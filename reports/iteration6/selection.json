@@ -1,0 +1,55 @@
+{
+  "decisions": {
+    "base_m0.5": {
+      "partition_reference_comparisons_passed": 0,
+      "comparisons": 6,
+      "flagged_tables": 0,
+      "ast_error_reduction_4027": 0.006890900187968563,
+      "maximum_feature_sd_error": 0.6531783265662044,
+      "qualifies_full_candidate": false
+    },
+    "base_m1": {
+      "partition_reference_comparisons_passed": 0,
+      "comparisons": 6,
+      "flagged_tables": 0,
+      "ast_error_reduction_4027": 0.012374886226571263,
+      "maximum_feature_sd_error": 0.6606842052853289,
+      "qualifies_full_candidate": false
+    },
+    "dense_m0.5": {
+      "partition_reference_comparisons_passed": 0,
+      "comparisons": 6,
+      "flagged_tables": 0,
+      "ast_error_reduction_4027": -0.005287914643184649,
+      "maximum_feature_sd_error": 0.6119676522395334,
+      "qualifies_full_candidate": false
+    },
+    "dense_m1": {
+      "partition_reference_comparisons_passed": 0,
+      "comparisons": 6,
+      "flagged_tables": 0,
+      "ast_error_reduction_4027": -0.014945833803077513,
+      "maximum_feature_sd_error": 0.8067268435900067,
+      "qualifies_full_candidate": false
+    },
+    "full_m0.5": {
+      "partition_reference_comparisons_passed": 0,
+      "comparisons": 6,
+      "flagged_tables": 0,
+      "ast_error_reduction_4027": 0.023447073517870703,
+      "maximum_feature_sd_error": 0.6685982518339277,
+      "qualifies_full_candidate": false
+    },
+    "full_m1": {
+      "partition_reference_comparisons_passed": 0,
+      "comparisons": 6,
+      "flagged_tables": 0,
+      "ast_error_reduction_4027": 0.04317756038064943,
+      "maximum_feature_sd_error": 0.9171323137814709,
+      "qualifies_full_candidate": false
+    }
+  },
+  "qualifying_full_settings": [],
+  "selected_development_candidate": null,
+  "interpretation": "Frozen development gates; no independent test, clinical validity or superiority claim."
+}

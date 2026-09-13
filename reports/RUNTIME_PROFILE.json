@@ -1,0 +1,14 @@
+{
+  "measured_date": "2026-09-12",
+  "run": "runs/runtime_profile_20260912_ilpd",
+  "device": "cpu",
+  "threads": 2,
+  "wall_seconds": 9.98,
+  "fit_seconds_including_structure": 5.169352041557431,
+  "sample_seconds": 0.325033999979496,
+  "parameters": 37600,
+  "peak_ram_bytes": null,
+  "peak_vram_bytes": null,
+  "gpu_used": false,
+  "notes": "The experiment completed successfully. /usr/bin/time printed wall time, but its additional -l statistics failed because sysctl kern.clockrate was restricted. No peak memory measurement is available."
+}

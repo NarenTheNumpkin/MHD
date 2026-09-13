@@ -1,0 +1,17 @@
+{
+  "status": "passed",
+  "new_training_runs": 0,
+  "generation_checkpoints": 27,
+  "reference_models": 54,
+  "new_evaluations": 162,
+  "reused_evaluations": 162,
+  "comparison_records": 324,
+  "source_parent_plan_hashes_match": true,
+  "fixed_weights_and_matched_sampling_settings": true,
+  "reserved_test_rows_in_fit_or_validation": 0,
+  "all_saved_auroc_reproduced": true,
+  "all_missingness_variance_quantile_and_tail_metrics_recomputed": true,
+  "matched_full_dense_pairs": 9,
+  "exact_sampler_replays": 6,
+  "zero_mixture_matches_original": true
+}

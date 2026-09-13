@@ -1,0 +1,16 @@
+{
+  "new_training_runs": 0,
+  "checkpoints": 36,
+  "generated_pools": 108,
+  "evaluations": 216,
+  "pool_sample_seconds_sum": 131.0934113371186,
+  "pool_sample_seconds_min": 1.0127493753097951,
+  "pool_sample_seconds_max": 1.3056770833209157,
+  "evaluation_seconds_sum": 155.7953846640885,
+  "evaluation_seconds_min": 0.5430312920361757,
+  "evaluation_seconds_max": 0.9458020417951047,
+  "device": "CPU",
+  "gpu_vram_gib": 0,
+  "peak_system_ram": "not measured",
+  "timing_note": "Component times; not total elapsed study wall time."
+}

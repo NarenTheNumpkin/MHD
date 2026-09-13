@@ -1,0 +1,52 @@
+..................................                                       [100%]
+=============================== warnings summary ===============================
+tests/test_research_invariants.py::test_official_tabddpm_train_and_checkpoint_roundtrip
+  /Users/naren/Desktop/MedHyperDiff/.venv/lib/python3.13/site-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+    warnings.warn(
+
+tests/test_research_invariants.py::test_official_tabddpm_train_and_checkpoint_roundtrip
+tests/test_research_invariants.py::test_official_tabddpm_train_and_checkpoint_roundtrip
+  /Users/naren/Desktop/MedHyperDiff/external/tab-ddpm/tab_ddpm/gaussian_multinomial_diffsuion.py:109: DeprecationWarning: __array_wrap__ must accept context and return_scalar arguments (positionally) in the future. (Deprecated NumPy 2.0)
+    log_alpha = np.log(alphas)
+
+tests/test_research_invariants.py::test_official_tabddpm_train_and_checkpoint_roundtrip
+tests/test_research_invariants.py::test_official_tabddpm_train_and_checkpoint_roundtrip
+tests/test_research_invariants.py::test_official_tabddpm_train_and_checkpoint_roundtrip
+tests/test_research_invariants.py::test_official_tabddpm_train_and_checkpoint_roundtrip
+tests/test_research_invariants.py::test_official_tabddpm_train_and_checkpoint_roundtrip
+tests/test_research_invariants.py::test_official_tabddpm_train_and_checkpoint_roundtrip
+  /Users/naren/Desktop/MedHyperDiff/.venv/lib/python3.13/site-packages/numpy/_core/fromnumeric.py:45: DeprecationWarning: __array_wrap__ must accept context and return_scalar arguments (positionally) in the future. (Deprecated NumPy 2.0)
+    return conv.wrap(result, to_scalar=False)
+
+tests/test_research_invariants.py::test_official_tabddpm_train_and_checkpoint_roundtrip
+tests/test_research_invariants.py::test_official_tabddpm_train_and_checkpoint_roundtrip
+  /Users/naren/Desktop/MedHyperDiff/external/tab-ddpm/tab_ddpm/gaussian_multinomial_diffsuion.py:118: DeprecationWarning: __array_wrap__ must accept context and return_scalar arguments (positionally) in the future. (Deprecated NumPy 2.0)
+    sqrt_alphas_cumprod = np.sqrt(alphas_cumprod)
+
+tests/test_research_invariants.py::test_official_tabddpm_train_and_checkpoint_roundtrip
+tests/test_research_invariants.py::test_official_tabddpm_train_and_checkpoint_roundtrip
+  /Users/naren/Desktop/MedHyperDiff/external/tab-ddpm/tab_ddpm/gaussian_multinomial_diffsuion.py:119: DeprecationWarning: __array_wrap__ must accept context and return_scalar arguments (positionally) in the future. (Deprecated NumPy 2.0)
+    sqrt_one_minus_alphas_cumprod = np.sqrt(1.0 - alphas_cumprod)
+
+tests/test_research_invariants.py::test_official_tabddpm_train_and_checkpoint_roundtrip
+tests/test_research_invariants.py::test_official_tabddpm_train_and_checkpoint_roundtrip
+  /Users/naren/Desktop/MedHyperDiff/external/tab-ddpm/tab_ddpm/gaussian_multinomial_diffsuion.py:120: DeprecationWarning: __array_wrap__ must accept context and return_scalar arguments (positionally) in the future. (Deprecated NumPy 2.0)
+    sqrt_recip_alphas_cumprod = np.sqrt(1.0 / alphas_cumprod)
+
+tests/test_research_invariants.py::test_official_tabddpm_train_and_checkpoint_roundtrip
+tests/test_research_invariants.py::test_official_tabddpm_train_and_checkpoint_roundtrip
+  /Users/naren/Desktop/MedHyperDiff/external/tab-ddpm/tab_ddpm/gaussian_multinomial_diffsuion.py:121: DeprecationWarning: __array_wrap__ must accept context and return_scalar arguments (positionally) in the future. (Deprecated NumPy 2.0)
+    sqrt_recipm1_alphas_cumprod = np.sqrt(1.0 / alphas_cumprod - 1)
+
+tests/test_research_invariants.py::test_official_tabddpm_train_and_checkpoint_roundtrip
+tests/test_research_invariants.py::test_official_tabddpm_train_and_checkpoint_roundtrip
+  /Users/naren/Desktop/MedHyperDiff/external/tab-ddpm/tab_ddpm/gaussian_multinomial_diffsuion.py:132: DeprecationWarning: __array_wrap__ must accept context and return_scalar arguments (positionally) in the future. (Deprecated NumPy 2.0)
+    betas * np.sqrt(alphas_cumprod_prev) / (1.0 - alphas_cumprod)
+
+tests/test_research_invariants.py::test_official_tabddpm_train_and_checkpoint_roundtrip
+tests/test_research_invariants.py::test_official_tabddpm_train_and_checkpoint_roundtrip
+  /Users/naren/Desktop/MedHyperDiff/external/tab-ddpm/tab_ddpm/gaussian_multinomial_diffsuion.py:135: DeprecationWarning: __array_wrap__ must accept context and return_scalar arguments (positionally) in the future. (Deprecated NumPy 2.0)
+    (1.0 - alphas_cumprod_prev)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+34 passed, 21 warnings in 2.77s

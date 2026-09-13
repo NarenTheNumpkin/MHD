@@ -1,0 +1,21 @@
+# Iteration 4: independent sampling seeds and synthetic sample size
+
+This protocol is written before generating iteration-4 samples. This is an exploratory ILPD development study, not a confirmatory evaluation or a new model-training stage.
+
+## Frozen design
+
+Reuse 36 existing fitted checkpoints: three training seeds (0, 1, 2), three inner split seeds (2027, 3027, 4027), and four configurations. The configurations are previous full x0 (training weight 0.1, guidance 0.2), updated full velocity (weight 0.01, guidance 10), matched dense velocity (weight 0.01, guidance 10), and guidance-only velocity backbone (weight 0, guidance 10). These settings come from iteration 3; no selection occurs using iteration-4 outcomes. No missing checkpoint may trigger training.
+
+Cross each checkpoint with independent sampling seeds 70001, 70002, 70003. Use downstream classifier/discriminator/empirical attack seed 2026 throughout, separating sampling randomness from training and evaluator seeds. For each of 108 pools, generate five repetitions of the fit-label vector with sampler batch size 256. Evaluate the first fit-size rows (1x) and all five repetitions (5x): 216 evaluations. This nested design gives each 1x table exactly the corresponding 5x prefix and keeps exact fit class proportions. It is a pool-prefix experiment, not a claim that sampling 1x in a separate call yields the same rows. Row and batch order remain fixed.
+
+Outer fold 0, outer split seed 2026, and the original reserved test remain fixed. Only inner validation is evaluated. Verify parent source, checkpoint hashes, split indices, and configs before reuse; save synthetic rows, scores, metrics, timing, hashes and source snapshots. Do not change the core model/evaluator used in iterations 2 and 3. Rename the evaluator's legacy AUGMENT_1x output to AUGMENT_5x when evaluating five synthetic fit sizes, including prediction columns.
+
+## Outcomes and interpretation
+
+Primary question: does 5x synthesis improve forest and logistic TSTR AUROC over its paired 1x prefix without degrading fidelity, rule coverage, or feature-wise missingness? Report paired deltas, average sampling seeds within each fitted checkpoint first, then summarize three training seeds separately by validation partition. Also report sample-seed variation; neither these replicates nor overlapping inner partitions are independent clinical cohorts. No population confidence intervals or significance claims.
+
+Retain every result. Descriptive engineering gates for 5x versus 1x partition means: both AUROCs decline by no more than 0.02 and at least one increases; numerical Wasserstein and association RMSE are at most 1.1 times the paired 1x means; observed any-rule violation increases by at most 0.01; each feature's mean absolute missingness error versus fit and versus validation increases by at most 0.01; each rule's mean coverage declines by no more than 0.01. Separately flag any single table with feature-wise missingness error greater than 0.02 versus fit. These arbitrary development tolerances are not clinical validity or noninferiority criteria. A recommendation to make 5x the default requires all three partitions to pass and no table-level missingness flag for that configuration. Otherwise retain the existing default and diagnose the tradeoff.
+
+For every feature save fit, validation and synthetic missing rates. For every rule save coverage, observed violation and the whole-table violation interval [observed violations / N, (observed violations + unevaluable rows) / N]. This is a logical missing-data bound, not a confidence interval. Also calculate the any-rule bound using the union of observed violations and unknown rules; do not sum overlapping unknowns and do not count missing relations as compliant. Report real fit/validation coverage with their own bound. Do not impute or repair generated rows.
+
+Report augmentation utility separately from TSTR. Include fidelity, discriminator, variability and empirical privacy diagnostics, but do not tune on privacy outcomes; different synthetic counts change the nearest-distance attack setting. This iteration does not resolve external baseline reproduction, external-cohort validation, clinical rule review, or stronger privacy attacks.

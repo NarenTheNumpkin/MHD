@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "records": 225,
+  "bootstrap_tables": 9,
+  "bootstrap_near_copy_rate": 1.0,
+  "bootstrap_tolerant_outside_fit_rate": 0.0,
+  "prespecified_primary_metric": false,
+  "original_metrics_modified": false,
+  "files": {
+    "scripts/iteration7_diagnostics.py": "2722d4ca04cf9f80fbd3ef96602b0e3d9596662ec7570f5809f5902421bf5cb9",
+    "scripts/supplement_iteration7.py": "4353af058c059418d3ec9e2157aeec282c862c9a3f60366f21c653a150703b47",
+    "docs/ITERATION_7_DIAGNOSTIC_ADDENDUM.md": "5ef252403d18b9f9afc8ccf823dba6756eb19e78be997c69d20aa22cc6be9261",
+    "tests/test_iteration7_diagnostics.py": "c3f6ab8084243cd336714b5ad4800bff56312da8377449c2ee16a7abc740d1f9"
+  },
+  "outputs": {
+    "tolerant_copy_all.csv": "6f8d649e0aaeca485884361e47ee7e3af0ffd52167311f52ec75a35f2143f311",
+    "tolerant_boundaries_all.csv": "09db2bc482eccd904102538ac6f60fb7ac85c05e3a7c87beaaa6b830f4d7a458",
+    "tolerant_copy_partition_means.csv": "c0fda3bc544f8c2383d317e9558c5192fda941453d436614e698ea61d146119c"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "decisions": {
+    "base_prior": {
+      "partitions_passed": 2,
+      "flagged_tables": 0,
+      "max_missing_error": 0.004584527220630373,
+      "meets_correction_gates": false
+    },
+    "dense_prior": {
+      "partitions_passed": 1,
+      "flagged_tables": 0,
+      "max_missing_error": 0.005157593123209169,
+      "meets_correction_gates": false
+    },
+    "full_prior": {
+      "partitions_passed": 2,
+      "flagged_tables": 0,
+      "max_missing_error": 0.004584527220630373,
+      "meets_correction_gates": false
+    },
+    "full_prior_w4": {
+      "partitions_passed": 1,
+      "flagged_tables": 0,
+      "max_missing_error": 0.004584527220630373,
+      "meets_correction_gates": false
+    }
+  },
+  "qualifying_full_variants": [],
+  "selected_development_candidate": null,
+  "interpretation": "Engineering development screen, not independent validation or a clinical threshold."
+}

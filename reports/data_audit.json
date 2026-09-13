@@ -1,0 +1,955 @@
+{
+  "heart_failure": {
+    "rows": 299,
+    "predictors": 11,
+    "target_counts": {
+      "0": 203,
+      "1": 96
+    },
+    "missing_by_column": {
+      "age": 0,
+      "creatinine_phosphokinase": 0,
+      "ejection_fraction": 0,
+      "platelets": 0,
+      "serum_creatinine": 0,
+      "serum_sodium": 0,
+      "anaemia": 0,
+      "diabetes": 0,
+      "high_blood_pressure": 0,
+      "sex": 0,
+      "smoking": 0,
+      "DEATH_EVENT": 0
+    },
+    "duplicate_rows": 0,
+    "duplicate_predictors": 0,
+    "splits": {
+      "train": 179,
+      "validation": 60,
+      "test": 60
+    },
+    "fit_rule_audit": {
+      "rules": {
+        "age_nonnegative": {
+          "eligible": 179,
+          "coverage": 1.0,
+          "violation_rate": 0.0,
+          "mean_severity": 0.0,
+          "status": "schema",
+          "tolerance": 0.0,
+          "scale": 11.717623547898128,
+          "confidence": 1.0
+        },
+        "creatinine_phosphokinase_nonnegative": {
+          "eligible": 179,
+          "coverage": 1.0,
+          "violation_rate": 0.0,
+          "mean_severity": 0.0,
+          "status": "schema",
+          "tolerance": 0.0,
+          "scale": 714.6773246897587,
+          "confidence": 1.0
+        },
+        "ejection_fraction_nonnegative": {
+          "eligible": 179,
+          "coverage": 1.0,
+          "violation_rate": 0.0,
+          "mean_severity": 0.0,
+          "status": "schema",
+          "tolerance": 0.0,
+          "scale": 12.548836243561775,
+          "confidence": 1.0
+        },
+        "platelets_nonnegative": {
+          "eligible": 179,
+          "coverage": 1.0,
+          "violation_rate": 0.0,
+          "mean_severity": 0.0,
+          "status": "schema",
+          "tolerance": 0.0,
+          "scale": 93137.71862567055,
+          "confidence": 1.0
+        },
+        "serum_creatinine_nonnegative": {
+          "eligible": 179,
+          "coverage": 1.0,
+          "violation_rate": 0.0,
+          "mean_severity": 0.0,
+          "status": "schema",
+          "tolerance": 0.0,
+          "scale": 1.2357742390888418,
+          "confidence": 1.0
+        },
+        "serum_sodium_nonnegative": {
+          "eligible": 179,
+          "coverage": 1.0,
+          "violation_rate": 0.0,
+          "mean_severity": 0.0,
+          "status": "schema",
+          "tolerance": 0.0,
+          "scale": 4.52867332160946,
+          "confidence": 1.0
+        },
+        "ejection_fraction_percentage": {
+          "eligible": 179,
+          "coverage": 1.0,
+          "violation_rate": 0.0,
+          "mean_severity": 0.0,
+          "status": "schema",
+          "tolerance": 0.0,
+          "scale": 100,
+          "confidence": 1.0
+        }
+      },
+      "any_rule_violation_rate": 0.0,
+      "any_rule_coverage": 1.0
+    },
+    "rules": [
+      {
+        "name": "age_nonnegative",
+        "kind": "lower",
+        "columns": [
+          "age"
+        ],
+        "confidence": 1.0,
+        "tolerance": 0.0,
+        "scale": 11.717623547898128,
+        "bound": 0.0,
+        "status": "schema",
+        "source": "https://archive.ics.uci.edu/dataset/519",
+        "units": "source measurement units; assay compatibility requires review",
+        "review_status": "not clinically reviewed"
+      },
+      {
+        "name": "creatinine_phosphokinase_nonnegative",
+        "kind": "lower",
+        "columns": [
+          "creatinine_phosphokinase"
+        ],
+        "confidence": 1.0,
+        "tolerance": 0.0,
+        "scale": 714.6773246897587,
+        "bound": 0.0,
+        "status": "schema",
+        "source": "https://archive.ics.uci.edu/dataset/519",
+        "units": "source measurement units; assay compatibility requires review",
+        "review_status": "not clinically reviewed"
+      },
+      {
+        "name": "ejection_fraction_nonnegative",
+        "kind": "lower",
+        "columns": [
+          "ejection_fraction"
+        ],
+        "confidence": 1.0,
+        "tolerance": 0.0,
+        "scale": 12.548836243561775,
+        "bound": 0.0,
+        "status": "schema",
+        "source": "https://archive.ics.uci.edu/dataset/519",
+        "units": "source measurement units; assay compatibility requires review",
+        "review_status": "not clinically reviewed"
+      },
+      {
+        "name": "platelets_nonnegative",
+        "kind": "lower",
+        "columns": [
+          "platelets"
+        ],
+        "confidence": 1.0,
+        "tolerance": 0.0,
+        "scale": 93137.71862567055,
+        "bound": 0.0,
+        "status": "schema",
+        "source": "https://archive.ics.uci.edu/dataset/519",
+        "units": "source measurement units; assay compatibility requires review",
+        "review_status": "not clinically reviewed"
+      },
+      {
+        "name": "serum_creatinine_nonnegative",
+        "kind": "lower",
+        "columns": [
+          "serum_creatinine"
+        ],
+        "confidence": 1.0,
+        "tolerance": 0.0,
+        "scale": 1.2357742390888418,
+        "bound": 0.0,
+        "status": "schema",
+        "source": "https://archive.ics.uci.edu/dataset/519",
+        "units": "source measurement units; assay compatibility requires review",
+        "review_status": "not clinically reviewed"
+      },
+      {
+        "name": "serum_sodium_nonnegative",
+        "kind": "lower",
+        "columns": [
+          "serum_sodium"
+        ],
+        "confidence": 1.0,
+        "tolerance": 0.0,
+        "scale": 4.52867332160946,
+        "bound": 0.0,
+        "status": "schema",
+        "source": "https://archive.ics.uci.edu/dataset/519",
+        "units": "source measurement units; assay compatibility requires review",
+        "review_status": "not clinically reviewed"
+      },
+      {
+        "name": "ejection_fraction_percentage",
+        "kind": "upper",
+        "columns": [
+          "ejection_fraction"
+        ],
+        "confidence": 1.0,
+        "tolerance": 0.0,
+        "scale": 100,
+        "bound": 100,
+        "status": "schema",
+        "source": "https://archive.ics.uci.edu/dataset/519",
+        "units": "source measurement units; assay compatibility requires review",
+        "review_status": "not clinically reviewed"
+      }
+    ]
+  },
+  "ilpd": {
+    "rows": 583,
+    "predictors": 10,
+    "target_counts": {
+      "1": 416,
+      "2": 167
+    },
+    "missing_by_column": {
+      "age": 0,
+      "total_bilirubin": 0,
+      "direct_bilirubin": 0,
+      "alkaline_phosphatase": 0,
+      "alt": 0,
+      "ast": 0,
+      "total_protein": 0,
+      "albumin": 0,
+      "ag_ratio": 4,
+      "sex": 0,
+      "disease": 0
+    },
+    "duplicate_rows": 13,
+    "duplicate_predictors": 13,
+    "splits": {
+      "train": 349,
+      "validation": 117,
+      "test": 117
+    },
+    "fit_rule_audit": {
+      "rules": {
+        "age_nonnegative": {
+          "eligible": 349,
+          "coverage": 1.0,
+          "violation_rate": 0.0,
+          "mean_severity": 0.0,
+          "status": "schema",
+          "tolerance": 0.0,
+          "scale": 15.738777054930198,
+          "confidence": 1.0
+        },
+        "total_bilirubin_nonnegative": {
+          "eligible": 349,
+          "coverage": 1.0,
+          "violation_rate": 0.0,
+          "mean_severity": 0.0,
+          "status": "schema",
+          "tolerance": 0.0,
+          "scale": 4.534905353430072,
+          "confidence": 1.0
+        },
+        "direct_bilirubin_nonnegative": {
+          "eligible": 349,
+          "coverage": 1.0,
+          "violation_rate": 0.0,
+          "mean_severity": 0.0,
+          "status": "schema",
+          "tolerance": 0.0,
+          "scale": 2.4282043975982535,
+          "confidence": 1.0
+        },
+        "alkaline_phosphatase_nonnegative": {
+          "eligible": 349,
+          "coverage": 1.0,
+          "violation_rate": 0.0,
+          "mean_severity": 0.0,
+          "status": "schema",
+          "tolerance": 0.0,
+          "scale": 241.56864371612565,
+          "confidence": 1.0
+        },
+        "alt_nonnegative": {
+          "eligible": 349,
+          "coverage": 1.0,
+          "violation_rate": 0.0,
+          "mean_severity": 0.0,
+          "status": "schema",
+          "tolerance": 0.0,
+          "scale": 130.22719975099167,
+          "confidence": 1.0
+        },
+        "ast_nonnegative": {
+          "eligible": 349,
+          "coverage": 1.0,
+          "violation_rate": 0.0,
+          "mean_severity": 0.0,
+          "status": "schema",
+          "tolerance": 0.0,
+          "scale": 294.9159602457629,
+          "confidence": 1.0
+        },
+        "total_protein_nonnegative": {
+          "eligible": 349,
+          "coverage": 1.0,
+          "violation_rate": 0.0,
+          "mean_severity": 0.0,
+          "status": "schema",
+          "tolerance": 0.0,
+          "scale": 1.1236726480628647,
+          "confidence": 1.0
+        },
+        "albumin_nonnegative": {
+          "eligible": 349,
+          "coverage": 1.0,
+          "violation_rate": 0.0,
+          "mean_severity": 0.0,
+          "status": "schema",
+          "tolerance": 0.0,
+          "scale": 0.8052492621576548,
+          "confidence": 1.0
+        },
+        "ag_ratio_nonnegative": {
+          "eligible": 346,
+          "coverage": 0.9914040114613181,
+          "violation_rate": 0.0,
+          "mean_severity": 0.0,
+          "status": "schema",
+          "tolerance": 0.0,
+          "scale": 0.3101370698486857,
+          "confidence": 1.0
+        },
+        "albumin_le_total": {
+          "eligible": 349,
+          "coverage": 1.0,
+          "violation_rate": 0.0,
+          "mean_severity": 0.0,
+          "status": "soft_biochemical",
+          "tolerance": 0.0,
+          "scale": 1.0,
+          "confidence": 1.0
+        },
+        "protein_identity": {
+          "eligible": 346,
+          "coverage": 0.9914040114613181,
+          "violation_rate": 0.049132947976878616,
+          "mean_severity": 0.04273410404624274,
+          "status": "exploratory_train_calibrated",
+          "tolerance": 0.3000000000000007,
+          "scale": 1.0,
+          "confidence": 0.5
+        },
+        "direct_le_total_bilirubin": {
+          "eligible": 349,
+          "coverage": 1.0,
+          "violation_rate": 0.0057306590257879654,
+          "mean_severity": 0.03581661891117478,
+          "status": "soft_biochemical",
+          "tolerance": 0.1,
+          "scale": 1,
+          "confidence": 0.75
+        }
+      },
+      "any_rule_violation_rate": 0.05157593123209169,
+      "any_rule_coverage": 1.0
+    },
+    "rules": [
+      {
+        "name": "age_nonnegative",
+        "kind": "lower",
+        "columns": [
+          "age"
+        ],
+        "confidence": 1.0,
+        "tolerance": 0.0,
+        "scale": 15.738777054930198,
+        "bound": 0.0,
+        "status": "schema",
+        "source": "https://archive.ics.uci.edu/dataset/225",
+        "units": "source measurement units; assay compatibility requires review",
+        "review_status": "not clinically reviewed"
+      },
+      {
+        "name": "total_bilirubin_nonnegative",
+        "kind": "lower",
+        "columns": [
+          "total_bilirubin"
+        ],
+        "confidence": 1.0,
+        "tolerance": 0.0,
+        "scale": 4.534905353430072,
+        "bound": 0.0,
+        "status": "schema",
+        "source": "https://archive.ics.uci.edu/dataset/225",
+        "units": "source measurement units; assay compatibility requires review",
+        "review_status": "not clinically reviewed"
+      },
+      {
+        "name": "direct_bilirubin_nonnegative",
+        "kind": "lower",
+        "columns": [
+          "direct_bilirubin"
+        ],
+        "confidence": 1.0,
+        "tolerance": 0.0,
+        "scale": 2.4282043975982535,
+        "bound": 0.0,
+        "status": "schema",
+        "source": "https://archive.ics.uci.edu/dataset/225",
+        "units": "source measurement units; assay compatibility requires review",
+        "review_status": "not clinically reviewed"
+      },
+      {
+        "name": "alkaline_phosphatase_nonnegative",
+        "kind": "lower",
+        "columns": [
+          "alkaline_phosphatase"
+        ],
+        "confidence": 1.0,
+        "tolerance": 0.0,
+        "scale": 241.56864371612565,
+        "bound": 0.0,
+        "status": "schema",
+        "source": "https://archive.ics.uci.edu/dataset/225",
+        "units": "source measurement units; assay compatibility requires review",
+        "review_status": "not clinically reviewed"
+      },
+      {
+        "name": "alt_nonnegative",
+        "kind": "lower",
+        "columns": [
+          "alt"
+        ],
+        "confidence": 1.0,
+        "tolerance": 0.0,
+        "scale": 130.22719975099167,
+        "bound": 0.0,
+        "status": "schema",
+        "source": "https://archive.ics.uci.edu/dataset/225",
+        "units": "source measurement units; assay compatibility requires review",
+        "review_status": "not clinically reviewed"
+      },
+      {
+        "name": "ast_nonnegative",
+        "kind": "lower",
+        "columns": [
+          "ast"
+        ],
+        "confidence": 1.0,
+        "tolerance": 0.0,
+        "scale": 294.9159602457629,
+        "bound": 0.0,
+        "status": "schema",
+        "source": "https://archive.ics.uci.edu/dataset/225",
+        "units": "source measurement units; assay compatibility requires review",
+        "review_status": "not clinically reviewed"
+      },
+      {
+        "name": "total_protein_nonnegative",
+        "kind": "lower",
+        "columns": [
+          "total_protein"
+        ],
+        "confidence": 1.0,
+        "tolerance": 0.0,
+        "scale": 1.1236726480628647,
+        "bound": 0.0,
+        "status": "schema",
+        "source": "https://archive.ics.uci.edu/dataset/225",
+        "units": "source measurement units; assay compatibility requires review",
+        "review_status": "not clinically reviewed"
+      },
+      {
+        "name": "albumin_nonnegative",
+        "kind": "lower",
+        "columns": [
+          "albumin"
+        ],
+        "confidence": 1.0,
+        "tolerance": 0.0,
+        "scale": 0.8052492621576548,
+        "bound": 0.0,
+        "status": "schema",
+        "source": "https://archive.ics.uci.edu/dataset/225",
+        "units": "source measurement units; assay compatibility requires review",
+        "review_status": "not clinically reviewed"
+      },
+      {
+        "name": "ag_ratio_nonnegative",
+        "kind": "lower",
+        "columns": [
+          "ag_ratio"
+        ],
+        "confidence": 1.0,
+        "tolerance": 0.0,
+        "scale": 0.3101370698486857,
+        "bound": 0.0,
+        "status": "schema",
+        "source": "https://archive.ics.uci.edu/dataset/225",
+        "units": "source measurement units; assay compatibility requires review",
+        "review_status": "not clinically reviewed"
+      },
+      {
+        "name": "albumin_le_total",
+        "kind": "le",
+        "columns": [
+          "albumin",
+          "total_protein"
+        ],
+        "confidence": 1.0,
+        "tolerance": 0.0,
+        "scale": 1.0,
+        "bound": 0.0,
+        "status": "soft_biochemical",
+        "source": "https://medlineplus.gov/lab-tests/total-protein-and-albumin-globulin-a-g-ratio/",
+        "units": "source measurement units; assay compatibility requires review",
+        "review_status": "not clinically reviewed"
+      },
+      {
+        "name": "protein_identity",
+        "kind": "protein",
+        "columns": [
+          "total_protein",
+          "albumin",
+          "ag_ratio"
+        ],
+        "confidence": 0.5,
+        "tolerance": 0.3000000000000007,
+        "scale": 1.0,
+        "bound": 0.0,
+        "status": "exploratory_train_calibrated",
+        "source": "https://medlineplus.gov/lab-tests/total-protein-and-albumin-globulin-a-g-ratio/",
+        "units": "source measurement units; assay compatibility requires review",
+        "review_status": "not clinically reviewed"
+      },
+      {
+        "name": "direct_le_total_bilirubin",
+        "kind": "le",
+        "columns": [
+          "direct_bilirubin",
+          "total_bilirubin"
+        ],
+        "confidence": 0.75,
+        "tolerance": 0.1,
+        "scale": 1,
+        "bound": 0.0,
+        "status": "soft_biochemical",
+        "source": "https://medlineplus.gov/ency/article/003479.htm",
+        "units": "source measurement units; assay compatibility requires review",
+        "review_status": "not clinically reviewed"
+      }
+    ],
+    "protein_absolute_residual_fit_quantiles": {
+      "0": 0.0,
+      "0.5": 0.09999999999999964,
+      "0.9": 0.2799999999999998,
+      "0.95": 0.3000000000000007,
+      "0.99": 0.5488000000000004,
+      "1": 8.68
+    },
+    "protein_residual_rows_observed_fit": 346
+  },
+  "ckd": {
+    "rows": 400,
+    "predictors": 24,
+    "target_counts": {
+      "ckd": 250,
+      "notckd": 150
+    },
+    "missing_by_column": {
+      "age": 9,
+      "bp": 12,
+      "bgr": 44,
+      "bu": 19,
+      "sc": 17,
+      "sod": 87,
+      "pot": 88,
+      "hemo": 52,
+      "pcv": 71,
+      "wc": 106,
+      "rc": 131,
+      "sg": 47,
+      "al": 46,
+      "su": 49,
+      "rbc": 152,
+      "pc": 65,
+      "pcc": 4,
+      "ba": 4,
+      "htn": 2,
+      "dm": 2,
+      "cad": 2,
+      "appet": 1,
+      "pe": 1,
+      "ane": 1,
+      "class": 0
+    },
+    "duplicate_rows": 0,
+    "duplicate_predictors": 0,
+    "splits": {
+      "train": 240,
+      "validation": 80,
+      "test": 80
+    },
+    "fit_rule_audit": {
+      "rules": {
+        "age_nonnegative": {
+          "eligible": 235,
+          "coverage": 0.9791666666666666,
+          "violation_rate": 0.0,
+          "mean_severity": 0.0,
+          "status": "schema",
+          "tolerance": 0.0,
+          "scale": 16.925300404444446,
+          "confidence": 1.0
+        },
+        "bp_nonnegative": {
+          "eligible": 232,
+          "coverage": 0.9666666666666667,
+          "violation_rate": 0.0,
+          "mean_severity": 0.0,
+          "status": "schema",
+          "tolerance": 0.0,
+          "scale": 14.063543338416785,
+          "confidence": 1.0
+        },
+        "bgr_nonnegative": {
+          "eligible": 214,
+          "coverage": 0.8916666666666667,
+          "violation_rate": 0.0,
+          "mean_severity": 0.0,
+          "status": "schema",
+          "tolerance": 0.0,
+          "scale": 74.77146202009511,
+          "confidence": 1.0
+        },
+        "bu_nonnegative": {
+          "eligible": 229,
+          "coverage": 0.9541666666666667,
+          "violation_rate": 0.0,
+          "mean_severity": 0.0,
+          "status": "schema",
+          "tolerance": 0.0,
+          "scale": 52.5362290459527,
+          "confidence": 1.0
+        },
+        "sc_nonnegative": {
+          "eligible": 230,
+          "coverage": 0.9583333333333334,
+          "violation_rate": 0.0,
+          "mean_severity": 0.0,
+          "status": "schema",
+          "tolerance": 0.0,
+          "scale": 6.301712396225247,
+          "confidence": 1.0
+        },
+        "sod_nonnegative": {
+          "eligible": 187,
+          "coverage": 0.7791666666666667,
+          "violation_rate": 0.0,
+          "mean_severity": 0.0,
+          "status": "schema",
+          "tolerance": 0.0,
+          "scale": 12.049944103404615,
+          "confidence": 1.0
+        },
+        "pot_nonnegative": {
+          "eligible": 186,
+          "coverage": 0.775,
+          "violation_rate": 0.0,
+          "mean_severity": 0.0,
+          "status": "schema",
+          "tolerance": 0.0,
+          "scale": 4.082910421788735,
+          "confidence": 1.0
+        },
+        "hemo_nonnegative": {
+          "eligible": 208,
+          "coverage": 0.8666666666666667,
+          "violation_rate": 0.0,
+          "mean_severity": 0.0,
+          "status": "schema",
+          "tolerance": 0.0,
+          "scale": 2.8614962056793045,
+          "confidence": 1.0
+        },
+        "pcv_nonnegative": {
+          "eligible": 197,
+          "coverage": 0.8208333333333333,
+          "violation_rate": 0.0,
+          "mean_severity": 0.0,
+          "status": "schema",
+          "tolerance": 0.0,
+          "scale": 8.708196971768578,
+          "confidence": 1.0
+        },
+        "wc_nonnegative": {
+          "eligible": 181,
+          "coverage": 0.7541666666666667,
+          "violation_rate": 0.0,
+          "mean_severity": 0.0,
+          "status": "schema",
+          "tolerance": 0.0,
+          "scale": 2857.1282271834502,
+          "confidence": 1.0
+        },
+        "rc_nonnegative": {
+          "eligible": 164,
+          "coverage": 0.6833333333333333,
+          "violation_rate": 0.0,
+          "mean_severity": 0.0,
+          "status": "schema",
+          "tolerance": 0.0,
+          "scale": 1.0056818978210593,
+          "confidence": 1.0
+        }
+      },
+      "any_rule_violation_rate": 0.0,
+      "any_rule_coverage": 1.0
+    },
+    "rules": [
+      {
+        "name": "age_nonnegative",
+        "kind": "lower",
+        "columns": [
+          "age"
+        ],
+        "confidence": 1.0,
+        "tolerance": 0.0,
+        "scale": 16.925300404444446,
+        "bound": 0.0,
+        "status": "schema",
+        "source": "https://archive.ics.uci.edu/dataset/336",
+        "units": "source measurement units; assay compatibility requires review",
+        "review_status": "not clinically reviewed"
+      },
+      {
+        "name": "bp_nonnegative",
+        "kind": "lower",
+        "columns": [
+          "bp"
+        ],
+        "confidence": 1.0,
+        "tolerance": 0.0,
+        "scale": 14.063543338416785,
+        "bound": 0.0,
+        "status": "schema",
+        "source": "https://archive.ics.uci.edu/dataset/336",
+        "units": "source measurement units; assay compatibility requires review",
+        "review_status": "not clinically reviewed"
+      },
+      {
+        "name": "bgr_nonnegative",
+        "kind": "lower",
+        "columns": [
+          "bgr"
+        ],
+        "confidence": 1.0,
+        "tolerance": 0.0,
+        "scale": 74.77146202009511,
+        "bound": 0.0,
+        "status": "schema",
+        "source": "https://archive.ics.uci.edu/dataset/336",
+        "units": "source measurement units; assay compatibility requires review",
+        "review_status": "not clinically reviewed"
+      },
+      {
+        "name": "bu_nonnegative",
+        "kind": "lower",
+        "columns": [
+          "bu"
+        ],
+        "confidence": 1.0,
+        "tolerance": 0.0,
+        "scale": 52.5362290459527,
+        "bound": 0.0,
+        "status": "schema",
+        "source": "https://archive.ics.uci.edu/dataset/336",
+        "units": "source measurement units; assay compatibility requires review",
+        "review_status": "not clinically reviewed"
+      },
+      {
+        "name": "sc_nonnegative",
+        "kind": "lower",
+        "columns": [
+          "sc"
+        ],
+        "confidence": 1.0,
+        "tolerance": 0.0,
+        "scale": 6.301712396225247,
+        "bound": 0.0,
+        "status": "schema",
+        "source": "https://archive.ics.uci.edu/dataset/336",
+        "units": "source measurement units; assay compatibility requires review",
+        "review_status": "not clinically reviewed"
+      },
+      {
+        "name": "sod_nonnegative",
+        "kind": "lower",
+        "columns": [
+          "sod"
+        ],
+        "confidence": 1.0,
+        "tolerance": 0.0,
+        "scale": 12.049944103404615,
+        "bound": 0.0,
+        "status": "schema",
+        "source": "https://archive.ics.uci.edu/dataset/336",
+        "units": "source measurement units; assay compatibility requires review",
+        "review_status": "not clinically reviewed"
+      },
+      {
+        "name": "pot_nonnegative",
+        "kind": "lower",
+        "columns": [
+          "pot"
+        ],
+        "confidence": 1.0,
+        "tolerance": 0.0,
+        "scale": 4.082910421788735,
+        "bound": 0.0,
+        "status": "schema",
+        "source": "https://archive.ics.uci.edu/dataset/336",
+        "units": "source measurement units; assay compatibility requires review",
+        "review_status": "not clinically reviewed"
+      },
+      {
+        "name": "hemo_nonnegative",
+        "kind": "lower",
+        "columns": [
+          "hemo"
+        ],
+        "confidence": 1.0,
+        "tolerance": 0.0,
+        "scale": 2.8614962056793045,
+        "bound": 0.0,
+        "status": "schema",
+        "source": "https://archive.ics.uci.edu/dataset/336",
+        "units": "source measurement units; assay compatibility requires review",
+        "review_status": "not clinically reviewed"
+      },
+      {
+        "name": "pcv_nonnegative",
+        "kind": "lower",
+        "columns": [
+          "pcv"
+        ],
+        "confidence": 1.0,
+        "tolerance": 0.0,
+        "scale": 8.708196971768578,
+        "bound": 0.0,
+        "status": "schema",
+        "source": "https://archive.ics.uci.edu/dataset/336",
+        "units": "source measurement units; assay compatibility requires review",
+        "review_status": "not clinically reviewed"
+      },
+      {
+        "name": "wc_nonnegative",
+        "kind": "lower",
+        "columns": [
+          "wc"
+        ],
+        "confidence": 1.0,
+        "tolerance": 0.0,
+        "scale": 2857.1282271834502,
+        "bound": 0.0,
+        "status": "schema",
+        "source": "https://archive.ics.uci.edu/dataset/336",
+        "units": "source measurement units; assay compatibility requires review",
+        "review_status": "not clinically reviewed"
+      },
+      {
+        "name": "rc_nonnegative",
+        "kind": "lower",
+        "columns": [
+          "rc"
+        ],
+        "confidence": 1.0,
+        "tolerance": 0.0,
+        "scale": 1.0056818978210593,
+        "bound": 0.0,
+        "status": "schema",
+        "source": "https://archive.ics.uci.edu/dataset/336",
+        "units": "source measurement units; assay compatibility requires review",
+        "review_status": "not clinically reviewed"
+      }
+    ]
+  },
+  "diabetes": {
+    "rows": 520,
+    "predictors": 16,
+    "target_counts": {
+      "Positive": 320,
+      "Negative": 200
+    },
+    "missing_by_column": {
+      "Age": 0,
+      "Gender": 0,
+      "Polyuria": 0,
+      "Polydipsia": 0,
+      "sudden weight loss": 0,
+      "weakness": 0,
+      "Polyphagia": 0,
+      "Genital thrush": 0,
+      "visual blurring": 0,
+      "Itching": 0,
+      "Irritability": 0,
+      "delayed healing": 0,
+      "partial paresis": 0,
+      "muscle stiffness": 0,
+      "Alopecia": 0,
+      "Obesity": 0,
+      "class": 0
+    },
+    "duplicate_rows": 269,
+    "duplicate_predictors": 269,
+    "splits": {
+      "train": 312,
+      "validation": 104,
+      "test": 104
+    },
+    "fit_rule_audit": {
+      "rules": {
+        "Age_nonnegative": {
+          "eligible": 312,
+          "coverage": 1.0,
+          "violation_rate": 0.0,
+          "mean_severity": 0.0,
+          "status": "schema",
+          "tolerance": 0.0,
+          "scale": 11.803464764363259,
+          "confidence": 1.0
+        }
+      },
+      "any_rule_violation_rate": 0.0,
+      "any_rule_coverage": 1.0
+    },
+    "rules": [
+      {
+        "name": "Age_nonnegative",
+        "kind": "lower",
+        "columns": [
+          "Age"
+        ],
+        "confidence": 1.0,
+        "tolerance": 0.0,
+        "scale": 11.803464764363259,
+        "bound": 0.0,
+        "status": "schema",
+        "source": "https://archive.ics.uci.edu/dataset/529",
+        "units": "source measurement units; assay compatibility requires review",
+        "review_status": "not clinically reviewed"
+      }
+    ]
+  }
+}

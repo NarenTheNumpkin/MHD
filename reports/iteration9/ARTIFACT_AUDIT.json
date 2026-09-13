@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "source_tables": 225,
+  "variants": 5,
+  "evaluations": 1125,
+  "fits": 0,
+  "sampling": 0,
+  "source_hashes_match": true,
+  "split_isolation": true,
+  "rule_metrics_recalculated": true,
+  "outer_test_rows": 0
+}

@@ -1,0 +1,41 @@
+{
+  "selected": {
+    "ilpd": [
+      {
+        "mode": "full",
+        "prediction": "v",
+        "clinical_weight": 0.1,
+        "guidance": 10.0,
+        "repair": false
+      },
+      {
+        "mode": "full",
+        "prediction": "v",
+        "clinical_weight": 0.01,
+        "guidance": 10.0,
+        "repair": false
+      }
+    ],
+    "toy": [
+      {
+        "mode": "base",
+        "prediction": "x0",
+        "clinical_weight": 0.0,
+        "guidance": 0.2,
+        "repair": false
+      }
+    ]
+  },
+  "selection_type": "adaptive development screen, not confirmation",
+  "protocol": "docs/ITERATION_3_PROTOCOL.md",
+  "screen_evaluations": 84,
+  "qualification": {
+    "ilpd": [
+      true,
+      true
+    ],
+    "toy": [
+      true
+    ]
+  }
+}

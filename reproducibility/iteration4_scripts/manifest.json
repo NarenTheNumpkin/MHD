@@ -1,0 +1,42 @@
+[
+  {
+    "file": "scripts/audit_iteration4.py",
+    "sha256": "e806900efc146ea7030f61ade0ef3ef30c708fdd10647085fff50f8c6fdcefe2",
+    "archive": "reproducibility/iteration4_scripts/e806900efc146ea7030f61ade0ef3ef30c708fdd10647085fff50f8c6fdcefe2/audit_iteration4.py"
+  },
+  {
+    "file": "scripts/plot_iteration4.py",
+    "sha256": "147272d5159e4824ff627f7476da7f701749df68ba9ae2534cf7c6a49b05a280",
+    "archive": "reproducibility/iteration4_scripts/147272d5159e4824ff627f7476da7f701749df68ba9ae2534cf7c6a49b05a280/plot_iteration4.py"
+  },
+  {
+    "file": "scripts/iteration4.py",
+    "sha256": "077446fbc961dbca9d404a52f81d94c9ed585c9825c9239caabab568d2761c2a",
+    "archive": "reproducibility/iteration4_scripts/077446fbc961dbca9d404a52f81d94c9ed585c9825c9239caabab568d2761c2a/iteration4.py"
+  },
+  {
+    "file": "scripts/report_iteration4.py",
+    "sha256": "8f7330002ca8cea3504d85b4d0f416d24e6ba324a84a2d310825ec3672b1406a",
+    "archive": "reproducibility/iteration4_scripts/8f7330002ca8cea3504d85b4d0f416d24e6ba324a84a2d310825ec3672b1406a/report_iteration4.py"
+  },
+  {
+    "file": "tests/test_iteration4_audits.py",
+    "sha256": "c1d801ad77c66797b091a77f2af8f51851fb662bce3abaf6676663bf7ad9fea7",
+    "archive": "reproducibility/iteration4_scripts/c1d801ad77c66797b091a77f2af8f51851fb662bce3abaf6676663bf7ad9fea7/test_iteration4_audits.py"
+  },
+  {
+    "file": "docs/ITERATION_4_RUNBOOK.md",
+    "sha256": "ce76bed4c28a028f0f1fddc8d97afd49b8240df1089f483c1a20244ea5aef458",
+    "archive": "reproducibility/iteration4_scripts/ce76bed4c28a028f0f1fddc8d97afd49b8240df1089f483c1a20244ea5aef458/ITERATION_4_RUNBOOK.md"
+  },
+  {
+    "file": "reports/iteration4/INTERPRETATION.md",
+    "sha256": "bbe7e6052a0fd13ee7e8ed5d8e4d423f8cabb82e8522d14b182fc8ad3df802b5",
+    "archive": "reproducibility/iteration4_scripts/bbe7e6052a0fd13ee7e8ed5d8e4d423f8cabb82e8522d14b182fc8ad3df802b5/INTERPRETATION.md"
+  },
+  {
+    "file": "paper/manuscript.md",
+    "sha256": "f6b18995c2f8a8ba01349fbe5e2695b9a45b68dd511e65d42b440ce3157d5da1",
+    "archive": "reproducibility/iteration4_scripts/f6b18995c2f8a8ba01349fbe5e2695b9a45b68dd511e65d42b440ce3157d5da1/manuscript.md"
+  }
+]

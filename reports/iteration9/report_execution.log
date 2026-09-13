@@ -1,0 +1,166 @@
+             arm                 variant  inner_seed  any_violation_rate  any_coverage
+      base_prior                 correct        2027            0.090226           1.0
+      base_prior                 correct        3027            0.078892           1.0
+      base_prior                 correct        4027            0.076571           1.0
+      base_prior   omit_protein_identity        2027            0.014645           1.0
+      base_prior   omit_protein_identity        3027            0.019675           1.0
+      base_prior   omit_protein_identity        4027            0.017778           1.0
+      base_prior   reverse_albumin_order        2027            1.000000           1.0
+      base_prior   reverse_albumin_order        3027            1.000000           1.0
+      base_prior   reverse_albumin_order        4027            1.000000           1.0
+      base_prior reverse_bilirubin_order        2027            0.990767           1.0
+      base_prior reverse_bilirubin_order        3027            0.980834           1.0
+      base_prior reverse_bilirubin_order        4027            0.985778           1.0
+      base_prior            reverse_both        2027            1.000000           1.0
+      base_prior            reverse_both        3027            1.000000           1.0
+      base_prior            reverse_both        4027            1.000000           1.0
+       bootstrap                 correct        2027            0.050812           1.0
+       bootstrap                 correct        3027            0.044126           1.0
+       bootstrap                 correct        4027            0.055810           1.0
+       bootstrap   omit_protein_identity        2027            0.005731           1.0
+       bootstrap   omit_protein_identity        3027            0.007259           1.0
+       bootstrap   omit_protein_identity        4027            0.008762           1.0
+       bootstrap   reverse_albumin_order        2027            1.000000           1.0
+       bootstrap   reverse_albumin_order        3027            1.000000           1.0
+       bootstrap   reverse_albumin_order        4027            1.000000           1.0
+       bootstrap reverse_bilirubin_order        2027            0.996562           1.0
+       bootstrap reverse_bilirubin_order        3027            0.992741           1.0
+       bootstrap reverse_bilirubin_order        4027            0.996000           1.0
+       bootstrap            reverse_both        2027            1.000000           1.0
+       bootstrap            reverse_both        3027            1.000000           1.0
+       bootstrap            reverse_both        4027            1.000000           1.0
+          copula                 correct        2027            0.648138           1.0
+          copula                 correct        3027            0.646418           1.0
+          copula                 correct        4027            0.650095           1.0
+          copula   omit_protein_identity        2027            0.047373           1.0
+          copula   omit_protein_identity        3027            0.052340           1.0
+          copula   omit_protein_identity        4027            0.062857           1.0
+          copula   reverse_albumin_order        2027            1.000000           1.0
+          copula   reverse_albumin_order        3027            1.000000           1.0
+          copula   reverse_albumin_order        4027            1.000000           1.0
+          copula reverse_bilirubin_order        2027            0.975358           1.0
+          copula reverse_bilirubin_order        3027            0.969054           1.0
+          copula reverse_bilirubin_order        4027            0.967619           1.0
+          copula            reverse_both        2027            1.000000           1.0
+          copula            reverse_both        3027            1.000000           1.0
+          copula            reverse_both        4027            1.000000           1.0
+   copula_repair                 correct        2027            0.000000           1.0
+   copula_repair                 correct        3027            0.000000           1.0
+   copula_repair                 correct        4027            0.000000           1.0
+   copula_repair   omit_protein_identity        2027            0.000000           1.0
+   copula_repair   omit_protein_identity        3027            0.000000           1.0
+   copula_repair   omit_protein_identity        4027            0.000000           1.0
+   copula_repair   reverse_albumin_order        2027            1.000000           1.0
+   copula_repair   reverse_albumin_order        3027            1.000000           1.0
+   copula_repair   reverse_albumin_order        4027            1.000000           1.0
+   copula_repair reverse_bilirubin_order        2027            0.925692           1.0
+   copula_repair reverse_bilirubin_order        3027            0.915950           1.0
+   copula_repair reverse_bilirubin_order        4027            0.911429           1.0
+   copula_repair            reverse_both        2027            1.000000           1.0
+   copula_repair            reverse_both        3027            1.000000           1.0
+   copula_repair            reverse_both        4027            1.000000           1.0
+ctgan_compact100                 correct        2027            0.940210           1.0
+ctgan_compact100                 correct        3027            0.940274           1.0
+ctgan_compact100                 correct        4027            0.965841           1.0
+ctgan_compact100   omit_protein_identity        2027            0.615282           1.0
+ctgan_compact100   omit_protein_identity        3027            0.648265           1.0
+ctgan_compact100   omit_protein_identity        4027            0.687683           1.0
+ctgan_compact100   reverse_albumin_order        2027            0.998344           1.0
+ctgan_compact100   reverse_albumin_order        3027            0.998790           1.0
+ctgan_compact100   reverse_albumin_order        4027            0.999746           1.0
+ctgan_compact100 reverse_bilirubin_order        2027            0.982108           1.0
+ctgan_compact100 reverse_bilirubin_order        3027            0.979433           1.0
+ctgan_compact100 reverse_bilirubin_order        4027            0.988254           1.0
+ctgan_compact100            reverse_both        2027            0.999873           1.0
+ctgan_compact100            reverse_both        3027            0.999873           1.0
+ctgan_compact100            reverse_both        4027            0.999937           1.0
+ctgan_default300                 correct        2027            0.972111           1.0
+ctgan_default300                 correct        3027            0.959758           1.0
+ctgan_default300                 correct        4027            0.971873           1.0
+ctgan_default300   omit_protein_identity        2027            0.652977           1.0
+ctgan_default300   omit_protein_identity        3027            0.653168           1.0
+ctgan_default300   omit_protein_identity        4027            0.690603           1.0
+ctgan_default300   reverse_albumin_order        2027            0.999427           1.0
+ctgan_default300   reverse_albumin_order        3027            1.000000           1.0
+ctgan_default300   reverse_albumin_order        4027            0.999683           1.0
+ctgan_default300 reverse_bilirubin_order        2027            0.990767           1.0
+ctgan_default300 reverse_bilirubin_order        3027            0.984209           1.0
+ctgan_default300 reverse_bilirubin_order        4027            0.988825           1.0
+ctgan_default300            reverse_both        2027            0.999809           1.0
+ctgan_default300            reverse_both        3027            1.000000           1.0
+ctgan_default300            reverse_both        4027            1.000000           1.0
+     dense_prior                 correct        2027            0.066858           1.0
+     dense_prior                 correct        3027            0.062655           1.0
+     dense_prior                 correct        4027            0.078857           1.0
+     dense_prior   omit_protein_identity        2027            0.013754           1.0
+     dense_prior   omit_protein_identity        3027            0.021522           1.0
+     dense_prior   omit_protein_identity        4027            0.026730           1.0
+     dense_prior   reverse_albumin_order        2027            1.000000           1.0
+     dense_prior   reverse_albumin_order        3027            1.000000           1.0
+     dense_prior   reverse_albumin_order        4027            1.000000           1.0
+     dense_prior reverse_bilirubin_order        2027            0.969436           1.0
+     dense_prior reverse_bilirubin_order        3027            0.960968           1.0
+     dense_prior reverse_bilirubin_order        4027            0.970857           1.0
+     dense_prior            reverse_both        2027            1.000000           1.0
+     dense_prior            reverse_both        3027            1.000000           1.0
+     dense_prior            reverse_both        4027            1.000000           1.0
+      full_prior                 correct        2027            0.055014           1.0
+      full_prior                 correct        3027            0.049729           1.0
+      full_prior                 correct        4027            0.059619           1.0
+      full_prior   omit_protein_identity        2027            0.012480           1.0
+      full_prior   omit_protein_identity        3027            0.022286           1.0
+      full_prior   omit_protein_identity        4027            0.019937           1.0
+      full_prior   reverse_albumin_order        2027            1.000000           1.0
+      full_prior   reverse_albumin_order        3027            1.000000           1.0
+      full_prior   reverse_albumin_order        4027            1.000000           1.0
+      full_prior reverse_bilirubin_order        2027            0.975422           1.0
+      full_prior reverse_bilirubin_order        3027            0.963642           1.0
+      full_prior reverse_bilirubin_order        4027            0.976762           1.0
+      full_prior            reverse_both        2027            1.000000           1.0
+      full_prior            reverse_both        3027            1.000000           1.0
+      full_prior            reverse_both        4027            1.000000           1.0
+     independent                 correct        2027            0.905635           1.0
+     independent                 correct        3027            0.902770           1.0
+     independent                 correct        4027            0.899619           1.0
+     independent   omit_protein_identity        2027            0.209360           1.0
+     independent   omit_protein_identity        3027            0.205158           1.0
+     independent   omit_protein_identity        4027            0.227619           1.0
+     independent   reverse_albumin_order        2027            1.000000           1.0
+     independent   reverse_albumin_order        3027            0.999809           1.0
+     independent   reverse_albumin_order        4027            1.000000           1.0
+     independent reverse_bilirubin_order        2027            0.968290           1.0
+     independent reverse_bilirubin_order        3027            0.967335           1.0
+     independent reverse_bilirubin_order        4027            0.963619           1.0
+     independent            reverse_both        2027            1.000000           1.0
+     independent            reverse_both        3027            1.000000           1.0
+     independent            reverse_both        4027            1.000000           1.0
+ tvae_compact100                 correct        2027            0.857243           1.0
+ tvae_compact100                 correct        3027            0.853996           1.0
+ tvae_compact100                 correct        4027            0.855175           1.0
+ tvae_compact100   omit_protein_identity        2027            0.190767           1.0
+ tvae_compact100   omit_protein_identity        3027            0.210952           1.0
+ tvae_compact100   omit_protein_identity        4027            0.218667           1.0
+ tvae_compact100   reverse_albumin_order        2027            1.000000           1.0
+ tvae_compact100   reverse_albumin_order        3027            1.000000           1.0
+ tvae_compact100   reverse_albumin_order        4027            1.000000           1.0
+ tvae_compact100 reverse_bilirubin_order        2027            0.980834           1.0
+ tvae_compact100 reverse_bilirubin_order        3027            0.981853           1.0
+ tvae_compact100 reverse_bilirubin_order        4027            0.981778           1.0
+ tvae_compact100            reverse_both        2027            1.000000           1.0
+ tvae_compact100            reverse_both        3027            1.000000           1.0
+ tvae_compact100            reverse_both        4027            1.000000           1.0
+ tvae_default300                 correct        2027            0.849920           1.0
+ tvae_default300                 correct        3027            0.839605           1.0
+ tvae_default300                 correct        4027            0.845333           1.0
+ tvae_default300   omit_protein_identity        2027            0.186501           1.0
+ tvae_default300   omit_protein_identity        3027            0.193824           1.0
+ tvae_default300   omit_protein_identity        4027            0.206476           1.0
+ tvae_default300   reverse_albumin_order        2027            1.000000           1.0
+ tvae_default300   reverse_albumin_order        3027            1.000000           1.0
+ tvae_default300   reverse_albumin_order        4027            1.000000           1.0
+ tvae_default300 reverse_bilirubin_order        2027            0.978478           1.0
+ tvae_default300 reverse_bilirubin_order        3027            0.979688           1.0
+ tvae_default300 reverse_bilirubin_order        4027            0.979175           1.0
+ tvae_default300            reverse_both        2027            1.000000           1.0
+ tvae_default300            reverse_both        3027            1.000000           1.0
+ tvae_default300            reverse_both        4027            1.000000           1.0

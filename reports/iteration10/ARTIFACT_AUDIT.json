@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "datasets": 3,
+  "fits": 9,
+  "evaluations": 27,
+  "exact_replays": 9,
+  "saved_auroc_recalculations": 162,
+  "reserved_test_rows_in_fit_or_validation": 0,
+  "split_isolation": true,
+  "hashes_match": true
+}

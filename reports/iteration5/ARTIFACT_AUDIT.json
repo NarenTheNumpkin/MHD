@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "new_training_runs": 36,
+  "new_evaluations": 108,
+  "reused_reference_evaluations": 81,
+  "fitted_models": 63,
+  "fit_only_initialization_counts": true,
+  "unchanged_core_source": "1a9e99d67a8131df426c2292c785cfe2b7c0f9d99d465fe4f476278d69a5645c",
+  "matched_preprocessing_graph_rules_capacity": true,
+  "matching_sampling_configs_and_label_order": true,
+  "original_reserved_test_rows_in_fit_or_validation": 0,
+  "all_saved_auroc_reproduced": true,
+  "all_missingness_bounds_and_variance_ratios_recomputed": true,
+  "exact_sampler_replays": 3
+}

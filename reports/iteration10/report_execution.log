@@ -1,0 +1,13 @@
+      dataset       rf  logistic  rf_augment  logistic_augment  rf_real  logistic_real  numeric_w  association_rmse  violation  violation_upper  max_missing_error_fit  c2st_auc  exact_train_copy
+          ckd 0.999111  0.998519    0.999926          0.999630 1.000000       1.000000   0.212107          0.110539        0.0          0.74787               0.040185  0.788351               0.0
+     diabetes 0.928602  0.925825    0.941102          0.938194 0.957813       0.934766   0.175933          0.066834        0.0          0.00000               0.000000  0.504078               0.0
+heart_failure 0.782627  0.728997    0.813579          0.744259 0.861361       0.780488   0.306046          0.074945        0.0          0.00000               0.000000  0.757623               0.0
+{
+  "fits": 9,
+  "evaluations": 27,
+  "fit_seconds_sum": 49.03748937603086,
+  "sample_seconds_sum": 24.55215891962871,
+  "evaluation_seconds_sum": 28.921549919061363,
+  "gpu_vram_gib": 0,
+  "peak_system_ram": "not measured"
+}

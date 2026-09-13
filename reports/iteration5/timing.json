@@ -1,0 +1,15 @@
+{
+  "new_fits": 36,
+  "new_evaluations": 108,
+  "reused_evaluations": 81,
+  "fit_seconds_sum": 201.73368674796075,
+  "fit_seconds_min": 1.5836612917482853,
+  "fit_seconds_max": 8.296623915899545,
+  "sample_seconds_sum": 169.26922674290836,
+  "sample_seconds_min": 1.226968334056437,
+  "sample_seconds_max": 2.348626666236669,
+  "evaluation_seconds_sum": 113.3664825023152,
+  "device": "CPU",
+  "gpu_vram_gib": 0,
+  "peak_system_ram": "not measured"
+}

@@ -1,0 +1,10 @@
+# Iteration 10: external-cohort development portability
+
+This stage tests whether the current observation-initialized full model runs on three additional public clinical tables: CKD, heart failure and diabetes. It is a portability study, not clinical validation or a confirmatory comparison.
+
+- Use each dataset's original outer fold 0 with split seed 2026 locked and inner development seed 2027. The outer test remains closed. The datasets and partitions are different from ILPD, but each comes from a public UCI table with convenience sampling and its own label definition.
+- Fit three training seeds (0,1,2) per dataset, for nine new models. Use the current full_prior settings: 30 steps, 100-epoch maximum, width 32, two layers, four heads, batch 64, velocity prediction, clinical weight 0.01, paired initialization, fit-frequency observation heads, CPU and fixed validation corruption. Recompute each fit-only graph and rule set from that dataset's training partition. Train with guidance zero, sample with adaptive guidance 10.
+- Generate three fivefold-size tables per checkpoint with seeds 70001–70003 and the exact fit-label vector. Evaluate with seed 2026 using the existing utility, fidelity, missingness, constraint, distribution-shape, C2ST and privacy diagnostics. This produces 27 new records.
+- Do not tune a dataset-specific model, open an outer test, or compare these cohorts to a baseline unavailable under the same protocol. No clinical claim follows from portability. CKD categorical ordinal codes remain categorical as defined by the project; diabetes and heart-failure labels retain their schema meanings.
+
+Report training and sampling variation separately by dataset. Treat the three inner partitions used in the ILPD work and these three different public tables as descriptive development evidence, not a population confidence interval. Any dataset with nonfinite decoding, missingness error above 0.02, or invalid metric output fails its artifact check and remains retained.

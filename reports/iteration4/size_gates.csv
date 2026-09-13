@@ -1,0 +1,13 @@
+arm,inner_seed,rf_non_degradation,logistic_non_degradation,some_utility_increase,numeric_fidelity,association_fidelity,observed_violation,missingness_fit,missingness_validation,rule_coverage,partition_pass,flagged_5x_tables,delta_rf,delta_logistic,max_feature_error_increase_fit,min_rule_coverage_delta
+guided_base,2027,True,True,False,True,True,True,True,True,True,False,0,-0.0031104811402473675,-0.007638396724151564,0.0,-6.36739891755056e-05
+guided_base,3027,True,True,True,True,True,True,True,True,True,True,0,0.006004409796046883,0.0016930466965904278,0.0,0.0
+guided_base,4027,True,True,False,True,True,True,True,True,True,False,0,-0.0041377631739076826,-0.0023528457263396474,0.0,0.0
+matched_dense,2027,True,True,True,True,True,True,True,True,True,True,0,0.009449562957713042,-0.0011024490117330643,0.0,0.0
+matched_dense,3027,True,True,True,True,True,True,True,True,True,True,0,-0.0021655248444759634,0.008425860303961086,0.0,0.0
+matched_dense,4027,True,True,True,True,True,True,True,True,True,True,0,-0.0005476451259585069,0.002596243560099021,0.0,0.0
+previous_full,2027,False,True,False,True,True,True,True,True,True,False,0,-0.02386014646822565,-0.001968658949523583,0.0,0.0
+previous_full,3027,True,True,True,True,True,True,True,True,True,True,0,-0.01925348452634068,0.007953382156075328,0.0,0.0
+previous_full,4027,True,True,True,True,True,True,True,True,True,True,0,0.021195894689870598,-0.01403594174678513,0.0,0.0
+updated_full,2027,True,True,True,True,True,True,True,True,True,True,3,0.005236632805732722,-0.003464839751161519,0.00019102196752626352,-0.0013371537726838412
+updated_full,3027,True,True,True,True,True,True,True,True,True,True,0,-0.003582959288133014,0.0004724781478857576,0.0,0.0
+updated_full,4027,True,True,False,True,True,True,True,True,True,False,0,-0.003001906616364458,-0.00040566305626554833,0.0,0.0

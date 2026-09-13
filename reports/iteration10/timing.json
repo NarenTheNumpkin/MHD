@@ -1,0 +1,9 @@
+{
+  "fits": 9,
+  "evaluations": 27,
+  "fit_seconds_sum": 49.03748937603086,
+  "sample_seconds_sum": 24.55215891962871,
+  "evaluation_seconds_sum": 28.921549919061363,
+  "gpu_vram_gib": 0,
+  "peak_system_ram": "not measured"
+}

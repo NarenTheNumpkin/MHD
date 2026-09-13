@@ -1,0 +1,1140 @@
+{
+  "new": [
+    "runs/iteration6/evaluations/full_m0p5_i2027_t0_s70001",
+    "runs/iteration6/evaluations/full_m1_i2027_t0_s70001",
+    "runs/iteration6/evaluations/full_m0p5_i2027_t0_s70002",
+    "runs/iteration6/evaluations/full_m1_i2027_t0_s70002",
+    "runs/iteration6/evaluations/full_m0p5_i2027_t0_s70003",
+    "runs/iteration6/evaluations/full_m1_i2027_t0_s70003",
+    "runs/iteration6/evaluations/full_m0p5_i2027_t1_s70001",
+    "runs/iteration6/evaluations/full_m1_i2027_t1_s70001",
+    "runs/iteration6/evaluations/full_m0p5_i2027_t1_s70002",
+    "runs/iteration6/evaluations/full_m1_i2027_t1_s70002",
+    "runs/iteration6/evaluations/full_m0p5_i2027_t1_s70003",
+    "runs/iteration6/evaluations/full_m1_i2027_t1_s70003",
+    "runs/iteration6/evaluations/full_m0p5_i2027_t2_s70001",
+    "runs/iteration6/evaluations/full_m1_i2027_t2_s70001",
+    "runs/iteration6/evaluations/full_m0p5_i2027_t2_s70002",
+    "runs/iteration6/evaluations/full_m1_i2027_t2_s70002",
+    "runs/iteration6/evaluations/full_m0p5_i2027_t2_s70003",
+    "runs/iteration6/evaluations/full_m1_i2027_t2_s70003",
+    "runs/iteration6/evaluations/full_m0p5_i3027_t0_s70001",
+    "runs/iteration6/evaluations/full_m1_i3027_t0_s70001",
+    "runs/iteration6/evaluations/full_m0p5_i3027_t0_s70002",
+    "runs/iteration6/evaluations/full_m1_i3027_t0_s70002",
+    "runs/iteration6/evaluations/full_m0p5_i3027_t0_s70003",
+    "runs/iteration6/evaluations/full_m1_i3027_t0_s70003",
+    "runs/iteration6/evaluations/full_m0p5_i3027_t1_s70001",
+    "runs/iteration6/evaluations/full_m1_i3027_t1_s70001",
+    "runs/iteration6/evaluations/full_m0p5_i3027_t1_s70002",
+    "runs/iteration6/evaluations/full_m1_i3027_t1_s70002",
+    "runs/iteration6/evaluations/full_m0p5_i3027_t1_s70003",
+    "runs/iteration6/evaluations/full_m1_i3027_t1_s70003",
+    "runs/iteration6/evaluations/full_m0p5_i3027_t2_s70001",
+    "runs/iteration6/evaluations/full_m1_i3027_t2_s70001",
+    "runs/iteration6/evaluations/full_m0p5_i3027_t2_s70002",
+    "runs/iteration6/evaluations/full_m1_i3027_t2_s70002",
+    "runs/iteration6/evaluations/full_m0p5_i3027_t2_s70003",
+    "runs/iteration6/evaluations/full_m1_i3027_t2_s70003",
+    "runs/iteration6/evaluations/full_m0p5_i4027_t0_s70001",
+    "runs/iteration6/evaluations/full_m1_i4027_t0_s70001",
+    "runs/iteration6/evaluations/full_m0p5_i4027_t0_s70002",
+    "runs/iteration6/evaluations/full_m1_i4027_t0_s70002",
+    "runs/iteration6/evaluations/full_m0p5_i4027_t0_s70003",
+    "runs/iteration6/evaluations/full_m1_i4027_t0_s70003",
+    "runs/iteration6/evaluations/full_m0p5_i4027_t1_s70001",
+    "runs/iteration6/evaluations/full_m1_i4027_t1_s70001",
+    "runs/iteration6/evaluations/full_m0p5_i4027_t1_s70002",
+    "runs/iteration6/evaluations/full_m1_i4027_t1_s70002",
+    "runs/iteration6/evaluations/full_m0p5_i4027_t1_s70003",
+    "runs/iteration6/evaluations/full_m1_i4027_t1_s70003",
+    "runs/iteration6/evaluations/full_m0p5_i4027_t2_s70001",
+    "runs/iteration6/evaluations/full_m1_i4027_t2_s70001",
+    "runs/iteration6/evaluations/full_m0p5_i4027_t2_s70002",
+    "runs/iteration6/evaluations/full_m1_i4027_t2_s70002",
+    "runs/iteration6/evaluations/full_m0p5_i4027_t2_s70003",
+    "runs/iteration6/evaluations/full_m1_i4027_t2_s70003",
+    "runs/iteration6/evaluations/dense_m0p5_i2027_t0_s70001",
+    "runs/iteration6/evaluations/dense_m1_i2027_t0_s70001",
+    "runs/iteration6/evaluations/dense_m0p5_i2027_t0_s70002",
+    "runs/iteration6/evaluations/dense_m1_i2027_t0_s70002",
+    "runs/iteration6/evaluations/dense_m0p5_i2027_t0_s70003",
+    "runs/iteration6/evaluations/dense_m1_i2027_t0_s70003",
+    "runs/iteration6/evaluations/dense_m0p5_i2027_t1_s70001",
+    "runs/iteration6/evaluations/dense_m1_i2027_t1_s70001",
+    "runs/iteration6/evaluations/dense_m0p5_i2027_t1_s70002",
+    "runs/iteration6/evaluations/dense_m1_i2027_t1_s70002",
+    "runs/iteration6/evaluations/dense_m0p5_i2027_t1_s70003",
+    "runs/iteration6/evaluations/dense_m1_i2027_t1_s70003",
+    "runs/iteration6/evaluations/dense_m0p5_i2027_t2_s70001",
+    "runs/iteration6/evaluations/dense_m1_i2027_t2_s70001",
+    "runs/iteration6/evaluations/dense_m0p5_i2027_t2_s70002",
+    "runs/iteration6/evaluations/dense_m1_i2027_t2_s70002",
+    "runs/iteration6/evaluations/dense_m0p5_i2027_t2_s70003",
+    "runs/iteration6/evaluations/dense_m1_i2027_t2_s70003",
+    "runs/iteration6/evaluations/dense_m0p5_i3027_t0_s70001",
+    "runs/iteration6/evaluations/dense_m1_i3027_t0_s70001",
+    "runs/iteration6/evaluations/dense_m0p5_i3027_t0_s70002",
+    "runs/iteration6/evaluations/dense_m1_i3027_t0_s70002",
+    "runs/iteration6/evaluations/dense_m0p5_i3027_t0_s70003",
+    "runs/iteration6/evaluations/dense_m1_i3027_t0_s70003",
+    "runs/iteration6/evaluations/dense_m0p5_i3027_t1_s70001",
+    "runs/iteration6/evaluations/dense_m1_i3027_t1_s70001",
+    "runs/iteration6/evaluations/dense_m0p5_i3027_t1_s70002",
+    "runs/iteration6/evaluations/dense_m1_i3027_t1_s70002",
+    "runs/iteration6/evaluations/dense_m0p5_i3027_t1_s70003",
+    "runs/iteration6/evaluations/dense_m1_i3027_t1_s70003",
+    "runs/iteration6/evaluations/dense_m0p5_i3027_t2_s70001",
+    "runs/iteration6/evaluations/dense_m1_i3027_t2_s70001",
+    "runs/iteration6/evaluations/dense_m0p5_i3027_t2_s70002",
+    "runs/iteration6/evaluations/dense_m1_i3027_t2_s70002",
+    "runs/iteration6/evaluations/dense_m0p5_i3027_t2_s70003",
+    "runs/iteration6/evaluations/dense_m1_i3027_t2_s70003",
+    "runs/iteration6/evaluations/dense_m0p5_i4027_t0_s70001",
+    "runs/iteration6/evaluations/dense_m1_i4027_t0_s70001",
+    "runs/iteration6/evaluations/dense_m0p5_i4027_t0_s70002",
+    "runs/iteration6/evaluations/dense_m1_i4027_t0_s70002",
+    "runs/iteration6/evaluations/dense_m0p5_i4027_t0_s70003",
+    "runs/iteration6/evaluations/dense_m1_i4027_t0_s70003",
+    "runs/iteration6/evaluations/dense_m0p5_i4027_t1_s70001",
+    "runs/iteration6/evaluations/dense_m1_i4027_t1_s70001",
+    "runs/iteration6/evaluations/dense_m0p5_i4027_t1_s70002",
+    "runs/iteration6/evaluations/dense_m1_i4027_t1_s70002",
+    "runs/iteration6/evaluations/dense_m0p5_i4027_t1_s70003",
+    "runs/iteration6/evaluations/dense_m1_i4027_t1_s70003",
+    "runs/iteration6/evaluations/dense_m0p5_i4027_t2_s70001",
+    "runs/iteration6/evaluations/dense_m1_i4027_t2_s70001",
+    "runs/iteration6/evaluations/dense_m0p5_i4027_t2_s70002",
+    "runs/iteration6/evaluations/dense_m1_i4027_t2_s70002",
+    "runs/iteration6/evaluations/dense_m0p5_i4027_t2_s70003",
+    "runs/iteration6/evaluations/dense_m1_i4027_t2_s70003",
+    "runs/iteration6/evaluations/base_m0p5_i2027_t0_s70001",
+    "runs/iteration6/evaluations/base_m1_i2027_t0_s70001",
+    "runs/iteration6/evaluations/base_m0p5_i2027_t0_s70002",
+    "runs/iteration6/evaluations/base_m1_i2027_t0_s70002",
+    "runs/iteration6/evaluations/base_m0p5_i2027_t0_s70003",
+    "runs/iteration6/evaluations/base_m1_i2027_t0_s70003",
+    "runs/iteration6/evaluations/base_m0p5_i2027_t1_s70001",
+    "runs/iteration6/evaluations/base_m1_i2027_t1_s70001",
+    "runs/iteration6/evaluations/base_m0p5_i2027_t1_s70002",
+    "runs/iteration6/evaluations/base_m1_i2027_t1_s70002",
+    "runs/iteration6/evaluations/base_m0p5_i2027_t1_s70003",
+    "runs/iteration6/evaluations/base_m1_i2027_t1_s70003",
+    "runs/iteration6/evaluations/base_m0p5_i2027_t2_s70001",
+    "runs/iteration6/evaluations/base_m1_i2027_t2_s70001",
+    "runs/iteration6/evaluations/base_m0p5_i2027_t2_s70002",
+    "runs/iteration6/evaluations/base_m1_i2027_t2_s70002",
+    "runs/iteration6/evaluations/base_m0p5_i2027_t2_s70003",
+    "runs/iteration6/evaluations/base_m1_i2027_t2_s70003",
+    "runs/iteration6/evaluations/base_m0p5_i3027_t0_s70001",
+    "runs/iteration6/evaluations/base_m1_i3027_t0_s70001",
+    "runs/iteration6/evaluations/base_m0p5_i3027_t0_s70002",
+    "runs/iteration6/evaluations/base_m1_i3027_t0_s70002",
+    "runs/iteration6/evaluations/base_m0p5_i3027_t0_s70003",
+    "runs/iteration6/evaluations/base_m1_i3027_t0_s70003",
+    "runs/iteration6/evaluations/base_m0p5_i3027_t1_s70001",
+    "runs/iteration6/evaluations/base_m1_i3027_t1_s70001",
+    "runs/iteration6/evaluations/base_m0p5_i3027_t1_s70002",
+    "runs/iteration6/evaluations/base_m1_i3027_t1_s70002",
+    "runs/iteration6/evaluations/base_m0p5_i3027_t1_s70003",
+    "runs/iteration6/evaluations/base_m1_i3027_t1_s70003",
+    "runs/iteration6/evaluations/base_m0p5_i3027_t2_s70001",
+    "runs/iteration6/evaluations/base_m1_i3027_t2_s70001",
+    "runs/iteration6/evaluations/base_m0p5_i3027_t2_s70002",
+    "runs/iteration6/evaluations/base_m1_i3027_t2_s70002",
+    "runs/iteration6/evaluations/base_m0p5_i3027_t2_s70003",
+    "runs/iteration6/evaluations/base_m1_i3027_t2_s70003",
+    "runs/iteration6/evaluations/base_m0p5_i4027_t0_s70001",
+    "runs/iteration6/evaluations/base_m1_i4027_t0_s70001",
+    "runs/iteration6/evaluations/base_m0p5_i4027_t0_s70002",
+    "runs/iteration6/evaluations/base_m1_i4027_t0_s70002",
+    "runs/iteration6/evaluations/base_m0p5_i4027_t0_s70003",
+    "runs/iteration6/evaluations/base_m1_i4027_t0_s70003",
+    "runs/iteration6/evaluations/base_m0p5_i4027_t1_s70001",
+    "runs/iteration6/evaluations/base_m1_i4027_t1_s70001",
+    "runs/iteration6/evaluations/base_m0p5_i4027_t1_s70002",
+    "runs/iteration6/evaluations/base_m1_i4027_t1_s70002",
+    "runs/iteration6/evaluations/base_m0p5_i4027_t1_s70003",
+    "runs/iteration6/evaluations/base_m1_i4027_t1_s70003",
+    "runs/iteration6/evaluations/base_m0p5_i4027_t2_s70001",
+    "runs/iteration6/evaluations/base_m1_i4027_t2_s70001",
+    "runs/iteration6/evaluations/base_m0p5_i4027_t2_s70002",
+    "runs/iteration6/evaluations/base_m1_i4027_t2_s70002",
+    "runs/iteration6/evaluations/base_m0p5_i4027_t2_s70003",
+    "runs/iteration6/evaluations/base_m1_i4027_t2_s70003"
+  ],
+  "references": [
+    {
+      "kind": "prior",
+      "architecture": "full",
+      "path": "runs/iteration5/evaluations/full_prior_i2027_t0_s70001_n5",
+      "shape": "reports/iteration6/reference_shapes/prior_full_prior_i2027_t0_s70001_n5.json"
+    },
+    {
+      "kind": "original",
+      "architecture": "full",
+      "path": "runs/iteration4/evaluations/updated_full_i2027_t0_s70001_n5",
+      "shape": "reports/iteration6/reference_shapes/original_updated_full_i2027_t0_s70001_n5.json"
+    },
+    {
+      "kind": "prior",
+      "architecture": "full",
+      "path": "runs/iteration5/evaluations/full_prior_i2027_t0_s70002_n5",
+      "shape": "reports/iteration6/reference_shapes/prior_full_prior_i2027_t0_s70002_n5.json"
+    },
+    {
+      "kind": "original",
+      "architecture": "full",
+      "path": "runs/iteration4/evaluations/updated_full_i2027_t0_s70002_n5",
+      "shape": "reports/iteration6/reference_shapes/original_updated_full_i2027_t0_s70002_n5.json"
+    },
+    {
+      "kind": "prior",
+      "architecture": "full",
+      "path": "runs/iteration5/evaluations/full_prior_i2027_t0_s70003_n5",
+      "shape": "reports/iteration6/reference_shapes/prior_full_prior_i2027_t0_s70003_n5.json"
+    },
+    {
+      "kind": "original",
+      "architecture": "full",
+      "path": "runs/iteration4/evaluations/updated_full_i2027_t0_s70003_n5",
+      "shape": "reports/iteration6/reference_shapes/original_updated_full_i2027_t0_s70003_n5.json"
+    },
+    {
+      "kind": "prior",
+      "architecture": "full",
+      "path": "runs/iteration5/evaluations/full_prior_i2027_t1_s70001_n5",
+      "shape": "reports/iteration6/reference_shapes/prior_full_prior_i2027_t1_s70001_n5.json"
+    },
+    {
+      "kind": "original",
+      "architecture": "full",
+      "path": "runs/iteration4/evaluations/updated_full_i2027_t1_s70001_n5",
+      "shape": "reports/iteration6/reference_shapes/original_updated_full_i2027_t1_s70001_n5.json"
+    },
+    {
+      "kind": "prior",
+      "architecture": "full",
+      "path": "runs/iteration5/evaluations/full_prior_i2027_t1_s70002_n5",
+      "shape": "reports/iteration6/reference_shapes/prior_full_prior_i2027_t1_s70002_n5.json"
+    },
+    {
+      "kind": "original",
+      "architecture": "full",
+      "path": "runs/iteration4/evaluations/updated_full_i2027_t1_s70002_n5",
+      "shape": "reports/iteration6/reference_shapes/original_updated_full_i2027_t1_s70002_n5.json"
+    },
+    {
+      "kind": "prior",
+      "architecture": "full",
+      "path": "runs/iteration5/evaluations/full_prior_i2027_t1_s70003_n5",
+      "shape": "reports/iteration6/reference_shapes/prior_full_prior_i2027_t1_s70003_n5.json"
+    },
+    {
+      "kind": "original",
+      "architecture": "full",
+      "path": "runs/iteration4/evaluations/updated_full_i2027_t1_s70003_n5",
+      "shape": "reports/iteration6/reference_shapes/original_updated_full_i2027_t1_s70003_n5.json"
+    },
+    {
+      "kind": "prior",
+      "architecture": "full",
+      "path": "runs/iteration5/evaluations/full_prior_i2027_t2_s70001_n5",
+      "shape": "reports/iteration6/reference_shapes/prior_full_prior_i2027_t2_s70001_n5.json"
+    },
+    {
+      "kind": "original",
+      "architecture": "full",
+      "path": "runs/iteration4/evaluations/updated_full_i2027_t2_s70001_n5",
+      "shape": "reports/iteration6/reference_shapes/original_updated_full_i2027_t2_s70001_n5.json"
+    },
+    {
+      "kind": "prior",
+      "architecture": "full",
+      "path": "runs/iteration5/evaluations/full_prior_i2027_t2_s70002_n5",
+      "shape": "reports/iteration6/reference_shapes/prior_full_prior_i2027_t2_s70002_n5.json"
+    },
+    {
+      "kind": "original",
+      "architecture": "full",
+      "path": "runs/iteration4/evaluations/updated_full_i2027_t2_s70002_n5",
+      "shape": "reports/iteration6/reference_shapes/original_updated_full_i2027_t2_s70002_n5.json"
+    },
+    {
+      "kind": "prior",
+      "architecture": "full",
+      "path": "runs/iteration5/evaluations/full_prior_i2027_t2_s70003_n5",
+      "shape": "reports/iteration6/reference_shapes/prior_full_prior_i2027_t2_s70003_n5.json"
+    },
+    {
+      "kind": "original",
+      "architecture": "full",
+      "path": "runs/iteration4/evaluations/updated_full_i2027_t2_s70003_n5",
+      "shape": "reports/iteration6/reference_shapes/original_updated_full_i2027_t2_s70003_n5.json"
+    },
+    {
+      "kind": "prior",
+      "architecture": "full",
+      "path": "runs/iteration5/evaluations/full_prior_i3027_t0_s70001_n5",
+      "shape": "reports/iteration6/reference_shapes/prior_full_prior_i3027_t0_s70001_n5.json"
+    },
+    {
+      "kind": "original",
+      "architecture": "full",
+      "path": "runs/iteration4/evaluations/updated_full_i3027_t0_s70001_n5",
+      "shape": "reports/iteration6/reference_shapes/original_updated_full_i3027_t0_s70001_n5.json"
+    },
+    {
+      "kind": "prior",
+      "architecture": "full",
+      "path": "runs/iteration5/evaluations/full_prior_i3027_t0_s70002_n5",
+      "shape": "reports/iteration6/reference_shapes/prior_full_prior_i3027_t0_s70002_n5.json"
+    },
+    {
+      "kind": "original",
+      "architecture": "full",
+      "path": "runs/iteration4/evaluations/updated_full_i3027_t0_s70002_n5",
+      "shape": "reports/iteration6/reference_shapes/original_updated_full_i3027_t0_s70002_n5.json"
+    },
+    {
+      "kind": "prior",
+      "architecture": "full",
+      "path": "runs/iteration5/evaluations/full_prior_i3027_t0_s70003_n5",
+      "shape": "reports/iteration6/reference_shapes/prior_full_prior_i3027_t0_s70003_n5.json"
+    },
+    {
+      "kind": "original",
+      "architecture": "full",
+      "path": "runs/iteration4/evaluations/updated_full_i3027_t0_s70003_n5",
+      "shape": "reports/iteration6/reference_shapes/original_updated_full_i3027_t0_s70003_n5.json"
+    },
+    {
+      "kind": "prior",
+      "architecture": "full",
+      "path": "runs/iteration5/evaluations/full_prior_i3027_t1_s70001_n5",
+      "shape": "reports/iteration6/reference_shapes/prior_full_prior_i3027_t1_s70001_n5.json"
+    },
+    {
+      "kind": "original",
+      "architecture": "full",
+      "path": "runs/iteration4/evaluations/updated_full_i3027_t1_s70001_n5",
+      "shape": "reports/iteration6/reference_shapes/original_updated_full_i3027_t1_s70001_n5.json"
+    },
+    {
+      "kind": "prior",
+      "architecture": "full",
+      "path": "runs/iteration5/evaluations/full_prior_i3027_t1_s70002_n5",
+      "shape": "reports/iteration6/reference_shapes/prior_full_prior_i3027_t1_s70002_n5.json"
+    },
+    {
+      "kind": "original",
+      "architecture": "full",
+      "path": "runs/iteration4/evaluations/updated_full_i3027_t1_s70002_n5",
+      "shape": "reports/iteration6/reference_shapes/original_updated_full_i3027_t1_s70002_n5.json"
+    },
+    {
+      "kind": "prior",
+      "architecture": "full",
+      "path": "runs/iteration5/evaluations/full_prior_i3027_t1_s70003_n5",
+      "shape": "reports/iteration6/reference_shapes/prior_full_prior_i3027_t1_s70003_n5.json"
+    },
+    {
+      "kind": "original",
+      "architecture": "full",
+      "path": "runs/iteration4/evaluations/updated_full_i3027_t1_s70003_n5",
+      "shape": "reports/iteration6/reference_shapes/original_updated_full_i3027_t1_s70003_n5.json"
+    },
+    {
+      "kind": "prior",
+      "architecture": "full",
+      "path": "runs/iteration5/evaluations/full_prior_i3027_t2_s70001_n5",
+      "shape": "reports/iteration6/reference_shapes/prior_full_prior_i3027_t2_s70001_n5.json"
+    },
+    {
+      "kind": "original",
+      "architecture": "full",
+      "path": "runs/iteration4/evaluations/updated_full_i3027_t2_s70001_n5",
+      "shape": "reports/iteration6/reference_shapes/original_updated_full_i3027_t2_s70001_n5.json"
+    },
+    {
+      "kind": "prior",
+      "architecture": "full",
+      "path": "runs/iteration5/evaluations/full_prior_i3027_t2_s70002_n5",
+      "shape": "reports/iteration6/reference_shapes/prior_full_prior_i3027_t2_s70002_n5.json"
+    },
+    {
+      "kind": "original",
+      "architecture": "full",
+      "path": "runs/iteration4/evaluations/updated_full_i3027_t2_s70002_n5",
+      "shape": "reports/iteration6/reference_shapes/original_updated_full_i3027_t2_s70002_n5.json"
+    },
+    {
+      "kind": "prior",
+      "architecture": "full",
+      "path": "runs/iteration5/evaluations/full_prior_i3027_t2_s70003_n5",
+      "shape": "reports/iteration6/reference_shapes/prior_full_prior_i3027_t2_s70003_n5.json"
+    },
+    {
+      "kind": "original",
+      "architecture": "full",
+      "path": "runs/iteration4/evaluations/updated_full_i3027_t2_s70003_n5",
+      "shape": "reports/iteration6/reference_shapes/original_updated_full_i3027_t2_s70003_n5.json"
+    },
+    {
+      "kind": "prior",
+      "architecture": "full",
+      "path": "runs/iteration5/evaluations/full_prior_i4027_t0_s70001_n5",
+      "shape": "reports/iteration6/reference_shapes/prior_full_prior_i4027_t0_s70001_n5.json"
+    },
+    {
+      "kind": "original",
+      "architecture": "full",
+      "path": "runs/iteration4/evaluations/updated_full_i4027_t0_s70001_n5",
+      "shape": "reports/iteration6/reference_shapes/original_updated_full_i4027_t0_s70001_n5.json"
+    },
+    {
+      "kind": "prior",
+      "architecture": "full",
+      "path": "runs/iteration5/evaluations/full_prior_i4027_t0_s70002_n5",
+      "shape": "reports/iteration6/reference_shapes/prior_full_prior_i4027_t0_s70002_n5.json"
+    },
+    {
+      "kind": "original",
+      "architecture": "full",
+      "path": "runs/iteration4/evaluations/updated_full_i4027_t0_s70002_n5",
+      "shape": "reports/iteration6/reference_shapes/original_updated_full_i4027_t0_s70002_n5.json"
+    },
+    {
+      "kind": "prior",
+      "architecture": "full",
+      "path": "runs/iteration5/evaluations/full_prior_i4027_t0_s70003_n5",
+      "shape": "reports/iteration6/reference_shapes/prior_full_prior_i4027_t0_s70003_n5.json"
+    },
+    {
+      "kind": "original",
+      "architecture": "full",
+      "path": "runs/iteration4/evaluations/updated_full_i4027_t0_s70003_n5",
+      "shape": "reports/iteration6/reference_shapes/original_updated_full_i4027_t0_s70003_n5.json"
+    },
+    {
+      "kind": "prior",
+      "architecture": "full",
+      "path": "runs/iteration5/evaluations/full_prior_i4027_t1_s70001_n5",
+      "shape": "reports/iteration6/reference_shapes/prior_full_prior_i4027_t1_s70001_n5.json"
+    },
+    {
+      "kind": "original",
+      "architecture": "full",
+      "path": "runs/iteration4/evaluations/updated_full_i4027_t1_s70001_n5",
+      "shape": "reports/iteration6/reference_shapes/original_updated_full_i4027_t1_s70001_n5.json"
+    },
+    {
+      "kind": "prior",
+      "architecture": "full",
+      "path": "runs/iteration5/evaluations/full_prior_i4027_t1_s70002_n5",
+      "shape": "reports/iteration6/reference_shapes/prior_full_prior_i4027_t1_s70002_n5.json"
+    },
+    {
+      "kind": "original",
+      "architecture": "full",
+      "path": "runs/iteration4/evaluations/updated_full_i4027_t1_s70002_n5",
+      "shape": "reports/iteration6/reference_shapes/original_updated_full_i4027_t1_s70002_n5.json"
+    },
+    {
+      "kind": "prior",
+      "architecture": "full",
+      "path": "runs/iteration5/evaluations/full_prior_i4027_t1_s70003_n5",
+      "shape": "reports/iteration6/reference_shapes/prior_full_prior_i4027_t1_s70003_n5.json"
+    },
+    {
+      "kind": "original",
+      "architecture": "full",
+      "path": "runs/iteration4/evaluations/updated_full_i4027_t1_s70003_n5",
+      "shape": "reports/iteration6/reference_shapes/original_updated_full_i4027_t1_s70003_n5.json"
+    },
+    {
+      "kind": "prior",
+      "architecture": "full",
+      "path": "runs/iteration5/evaluations/full_prior_i4027_t2_s70001_n5",
+      "shape": "reports/iteration6/reference_shapes/prior_full_prior_i4027_t2_s70001_n5.json"
+    },
+    {
+      "kind": "original",
+      "architecture": "full",
+      "path": "runs/iteration4/evaluations/updated_full_i4027_t2_s70001_n5",
+      "shape": "reports/iteration6/reference_shapes/original_updated_full_i4027_t2_s70001_n5.json"
+    },
+    {
+      "kind": "prior",
+      "architecture": "full",
+      "path": "runs/iteration5/evaluations/full_prior_i4027_t2_s70002_n5",
+      "shape": "reports/iteration6/reference_shapes/prior_full_prior_i4027_t2_s70002_n5.json"
+    },
+    {
+      "kind": "original",
+      "architecture": "full",
+      "path": "runs/iteration4/evaluations/updated_full_i4027_t2_s70002_n5",
+      "shape": "reports/iteration6/reference_shapes/original_updated_full_i4027_t2_s70002_n5.json"
+    },
+    {
+      "kind": "prior",
+      "architecture": "full",
+      "path": "runs/iteration5/evaluations/full_prior_i4027_t2_s70003_n5",
+      "shape": "reports/iteration6/reference_shapes/prior_full_prior_i4027_t2_s70003_n5.json"
+    },
+    {
+      "kind": "original",
+      "architecture": "full",
+      "path": "runs/iteration4/evaluations/updated_full_i4027_t2_s70003_n5",
+      "shape": "reports/iteration6/reference_shapes/original_updated_full_i4027_t2_s70003_n5.json"
+    },
+    {
+      "kind": "prior",
+      "architecture": "dense",
+      "path": "runs/iteration5/evaluations/dense_prior_i2027_t0_s70001_n5",
+      "shape": "reports/iteration6/reference_shapes/prior_dense_prior_i2027_t0_s70001_n5.json"
+    },
+    {
+      "kind": "original",
+      "architecture": "dense",
+      "path": "runs/iteration4/evaluations/matched_dense_i2027_t0_s70001_n5",
+      "shape": "reports/iteration6/reference_shapes/original_matched_dense_i2027_t0_s70001_n5.json"
+    },
+    {
+      "kind": "prior",
+      "architecture": "dense",
+      "path": "runs/iteration5/evaluations/dense_prior_i2027_t0_s70002_n5",
+      "shape": "reports/iteration6/reference_shapes/prior_dense_prior_i2027_t0_s70002_n5.json"
+    },
+    {
+      "kind": "original",
+      "architecture": "dense",
+      "path": "runs/iteration4/evaluations/matched_dense_i2027_t0_s70002_n5",
+      "shape": "reports/iteration6/reference_shapes/original_matched_dense_i2027_t0_s70002_n5.json"
+    },
+    {
+      "kind": "prior",
+      "architecture": "dense",
+      "path": "runs/iteration5/evaluations/dense_prior_i2027_t0_s70003_n5",
+      "shape": "reports/iteration6/reference_shapes/prior_dense_prior_i2027_t0_s70003_n5.json"
+    },
+    {
+      "kind": "original",
+      "architecture": "dense",
+      "path": "runs/iteration4/evaluations/matched_dense_i2027_t0_s70003_n5",
+      "shape": "reports/iteration6/reference_shapes/original_matched_dense_i2027_t0_s70003_n5.json"
+    },
+    {
+      "kind": "prior",
+      "architecture": "dense",
+      "path": "runs/iteration5/evaluations/dense_prior_i2027_t1_s70001_n5",
+      "shape": "reports/iteration6/reference_shapes/prior_dense_prior_i2027_t1_s70001_n5.json"
+    },
+    {
+      "kind": "original",
+      "architecture": "dense",
+      "path": "runs/iteration4/evaluations/matched_dense_i2027_t1_s70001_n5",
+      "shape": "reports/iteration6/reference_shapes/original_matched_dense_i2027_t1_s70001_n5.json"
+    },
+    {
+      "kind": "prior",
+      "architecture": "dense",
+      "path": "runs/iteration5/evaluations/dense_prior_i2027_t1_s70002_n5",
+      "shape": "reports/iteration6/reference_shapes/prior_dense_prior_i2027_t1_s70002_n5.json"
+    },
+    {
+      "kind": "original",
+      "architecture": "dense",
+      "path": "runs/iteration4/evaluations/matched_dense_i2027_t1_s70002_n5",
+      "shape": "reports/iteration6/reference_shapes/original_matched_dense_i2027_t1_s70002_n5.json"
+    },
+    {
+      "kind": "prior",
+      "architecture": "dense",
+      "path": "runs/iteration5/evaluations/dense_prior_i2027_t1_s70003_n5",
+      "shape": "reports/iteration6/reference_shapes/prior_dense_prior_i2027_t1_s70003_n5.json"
+    },
+    {
+      "kind": "original",
+      "architecture": "dense",
+      "path": "runs/iteration4/evaluations/matched_dense_i2027_t1_s70003_n5",
+      "shape": "reports/iteration6/reference_shapes/original_matched_dense_i2027_t1_s70003_n5.json"
+    },
+    {
+      "kind": "prior",
+      "architecture": "dense",
+      "path": "runs/iteration5/evaluations/dense_prior_i2027_t2_s70001_n5",
+      "shape": "reports/iteration6/reference_shapes/prior_dense_prior_i2027_t2_s70001_n5.json"
+    },
+    {
+      "kind": "original",
+      "architecture": "dense",
+      "path": "runs/iteration4/evaluations/matched_dense_i2027_t2_s70001_n5",
+      "shape": "reports/iteration6/reference_shapes/original_matched_dense_i2027_t2_s70001_n5.json"
+    },
+    {
+      "kind": "prior",
+      "architecture": "dense",
+      "path": "runs/iteration5/evaluations/dense_prior_i2027_t2_s70002_n5",
+      "shape": "reports/iteration6/reference_shapes/prior_dense_prior_i2027_t2_s70002_n5.json"
+    },
+    {
+      "kind": "original",
+      "architecture": "dense",
+      "path": "runs/iteration4/evaluations/matched_dense_i2027_t2_s70002_n5",
+      "shape": "reports/iteration6/reference_shapes/original_matched_dense_i2027_t2_s70002_n5.json"
+    },
+    {
+      "kind": "prior",
+      "architecture": "dense",
+      "path": "runs/iteration5/evaluations/dense_prior_i2027_t2_s70003_n5",
+      "shape": "reports/iteration6/reference_shapes/prior_dense_prior_i2027_t2_s70003_n5.json"
+    },
+    {
+      "kind": "original",
+      "architecture": "dense",
+      "path": "runs/iteration4/evaluations/matched_dense_i2027_t2_s70003_n5",
+      "shape": "reports/iteration6/reference_shapes/original_matched_dense_i2027_t2_s70003_n5.json"
+    },
+    {
+      "kind": "prior",
+      "architecture": "dense",
+      "path": "runs/iteration5/evaluations/dense_prior_i3027_t0_s70001_n5",
+      "shape": "reports/iteration6/reference_shapes/prior_dense_prior_i3027_t0_s70001_n5.json"
+    },
+    {
+      "kind": "original",
+      "architecture": "dense",
+      "path": "runs/iteration4/evaluations/matched_dense_i3027_t0_s70001_n5",
+      "shape": "reports/iteration6/reference_shapes/original_matched_dense_i3027_t0_s70001_n5.json"
+    },
+    {
+      "kind": "prior",
+      "architecture": "dense",
+      "path": "runs/iteration5/evaluations/dense_prior_i3027_t0_s70002_n5",
+      "shape": "reports/iteration6/reference_shapes/prior_dense_prior_i3027_t0_s70002_n5.json"
+    },
+    {
+      "kind": "original",
+      "architecture": "dense",
+      "path": "runs/iteration4/evaluations/matched_dense_i3027_t0_s70002_n5",
+      "shape": "reports/iteration6/reference_shapes/original_matched_dense_i3027_t0_s70002_n5.json"
+    },
+    {
+      "kind": "prior",
+      "architecture": "dense",
+      "path": "runs/iteration5/evaluations/dense_prior_i3027_t0_s70003_n5",
+      "shape": "reports/iteration6/reference_shapes/prior_dense_prior_i3027_t0_s70003_n5.json"
+    },
+    {
+      "kind": "original",
+      "architecture": "dense",
+      "path": "runs/iteration4/evaluations/matched_dense_i3027_t0_s70003_n5",
+      "shape": "reports/iteration6/reference_shapes/original_matched_dense_i3027_t0_s70003_n5.json"
+    },
+    {
+      "kind": "prior",
+      "architecture": "dense",
+      "path": "runs/iteration5/evaluations/dense_prior_i3027_t1_s70001_n5",
+      "shape": "reports/iteration6/reference_shapes/prior_dense_prior_i3027_t1_s70001_n5.json"
+    },
+    {
+      "kind": "original",
+      "architecture": "dense",
+      "path": "runs/iteration4/evaluations/matched_dense_i3027_t1_s70001_n5",
+      "shape": "reports/iteration6/reference_shapes/original_matched_dense_i3027_t1_s70001_n5.json"
+    },
+    {
+      "kind": "prior",
+      "architecture": "dense",
+      "path": "runs/iteration5/evaluations/dense_prior_i3027_t1_s70002_n5",
+      "shape": "reports/iteration6/reference_shapes/prior_dense_prior_i3027_t1_s70002_n5.json"
+    },
+    {
+      "kind": "original",
+      "architecture": "dense",
+      "path": "runs/iteration4/evaluations/matched_dense_i3027_t1_s70002_n5",
+      "shape": "reports/iteration6/reference_shapes/original_matched_dense_i3027_t1_s70002_n5.json"
+    },
+    {
+      "kind": "prior",
+      "architecture": "dense",
+      "path": "runs/iteration5/evaluations/dense_prior_i3027_t1_s70003_n5",
+      "shape": "reports/iteration6/reference_shapes/prior_dense_prior_i3027_t1_s70003_n5.json"
+    },
+    {
+      "kind": "original",
+      "architecture": "dense",
+      "path": "runs/iteration4/evaluations/matched_dense_i3027_t1_s70003_n5",
+      "shape": "reports/iteration6/reference_shapes/original_matched_dense_i3027_t1_s70003_n5.json"
+    },
+    {
+      "kind": "prior",
+      "architecture": "dense",
+      "path": "runs/iteration5/evaluations/dense_prior_i3027_t2_s70001_n5",
+      "shape": "reports/iteration6/reference_shapes/prior_dense_prior_i3027_t2_s70001_n5.json"
+    },
+    {
+      "kind": "original",
+      "architecture": "dense",
+      "path": "runs/iteration4/evaluations/matched_dense_i3027_t2_s70001_n5",
+      "shape": "reports/iteration6/reference_shapes/original_matched_dense_i3027_t2_s70001_n5.json"
+    },
+    {
+      "kind": "prior",
+      "architecture": "dense",
+      "path": "runs/iteration5/evaluations/dense_prior_i3027_t2_s70002_n5",
+      "shape": "reports/iteration6/reference_shapes/prior_dense_prior_i3027_t2_s70002_n5.json"
+    },
+    {
+      "kind": "original",
+      "architecture": "dense",
+      "path": "runs/iteration4/evaluations/matched_dense_i3027_t2_s70002_n5",
+      "shape": "reports/iteration6/reference_shapes/original_matched_dense_i3027_t2_s70002_n5.json"
+    },
+    {
+      "kind": "prior",
+      "architecture": "dense",
+      "path": "runs/iteration5/evaluations/dense_prior_i3027_t2_s70003_n5",
+      "shape": "reports/iteration6/reference_shapes/prior_dense_prior_i3027_t2_s70003_n5.json"
+    },
+    {
+      "kind": "original",
+      "architecture": "dense",
+      "path": "runs/iteration4/evaluations/matched_dense_i3027_t2_s70003_n5",
+      "shape": "reports/iteration6/reference_shapes/original_matched_dense_i3027_t2_s70003_n5.json"
+    },
+    {
+      "kind": "prior",
+      "architecture": "dense",
+      "path": "runs/iteration5/evaluations/dense_prior_i4027_t0_s70001_n5",
+      "shape": "reports/iteration6/reference_shapes/prior_dense_prior_i4027_t0_s70001_n5.json"
+    },
+    {
+      "kind": "original",
+      "architecture": "dense",
+      "path": "runs/iteration4/evaluations/matched_dense_i4027_t0_s70001_n5",
+      "shape": "reports/iteration6/reference_shapes/original_matched_dense_i4027_t0_s70001_n5.json"
+    },
+    {
+      "kind": "prior",
+      "architecture": "dense",
+      "path": "runs/iteration5/evaluations/dense_prior_i4027_t0_s70002_n5",
+      "shape": "reports/iteration6/reference_shapes/prior_dense_prior_i4027_t0_s70002_n5.json"
+    },
+    {
+      "kind": "original",
+      "architecture": "dense",
+      "path": "runs/iteration4/evaluations/matched_dense_i4027_t0_s70002_n5",
+      "shape": "reports/iteration6/reference_shapes/original_matched_dense_i4027_t0_s70002_n5.json"
+    },
+    {
+      "kind": "prior",
+      "architecture": "dense",
+      "path": "runs/iteration5/evaluations/dense_prior_i4027_t0_s70003_n5",
+      "shape": "reports/iteration6/reference_shapes/prior_dense_prior_i4027_t0_s70003_n5.json"
+    },
+    {
+      "kind": "original",
+      "architecture": "dense",
+      "path": "runs/iteration4/evaluations/matched_dense_i4027_t0_s70003_n5",
+      "shape": "reports/iteration6/reference_shapes/original_matched_dense_i4027_t0_s70003_n5.json"
+    },
+    {
+      "kind": "prior",
+      "architecture": "dense",
+      "path": "runs/iteration5/evaluations/dense_prior_i4027_t1_s70001_n5",
+      "shape": "reports/iteration6/reference_shapes/prior_dense_prior_i4027_t1_s70001_n5.json"
+    },
+    {
+      "kind": "original",
+      "architecture": "dense",
+      "path": "runs/iteration4/evaluations/matched_dense_i4027_t1_s70001_n5",
+      "shape": "reports/iteration6/reference_shapes/original_matched_dense_i4027_t1_s70001_n5.json"
+    },
+    {
+      "kind": "prior",
+      "architecture": "dense",
+      "path": "runs/iteration5/evaluations/dense_prior_i4027_t1_s70002_n5",
+      "shape": "reports/iteration6/reference_shapes/prior_dense_prior_i4027_t1_s70002_n5.json"
+    },
+    {
+      "kind": "original",
+      "architecture": "dense",
+      "path": "runs/iteration4/evaluations/matched_dense_i4027_t1_s70002_n5",
+      "shape": "reports/iteration6/reference_shapes/original_matched_dense_i4027_t1_s70002_n5.json"
+    },
+    {
+      "kind": "prior",
+      "architecture": "dense",
+      "path": "runs/iteration5/evaluations/dense_prior_i4027_t1_s70003_n5",
+      "shape": "reports/iteration6/reference_shapes/prior_dense_prior_i4027_t1_s70003_n5.json"
+    },
+    {
+      "kind": "original",
+      "architecture": "dense",
+      "path": "runs/iteration4/evaluations/matched_dense_i4027_t1_s70003_n5",
+      "shape": "reports/iteration6/reference_shapes/original_matched_dense_i4027_t1_s70003_n5.json"
+    },
+    {
+      "kind": "prior",
+      "architecture": "dense",
+      "path": "runs/iteration5/evaluations/dense_prior_i4027_t2_s70001_n5",
+      "shape": "reports/iteration6/reference_shapes/prior_dense_prior_i4027_t2_s70001_n5.json"
+    },
+    {
+      "kind": "original",
+      "architecture": "dense",
+      "path": "runs/iteration4/evaluations/matched_dense_i4027_t2_s70001_n5",
+      "shape": "reports/iteration6/reference_shapes/original_matched_dense_i4027_t2_s70001_n5.json"
+    },
+    {
+      "kind": "prior",
+      "architecture": "dense",
+      "path": "runs/iteration5/evaluations/dense_prior_i4027_t2_s70002_n5",
+      "shape": "reports/iteration6/reference_shapes/prior_dense_prior_i4027_t2_s70002_n5.json"
+    },
+    {
+      "kind": "original",
+      "architecture": "dense",
+      "path": "runs/iteration4/evaluations/matched_dense_i4027_t2_s70002_n5",
+      "shape": "reports/iteration6/reference_shapes/original_matched_dense_i4027_t2_s70002_n5.json"
+    },
+    {
+      "kind": "prior",
+      "architecture": "dense",
+      "path": "runs/iteration5/evaluations/dense_prior_i4027_t2_s70003_n5",
+      "shape": "reports/iteration6/reference_shapes/prior_dense_prior_i4027_t2_s70003_n5.json"
+    },
+    {
+      "kind": "original",
+      "architecture": "dense",
+      "path": "runs/iteration4/evaluations/matched_dense_i4027_t2_s70003_n5",
+      "shape": "reports/iteration6/reference_shapes/original_matched_dense_i4027_t2_s70003_n5.json"
+    },
+    {
+      "kind": "prior",
+      "architecture": "base",
+      "path": "runs/iteration5/evaluations/base_prior_i2027_t0_s70001_n5",
+      "shape": "reports/iteration6/reference_shapes/prior_base_prior_i2027_t0_s70001_n5.json"
+    },
+    {
+      "kind": "original",
+      "architecture": "base",
+      "path": "runs/iteration4/evaluations/guided_base_i2027_t0_s70001_n5",
+      "shape": "reports/iteration6/reference_shapes/original_guided_base_i2027_t0_s70001_n5.json"
+    },
+    {
+      "kind": "prior",
+      "architecture": "base",
+      "path": "runs/iteration5/evaluations/base_prior_i2027_t0_s70002_n5",
+      "shape": "reports/iteration6/reference_shapes/prior_base_prior_i2027_t0_s70002_n5.json"
+    },
+    {
+      "kind": "original",
+      "architecture": "base",
+      "path": "runs/iteration4/evaluations/guided_base_i2027_t0_s70002_n5",
+      "shape": "reports/iteration6/reference_shapes/original_guided_base_i2027_t0_s70002_n5.json"
+    },
+    {
+      "kind": "prior",
+      "architecture": "base",
+      "path": "runs/iteration5/evaluations/base_prior_i2027_t0_s70003_n5",
+      "shape": "reports/iteration6/reference_shapes/prior_base_prior_i2027_t0_s70003_n5.json"
+    },
+    {
+      "kind": "original",
+      "architecture": "base",
+      "path": "runs/iteration4/evaluations/guided_base_i2027_t0_s70003_n5",
+      "shape": "reports/iteration6/reference_shapes/original_guided_base_i2027_t0_s70003_n5.json"
+    },
+    {
+      "kind": "prior",
+      "architecture": "base",
+      "path": "runs/iteration5/evaluations/base_prior_i2027_t1_s70001_n5",
+      "shape": "reports/iteration6/reference_shapes/prior_base_prior_i2027_t1_s70001_n5.json"
+    },
+    {
+      "kind": "original",
+      "architecture": "base",
+      "path": "runs/iteration4/evaluations/guided_base_i2027_t1_s70001_n5",
+      "shape": "reports/iteration6/reference_shapes/original_guided_base_i2027_t1_s70001_n5.json"
+    },
+    {
+      "kind": "prior",
+      "architecture": "base",
+      "path": "runs/iteration5/evaluations/base_prior_i2027_t1_s70002_n5",
+      "shape": "reports/iteration6/reference_shapes/prior_base_prior_i2027_t1_s70002_n5.json"
+    },
+    {
+      "kind": "original",
+      "architecture": "base",
+      "path": "runs/iteration4/evaluations/guided_base_i2027_t1_s70002_n5",
+      "shape": "reports/iteration6/reference_shapes/original_guided_base_i2027_t1_s70002_n5.json"
+    },
+    {
+      "kind": "prior",
+      "architecture": "base",
+      "path": "runs/iteration5/evaluations/base_prior_i2027_t1_s70003_n5",
+      "shape": "reports/iteration6/reference_shapes/prior_base_prior_i2027_t1_s70003_n5.json"
+    },
+    {
+      "kind": "original",
+      "architecture": "base",
+      "path": "runs/iteration4/evaluations/guided_base_i2027_t1_s70003_n5",
+      "shape": "reports/iteration6/reference_shapes/original_guided_base_i2027_t1_s70003_n5.json"
+    },
+    {
+      "kind": "prior",
+      "architecture": "base",
+      "path": "runs/iteration5/evaluations/base_prior_i2027_t2_s70001_n5",
+      "shape": "reports/iteration6/reference_shapes/prior_base_prior_i2027_t2_s70001_n5.json"
+    },
+    {
+      "kind": "original",
+      "architecture": "base",
+      "path": "runs/iteration4/evaluations/guided_base_i2027_t2_s70001_n5",
+      "shape": "reports/iteration6/reference_shapes/original_guided_base_i2027_t2_s70001_n5.json"
+    },
+    {
+      "kind": "prior",
+      "architecture": "base",
+      "path": "runs/iteration5/evaluations/base_prior_i2027_t2_s70002_n5",
+      "shape": "reports/iteration6/reference_shapes/prior_base_prior_i2027_t2_s70002_n5.json"
+    },
+    {
+      "kind": "original",
+      "architecture": "base",
+      "path": "runs/iteration4/evaluations/guided_base_i2027_t2_s70002_n5",
+      "shape": "reports/iteration6/reference_shapes/original_guided_base_i2027_t2_s70002_n5.json"
+    },
+    {
+      "kind": "prior",
+      "architecture": "base",
+      "path": "runs/iteration5/evaluations/base_prior_i2027_t2_s70003_n5",
+      "shape": "reports/iteration6/reference_shapes/prior_base_prior_i2027_t2_s70003_n5.json"
+    },
+    {
+      "kind": "original",
+      "architecture": "base",
+      "path": "runs/iteration4/evaluations/guided_base_i2027_t2_s70003_n5",
+      "shape": "reports/iteration6/reference_shapes/original_guided_base_i2027_t2_s70003_n5.json"
+    },
+    {
+      "kind": "prior",
+      "architecture": "base",
+      "path": "runs/iteration5/evaluations/base_prior_i3027_t0_s70001_n5",
+      "shape": "reports/iteration6/reference_shapes/prior_base_prior_i3027_t0_s70001_n5.json"
+    },
+    {
+      "kind": "original",
+      "architecture": "base",
+      "path": "runs/iteration4/evaluations/guided_base_i3027_t0_s70001_n5",
+      "shape": "reports/iteration6/reference_shapes/original_guided_base_i3027_t0_s70001_n5.json"
+    },
+    {
+      "kind": "prior",
+      "architecture": "base",
+      "path": "runs/iteration5/evaluations/base_prior_i3027_t0_s70002_n5",
+      "shape": "reports/iteration6/reference_shapes/prior_base_prior_i3027_t0_s70002_n5.json"
+    },
+    {
+      "kind": "original",
+      "architecture": "base",
+      "path": "runs/iteration4/evaluations/guided_base_i3027_t0_s70002_n5",
+      "shape": "reports/iteration6/reference_shapes/original_guided_base_i3027_t0_s70002_n5.json"
+    },
+    {
+      "kind": "prior",
+      "architecture": "base",
+      "path": "runs/iteration5/evaluations/base_prior_i3027_t0_s70003_n5",
+      "shape": "reports/iteration6/reference_shapes/prior_base_prior_i3027_t0_s70003_n5.json"
+    },
+    {
+      "kind": "original",
+      "architecture": "base",
+      "path": "runs/iteration4/evaluations/guided_base_i3027_t0_s70003_n5",
+      "shape": "reports/iteration6/reference_shapes/original_guided_base_i3027_t0_s70003_n5.json"
+    },
+    {
+      "kind": "prior",
+      "architecture": "base",
+      "path": "runs/iteration5/evaluations/base_prior_i3027_t1_s70001_n5",
+      "shape": "reports/iteration6/reference_shapes/prior_base_prior_i3027_t1_s70001_n5.json"
+    },
+    {
+      "kind": "original",
+      "architecture": "base",
+      "path": "runs/iteration4/evaluations/guided_base_i3027_t1_s70001_n5",
+      "shape": "reports/iteration6/reference_shapes/original_guided_base_i3027_t1_s70001_n5.json"
+    },
+    {
+      "kind": "prior",
+      "architecture": "base",
+      "path": "runs/iteration5/evaluations/base_prior_i3027_t1_s70002_n5",
+      "shape": "reports/iteration6/reference_shapes/prior_base_prior_i3027_t1_s70002_n5.json"
+    },
+    {
+      "kind": "original",
+      "architecture": "base",
+      "path": "runs/iteration4/evaluations/guided_base_i3027_t1_s70002_n5",
+      "shape": "reports/iteration6/reference_shapes/original_guided_base_i3027_t1_s70002_n5.json"
+    },
+    {
+      "kind": "prior",
+      "architecture": "base",
+      "path": "runs/iteration5/evaluations/base_prior_i3027_t1_s70003_n5",
+      "shape": "reports/iteration6/reference_shapes/prior_base_prior_i3027_t1_s70003_n5.json"
+    },
+    {
+      "kind": "original",
+      "architecture": "base",
+      "path": "runs/iteration4/evaluations/guided_base_i3027_t1_s70003_n5",
+      "shape": "reports/iteration6/reference_shapes/original_guided_base_i3027_t1_s70003_n5.json"
+    },
+    {
+      "kind": "prior",
+      "architecture": "base",
+      "path": "runs/iteration5/evaluations/base_prior_i3027_t2_s70001_n5",
+      "shape": "reports/iteration6/reference_shapes/prior_base_prior_i3027_t2_s70001_n5.json"
+    },
+    {
+      "kind": "original",
+      "architecture": "base",
+      "path": "runs/iteration4/evaluations/guided_base_i3027_t2_s70001_n5",
+      "shape": "reports/iteration6/reference_shapes/original_guided_base_i3027_t2_s70001_n5.json"
+    },
+    {
+      "kind": "prior",
+      "architecture": "base",
+      "path": "runs/iteration5/evaluations/base_prior_i3027_t2_s70002_n5",
+      "shape": "reports/iteration6/reference_shapes/prior_base_prior_i3027_t2_s70002_n5.json"
+    },
+    {
+      "kind": "original",
+      "architecture": "base",
+      "path": "runs/iteration4/evaluations/guided_base_i3027_t2_s70002_n5",
+      "shape": "reports/iteration6/reference_shapes/original_guided_base_i3027_t2_s70002_n5.json"
+    },
+    {
+      "kind": "prior",
+      "architecture": "base",
+      "path": "runs/iteration5/evaluations/base_prior_i3027_t2_s70003_n5",
+      "shape": "reports/iteration6/reference_shapes/prior_base_prior_i3027_t2_s70003_n5.json"
+    },
+    {
+      "kind": "original",
+      "architecture": "base",
+      "path": "runs/iteration4/evaluations/guided_base_i3027_t2_s70003_n5",
+      "shape": "reports/iteration6/reference_shapes/original_guided_base_i3027_t2_s70003_n5.json"
+    },
+    {
+      "kind": "prior",
+      "architecture": "base",
+      "path": "runs/iteration5/evaluations/base_prior_i4027_t0_s70001_n5",
+      "shape": "reports/iteration6/reference_shapes/prior_base_prior_i4027_t0_s70001_n5.json"
+    },
+    {
+      "kind": "original",
+      "architecture": "base",
+      "path": "runs/iteration4/evaluations/guided_base_i4027_t0_s70001_n5",
+      "shape": "reports/iteration6/reference_shapes/original_guided_base_i4027_t0_s70001_n5.json"
+    },
+    {
+      "kind": "prior",
+      "architecture": "base",
+      "path": "runs/iteration5/evaluations/base_prior_i4027_t0_s70002_n5",
+      "shape": "reports/iteration6/reference_shapes/prior_base_prior_i4027_t0_s70002_n5.json"
+    },
+    {
+      "kind": "original",
+      "architecture": "base",
+      "path": "runs/iteration4/evaluations/guided_base_i4027_t0_s70002_n5",
+      "shape": "reports/iteration6/reference_shapes/original_guided_base_i4027_t0_s70002_n5.json"
+    },
+    {
+      "kind": "prior",
+      "architecture": "base",
+      "path": "runs/iteration5/evaluations/base_prior_i4027_t0_s70003_n5",
+      "shape": "reports/iteration6/reference_shapes/prior_base_prior_i4027_t0_s70003_n5.json"
+    },
+    {
+      "kind": "original",
+      "architecture": "base",
+      "path": "runs/iteration4/evaluations/guided_base_i4027_t0_s70003_n5",
+      "shape": "reports/iteration6/reference_shapes/original_guided_base_i4027_t0_s70003_n5.json"
+    },
+    {
+      "kind": "prior",
+      "architecture": "base",
+      "path": "runs/iteration5/evaluations/base_prior_i4027_t1_s70001_n5",
+      "shape": "reports/iteration6/reference_shapes/prior_base_prior_i4027_t1_s70001_n5.json"
+    },
+    {
+      "kind": "original",
+      "architecture": "base",
+      "path": "runs/iteration4/evaluations/guided_base_i4027_t1_s70001_n5",
+      "shape": "reports/iteration6/reference_shapes/original_guided_base_i4027_t1_s70001_n5.json"
+    },
+    {
+      "kind": "prior",
+      "architecture": "base",
+      "path": "runs/iteration5/evaluations/base_prior_i4027_t1_s70002_n5",
+      "shape": "reports/iteration6/reference_shapes/prior_base_prior_i4027_t1_s70002_n5.json"
+    },
+    {
+      "kind": "original",
+      "architecture": "base",
+      "path": "runs/iteration4/evaluations/guided_base_i4027_t1_s70002_n5",
+      "shape": "reports/iteration6/reference_shapes/original_guided_base_i4027_t1_s70002_n5.json"
+    },
+    {
+      "kind": "prior",
+      "architecture": "base",
+      "path": "runs/iteration5/evaluations/base_prior_i4027_t1_s70003_n5",
+      "shape": "reports/iteration6/reference_shapes/prior_base_prior_i4027_t1_s70003_n5.json"
+    },
+    {
+      "kind": "original",
+      "architecture": "base",
+      "path": "runs/iteration4/evaluations/guided_base_i4027_t1_s70003_n5",
+      "shape": "reports/iteration6/reference_shapes/original_guided_base_i4027_t1_s70003_n5.json"
+    },
+    {
+      "kind": "prior",
+      "architecture": "base",
+      "path": "runs/iteration5/evaluations/base_prior_i4027_t2_s70001_n5",
+      "shape": "reports/iteration6/reference_shapes/prior_base_prior_i4027_t2_s70001_n5.json"
+    },
+    {
+      "kind": "original",
+      "architecture": "base",
+      "path": "runs/iteration4/evaluations/guided_base_i4027_t2_s70001_n5",
+      "shape": "reports/iteration6/reference_shapes/original_guided_base_i4027_t2_s70001_n5.json"
+    },
+    {
+      "kind": "prior",
+      "architecture": "base",
+      "path": "runs/iteration5/evaluations/base_prior_i4027_t2_s70002_n5",
+      "shape": "reports/iteration6/reference_shapes/prior_base_prior_i4027_t2_s70002_n5.json"
+    },
+    {
+      "kind": "original",
+      "architecture": "base",
+      "path": "runs/iteration4/evaluations/guided_base_i4027_t2_s70002_n5",
+      "shape": "reports/iteration6/reference_shapes/original_guided_base_i4027_t2_s70002_n5.json"
+    },
+    {
+      "kind": "prior",
+      "architecture": "base",
+      "path": "runs/iteration5/evaluations/base_prior_i4027_t2_s70003_n5",
+      "shape": "reports/iteration6/reference_shapes/prior_base_prior_i4027_t2_s70003_n5.json"
+    },
+    {
+      "kind": "original",
+      "architecture": "base",
+      "path": "runs/iteration4/evaluations/guided_base_i4027_t2_s70003_n5",
+      "shape": "reports/iteration6/reference_shapes/original_guided_base_i4027_t2_s70003_n5.json"
+    }
+  ]
+}

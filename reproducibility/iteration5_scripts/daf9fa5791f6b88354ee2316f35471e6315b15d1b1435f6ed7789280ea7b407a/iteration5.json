@@ -1,0 +1,849 @@
+{
+  "created_at": "2026-09-12T15:00:03.969975+00:00",
+  "jobs": [
+    {
+      "variant": "full_prior",
+      "observation_weight": 1.0,
+      "reference_arm": "updated_full",
+      "inner_seed": 2027,
+      "training_seed": 0,
+      "references": [
+        {
+          "path": "runs/iteration4/evaluations/updated_full_i2027_t0_s70001_n5",
+          "metrics_sha256": "ce93709d7546106267ab211ae50571b339ad6497f4810b527ef64ca6fa8b77af"
+        },
+        {
+          "path": "runs/iteration4/evaluations/updated_full_i2027_t0_s70002_n5",
+          "metrics_sha256": "9b11e5f3f7d9fa3fcf96870b4960882e466a7e201f5d55bac1897ee08a5f6a4c"
+        },
+        {
+          "path": "runs/iteration4/evaluations/updated_full_i2027_t0_s70003_n5",
+          "metrics_sha256": "a88416a1d4d03e57318447fb8c9ad4a92bc263440761fb924a347164f5d05d69"
+        }
+      ],
+      "parent_checkpoint": "runs/iteration3/training/ilpd_full_v_l0p01_i2027_s0/checkpoint.pt",
+      "parent_checkpoint_sha256": "d835949c167b83aa35b605635e01fcd2f125eb71eb968b3f7aeaf7a4b8ff5e1a"
+    },
+    {
+      "variant": "full_prior",
+      "observation_weight": 1.0,
+      "reference_arm": "updated_full",
+      "inner_seed": 2027,
+      "training_seed": 1,
+      "references": [
+        {
+          "path": "runs/iteration4/evaluations/updated_full_i2027_t1_s70001_n5",
+          "metrics_sha256": "ed43c04983f4fb8dbcdd181276d59adbe0bde306eb2ff85ebfc98d249aac84f2"
+        },
+        {
+          "path": "runs/iteration4/evaluations/updated_full_i2027_t1_s70002_n5",
+          "metrics_sha256": "c8837eee4805f0aee57d736edbdfee05965cb4eb750e01e86168bbb068a43c57"
+        },
+        {
+          "path": "runs/iteration4/evaluations/updated_full_i2027_t1_s70003_n5",
+          "metrics_sha256": "589a204f8bed6ee97b5db27cbe22b087a3da80f9bafe73fd2d9cc70b9e5575f6"
+        }
+      ],
+      "parent_checkpoint": "runs/iteration3/training/ilpd_full_v_l0p01_i2027_s1/checkpoint.pt",
+      "parent_checkpoint_sha256": "892e376851d096b52d810bdbca2029404cc55785de7626d282a6a18cd15d94a6"
+    },
+    {
+      "variant": "full_prior",
+      "observation_weight": 1.0,
+      "reference_arm": "updated_full",
+      "inner_seed": 2027,
+      "training_seed": 2,
+      "references": [
+        {
+          "path": "runs/iteration4/evaluations/updated_full_i2027_t2_s70001_n5",
+          "metrics_sha256": "2f9ed9e9057e271e47854f4ae6235a552699c8bb7c6ea13e6f26a30830238a3a"
+        },
+        {
+          "path": "runs/iteration4/evaluations/updated_full_i2027_t2_s70002_n5",
+          "metrics_sha256": "b0ec0639d15a3c71cf79e91155cb91b8bb1c95e435117908d6105665e1445696"
+        },
+        {
+          "path": "runs/iteration4/evaluations/updated_full_i2027_t2_s70003_n5",
+          "metrics_sha256": "7b311e4d339c2ed9f91153640b517edb21c2e811bfd1ffaf758b95a65df9398f"
+        }
+      ],
+      "parent_checkpoint": "runs/iteration3/training/ilpd_full_v_l0p01_i2027_s2/checkpoint.pt",
+      "parent_checkpoint_sha256": "83540adabcd6236857e2f9b1db6c4c950c3586efd92393ccda3b2f685f1346df"
+    },
+    {
+      "variant": "full_prior",
+      "observation_weight": 1.0,
+      "reference_arm": "updated_full",
+      "inner_seed": 3027,
+      "training_seed": 0,
+      "references": [
+        {
+          "path": "runs/iteration4/evaluations/updated_full_i3027_t0_s70001_n5",
+          "metrics_sha256": "25c4fe6d31ccb6402f76e311df43dca476bfcfab086e68917c01ed6d572df3bc"
+        },
+        {
+          "path": "runs/iteration4/evaluations/updated_full_i3027_t0_s70002_n5",
+          "metrics_sha256": "9b8057eaf7471716dc307c668d0271d0b2aea3c2b6b17a7521f0896bb3b9789e"
+        },
+        {
+          "path": "runs/iteration4/evaluations/updated_full_i3027_t0_s70003_n5",
+          "metrics_sha256": "cd9bf11936c03ec55db323b01721560ef988726f1849276de5fa2d86fd507bb9"
+        }
+      ],
+      "parent_checkpoint": "runs/iteration3/training/ilpd_full_v_l0p01_i3027_s0/checkpoint.pt",
+      "parent_checkpoint_sha256": "6668db82de991cf1ee847267e4f5ffbd4432567656a4d459453f4e31cfc48d49"
+    },
+    {
+      "variant": "full_prior",
+      "observation_weight": 1.0,
+      "reference_arm": "updated_full",
+      "inner_seed": 3027,
+      "training_seed": 1,
+      "references": [
+        {
+          "path": "runs/iteration4/evaluations/updated_full_i3027_t1_s70001_n5",
+          "metrics_sha256": "f8b481ec2d67bcfb3a22d2ba7d3e1a9c1ab444320534d5c5f6d875364229b88d"
+        },
+        {
+          "path": "runs/iteration4/evaluations/updated_full_i3027_t1_s70002_n5",
+          "metrics_sha256": "1c51414e87ce0f3580204fcd3e185cf0afe8ca65b7d9a59c5a179c930ca7fa4f"
+        },
+        {
+          "path": "runs/iteration4/evaluations/updated_full_i3027_t1_s70003_n5",
+          "metrics_sha256": "a1db22d37a107cc618e3a6c3081301cc721283d07b56dffd9eae5d8db272e8dd"
+        }
+      ],
+      "parent_checkpoint": "runs/iteration3/training/ilpd_full_v_l0p01_i3027_s1/checkpoint.pt",
+      "parent_checkpoint_sha256": "3bc0a5bfd1f978cc42ee87366c679a279385c65d24ae18bdb45eed8f4f78ec48"
+    },
+    {
+      "variant": "full_prior",
+      "observation_weight": 1.0,
+      "reference_arm": "updated_full",
+      "inner_seed": 3027,
+      "training_seed": 2,
+      "references": [
+        {
+          "path": "runs/iteration4/evaluations/updated_full_i3027_t2_s70001_n5",
+          "metrics_sha256": "d74c1147dfc70ed02a0cba9240b049dd499e3ebc133ddde963710ef89d1fd4bb"
+        },
+        {
+          "path": "runs/iteration4/evaluations/updated_full_i3027_t2_s70002_n5",
+          "metrics_sha256": "b9898e113ce59a1b7afa023dfe1cf331305f6a77fcce66385351250fd212ddbb"
+        },
+        {
+          "path": "runs/iteration4/evaluations/updated_full_i3027_t2_s70003_n5",
+          "metrics_sha256": "06375cc50f90e482193a6f59dc88db4bc443e21e6f338300914a15f149ec95a9"
+        }
+      ],
+      "parent_checkpoint": "runs/iteration3/training/ilpd_full_v_l0p01_i3027_s2/checkpoint.pt",
+      "parent_checkpoint_sha256": "0941d0b7153ebe9530b2e4a14cb44d785ab28102791e9310eef0daacf853c4b7"
+    },
+    {
+      "variant": "full_prior",
+      "observation_weight": 1.0,
+      "reference_arm": "updated_full",
+      "inner_seed": 4027,
+      "training_seed": 0,
+      "references": [
+        {
+          "path": "runs/iteration4/evaluations/updated_full_i4027_t0_s70001_n5",
+          "metrics_sha256": "8f4f804979749df4220c3245a0ba3139f149a843b3289d5ce0048129c6e5832e"
+        },
+        {
+          "path": "runs/iteration4/evaluations/updated_full_i4027_t0_s70002_n5",
+          "metrics_sha256": "9b69661ec2644880fdf83c5bf672cd6483a0f69557448d440180277e4611aad2"
+        },
+        {
+          "path": "runs/iteration4/evaluations/updated_full_i4027_t0_s70003_n5",
+          "metrics_sha256": "2afdad6199ca16556512ab449b7c4c80779cc3ca2e29b6b74b2c975f343521bd"
+        }
+      ],
+      "parent_checkpoint": "runs/iteration3/training/ilpd_full_v_l0p01_i4027_s0/checkpoint.pt",
+      "parent_checkpoint_sha256": "d457c884d9353becd8f483ec680a01f01d11dbc7220726ee0a73520b4a226577"
+    },
+    {
+      "variant": "full_prior",
+      "observation_weight": 1.0,
+      "reference_arm": "updated_full",
+      "inner_seed": 4027,
+      "training_seed": 1,
+      "references": [
+        {
+          "path": "runs/iteration4/evaluations/updated_full_i4027_t1_s70001_n5",
+          "metrics_sha256": "c48960f83e21f21d416c21c0ba237c6adc9c1cdaba3e6d7944e694cf8bfc3968"
+        },
+        {
+          "path": "runs/iteration4/evaluations/updated_full_i4027_t1_s70002_n5",
+          "metrics_sha256": "495d361bce75659d14cf36b4af4777b730028245d9e05fc16c9cdebd94083841"
+        },
+        {
+          "path": "runs/iteration4/evaluations/updated_full_i4027_t1_s70003_n5",
+          "metrics_sha256": "6c0a91c7d1e1d27618ff2e5d82db677d4a484236dcc27308362d38311de987e4"
+        }
+      ],
+      "parent_checkpoint": "runs/iteration3/training/ilpd_full_v_l0p01_i4027_s1/checkpoint.pt",
+      "parent_checkpoint_sha256": "ea15ec82337ab6934775831a898162955fff6d260f690b20d1012adfb0758dbf"
+    },
+    {
+      "variant": "full_prior",
+      "observation_weight": 1.0,
+      "reference_arm": "updated_full",
+      "inner_seed": 4027,
+      "training_seed": 2,
+      "references": [
+        {
+          "path": "runs/iteration4/evaluations/updated_full_i4027_t2_s70001_n5",
+          "metrics_sha256": "5b17fc3d10ea55490b6bcaf699ac75b16f9eeba93a5e58fe86a73f138ace2b8d"
+        },
+        {
+          "path": "runs/iteration4/evaluations/updated_full_i4027_t2_s70002_n5",
+          "metrics_sha256": "d0d971cef2a2c22a56142e006d5a80dbfd8773b89b0ca88939cbd3824a850431"
+        },
+        {
+          "path": "runs/iteration4/evaluations/updated_full_i4027_t2_s70003_n5",
+          "metrics_sha256": "0f3dc31ecc9874af0073fdaed1213ec4b9d6955a8c3c25ad121201ac7370a098"
+        }
+      ],
+      "parent_checkpoint": "runs/iteration3/training/ilpd_full_v_l0p01_i4027_s2/checkpoint.pt",
+      "parent_checkpoint_sha256": "4b5ed346c11e74dc9934371b6429970d77e42d672c560d949be4620a7c13acd7"
+    },
+    {
+      "variant": "full_prior_w4",
+      "observation_weight": 4.0,
+      "reference_arm": "updated_full",
+      "inner_seed": 2027,
+      "training_seed": 0,
+      "references": [
+        {
+          "path": "runs/iteration4/evaluations/updated_full_i2027_t0_s70001_n5",
+          "metrics_sha256": "ce93709d7546106267ab211ae50571b339ad6497f4810b527ef64ca6fa8b77af"
+        },
+        {
+          "path": "runs/iteration4/evaluations/updated_full_i2027_t0_s70002_n5",
+          "metrics_sha256": "9b11e5f3f7d9fa3fcf96870b4960882e466a7e201f5d55bac1897ee08a5f6a4c"
+        },
+        {
+          "path": "runs/iteration4/evaluations/updated_full_i2027_t0_s70003_n5",
+          "metrics_sha256": "a88416a1d4d03e57318447fb8c9ad4a92bc263440761fb924a347164f5d05d69"
+        }
+      ],
+      "parent_checkpoint": "runs/iteration3/training/ilpd_full_v_l0p01_i2027_s0/checkpoint.pt",
+      "parent_checkpoint_sha256": "d835949c167b83aa35b605635e01fcd2f125eb71eb968b3f7aeaf7a4b8ff5e1a"
+    },
+    {
+      "variant": "full_prior_w4",
+      "observation_weight": 4.0,
+      "reference_arm": "updated_full",
+      "inner_seed": 2027,
+      "training_seed": 1,
+      "references": [
+        {
+          "path": "runs/iteration4/evaluations/updated_full_i2027_t1_s70001_n5",
+          "metrics_sha256": "ed43c04983f4fb8dbcdd181276d59adbe0bde306eb2ff85ebfc98d249aac84f2"
+        },
+        {
+          "path": "runs/iteration4/evaluations/updated_full_i2027_t1_s70002_n5",
+          "metrics_sha256": "c8837eee4805f0aee57d736edbdfee05965cb4eb750e01e86168bbb068a43c57"
+        },
+        {
+          "path": "runs/iteration4/evaluations/updated_full_i2027_t1_s70003_n5",
+          "metrics_sha256": "589a204f8bed6ee97b5db27cbe22b087a3da80f9bafe73fd2d9cc70b9e5575f6"
+        }
+      ],
+      "parent_checkpoint": "runs/iteration3/training/ilpd_full_v_l0p01_i2027_s1/checkpoint.pt",
+      "parent_checkpoint_sha256": "892e376851d096b52d810bdbca2029404cc55785de7626d282a6a18cd15d94a6"
+    },
+    {
+      "variant": "full_prior_w4",
+      "observation_weight": 4.0,
+      "reference_arm": "updated_full",
+      "inner_seed": 2027,
+      "training_seed": 2,
+      "references": [
+        {
+          "path": "runs/iteration4/evaluations/updated_full_i2027_t2_s70001_n5",
+          "metrics_sha256": "2f9ed9e9057e271e47854f4ae6235a552699c8bb7c6ea13e6f26a30830238a3a"
+        },
+        {
+          "path": "runs/iteration4/evaluations/updated_full_i2027_t2_s70002_n5",
+          "metrics_sha256": "b0ec0639d15a3c71cf79e91155cb91b8bb1c95e435117908d6105665e1445696"
+        },
+        {
+          "path": "runs/iteration4/evaluations/updated_full_i2027_t2_s70003_n5",
+          "metrics_sha256": "7b311e4d339c2ed9f91153640b517edb21c2e811bfd1ffaf758b95a65df9398f"
+        }
+      ],
+      "parent_checkpoint": "runs/iteration3/training/ilpd_full_v_l0p01_i2027_s2/checkpoint.pt",
+      "parent_checkpoint_sha256": "83540adabcd6236857e2f9b1db6c4c950c3586efd92393ccda3b2f685f1346df"
+    },
+    {
+      "variant": "full_prior_w4",
+      "observation_weight": 4.0,
+      "reference_arm": "updated_full",
+      "inner_seed": 3027,
+      "training_seed": 0,
+      "references": [
+        {
+          "path": "runs/iteration4/evaluations/updated_full_i3027_t0_s70001_n5",
+          "metrics_sha256": "25c4fe6d31ccb6402f76e311df43dca476bfcfab086e68917c01ed6d572df3bc"
+        },
+        {
+          "path": "runs/iteration4/evaluations/updated_full_i3027_t0_s70002_n5",
+          "metrics_sha256": "9b8057eaf7471716dc307c668d0271d0b2aea3c2b6b17a7521f0896bb3b9789e"
+        },
+        {
+          "path": "runs/iteration4/evaluations/updated_full_i3027_t0_s70003_n5",
+          "metrics_sha256": "cd9bf11936c03ec55db323b01721560ef988726f1849276de5fa2d86fd507bb9"
+        }
+      ],
+      "parent_checkpoint": "runs/iteration3/training/ilpd_full_v_l0p01_i3027_s0/checkpoint.pt",
+      "parent_checkpoint_sha256": "6668db82de991cf1ee847267e4f5ffbd4432567656a4d459453f4e31cfc48d49"
+    },
+    {
+      "variant": "full_prior_w4",
+      "observation_weight": 4.0,
+      "reference_arm": "updated_full",
+      "inner_seed": 3027,
+      "training_seed": 1,
+      "references": [
+        {
+          "path": "runs/iteration4/evaluations/updated_full_i3027_t1_s70001_n5",
+          "metrics_sha256": "f8b481ec2d67bcfb3a22d2ba7d3e1a9c1ab444320534d5c5f6d875364229b88d"
+        },
+        {
+          "path": "runs/iteration4/evaluations/updated_full_i3027_t1_s70002_n5",
+          "metrics_sha256": "1c51414e87ce0f3580204fcd3e185cf0afe8ca65b7d9a59c5a179c930ca7fa4f"
+        },
+        {
+          "path": "runs/iteration4/evaluations/updated_full_i3027_t1_s70003_n5",
+          "metrics_sha256": "a1db22d37a107cc618e3a6c3081301cc721283d07b56dffd9eae5d8db272e8dd"
+        }
+      ],
+      "parent_checkpoint": "runs/iteration3/training/ilpd_full_v_l0p01_i3027_s1/checkpoint.pt",
+      "parent_checkpoint_sha256": "3bc0a5bfd1f978cc42ee87366c679a279385c65d24ae18bdb45eed8f4f78ec48"
+    },
+    {
+      "variant": "full_prior_w4",
+      "observation_weight": 4.0,
+      "reference_arm": "updated_full",
+      "inner_seed": 3027,
+      "training_seed": 2,
+      "references": [
+        {
+          "path": "runs/iteration4/evaluations/updated_full_i3027_t2_s70001_n5",
+          "metrics_sha256": "d74c1147dfc70ed02a0cba9240b049dd499e3ebc133ddde963710ef89d1fd4bb"
+        },
+        {
+          "path": "runs/iteration4/evaluations/updated_full_i3027_t2_s70002_n5",
+          "metrics_sha256": "b9898e113ce59a1b7afa023dfe1cf331305f6a77fcce66385351250fd212ddbb"
+        },
+        {
+          "path": "runs/iteration4/evaluations/updated_full_i3027_t2_s70003_n5",
+          "metrics_sha256": "06375cc50f90e482193a6f59dc88db4bc443e21e6f338300914a15f149ec95a9"
+        }
+      ],
+      "parent_checkpoint": "runs/iteration3/training/ilpd_full_v_l0p01_i3027_s2/checkpoint.pt",
+      "parent_checkpoint_sha256": "0941d0b7153ebe9530b2e4a14cb44d785ab28102791e9310eef0daacf853c4b7"
+    },
+    {
+      "variant": "full_prior_w4",
+      "observation_weight": 4.0,
+      "reference_arm": "updated_full",
+      "inner_seed": 4027,
+      "training_seed": 0,
+      "references": [
+        {
+          "path": "runs/iteration4/evaluations/updated_full_i4027_t0_s70001_n5",
+          "metrics_sha256": "8f4f804979749df4220c3245a0ba3139f149a843b3289d5ce0048129c6e5832e"
+        },
+        {
+          "path": "runs/iteration4/evaluations/updated_full_i4027_t0_s70002_n5",
+          "metrics_sha256": "9b69661ec2644880fdf83c5bf672cd6483a0f69557448d440180277e4611aad2"
+        },
+        {
+          "path": "runs/iteration4/evaluations/updated_full_i4027_t0_s70003_n5",
+          "metrics_sha256": "2afdad6199ca16556512ab449b7c4c80779cc3ca2e29b6b74b2c975f343521bd"
+        }
+      ],
+      "parent_checkpoint": "runs/iteration3/training/ilpd_full_v_l0p01_i4027_s0/checkpoint.pt",
+      "parent_checkpoint_sha256": "d457c884d9353becd8f483ec680a01f01d11dbc7220726ee0a73520b4a226577"
+    },
+    {
+      "variant": "full_prior_w4",
+      "observation_weight": 4.0,
+      "reference_arm": "updated_full",
+      "inner_seed": 4027,
+      "training_seed": 1,
+      "references": [
+        {
+          "path": "runs/iteration4/evaluations/updated_full_i4027_t1_s70001_n5",
+          "metrics_sha256": "c48960f83e21f21d416c21c0ba237c6adc9c1cdaba3e6d7944e694cf8bfc3968"
+        },
+        {
+          "path": "runs/iteration4/evaluations/updated_full_i4027_t1_s70002_n5",
+          "metrics_sha256": "495d361bce75659d14cf36b4af4777b730028245d9e05fc16c9cdebd94083841"
+        },
+        {
+          "path": "runs/iteration4/evaluations/updated_full_i4027_t1_s70003_n5",
+          "metrics_sha256": "6c0a91c7d1e1d27618ff2e5d82db677d4a484236dcc27308362d38311de987e4"
+        }
+      ],
+      "parent_checkpoint": "runs/iteration3/training/ilpd_full_v_l0p01_i4027_s1/checkpoint.pt",
+      "parent_checkpoint_sha256": "ea15ec82337ab6934775831a898162955fff6d260f690b20d1012adfb0758dbf"
+    },
+    {
+      "variant": "full_prior_w4",
+      "observation_weight": 4.0,
+      "reference_arm": "updated_full",
+      "inner_seed": 4027,
+      "training_seed": 2,
+      "references": [
+        {
+          "path": "runs/iteration4/evaluations/updated_full_i4027_t2_s70001_n5",
+          "metrics_sha256": "5b17fc3d10ea55490b6bcaf699ac75b16f9eeba93a5e58fe86a73f138ace2b8d"
+        },
+        {
+          "path": "runs/iteration4/evaluations/updated_full_i4027_t2_s70002_n5",
+          "metrics_sha256": "d0d971cef2a2c22a56142e006d5a80dbfd8773b89b0ca88939cbd3824a850431"
+        },
+        {
+          "path": "runs/iteration4/evaluations/updated_full_i4027_t2_s70003_n5",
+          "metrics_sha256": "0f3dc31ecc9874af0073fdaed1213ec4b9d6955a8c3c25ad121201ac7370a098"
+        }
+      ],
+      "parent_checkpoint": "runs/iteration3/training/ilpd_full_v_l0p01_i4027_s2/checkpoint.pt",
+      "parent_checkpoint_sha256": "4b5ed346c11e74dc9934371b6429970d77e42d672c560d949be4620a7c13acd7"
+    },
+    {
+      "variant": "dense_prior",
+      "observation_weight": 1.0,
+      "reference_arm": "matched_dense",
+      "inner_seed": 2027,
+      "training_seed": 0,
+      "references": [
+        {
+          "path": "runs/iteration4/evaluations/matched_dense_i2027_t0_s70001_n5",
+          "metrics_sha256": "072d7aa0175519c7cf792e61194dbbc96de0204ad2c5c279dd6274bc337859a2"
+        },
+        {
+          "path": "runs/iteration4/evaluations/matched_dense_i2027_t0_s70002_n5",
+          "metrics_sha256": "44978b521f806a577112c7bc2fea5b5959e414d817735d97f88c34c1680c3b87"
+        },
+        {
+          "path": "runs/iteration4/evaluations/matched_dense_i2027_t0_s70003_n5",
+          "metrics_sha256": "caf08dde5a7e6ebdb7972180afb76a722ce6bc2a59b32e9d0d2adeec9331f998"
+        }
+      ],
+      "parent_checkpoint": "runs/iteration3/training/ilpd_dense_v_l0p01_i2027_s0/checkpoint.pt",
+      "parent_checkpoint_sha256": "eef53f7e7c73ec086766d7e48b1bb0a64f920329f2668301fdaced3abc0a3aff"
+    },
+    {
+      "variant": "dense_prior",
+      "observation_weight": 1.0,
+      "reference_arm": "matched_dense",
+      "inner_seed": 2027,
+      "training_seed": 1,
+      "references": [
+        {
+          "path": "runs/iteration4/evaluations/matched_dense_i2027_t1_s70001_n5",
+          "metrics_sha256": "d436154d173166bc611c5eecb3342fbdad9d217cad7dc7f3ca1bca13a0c346a7"
+        },
+        {
+          "path": "runs/iteration4/evaluations/matched_dense_i2027_t1_s70002_n5",
+          "metrics_sha256": "c52ab6ccf8eb4cc7e8442b0bfa5a597e946d54a34b8ed327a74a4629b5e7f6b9"
+        },
+        {
+          "path": "runs/iteration4/evaluations/matched_dense_i2027_t1_s70003_n5",
+          "metrics_sha256": "c9a961e5bf87ef5ad80e592b59dfe218d22a2c7f21fcfd85b473613195833c30"
+        }
+      ],
+      "parent_checkpoint": "runs/iteration3/training/ilpd_dense_v_l0p01_i2027_s1/checkpoint.pt",
+      "parent_checkpoint_sha256": "73bfc813cce286decaf6bcc6f25a98ef19cb06e75e9023edf9b6c182f1659f72"
+    },
+    {
+      "variant": "dense_prior",
+      "observation_weight": 1.0,
+      "reference_arm": "matched_dense",
+      "inner_seed": 2027,
+      "training_seed": 2,
+      "references": [
+        {
+          "path": "runs/iteration4/evaluations/matched_dense_i2027_t2_s70001_n5",
+          "metrics_sha256": "b76b5b02a3a968be26f22b87d232b730ea5ae383f02ed334c0a72123ffe12aca"
+        },
+        {
+          "path": "runs/iteration4/evaluations/matched_dense_i2027_t2_s70002_n5",
+          "metrics_sha256": "07563a5138d07aa7ee23ddb2133fb719b187762bc4a664f73f7dc03bd41804c9"
+        },
+        {
+          "path": "runs/iteration4/evaluations/matched_dense_i2027_t2_s70003_n5",
+          "metrics_sha256": "099ce6ab86eea8bc7d54f2d1c42c483b4ade90f30afc8c3ea0c704e70d7656ee"
+        }
+      ],
+      "parent_checkpoint": "runs/iteration3/training/ilpd_dense_v_l0p01_i2027_s2/checkpoint.pt",
+      "parent_checkpoint_sha256": "c55975805e6c3c52b60ec35a0a7af4d176f5311ea751c4edf7cfc5290df68c1b"
+    },
+    {
+      "variant": "dense_prior",
+      "observation_weight": 1.0,
+      "reference_arm": "matched_dense",
+      "inner_seed": 3027,
+      "training_seed": 0,
+      "references": [
+        {
+          "path": "runs/iteration4/evaluations/matched_dense_i3027_t0_s70001_n5",
+          "metrics_sha256": "0be6202fc360c9f005d12cdd428a977205ea9fca7763d85a87325824a75382b9"
+        },
+        {
+          "path": "runs/iteration4/evaluations/matched_dense_i3027_t0_s70002_n5",
+          "metrics_sha256": "44888c77e7c30b43665394c7d1bf5fe4f94641618ee1ff66915150e7a77fd8b2"
+        },
+        {
+          "path": "runs/iteration4/evaluations/matched_dense_i3027_t0_s70003_n5",
+          "metrics_sha256": "5eff6ddad287e49da2649969c58fc4b39d1325ff5e705c1907dffc8318f83f8c"
+        }
+      ],
+      "parent_checkpoint": "runs/iteration3/training/ilpd_dense_v_l0p01_i3027_s0/checkpoint.pt",
+      "parent_checkpoint_sha256": "6d962f69bdd8e90462d256dcc1a11606a312b36176e462d46e22b16614676c02"
+    },
+    {
+      "variant": "dense_prior",
+      "observation_weight": 1.0,
+      "reference_arm": "matched_dense",
+      "inner_seed": 3027,
+      "training_seed": 1,
+      "references": [
+        {
+          "path": "runs/iteration4/evaluations/matched_dense_i3027_t1_s70001_n5",
+          "metrics_sha256": "2d80984114fbfb772cf18c43f6dd73f9423ae1ba67f0e644c84090940455927e"
+        },
+        {
+          "path": "runs/iteration4/evaluations/matched_dense_i3027_t1_s70002_n5",
+          "metrics_sha256": "ffc37a276cd0969e9dc7b9875f49b7a16173f0736ba8b6519d3857cc2cd5247d"
+        },
+        {
+          "path": "runs/iteration4/evaluations/matched_dense_i3027_t1_s70003_n5",
+          "metrics_sha256": "0815881baa5a426774f8554952f16d0df9a09d8d64ed0310c2d8b322408f0b7d"
+        }
+      ],
+      "parent_checkpoint": "runs/iteration3/training/ilpd_dense_v_l0p01_i3027_s1/checkpoint.pt",
+      "parent_checkpoint_sha256": "62f59bc78d88d28e917446b304914a88bea82b5d902378ad178ea65d3a5084ab"
+    },
+    {
+      "variant": "dense_prior",
+      "observation_weight": 1.0,
+      "reference_arm": "matched_dense",
+      "inner_seed": 3027,
+      "training_seed": 2,
+      "references": [
+        {
+          "path": "runs/iteration4/evaluations/matched_dense_i3027_t2_s70001_n5",
+          "metrics_sha256": "37dd1b1cbd1509c6872bc05cb94068f69eb394cc25a77544f237c52114041564"
+        },
+        {
+          "path": "runs/iteration4/evaluations/matched_dense_i3027_t2_s70002_n5",
+          "metrics_sha256": "c33db107baf7a008cf7ba6d74c53c6ad74b251de0a82ac445bbfde430c567f45"
+        },
+        {
+          "path": "runs/iteration4/evaluations/matched_dense_i3027_t2_s70003_n5",
+          "metrics_sha256": "832d9d9bda32cb5b1751660d91c9ff9aad8a9e9ffb40b7d270be76870c105d16"
+        }
+      ],
+      "parent_checkpoint": "runs/iteration3/training/ilpd_dense_v_l0p01_i3027_s2/checkpoint.pt",
+      "parent_checkpoint_sha256": "0b4eee3e553a199c449a53d95cfc6fe8bce532a1989af2ec5a6567e1b778876e"
+    },
+    {
+      "variant": "dense_prior",
+      "observation_weight": 1.0,
+      "reference_arm": "matched_dense",
+      "inner_seed": 4027,
+      "training_seed": 0,
+      "references": [
+        {
+          "path": "runs/iteration4/evaluations/matched_dense_i4027_t0_s70001_n5",
+          "metrics_sha256": "53549f9f74dc4d29d7ceef6d9d9cc45bfd0ff9f5494f2cb92cd07f8d6f761c06"
+        },
+        {
+          "path": "runs/iteration4/evaluations/matched_dense_i4027_t0_s70002_n5",
+          "metrics_sha256": "5d4732027505d3e5f100a1d6a32d45075a9800a2a1763e816224a234e22441c4"
+        },
+        {
+          "path": "runs/iteration4/evaluations/matched_dense_i4027_t0_s70003_n5",
+          "metrics_sha256": "809f8c090446126a6acb93cc6425e415930ecda688d5d27256a7226dc05dfe1f"
+        }
+      ],
+      "parent_checkpoint": "runs/iteration3/training/ilpd_dense_v_l0p01_i4027_s0/checkpoint.pt",
+      "parent_checkpoint_sha256": "fe9bce24421ba8d99da668b32ce73e060ccc13a66b5bc60446e8d3b5b3d2a50d"
+    },
+    {
+      "variant": "dense_prior",
+      "observation_weight": 1.0,
+      "reference_arm": "matched_dense",
+      "inner_seed": 4027,
+      "training_seed": 1,
+      "references": [
+        {
+          "path": "runs/iteration4/evaluations/matched_dense_i4027_t1_s70001_n5",
+          "metrics_sha256": "ee354e972dcc9f9957eccc5ad08990465a59cc2215bcc6d6effd7d321ceb6a58"
+        },
+        {
+          "path": "runs/iteration4/evaluations/matched_dense_i4027_t1_s70002_n5",
+          "metrics_sha256": "23705482284349a60572b72e7b60534ed8d2637bc4ff5c9da078ea90c7558672"
+        },
+        {
+          "path": "runs/iteration4/evaluations/matched_dense_i4027_t1_s70003_n5",
+          "metrics_sha256": "e4bc7f36bf86fc63af3582ed97f5a8460406d5352dc25ac0461d4fd801377170"
+        }
+      ],
+      "parent_checkpoint": "runs/iteration3/training/ilpd_dense_v_l0p01_i4027_s1/checkpoint.pt",
+      "parent_checkpoint_sha256": "b9da6de17e54e9341a166906a48becc541438ae742c59e9d0f2816b284f5557b"
+    },
+    {
+      "variant": "dense_prior",
+      "observation_weight": 1.0,
+      "reference_arm": "matched_dense",
+      "inner_seed": 4027,
+      "training_seed": 2,
+      "references": [
+        {
+          "path": "runs/iteration4/evaluations/matched_dense_i4027_t2_s70001_n5",
+          "metrics_sha256": "a1ec8449d83246cfa82b6a05a48d0178d64d033bf7ecbb4ab2b787fdf475bdac"
+        },
+        {
+          "path": "runs/iteration4/evaluations/matched_dense_i4027_t2_s70002_n5",
+          "metrics_sha256": "0b19781aeef491d5c4f60c97157765ce7dc65632c904f1188c98e39b65d6d297"
+        },
+        {
+          "path": "runs/iteration4/evaluations/matched_dense_i4027_t2_s70003_n5",
+          "metrics_sha256": "1cfba6e3ffd0efe3d473901054cbe57eede320d6d7f4b22e4a0c045cb881fc31"
+        }
+      ],
+      "parent_checkpoint": "runs/iteration3/training/ilpd_dense_v_l0p01_i4027_s2/checkpoint.pt",
+      "parent_checkpoint_sha256": "a826764961e2489caec691e5e878523b346a18abe540eea5dd8b4b5eca8750b3"
+    },
+    {
+      "variant": "base_prior",
+      "observation_weight": 1.0,
+      "reference_arm": "guided_base",
+      "inner_seed": 2027,
+      "training_seed": 0,
+      "references": [
+        {
+          "path": "runs/iteration4/evaluations/guided_base_i2027_t0_s70001_n5",
+          "metrics_sha256": "135f186622835d468f509b9a89e667a41575407c22453e107957224b999eaca7"
+        },
+        {
+          "path": "runs/iteration4/evaluations/guided_base_i2027_t0_s70002_n5",
+          "metrics_sha256": "8aeac4c5704a4badfbeb924724b79c731698985a8fbd064b6ea50459d87af7db"
+        },
+        {
+          "path": "runs/iteration4/evaluations/guided_base_i2027_t0_s70003_n5",
+          "metrics_sha256": "0ebb9de9cad016c19edd9c8fceb07d928e4abdd374b267fa398b2803c5f4b90b"
+        }
+      ],
+      "parent_checkpoint": "runs/iteration2/screen/ilpd_velocity_base_s0/checkpoint.pt",
+      "parent_checkpoint_sha256": "814fc1c516e99222992041920a21dd747ffeb3e50508e4bb104dee1c9be2eb44"
+    },
+    {
+      "variant": "base_prior",
+      "observation_weight": 1.0,
+      "reference_arm": "guided_base",
+      "inner_seed": 2027,
+      "training_seed": 1,
+      "references": [
+        {
+          "path": "runs/iteration4/evaluations/guided_base_i2027_t1_s70001_n5",
+          "metrics_sha256": "9c2f2e220d1dae2ea306a16d0989f48416fbd6dd66866019413ddb73932f7ffe"
+        },
+        {
+          "path": "runs/iteration4/evaluations/guided_base_i2027_t1_s70002_n5",
+          "metrics_sha256": "908dcd036526523b0519e29c376bedf453b59a1781fd7a3191ac2a8ea7f8faa4"
+        },
+        {
+          "path": "runs/iteration4/evaluations/guided_base_i2027_t1_s70003_n5",
+          "metrics_sha256": "617d6efe16b164c3ad479924401f7103eebdb82d03085018bc9da7066bbff521"
+        }
+      ],
+      "parent_checkpoint": "runs/iteration3/training/ilpd_base_v_l0_i2027_s1/checkpoint.pt",
+      "parent_checkpoint_sha256": "b173f1719dd096329f97d82eab0dc8b2b8d71730250832cf5ba543913a987870"
+    },
+    {
+      "variant": "base_prior",
+      "observation_weight": 1.0,
+      "reference_arm": "guided_base",
+      "inner_seed": 2027,
+      "training_seed": 2,
+      "references": [
+        {
+          "path": "runs/iteration4/evaluations/guided_base_i2027_t2_s70001_n5",
+          "metrics_sha256": "dcd9b828451fd529ab22a4f818bc23e196bfaadf005d0feab44dc8a8f8d237f8"
+        },
+        {
+          "path": "runs/iteration4/evaluations/guided_base_i2027_t2_s70002_n5",
+          "metrics_sha256": "25936e2b5d97b59881ccb293263ccad764127f5b5dd399881d1785ad3c4cdd94"
+        },
+        {
+          "path": "runs/iteration4/evaluations/guided_base_i2027_t2_s70003_n5",
+          "metrics_sha256": "dd6c2a9fad4ffd4143877c8a127c73f17a312ed7613f992e93b2cb71c9bc70f2"
+        }
+      ],
+      "parent_checkpoint": "runs/iteration3/training/ilpd_base_v_l0_i2027_s2/checkpoint.pt",
+      "parent_checkpoint_sha256": "e727f4a2b42f8842ac4580f0d93c12bab0ee6e595cd787614f3ab793f943311e"
+    },
+    {
+      "variant": "base_prior",
+      "observation_weight": 1.0,
+      "reference_arm": "guided_base",
+      "inner_seed": 3027,
+      "training_seed": 0,
+      "references": [
+        {
+          "path": "runs/iteration4/evaluations/guided_base_i3027_t0_s70001_n5",
+          "metrics_sha256": "0b7dd864d8ec054bdd97f4569e11260b3ed7d081bf8a51e8ba283f9c43047d18"
+        },
+        {
+          "path": "runs/iteration4/evaluations/guided_base_i3027_t0_s70002_n5",
+          "metrics_sha256": "27891f39150d63dda9a44e451f35f7973d4674922a648a630a5277af58e8ce26"
+        },
+        {
+          "path": "runs/iteration4/evaluations/guided_base_i3027_t0_s70003_n5",
+          "metrics_sha256": "bf0b3f5b719cdbf9beedfd5a2fadc705b0c8bfbcde1c46f8326241cbb7af872a"
+        }
+      ],
+      "parent_checkpoint": "runs/iteration3/training/ilpd_base_v_l0_i3027_s0/checkpoint.pt",
+      "parent_checkpoint_sha256": "c73b1d210083b736ad9a0e633d17680e5c3ea7c3b917400863fd537458e7c5ae"
+    },
+    {
+      "variant": "base_prior",
+      "observation_weight": 1.0,
+      "reference_arm": "guided_base",
+      "inner_seed": 3027,
+      "training_seed": 1,
+      "references": [
+        {
+          "path": "runs/iteration4/evaluations/guided_base_i3027_t1_s70001_n5",
+          "metrics_sha256": "6b36d45e655287c6ac0d16c1de44b2ee533bc4c90b12e8e353abc19b0150e6a5"
+        },
+        {
+          "path": "runs/iteration4/evaluations/guided_base_i3027_t1_s70002_n5",
+          "metrics_sha256": "1d87c0b65833b2fb109aab79ce3e392af12667f6bcda2271cf1fd3d8c073d54f"
+        },
+        {
+          "path": "runs/iteration4/evaluations/guided_base_i3027_t1_s70003_n5",
+          "metrics_sha256": "9fe3d87ad53014e023e7d8dece48aeedf9c264912abe624e29e3d9e044cd7c41"
+        }
+      ],
+      "parent_checkpoint": "runs/iteration3/training/ilpd_base_v_l0_i3027_s1/checkpoint.pt",
+      "parent_checkpoint_sha256": "08202a487ddc8f34168983499af76895c6e8d436df068dbdbb890e1c9d824f30"
+    },
+    {
+      "variant": "base_prior",
+      "observation_weight": 1.0,
+      "reference_arm": "guided_base",
+      "inner_seed": 3027,
+      "training_seed": 2,
+      "references": [
+        {
+          "path": "runs/iteration4/evaluations/guided_base_i3027_t2_s70001_n5",
+          "metrics_sha256": "2638a5b3e17ef4ecc2a45b0109af2cc1036e94a813b405fa6e73e71f7ad9d503"
+        },
+        {
+          "path": "runs/iteration4/evaluations/guided_base_i3027_t2_s70002_n5",
+          "metrics_sha256": "02108874e865bf9b7b0c3a536f5bde6664aa5cd20ce760dd5ef944787c116ff4"
+        },
+        {
+          "path": "runs/iteration4/evaluations/guided_base_i3027_t2_s70003_n5",
+          "metrics_sha256": "447c9c799a76cdf1f79390cfc465b9b92435c7bcbd01d5ec50d714e8ae98be05"
+        }
+      ],
+      "parent_checkpoint": "runs/iteration3/training/ilpd_base_v_l0_i3027_s2/checkpoint.pt",
+      "parent_checkpoint_sha256": "397d2b69dc76e796c27a33f535d887fa59f6dff017f7262e2e1cd5e22964b518"
+    },
+    {
+      "variant": "base_prior",
+      "observation_weight": 1.0,
+      "reference_arm": "guided_base",
+      "inner_seed": 4027,
+      "training_seed": 0,
+      "references": [
+        {
+          "path": "runs/iteration4/evaluations/guided_base_i4027_t0_s70001_n5",
+          "metrics_sha256": "36e78a059b1c255b73bbeb6a582a146726e69bc871f2bfd509ca090e796d1b92"
+        },
+        {
+          "path": "runs/iteration4/evaluations/guided_base_i4027_t0_s70002_n5",
+          "metrics_sha256": "a4483196bf118ef3dde7a1ab2ef6f9d49b411458bbb8b77c35f78b03b9633a62"
+        },
+        {
+          "path": "runs/iteration4/evaluations/guided_base_i4027_t0_s70003_n5",
+          "metrics_sha256": "bd4692fb040769defec74391ba85c0798ae94be41a1e7e35217017c7a96c3651"
+        }
+      ],
+      "parent_checkpoint": "runs/iteration3/training/ilpd_base_v_l0_i4027_s0/checkpoint.pt",
+      "parent_checkpoint_sha256": "970ea950d9663e47764b260a6ff21fc18d09871bc9a39a7ad7f54a397827653e"
+    },
+    {
+      "variant": "base_prior",
+      "observation_weight": 1.0,
+      "reference_arm": "guided_base",
+      "inner_seed": 4027,
+      "training_seed": 1,
+      "references": [
+        {
+          "path": "runs/iteration4/evaluations/guided_base_i4027_t1_s70001_n5",
+          "metrics_sha256": "339de989c1fb506328ff45a044da64f54f697fd5b340e64dc96a3dd76d92da36"
+        },
+        {
+          "path": "runs/iteration4/evaluations/guided_base_i4027_t1_s70002_n5",
+          "metrics_sha256": "a1f4a10484ff816268277287cba26949954c48486c4c6628c47ccd94839382f1"
+        },
+        {
+          "path": "runs/iteration4/evaluations/guided_base_i4027_t1_s70003_n5",
+          "metrics_sha256": "bd7fa081b469ce0bf47f0846606329ca6351e9540501615695c4713174b62c7d"
+        }
+      ],
+      "parent_checkpoint": "runs/iteration3/training/ilpd_base_v_l0_i4027_s1/checkpoint.pt",
+      "parent_checkpoint_sha256": "670fd0eebeb368f75c202229f7df77ddf684aed62abd1f401ccb9eef3850e329"
+    },
+    {
+      "variant": "base_prior",
+      "observation_weight": 1.0,
+      "reference_arm": "guided_base",
+      "inner_seed": 4027,
+      "training_seed": 2,
+      "references": [
+        {
+          "path": "runs/iteration4/evaluations/guided_base_i4027_t2_s70001_n5",
+          "metrics_sha256": "b5ab0e193321b0653489930f2c6f3cbf24e178dcb73806186ea24307dcc36c67"
+        },
+        {
+          "path": "runs/iteration4/evaluations/guided_base_i4027_t2_s70002_n5",
+          "metrics_sha256": "5789e72e0b92ed51b858c14affe94845953d845ff3c30893c7cb812733e339ab"
+        },
+        {
+          "path": "runs/iteration4/evaluations/guided_base_i4027_t2_s70003_n5",
+          "metrics_sha256": "0d662c049ad0f9cbab925dce1e1f39ca37bf1afc815a4bddc5ae120f0c52a0cf"
+        }
+      ],
+      "parent_checkpoint": "runs/iteration3/training/ilpd_base_v_l0_i4027_s2/checkpoint.pt",
+      "parent_checkpoint_sha256": "cd5e8f6e4a9c43d84706a7a244f4cd9838e2772b65dae8335c630f231e701052"
+    }
+  ],
+  "source_sha256": "1a9e99d67a8131df426c2292c785cfe2b7c0f9d99d465fe4f476278d69a5645c",
+  "runner_sha256": "75efd59c74fdb9a57488343a506086f07f07ce8119d160e69c6f6e96d3e3338e",
+  "model_script_sha256": "54aea46fbe906e2490ea3ffa2e8dee9d0927d8ccb4be96fcc754edb774db60bb",
+  "protocol_sha256": "55464ac1cf54bdd4a5e6bf3a43c971376ba9a042bfc23a2348ac5684cbc32987",
+  "audit_helpers_sha256": "077446fbc961dbca9d404a52f81d94c9ed585c9825c9239caabab568d2761c2a",
+  "study_helpers_sha256": "4c4c10fa6e8ae7a8d118db08018284ceb00d78d71c706d8965940ff9fbfc4482",
+  "sampling_seeds": [
+    70001,
+    70002,
+    70003
+  ],
+  "evaluator_seed": 2026,
+  "multiplier": 5,
+  "expected_new_fits": 36,
+  "expected_new_evaluations": 108,
+  "expected_reference_evaluations": 81
+}

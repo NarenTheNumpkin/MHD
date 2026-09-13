@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "records": 225,
+  "new_evaluations": 144,
+  "reused_evaluations": 81,
+  "newly_fitted_adapters_or_statistical_models": 45,
+  "native_class_networks": 72,
+  "exact_first_seed_checkpoint_replays": 45,
+  "exact_repair_replays": 9,
+  "saved_auroc_recalculations": 1350,
+  "reserved_test_rows_in_fit_or_validation": 0,
+  "source_plan_data_checkpoint_sample_prediction_hashes_match": true,
+  "missingness_rule_coverage_and_shape_metrics_recalculated": true
+}

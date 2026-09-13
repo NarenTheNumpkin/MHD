@@ -1,0 +1,9 @@
+# Post-protocol numerical diagnostic: copy and boundary roundoff
+
+Added during iteration 7 after inspecting its bootstrap control, before this supplemental analysis. This is not a prespecified primary endpoint and changes no frozen design, fits, samples or original metric files.
+
+The reference generator stores standardized numeric values as float32 before affine inversion. Whole-row resampling therefore retains training profiles up to small numerical error. The evaluator's literal numeric hashes can report zero exact copies, and strict `value > fit_max`/`value > fit_q95` comparisons can treat perturbed ties as extrapolation or extra tail mass. Literal exact-match results cannot establish absence of memorization. Prior reports' absence of exact copies also must not be read as privacy evidence.
+
+Supplement all 225 records with a predictor-profile match requiring every categorical value and missingness pattern to agree, and every observed finite numeric difference to be no larger than `1e-6 * max(fit_feature_SD, 1)` in source units. Count all generated rows, including repeated copies, against both complete fit and validation sets. Report the actual per-feature tolerance. This numerical tolerance is not a clinical similarity threshold, a privacy guarantee, or a realistic adversary definition. Near-copy rates do not replace stronger attacks.
+
+Also report strict and tolerance-aware outside-fit-range and above-fit-95th-quantile frequencies for each numeric feature and population. A numerical tie inside the stated tolerance is not counted as beyond the boundary. The bootstrap positive control must show 100% near-copy training matches and no tolerance-aware extrapolation. Unit checks exercise numerical perturbations, genuinely changed values, categorical/missingness mismatches and threshold ties. Preserve original strict diagnostics for provenance; use the corrected supplemental frequencies when interpreting boundary effects.

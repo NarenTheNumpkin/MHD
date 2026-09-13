@@ -1,0 +1,562 @@
+{
+  "created_at": "2026-09-12T14:13:18.922963+00:00",
+  "dataset": "ilpd",
+  "parents": [
+    {
+      "arm": "previous_full",
+      "setting": {
+        "mode": "full",
+        "prediction": "x0",
+        "clinical_weight": 0.1,
+        "guidance": 0.2,
+        "repair": false
+      },
+      "inner_seed": 2027,
+      "training_seed": 0,
+      "parent_checkpoint": "runs/iteration2/screen/ilpd_paired_full_s0/checkpoint.pt",
+      "parent_checkpoint_sha256": "47eaff7ed00683a14d22c228d927d03e4a543891e53265c5d166038535142d8b",
+      "reference_evaluation": "runs/iteration3/evaluations/ilpd_full_x0_l0p1_g0p2_i2027_s0"
+    },
+    {
+      "arm": "updated_full",
+      "setting": {
+        "mode": "full",
+        "prediction": "v",
+        "clinical_weight": 0.01,
+        "guidance": 10.0,
+        "repair": false
+      },
+      "inner_seed": 2027,
+      "training_seed": 0,
+      "parent_checkpoint": "runs/iteration3/training/ilpd_full_v_l0p01_i2027_s0/checkpoint.pt",
+      "parent_checkpoint_sha256": "d835949c167b83aa35b605635e01fcd2f125eb71eb968b3f7aeaf7a4b8ff5e1a",
+      "reference_evaluation": "runs/iteration3/evaluations/ilpd_full_v_l0p01_g10_i2027_s0"
+    },
+    {
+      "arm": "guided_base",
+      "setting": {
+        "mode": "base",
+        "prediction": "v",
+        "clinical_weight": 0.0,
+        "guidance": 10.0,
+        "repair": false
+      },
+      "inner_seed": 2027,
+      "training_seed": 0,
+      "parent_checkpoint": "runs/iteration2/screen/ilpd_velocity_base_s0/checkpoint.pt",
+      "parent_checkpoint_sha256": "814fc1c516e99222992041920a21dd747ffeb3e50508e4bb104dee1c9be2eb44",
+      "reference_evaluation": "runs/iteration3/evaluations/ilpd_base_v_l0_g10_i2027_s0"
+    },
+    {
+      "arm": "matched_dense",
+      "setting": {
+        "mode": "dense",
+        "prediction": "v",
+        "clinical_weight": 0.01,
+        "guidance": 10.0,
+        "repair": false
+      },
+      "inner_seed": 2027,
+      "training_seed": 0,
+      "parent_checkpoint": "runs/iteration3/training/ilpd_dense_v_l0p01_i2027_s0/checkpoint.pt",
+      "parent_checkpoint_sha256": "eef53f7e7c73ec086766d7e48b1bb0a64f920329f2668301fdaced3abc0a3aff",
+      "reference_evaluation": "runs/iteration3/evaluations/ilpd_dense_v_l0p01_g10_i2027_s0"
+    },
+    {
+      "arm": "previous_full",
+      "setting": {
+        "mode": "full",
+        "prediction": "x0",
+        "clinical_weight": 0.1,
+        "guidance": 0.2,
+        "repair": false
+      },
+      "inner_seed": 2027,
+      "training_seed": 1,
+      "parent_checkpoint": "runs/iteration2/replication/ilpd_paired_full_s1/checkpoint.pt",
+      "parent_checkpoint_sha256": "e9d4b46bbd0bf3ac1b2910415d31bc284b6fed1ff8756c5e4103b9fc8bed862d",
+      "reference_evaluation": "runs/iteration3/evaluations/ilpd_full_x0_l0p1_g0p2_i2027_s1"
+    },
+    {
+      "arm": "updated_full",
+      "setting": {
+        "mode": "full",
+        "prediction": "v",
+        "clinical_weight": 0.01,
+        "guidance": 10.0,
+        "repair": false
+      },
+      "inner_seed": 2027,
+      "training_seed": 1,
+      "parent_checkpoint": "runs/iteration3/training/ilpd_full_v_l0p01_i2027_s1/checkpoint.pt",
+      "parent_checkpoint_sha256": "892e376851d096b52d810bdbca2029404cc55785de7626d282a6a18cd15d94a6",
+      "reference_evaluation": "runs/iteration3/evaluations/ilpd_full_v_l0p01_g10_i2027_s1"
+    },
+    {
+      "arm": "guided_base",
+      "setting": {
+        "mode": "base",
+        "prediction": "v",
+        "clinical_weight": 0.0,
+        "guidance": 10.0,
+        "repair": false
+      },
+      "inner_seed": 2027,
+      "training_seed": 1,
+      "parent_checkpoint": "runs/iteration3/training/ilpd_base_v_l0_i2027_s1/checkpoint.pt",
+      "parent_checkpoint_sha256": "b173f1719dd096329f97d82eab0dc8b2b8d71730250832cf5ba543913a987870",
+      "reference_evaluation": "runs/iteration3/evaluations/ilpd_base_v_l0_g10_i2027_s1"
+    },
+    {
+      "arm": "matched_dense",
+      "setting": {
+        "mode": "dense",
+        "prediction": "v",
+        "clinical_weight": 0.01,
+        "guidance": 10.0,
+        "repair": false
+      },
+      "inner_seed": 2027,
+      "training_seed": 1,
+      "parent_checkpoint": "runs/iteration3/training/ilpd_dense_v_l0p01_i2027_s1/checkpoint.pt",
+      "parent_checkpoint_sha256": "73bfc813cce286decaf6bcc6f25a98ef19cb06e75e9023edf9b6c182f1659f72",
+      "reference_evaluation": "runs/iteration3/evaluations/ilpd_dense_v_l0p01_g10_i2027_s1"
+    },
+    {
+      "arm": "previous_full",
+      "setting": {
+        "mode": "full",
+        "prediction": "x0",
+        "clinical_weight": 0.1,
+        "guidance": 0.2,
+        "repair": false
+      },
+      "inner_seed": 2027,
+      "training_seed": 2,
+      "parent_checkpoint": "runs/iteration2/replication/ilpd_paired_full_s2/checkpoint.pt",
+      "parent_checkpoint_sha256": "612b245d69a6332f99ef5de5c6ed55631eeb3724e53573c3ae7adbfa188696d1",
+      "reference_evaluation": "runs/iteration3/evaluations/ilpd_full_x0_l0p1_g0p2_i2027_s2"
+    },
+    {
+      "arm": "updated_full",
+      "setting": {
+        "mode": "full",
+        "prediction": "v",
+        "clinical_weight": 0.01,
+        "guidance": 10.0,
+        "repair": false
+      },
+      "inner_seed": 2027,
+      "training_seed": 2,
+      "parent_checkpoint": "runs/iteration3/training/ilpd_full_v_l0p01_i2027_s2/checkpoint.pt",
+      "parent_checkpoint_sha256": "83540adabcd6236857e2f9b1db6c4c950c3586efd92393ccda3b2f685f1346df",
+      "reference_evaluation": "runs/iteration3/evaluations/ilpd_full_v_l0p01_g10_i2027_s2"
+    },
+    {
+      "arm": "guided_base",
+      "setting": {
+        "mode": "base",
+        "prediction": "v",
+        "clinical_weight": 0.0,
+        "guidance": 10.0,
+        "repair": false
+      },
+      "inner_seed": 2027,
+      "training_seed": 2,
+      "parent_checkpoint": "runs/iteration3/training/ilpd_base_v_l0_i2027_s2/checkpoint.pt",
+      "parent_checkpoint_sha256": "e727f4a2b42f8842ac4580f0d93c12bab0ee6e595cd787614f3ab793f943311e",
+      "reference_evaluation": "runs/iteration3/evaluations/ilpd_base_v_l0_g10_i2027_s2"
+    },
+    {
+      "arm": "matched_dense",
+      "setting": {
+        "mode": "dense",
+        "prediction": "v",
+        "clinical_weight": 0.01,
+        "guidance": 10.0,
+        "repair": false
+      },
+      "inner_seed": 2027,
+      "training_seed": 2,
+      "parent_checkpoint": "runs/iteration3/training/ilpd_dense_v_l0p01_i2027_s2/checkpoint.pt",
+      "parent_checkpoint_sha256": "c55975805e6c3c52b60ec35a0a7af4d176f5311ea751c4edf7cfc5290df68c1b",
+      "reference_evaluation": "runs/iteration3/evaluations/ilpd_dense_v_l0p01_g10_i2027_s2"
+    },
+    {
+      "arm": "previous_full",
+      "setting": {
+        "mode": "full",
+        "prediction": "x0",
+        "clinical_weight": 0.1,
+        "guidance": 0.2,
+        "repair": false
+      },
+      "inner_seed": 3027,
+      "training_seed": 0,
+      "parent_checkpoint": "runs/iteration2/inner_sensitivity/ilpd_paired_full_i3027_s0/checkpoint.pt",
+      "parent_checkpoint_sha256": "7d0fd0425168844e2f114220af0cefca2238e81e6858adb6ff2dda22b93fbace",
+      "reference_evaluation": "runs/iteration3/evaluations/ilpd_full_x0_l0p1_g0p2_i3027_s0"
+    },
+    {
+      "arm": "updated_full",
+      "setting": {
+        "mode": "full",
+        "prediction": "v",
+        "clinical_weight": 0.01,
+        "guidance": 10.0,
+        "repair": false
+      },
+      "inner_seed": 3027,
+      "training_seed": 0,
+      "parent_checkpoint": "runs/iteration3/training/ilpd_full_v_l0p01_i3027_s0/checkpoint.pt",
+      "parent_checkpoint_sha256": "6668db82de991cf1ee847267e4f5ffbd4432567656a4d459453f4e31cfc48d49",
+      "reference_evaluation": "runs/iteration3/evaluations/ilpd_full_v_l0p01_g10_i3027_s0"
+    },
+    {
+      "arm": "guided_base",
+      "setting": {
+        "mode": "base",
+        "prediction": "v",
+        "clinical_weight": 0.0,
+        "guidance": 10.0,
+        "repair": false
+      },
+      "inner_seed": 3027,
+      "training_seed": 0,
+      "parent_checkpoint": "runs/iteration3/training/ilpd_base_v_l0_i3027_s0/checkpoint.pt",
+      "parent_checkpoint_sha256": "c73b1d210083b736ad9a0e633d17680e5c3ea7c3b917400863fd537458e7c5ae",
+      "reference_evaluation": "runs/iteration3/evaluations/ilpd_base_v_l0_g10_i3027_s0"
+    },
+    {
+      "arm": "matched_dense",
+      "setting": {
+        "mode": "dense",
+        "prediction": "v",
+        "clinical_weight": 0.01,
+        "guidance": 10.0,
+        "repair": false
+      },
+      "inner_seed": 3027,
+      "training_seed": 0,
+      "parent_checkpoint": "runs/iteration3/training/ilpd_dense_v_l0p01_i3027_s0/checkpoint.pt",
+      "parent_checkpoint_sha256": "6d962f69bdd8e90462d256dcc1a11606a312b36176e462d46e22b16614676c02",
+      "reference_evaluation": "runs/iteration3/evaluations/ilpd_dense_v_l0p01_g10_i3027_s0"
+    },
+    {
+      "arm": "previous_full",
+      "setting": {
+        "mode": "full",
+        "prediction": "x0",
+        "clinical_weight": 0.1,
+        "guidance": 0.2,
+        "repair": false
+      },
+      "inner_seed": 3027,
+      "training_seed": 1,
+      "parent_checkpoint": "runs/iteration2/inner_sensitivity/ilpd_paired_full_i3027_s1/checkpoint.pt",
+      "parent_checkpoint_sha256": "fa99c01ed24a96cd9ea03fc8ece3d5a4d74c520b846b2f844dce61cb21c960cc",
+      "reference_evaluation": "runs/iteration3/evaluations/ilpd_full_x0_l0p1_g0p2_i3027_s1"
+    },
+    {
+      "arm": "updated_full",
+      "setting": {
+        "mode": "full",
+        "prediction": "v",
+        "clinical_weight": 0.01,
+        "guidance": 10.0,
+        "repair": false
+      },
+      "inner_seed": 3027,
+      "training_seed": 1,
+      "parent_checkpoint": "runs/iteration3/training/ilpd_full_v_l0p01_i3027_s1/checkpoint.pt",
+      "parent_checkpoint_sha256": "3bc0a5bfd1f978cc42ee87366c679a279385c65d24ae18bdb45eed8f4f78ec48",
+      "reference_evaluation": "runs/iteration3/evaluations/ilpd_full_v_l0p01_g10_i3027_s1"
+    },
+    {
+      "arm": "guided_base",
+      "setting": {
+        "mode": "base",
+        "prediction": "v",
+        "clinical_weight": 0.0,
+        "guidance": 10.0,
+        "repair": false
+      },
+      "inner_seed": 3027,
+      "training_seed": 1,
+      "parent_checkpoint": "runs/iteration3/training/ilpd_base_v_l0_i3027_s1/checkpoint.pt",
+      "parent_checkpoint_sha256": "08202a487ddc8f34168983499af76895c6e8d436df068dbdbb890e1c9d824f30",
+      "reference_evaluation": "runs/iteration3/evaluations/ilpd_base_v_l0_g10_i3027_s1"
+    },
+    {
+      "arm": "matched_dense",
+      "setting": {
+        "mode": "dense",
+        "prediction": "v",
+        "clinical_weight": 0.01,
+        "guidance": 10.0,
+        "repair": false
+      },
+      "inner_seed": 3027,
+      "training_seed": 1,
+      "parent_checkpoint": "runs/iteration3/training/ilpd_dense_v_l0p01_i3027_s1/checkpoint.pt",
+      "parent_checkpoint_sha256": "62f59bc78d88d28e917446b304914a88bea82b5d902378ad178ea65d3a5084ab",
+      "reference_evaluation": "runs/iteration3/evaluations/ilpd_dense_v_l0p01_g10_i3027_s1"
+    },
+    {
+      "arm": "previous_full",
+      "setting": {
+        "mode": "full",
+        "prediction": "x0",
+        "clinical_weight": 0.1,
+        "guidance": 0.2,
+        "repair": false
+      },
+      "inner_seed": 3027,
+      "training_seed": 2,
+      "parent_checkpoint": "runs/iteration2/inner_sensitivity/ilpd_paired_full_i3027_s2/checkpoint.pt",
+      "parent_checkpoint_sha256": "e4af7e2d4ac34a397491e252389feabbcc6c3dfe9a534e9d3008ce8e7792424b",
+      "reference_evaluation": "runs/iteration3/evaluations/ilpd_full_x0_l0p1_g0p2_i3027_s2"
+    },
+    {
+      "arm": "updated_full",
+      "setting": {
+        "mode": "full",
+        "prediction": "v",
+        "clinical_weight": 0.01,
+        "guidance": 10.0,
+        "repair": false
+      },
+      "inner_seed": 3027,
+      "training_seed": 2,
+      "parent_checkpoint": "runs/iteration3/training/ilpd_full_v_l0p01_i3027_s2/checkpoint.pt",
+      "parent_checkpoint_sha256": "0941d0b7153ebe9530b2e4a14cb44d785ab28102791e9310eef0daacf853c4b7",
+      "reference_evaluation": "runs/iteration3/evaluations/ilpd_full_v_l0p01_g10_i3027_s2"
+    },
+    {
+      "arm": "guided_base",
+      "setting": {
+        "mode": "base",
+        "prediction": "v",
+        "clinical_weight": 0.0,
+        "guidance": 10.0,
+        "repair": false
+      },
+      "inner_seed": 3027,
+      "training_seed": 2,
+      "parent_checkpoint": "runs/iteration3/training/ilpd_base_v_l0_i3027_s2/checkpoint.pt",
+      "parent_checkpoint_sha256": "397d2b69dc76e796c27a33f535d887fa59f6dff017f7262e2e1cd5e22964b518",
+      "reference_evaluation": "runs/iteration3/evaluations/ilpd_base_v_l0_g10_i3027_s2"
+    },
+    {
+      "arm": "matched_dense",
+      "setting": {
+        "mode": "dense",
+        "prediction": "v",
+        "clinical_weight": 0.01,
+        "guidance": 10.0,
+        "repair": false
+      },
+      "inner_seed": 3027,
+      "training_seed": 2,
+      "parent_checkpoint": "runs/iteration3/training/ilpd_dense_v_l0p01_i3027_s2/checkpoint.pt",
+      "parent_checkpoint_sha256": "0b4eee3e553a199c449a53d95cfc6fe8bce532a1989af2ec5a6567e1b778876e",
+      "reference_evaluation": "runs/iteration3/evaluations/ilpd_dense_v_l0p01_g10_i3027_s2"
+    },
+    {
+      "arm": "previous_full",
+      "setting": {
+        "mode": "full",
+        "prediction": "x0",
+        "clinical_weight": 0.1,
+        "guidance": 0.2,
+        "repair": false
+      },
+      "inner_seed": 4027,
+      "training_seed": 0,
+      "parent_checkpoint": "runs/iteration2/inner_sensitivity/ilpd_paired_full_i4027_s0/checkpoint.pt",
+      "parent_checkpoint_sha256": "adbe1cf4b79b0469c1488c02ef33d3788cdd4c861d18346680a21681e14dc303",
+      "reference_evaluation": "runs/iteration3/evaluations/ilpd_full_x0_l0p1_g0p2_i4027_s0"
+    },
+    {
+      "arm": "updated_full",
+      "setting": {
+        "mode": "full",
+        "prediction": "v",
+        "clinical_weight": 0.01,
+        "guidance": 10.0,
+        "repair": false
+      },
+      "inner_seed": 4027,
+      "training_seed": 0,
+      "parent_checkpoint": "runs/iteration3/training/ilpd_full_v_l0p01_i4027_s0/checkpoint.pt",
+      "parent_checkpoint_sha256": "d457c884d9353becd8f483ec680a01f01d11dbc7220726ee0a73520b4a226577",
+      "reference_evaluation": "runs/iteration3/evaluations/ilpd_full_v_l0p01_g10_i4027_s0"
+    },
+    {
+      "arm": "guided_base",
+      "setting": {
+        "mode": "base",
+        "prediction": "v",
+        "clinical_weight": 0.0,
+        "guidance": 10.0,
+        "repair": false
+      },
+      "inner_seed": 4027,
+      "training_seed": 0,
+      "parent_checkpoint": "runs/iteration3/training/ilpd_base_v_l0_i4027_s0/checkpoint.pt",
+      "parent_checkpoint_sha256": "970ea950d9663e47764b260a6ff21fc18d09871bc9a39a7ad7f54a397827653e",
+      "reference_evaluation": "runs/iteration3/evaluations/ilpd_base_v_l0_g10_i4027_s0"
+    },
+    {
+      "arm": "matched_dense",
+      "setting": {
+        "mode": "dense",
+        "prediction": "v",
+        "clinical_weight": 0.01,
+        "guidance": 10.0,
+        "repair": false
+      },
+      "inner_seed": 4027,
+      "training_seed": 0,
+      "parent_checkpoint": "runs/iteration3/training/ilpd_dense_v_l0p01_i4027_s0/checkpoint.pt",
+      "parent_checkpoint_sha256": "fe9bce24421ba8d99da668b32ce73e060ccc13a66b5bc60446e8d3b5b3d2a50d",
+      "reference_evaluation": "runs/iteration3/evaluations/ilpd_dense_v_l0p01_g10_i4027_s0"
+    },
+    {
+      "arm": "previous_full",
+      "setting": {
+        "mode": "full",
+        "prediction": "x0",
+        "clinical_weight": 0.1,
+        "guidance": 0.2,
+        "repair": false
+      },
+      "inner_seed": 4027,
+      "training_seed": 1,
+      "parent_checkpoint": "runs/iteration2/inner_sensitivity/ilpd_paired_full_i4027_s1/checkpoint.pt",
+      "parent_checkpoint_sha256": "5f27c77df01f9b4b13a244a55fe711f7b88a6583c036d334af8adc42c9df8e49",
+      "reference_evaluation": "runs/iteration3/evaluations/ilpd_full_x0_l0p1_g0p2_i4027_s1"
+    },
+    {
+      "arm": "updated_full",
+      "setting": {
+        "mode": "full",
+        "prediction": "v",
+        "clinical_weight": 0.01,
+        "guidance": 10.0,
+        "repair": false
+      },
+      "inner_seed": 4027,
+      "training_seed": 1,
+      "parent_checkpoint": "runs/iteration3/training/ilpd_full_v_l0p01_i4027_s1/checkpoint.pt",
+      "parent_checkpoint_sha256": "ea15ec82337ab6934775831a898162955fff6d260f690b20d1012adfb0758dbf",
+      "reference_evaluation": "runs/iteration3/evaluations/ilpd_full_v_l0p01_g10_i4027_s1"
+    },
+    {
+      "arm": "guided_base",
+      "setting": {
+        "mode": "base",
+        "prediction": "v",
+        "clinical_weight": 0.0,
+        "guidance": 10.0,
+        "repair": false
+      },
+      "inner_seed": 4027,
+      "training_seed": 1,
+      "parent_checkpoint": "runs/iteration3/training/ilpd_base_v_l0_i4027_s1/checkpoint.pt",
+      "parent_checkpoint_sha256": "670fd0eebeb368f75c202229f7df77ddf684aed62abd1f401ccb9eef3850e329",
+      "reference_evaluation": "runs/iteration3/evaluations/ilpd_base_v_l0_g10_i4027_s1"
+    },
+    {
+      "arm": "matched_dense",
+      "setting": {
+        "mode": "dense",
+        "prediction": "v",
+        "clinical_weight": 0.01,
+        "guidance": 10.0,
+        "repair": false
+      },
+      "inner_seed": 4027,
+      "training_seed": 1,
+      "parent_checkpoint": "runs/iteration3/training/ilpd_dense_v_l0p01_i4027_s1/checkpoint.pt",
+      "parent_checkpoint_sha256": "b9da6de17e54e9341a166906a48becc541438ae742c59e9d0f2816b284f5557b",
+      "reference_evaluation": "runs/iteration3/evaluations/ilpd_dense_v_l0p01_g10_i4027_s1"
+    },
+    {
+      "arm": "previous_full",
+      "setting": {
+        "mode": "full",
+        "prediction": "x0",
+        "clinical_weight": 0.1,
+        "guidance": 0.2,
+        "repair": false
+      },
+      "inner_seed": 4027,
+      "training_seed": 2,
+      "parent_checkpoint": "runs/iteration2/inner_sensitivity/ilpd_paired_full_i4027_s2/checkpoint.pt",
+      "parent_checkpoint_sha256": "1865f3fb26488895fcd244028e59d8c625e2a34fee89430a31b6cf5fdca340c9",
+      "reference_evaluation": "runs/iteration3/evaluations/ilpd_full_x0_l0p1_g0p2_i4027_s2"
+    },
+    {
+      "arm": "updated_full",
+      "setting": {
+        "mode": "full",
+        "prediction": "v",
+        "clinical_weight": 0.01,
+        "guidance": 10.0,
+        "repair": false
+      },
+      "inner_seed": 4027,
+      "training_seed": 2,
+      "parent_checkpoint": "runs/iteration3/training/ilpd_full_v_l0p01_i4027_s2/checkpoint.pt",
+      "parent_checkpoint_sha256": "4b5ed346c11e74dc9934371b6429970d77e42d672c560d949be4620a7c13acd7",
+      "reference_evaluation": "runs/iteration3/evaluations/ilpd_full_v_l0p01_g10_i4027_s2"
+    },
+    {
+      "arm": "guided_base",
+      "setting": {
+        "mode": "base",
+        "prediction": "v",
+        "clinical_weight": 0.0,
+        "guidance": 10.0,
+        "repair": false
+      },
+      "inner_seed": 4027,
+      "training_seed": 2,
+      "parent_checkpoint": "runs/iteration3/training/ilpd_base_v_l0_i4027_s2/checkpoint.pt",
+      "parent_checkpoint_sha256": "cd5e8f6e4a9c43d84706a7a244f4cd9838e2772b65dae8335c630f231e701052",
+      "reference_evaluation": "runs/iteration3/evaluations/ilpd_base_v_l0_g10_i4027_s2"
+    },
+    {
+      "arm": "matched_dense",
+      "setting": {
+        "mode": "dense",
+        "prediction": "v",
+        "clinical_weight": 0.01,
+        "guidance": 10.0,
+        "repair": false
+      },
+      "inner_seed": 4027,
+      "training_seed": 2,
+      "parent_checkpoint": "runs/iteration3/training/ilpd_dense_v_l0p01_i4027_s2/checkpoint.pt",
+      "parent_checkpoint_sha256": "a826764961e2489caec691e5e878523b346a18abe540eea5dd8b4b5eca8750b3",
+      "reference_evaluation": "runs/iteration3/evaluations/ilpd_dense_v_l0p01_g10_i4027_s2"
+    }
+  ],
+  "sampling_seeds": [
+    70001,
+    70002,
+    70003
+  ],
+  "multipliers": [
+    1,
+    5
+  ],
+  "evaluator_seed": 2026,
+  "source_sha256": "1a9e99d67a8131df426c2292c785cfe2b7c0f9d99d465fe4f476278d69a5645c",
+  "runner_sha256": "077446fbc961dbca9d404a52f81d94c9ed585c9825c9239caabab568d2761c2a",
+  "protocol_sha256": "ca0e2e2e53f499eaa19393ed98c9f2078525e9bd7144972351321ff9e5f356b6",
+  "new_training_runs": 0,
+  "expected_pools": 108,
+  "expected_evaluations": 216
+}

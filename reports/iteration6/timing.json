@@ -1,0 +1,15 @@
+{
+  "new_training_runs": 0,
+  "generation_checkpoints": 27,
+  "new_evaluations": 162,
+  "reused_evaluations": 162,
+  "sample_seconds_sum": 193.60590438358486,
+  "sample_seconds_min": 1.021431458182633,
+  "sample_seconds_max": 1.44186641741544,
+  "evaluation_seconds_sum": 147.23977479944006,
+  "evaluation_seconds_min": 0.8570312922820449,
+  "evaluation_seconds_max": 1.0243507092818618,
+  "device": "CPU",
+  "gpu_vram_gib": 0,
+  "peak_system_ram": "not measured"
+}
