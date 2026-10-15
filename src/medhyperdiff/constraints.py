@@ -27,6 +27,8 @@ class Rule:
     source: str = ""
     units: str = "source measurement units; assay compatibility requires review"
     review_status: str = "not clinically reviewed"
+    # Coefficients of a "linear" rule: derived = bound + sum(weights * operands).
+    weights: tuple[float, ...] = ()
 
 
 class ConstraintSet:
@@ -55,6 +57,36 @@ class ConstraintSet:
             # Algebraically equivalent to r = a/(t-a) for t>a, without singularity.
             total, albumin, ratio = v
             return abs(ratio * (total - albumin) - albumin)
+        if rule.kind == "difference":
+            # Definitional c = a - b (for example NHANES globulin = total protein - albumin).
+            derived, a, b = v
+            return abs(derived - (a - b))
+        if rule.kind == "ratio":
+            # c = a / b with the denominator floored to avoid a singularity (thyroid FTI = TT4/T4U).
+            derived, a, b = v
+            denominator = b.clamp(min=1e-3) if hasattr(b, "clamp") else np.maximum(b, 1e-3)
+            return abs(derived - a / denominator)
+        if rule.kind == "bmi":
+            bmi, weight, height = v
+            metres = height / 100
+            metres = metres.clamp(min=.3) if hasattr(metres, "clamp") else np.maximum(metres, .3)
+            return abs(bmi - weight / metres ** 2)
+        if rule.kind == "scaled_product":
+            derived, a, b = v
+            return abs(derived - rule.bound * a * b)
+        if rule.kind == "scaled_ratio":
+            derived, a, b = v
+            denominator = b.clamp(min=1e-3) if hasattr(b, "clamp") else np.maximum(b, 1e-3)
+            return abs(derived - rule.bound * a / denominator)
+        if rule.kind == "complement":
+            derived, *rest = v
+            return abs(derived - (rule.bound - sum(rest)))
+        if rule.kind == "linear":
+            derived, *rest = v
+            return abs(derived - (rule.bound + sum(w * x for w, x in zip(rule.weights, rest))))
+        if rule.kind == "structure":
+            # Hyperedge membership only: contributes incidence to the model and no energy or violations.
+            return 0 * v[0]
         if rule.kind == "parity":
             # Expected violation under factorized categorical probabilities.
             a, b, c = v
@@ -92,8 +124,10 @@ class ConstraintSet:
         """
         values = {}
         eligibility = {}
+        # The preprocessor owns the differentiable decode (affine or fit-only quantile).
+        physical = preprocessor.physical_torch(numeric)
         for i, col in enumerate(preprocessor.schema.numeric):
-            values[col] = numeric[:, i] * float(preprocessor.scales[i]) + float(preprocessor.means[i])
+            values[col] = physical[i]
             mask_index = len(preprocessor.cat_names) + i
             p_observed = logits[mask_index].softmax(-1)[:, 1]
             eligibility[col] = observed[:, i] if observed is not None else p_observed.detach() if detach_masks else p_observed
@@ -143,6 +177,42 @@ def build_constraints(schema, train):
             confidence=.75, tolerance=.1, scale=1, status="soft_biochemical", source=BILIRUBIN_SOURCE))
     if schema.name == "toy":
         rules.append(Rule("parity", "parity", ("symptom_a", "symptom_b", "symptom_c"), status="controlled", source="toy XOR mechanism"))
+    if schema.name == "nhanes":
+        # NHANES documentation: globulin is calculated as total protein minus albumin; BMI is weight (kg)
+        # divided by height (m) squared, rounded to 0.1. Tolerances are half the recording resolution.
+        rules.append(Rule("globulin_identity", "difference", ("globulin", "total_protein", "albumin"), tolerance=.05 + 1e-6,
+                          status="definitional", source="https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/BIOPRO_J.htm"))
+        rules.append(Rule("bmi_identity", "bmi", ("bmi", "weight", "height"), tolerance=.05 + 1e-6, status="definitional",
+                          source="https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/BMX_J.htm"))
+        rules.append(Rule("albumin_le_total", "le", ("albumin", "total_protein"), status="soft_biochemical", source=PROTEIN_SOURCE))
+    def envelope(rule):
+        raw = np.asarray(ConstraintSet([rule]).residual(rule, {c: train[c].to_numpy(float) for c in rule.columns}), float)
+        raw = raw[np.isfinite(raw)]
+        return replace(rule, tolerance=float(np.quantile(raw, .95)) if len(raw) else .1)
+    if schema.name.startswith("nhanes_chem"):
+        # NHANES-reported relations (BIOPRO, ALB_CR and BMX documentation); envelopes as for the CBC panel.
+        for rule in (Rule("globulin_identity", "difference", ("globulin", "total_protein", "albumin")),
+                     Rule("bmi_identity", "bmi", ("bmi", "weight", "height")),
+                     Rule("acr_index", "scaled_ratio", ("acr", "urine_albumin", "urine_creatinine"), bound=100.),
+                     Rule("osmolality_formula", "linear", ("osmolality", "sodium", "glucose", "bun"), bound=9.,
+                          weights=(1.86, 1 / 18, 1 / 2.8))):
+            rules.append(envelope(replace(rule, confidence=.5, status="exploratory_train_calibrated",
+                                          source="https://wwwn.cdc.gov/nchs/nhanes/ (BIOPRO, ALB_CR, BMX documentation)")))
+    if schema.name.startswith("nhanes_cbc"):
+        # Analyser-computed indices and the differential sum hold up to reporting rounding; tolerances are
+        # fit 95th percentiles (descriptive envelopes), so about 5% of real records violate by construction.
+        for rule in (Rule("hct_index", "scaled_product", ("hct", "rbc", "mcv"), bound=.1),
+                     Rule("mch_index", "scaled_ratio", ("mch", "hgb", "rbc"), bound=10.),
+                     Rule("mchc_index", "scaled_ratio", ("mchc", "hgb", "hct"), bound=100.),
+                     Rule("differential_sum", "complement", ("baso_pct", "lymph_pct", "mono_pct", "neut_pct", "eos_pct"), bound=100.)):
+            rules.append(envelope(replace(rule, confidence=.5, status="exploratory_train_calibrated",
+                                          source="https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/CBC_J.htm")))
+    if schema.name == "thyroid":
+        # FTI is reported as a function of TT4 and T4U; rounding and entry errors make it approximate,
+        # so the tolerance is the fit-partition 95th percentile, a descriptive envelope like ILPD's.
+        raw = (train.fti - train.tt4 / train.t4u.clip(lower=1e-3)).abs().dropna()
+        rules.append(Rule("fti_ratio", "ratio", ("fti", "tt4", "t4u"), confidence=.5, tolerance=float(raw.quantile(.95)) if len(raw) else 1.,
+                          status="exploratory_train_calibrated", source="UCI thyroid0387 documentation (Garvan Institute)"))
     return ConstraintSet(rules)
 
 
@@ -172,6 +242,16 @@ def repair_simple(frame, constraints):
             globulin = (fixed[total] - fixed[albumin]).clip(lower=.1)
             fixed.loc[eligible, total] = fixed.loc[eligible, albumin] + globulin[eligible]
             fixed.loc[eligible, ratio] = fixed.loc[eligible, albumin] / globulin[eligible]
+        elif rule.kind in ("difference", "ratio", "bmi"):
+            derived, a, b = cols
+            eligible = fixed[list(cols)].notna().all(axis=1)
+            if rule.kind == "difference":
+                value = fixed[a] - fixed[b]
+            elif rule.kind == "ratio":
+                value = fixed[a] / fixed[b].clip(lower=1e-3)
+            else:
+                value = fixed[a] / (fixed[b].clip(lower=30) / 100) ** 2
+            fixed.loc[eligible, derived] = value[eligible]
         elif rule.kind == "parity":
             a, b, c = cols
             eligible = fixed[list(cols)].notna().all(axis=1)

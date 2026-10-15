@@ -1,0 +1,495 @@
+\documentclass[conference]{IEEEtran}
+\IEEEoverridecommandlockouts
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning}
+\usepackage[hidelinks]{hyperref}
+
+\begin{document}
+
+\title{Synthetic Clinical Tables That Keep Laboratory Relationships, and How to Evaluate Them}
+
+\author{\IEEEauthorblockN{Naren Medarametla}
+\IEEEauthorblockA{\textit{School Of Computer Science and Engineering} \\
+\textit{Vellore Institute of Technology}\\
+Chennai, India \\
+naren.medarametla2023@vitstudent.ac.in}
+\and
+\IEEEauthorblockN{Abishek K G}
+\IEEEauthorblockA{\textit{School Of Computer Science and Engineering} \\
+\textit{Vellore Institute of Technology}\\
+Chennai, India \\
+abishek.kg2023@vitstudent.ac.in}
+\and
+\IEEEauthorblockN{Roshan Parveen}
+\IEEEauthorblockA{\textit{School Of Computer Science and Engineering} \\
+\textit{Vellore Institute of Technology}\\
+Chennai, India \\
+roshan.parveen2023@vitstudent.ac.in}
+
+\and
+\IEEEauthorblockN{Parkavi K}
+\IEEEauthorblockA{\textit{School Of Computer Science and Engineering} \\
+\textit{Vellore Institute of Technology}\\
+Chennai, India \\
+parkavi.k@vit.ac.in}
+}
+
+\maketitle
+
+\begin{abstract}
+Synthetic clinical tables are judged by empirical evaluation, yet laboratory data are small, reported on fixed grids and linked by formulas that hold exactly or only up to rounding. We study how such tables should be evaluated and how their relationships can be preserved. In a prospectively specified study with two public populations and twelve generator variants, moving from common to corrected practice reversed 25\% to 34\% of generator pairs and changed the top-ranked generator in 18 of 20 training samples; a decomposition traced the training effect to an epoch cap that left small tables undertrained rather than to validation-based checkpoint selection. We then formalize relation reparameterization for a hypergraph-guided diffusion model: one participant of each supplied relation is replaced by a learned residual, the reconstructed participant is chosen to limit error propagation, and exactly reported values are re-derived after decoding. On five NHANES datasets from four survey cycles, the model reproduced approximate blood count relations more closely than five published generators, as generated or with deterministic re-derivation, in every setting, and kept the coupling between related residuals that residual resampling loses; for exact chemistry formulas, simple re-derivation was as faithful. With 250 sampled records it was more realistic than every comparator below a membership threshold on all four confirmation datasets; with 1,000 records this held for chemistry but not for blood counts, and with 2,000 records TabDiff was more realistic. Membership AUROC exceeded 0.60 in one of ten settings, and the attacks are diagnostics rather than privacy guarantees.
+\end{abstract}
+
+\begin{IEEEkeywords}
+synthetic data, tabular data, diffusion models, laboratory data, evaluation methodology, membership inference
+\end{IEEEkeywords}
+
+\section{Introduction}
+
+Synthetic data are increasingly proposed as a way to share clinical tables without exposing patients. Whether a synthetic table is faithful, useful and safe is decided almost entirely by empirical evaluation: classifier two-sample tests, distances between marginal and joint distributions, models trained on synthetic data and tested on real data, checks of clinical rules, and distance-based or attack-based privacy diagnostics. Clinical tables are typically small, their laboratory values are heavy-tailed and reported on fixed grids, some measurements are missing, and several variables are linked by formulas. Some formulas hold exactly at the reported precision, such as a globulin value computed from reported total protein and albumin; others hold only approximately, such as red cell indices that an analyzer computes from unrounded internal measurements. These properties interact with ordinary training and evaluation choices in ways that are easy to overlook.
+
+This work began as the development of a constraint-guided diffusion model for medical tables. Ten development iterations produced mixed, partition-dependent conclusions, and an audit showed that most of them were produced by training and evaluation choices rather than by the models. We describe seven such pitfalls and quantify them in a controlled study. We then use the corrected protocol to develop and test a generator that reproduces laboratory relationships, and we report where it is better than published generators and where it is not.
+
+Our contributions are threefold. First, we catalogue seven training and evaluation pitfalls and quantify how much they change the ranking of generators on two public populations, including a decomposition of the training correction into its components. Second, we formalize relation reparameterization with learned residuals, a conditioning-based choice of the reconstructed participant and re-derivation of exactly reported values, and we position it against rule-based reconstruction of dependent features. Third, we evaluate it on five NHANES panel-by-cycle datasets against five published generators and knowledge-equivalent post-processing controls, with relation diagnostics beyond the primary metric, clinical categories, utility, computation and membership diagnostics, and we report the settings in which it does not win.
+
+\section{Related Work}
+
+Tabular data generators range from statistical copulas to generative adversarial networks and variational autoencoders, of which CTGAN and TVAE are the standard references \cite{xu2019ctgan}. Diffusion models \cite{ho2020ddpm,austin2021d3pm} were adapted to mixed tables by TabDDPM \cite{kotelnikov2023tabddpm}, which combines Gaussian and multinomial diffusion, and by TabDiff \cite{shi2025tabdiff}, which uses continuous-time diffusion with learnable per-column noise schedules. Feature relationships have been modeled with learned graphs in GOGGLE \cite{liu2023goggle}.
+
+Umesh \textit{et al.} showed that common generators do not preserve functional dependencies between attributes \cite{umesh2024dependencies}, and their hierarchical feature generation framework generates independent features with an existing generator and reconstructs dependent features deterministically from supplied dependency rules \cite{umesh2025hfgf}. That framework targets mainly categorical dependencies and sets dependent values exactly by the rule. Our method differs in three respects: it models the discrepancy of each numerical relation as a learned residual instead of assuming exactness, it chooses which participant to reconstruct from the data to limit error propagation, and it accounts for the recording resolution of reported values. Constraint-aware generation also includes the constraint layers of C-DGM \cite{stoian2024cdgm} and DRL \cite{stoian2025drl} and the inference-time manifold guidance of Harpoon \cite{shankar2026harpoon}. We did not run these methods. Our deterministic re-derivation controls enforce the supplied relations exactly after generation and should not be read as reimplementations of them.
+
+Evaluation commonly combines classifier two-sample tests \cite{lopezpaz2017c2st}, marginal and dependence distances, downstream utility and privacy diagnostics such as distance to the closest record, membership inference by overfitting detection \cite{vanbreugel2023domias} and attack-based audits \cite{giomi2023anonymeter}. The difficulty of estimating uncertainty from overlapping resamples is well known \cite{bengio2004variance}. We do not propose a new metric family; we show how ordinary choices around established metrics change conclusions on small clinical tables.
+
+\section{The Seven Pitfalls}
+
+The first pitfall is an under-specified training recipe for diffusion models on small tables. The legacy recipe of our case study stopped training by patience on a validation diffusion loss computed with one fixed draw of noise levels and masks, within a cap of 100 epochs. On a few hundred records this criterion is a noisy finite-sample estimate and is often flat early in training, and the cap itself allows only about 400 parameter updates at 200 training rows, against 5,000 in the corrected recipe, which also decays the learning rate and averages the weights. The symptom is a cluster of selected checkpoints near the start of training or at the cap. Section VI shows that the update budget, not the selection rule, accounts for most of the damage.
+
+The second pitfall is linear scaling of heavy-tailed laboratory values. Standardization leaves most of the mass of an enzyme or triglyceride distribution in a tiny region while rare extreme values dominate the loss. A rank-based representation fitted on training rows, with a bounded inverse, is the usual alternative, but its benefit must be validated rather than assumed.
+
+The third pitfall is ignoring the recorded measurement resolution. Laboratories report on fixed grids, sometimes depending on magnitude, as with significant-figure reporting of thyroid stimulating hormone. Continuous outputs fall off the grid and are detectable by tree-based discriminators, whereas resampling-based generators emit observed values and are implicitly favored. Every continuous-output generator should be decoded to the resolution detected on its training rows.
+
+The fourth pitfall is scoring clinical rules by violation counts. For a relation computed exactly from reported values, the real violation rate is zero and recomputing the derived variable is correct practice. For an empirical envelope, such as a tolerance set at the 95th percentile of training residuals, about 5\% of real records violate the rule by construction, so zero violations signals over-correction. Rule behavior should be compared with real held-out behavior.
+
+The fifth pitfall is training baselines outside their published recipes. Adapters that change optimization, for example by using a constant learning rate with early stopping, can make a strong method appear unstable. Baselines should reproduce the upstream training loop and document every adaptation.
+
+The sixth pitfall is that realism metrics reward memorization. Copies of training records are indistinguishable from real data, so when generators or configurations are selected by two-sample tests, near-copying wins on small tables. Membership diagnostics should be reported beside every realism metric, and selection should respect a privacy threshold.
+
+The seventh pitfall is the use of small evaluation sets. A two-sample AUROC estimated on tens to a hundred records per class is noisy, and generator orderings at that size often disagree with orderings on large reference sets. Evaluation should use the largest available held-out reference, with repeated subsampling and reported uncertainty.
+
+\section{Case Study: A Development Project}
+
+\begin{figure}[t]
+\centering
+\begin{tikzpicture}[node distance=3.5mm, every node/.style={font=\scriptsize, align=center}, box/.style={draw, rounded corners=2pt, minimum width=7.6cm, minimum height=6mm, fill=gray!8}, arr/.style={-{Latex[length=1.6mm]}}]
+\node[box] (a) {Real table: numeric values, categories, missingness indicators, class label};
+\node[box, below=of a] (b) {Fit-only coding: quantile scores, recorded resolution, relation residuals};
+\node[box, below=of b] (c) {Mixed diffusion: Gaussian numerics and absorbing-mask categories};
+\node[box, below=of c] (d) {Denoiser: feature transformer, association attention bias, hyperedge message passing};
+\node[box, below=of d] (e) {Training: updates proportional to sample size, learning-rate decay, weight averaging};
+\node[box, below=of e] (f) {Decoding: recorded resolution, relation reconstruction, re-derivation of exact values};
+\node[box, below=of f] (g) {Evaluation: realism, relation diagnostics, utility and membership on held-out records};
+\foreach \x/\y in {a/b,b/c,c/d,d/e,e/f,f/g} \draw[arr] (\x) -- (\y);
+\end{tikzpicture}
+\caption{Overview of the corrected MedHyperDiff pipeline and its evaluation.}
+\label{fig:pipeline}
+\end{figure}
+
+MedHyperDiff is a mixed-type diffusion model with Gaussian diffusion for numerical values, absorbing-mask diffusion for categories and explicit missingness indicators (Fig.~\ref{fig:pipeline}). Its denoiser is a feature transformer with an attention bias from a bootstrap-stable association graph and nonlinear hyperedge message passing over supplied clinical relations. Ten development iterations on four public UCI cohorts (Indian Liver Patient Dataset, heart failure, chronic kidney disease and early-stage diabetes) had produced partition-dependent effects and a repaired Gaussian copula that dominated the model on realism and rule compliance.
+
+The audit found that 13 of 36 fits in one iteration stopped during the initial plateau of the validation loss and kept checkpoints from epochs 3 to 28, while the other 23 reached the 100-epoch cap still improving. Enzyme and bilirubin values were linearly scaled, every numerical column had a fixed reporting grid but outputs were continuous, an empirical protein tolerance was scored as if fewer violations were always better, and the TabDDPM adapter used a constant learning rate with early stopping instead of the upstream recipe. The modified implementation reproduces an archived synthetic table byte for byte under the original settings, so each correction can be isolated.
+
+Table~\ref{tab:ablation} and Fig.~\ref{fig:ablation} apply the corrections one at a time on three development partitions of the liver dataset with three seeds each. The training correction alone reduced association error by 61\%, to the level of a control that resamples training rows, and restoring only the original training loop, with its epoch cap and validation-selected checkpoint, undid most of that gain. Decoding to the recorded resolution produced most of the remaining improvement in two-sample realism, measured as the AUROC of a classifier separating synthetic from real records (C2ST), where 0.5 means indistinguishable.
+
+\begin{table}[t]
+\caption{Correcting one pitfall at a time (liver dataset, development partitions)}
+\label{tab:ablation}
+\centering
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{lcccc}
+\toprule
+Variant & C2ST & Num. W & Assoc. & Rule gap \\
+\midrule
+Original recipe & 0.855 & 0.245 & 0.176 & 0.004 \\
++ corrected training recipe & 0.730 & 0.167 & 0.068 & 0.006 \\
++ quantile coding, 100 steps & 0.714 & 0.151 & 0.066 & 0.006 \\
++ recorded resolution & \textbf{0.571} & \textbf{0.150} & \textbf{0.066} & \textbf{0.001} \\
+Corrected, original training loop & 0.697 & 0.166 & 0.158 & 0.002 \\
+Repaired copula & 0.573 & 0.153 & 0.079 & 0.006 \\
+Bootstrap copy control & 0.493 & 0.150 & 0.066 & 0.002 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=\textwidth]{figures/fig_ablation.png}
+\caption{Effect of each correction on the liver dataset development partitions (mean and standard deviation across three partitions). C2ST is the two-sample classifier AUROC (0.5 is indistinguishable), numeric W the Wasserstein distance scaled by the training standard deviation, and the rule gap the difference between synthetic and real violation rates.}
+\label{fig:ablation}
+\end{figure*}
+
+After correction, a comparison specified in advance with equal tuning budgets against upstream-recipe TabDDPM and TabDiff, CTGAN, TVAE and statistical references was evaluated once on reserved test folds. The corrected model improved on the original recipe in every seed and cohort, reducing C2ST from 0.944 to 0.631 on the liver data, from 0.761 to 0.615 on heart failure and from 0.782 to 0.586 on kidney disease. TabDiff and the copula were nevertheless more realistic overall. This stage also revealed the last two pitfalls: several TabDDPM configurations chosen by a fidelity and utility rule had membership AUROC between 0.91 and 0.99, and with 60 to 117 test patients the seed-to-seed standard deviation of C2ST reached 0.07.
+
+\section{Controlled Study Design}
+
+The case study cannot separate the pitfalls from one model's idiosyncrasies or from the noise of small test folds. The controlled study was specified in a dated protocol before any generator was fitted to its data. It uses NHANES 2017 to 2018 \cite{nhanes} adults with a standard biochemistry record (4,756 records, diagnosed diabetes as label, 21 numerical predictors and sex), in which globulin equals total protein minus albumin and body mass index equals weight over squared height as reported, and the UCI thyroid registry (9,172 records, any thyroid diagnosis as label, six numerical and sixteen categorical predictors, up to 28\% missing), in which the free thyroxine index approximately equals total thyroxine divided by thyroid hormone uptake.
+
+Each population is split once into a reference half and a pool, grouped by identical predictor profile and stratified by label. From the pool, samples of nominal size $n = 250$ and $n = 1{,}000$ are drawn five times each and split 80/20 into 200 or 800 fit rows and validation rows. All generators fit the same rows, and every generator produces five synthetic records per fit row. The reference half, with 2,378 and 4,588 records, is never fitted and serves for utility, two-sample tests and as the source of non-members and attacker background data. Twelve variants are compared: corrected MedHyperDiff, the same with the legacy training recipe or linear scaling, TabDDPM with the upstream recipe and with an earlier adapter loop, TabDiff, CTGAN, TVAE, a Gaussian copula, a copula with re-derivation of supplied relations, independent marginals, and bootstrap resampling as a copy control. Configurations are fixed in advance.
+
+Every continuous-output generator emits raw values that are decoded after sampling in three ways using fit rows only: raw, a single global grid per column, and a magnitude-banded grid. We compute C2ST with a random forest discriminator on the full reference and at 50 to 1,000 records per source with ten subsamples each, numerical and dependence distances, forest utility trained on synthetic and tested on real data (TSTR), rule violation rates and rule realism, a nearest-distance membership attack and a density-ratio membership attack in the style of DOMIAS \cite{vanbreugel2023domias}. Rankings are compared by the fraction of generator pairs whose order reverses and by Kendall's $\tau$, with bootstrap intervals over the five training samples.
+
+\section{Results of the Controlled Study}
+
+\subsection*{Common Versus Corrected Practice}
+
+We ranked eight generator identities by realism under a common-practice pipeline, consisting of diffusion models trained with the legacy recipe, the adapter TabDDPM loop, raw outputs, two-sample tests on 100 records per source and no privacy check, and under the corrected pipeline. Table~\ref{tab:pipeline} and Fig.~\ref{fig:pipeline_rev} show that a quarter to a third of all pairwise comparisons reversed and that the top-ranked generator changed in 18 of 20 training samples. The case-study model ranked fourth to sixth of eight under common practice in most samples and first in 16 of 20 under corrected practice. With a privacy-aware ranking, which places generators with membership AUROC above 0.60 last, 20\% to 36\% of pairs reversed, and the corrected top generator was MedHyperDiff in three settings and the copula with re-derivation on thyroid at $n = 250$.
+
+\begin{table}[t]
+\caption{Agreement between common and corrected practice (realism ranking)}
+\label{tab:pipeline}
+\centering
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{lcccc}
+\toprule
+Population, $n$ & Pairs reversed & $\tau$ & Top-1 agree & Top (corrected) \\
+\midrule
+NHANES, 250 & 32\% (29 to 35) & 0.36 & 0/5 & MedHyperDiff \\
+NHANES, 1,000 & 34\% (29 to 38) & 0.33 & 0/5 & MedHyperDiff \\
+Thyroid, 250 & 25\% (22 to 28) & 0.50 & 0/5 & MedHyperDiff \\
+Thyroid, 1,000 & 26\% (22 to 31) & 0.47 & 2/5 & MedHyperDiff \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=\textwidth]{figures/pipeline_reversals.png}
+\caption{Fraction of generator pairs whose order reverses between common and corrected practice, for realism, privacy-aware realism and rule scoring (mean and 95\% bootstrap interval over five training samples).}
+\label{fig:pipeline_rev}
+\end{figure*}
+
+\subsection*{Training Choices}
+
+With the legacy recipe, 30\% of MedHyperDiff fits kept a checkpoint from the first 20 epochs, the earliest at epoch 3, and 45\% stopped at the cap. Its C2ST was worse than with the corrected recipe in all 20 paired samples, by 0.22 and 0.16 on NHANES and thyroid at $n = 250$ and by 0.17 and 0.07 at $n = 1{,}000$, and association error was also worse in all 20. A follow-up experiment, specified before it was run, decomposed this difference on the same samples (Table~\ref{tab:decomp}). Giving the corrected recipe only the legacy number of updates, 400 at 200 fit rows and 1,300 at 800, reproduced or exceeded the whole gap, with C2ST worse in all 20 samples by 0.17 on average. Returning the checkpoint with the lowest validation loss along the same trajectory instead of the final weights changed C2ST by 0.004 on average with no consistent sign, and so did averaging the validation loss over 16 corruption draws or stopping by patience. A constant learning rate without weight averaging did not consistently change realism but raised membership AUROC in all 20 samples, by 0.035 on average, while the undertrained variants had membership AUROC about 0.04 lower, in line with the trade-off between realism and memorization reported below. Rebuilding the legacy recipe inside the fixed-budget loop reproduced the legacy results. The first pitfall is therefore mainly an update budget set in epochs that is too small for small tables, not validation-based selection itself.
+
+\begin{table}[t]
+\caption{Decomposition of the training correction on the controlled-study samples (C2ST, mean of five samples; last column: samples of 20 in which C2ST was worse or better than with the corrected recipe)}
+\label{tab:decomp}
+\centering
+\setlength{\tabcolsep}{2.4pt}
+\begin{tabular}{lccccc}
+\toprule
+& \multicolumn{2}{c}{NHANES} & \multicolumn{2}{c}{Thyroid} & \\
+Variant & 250 & 1,000 & 250 & 1,000 & Worse/better \\
+\midrule
+Corrected recipe & 0.729 & 0.691 & 0.710 & 0.686 & reference \\
++ validation-selected weights & 0.735 & 0.691 & 0.719 & 0.685 & 6/3 \\
++ selection with patience 20 & 0.778 & 0.691 & 0.710 & 0.685 & 5/6 \\
++ 16 corruption draws & 0.722 & 0.691 & 0.712 & 0.686 & 4/6 \\
+Constant rate, raw weights & 0.786 & 0.689 & 0.754 & 0.683 & 13/7 \\
+Legacy number of updates & 0.943 & 0.896 & 0.851 & 0.798 & 20/0 \\
+Legacy, rebuilt & 0.945 & 0.832 & 0.862 & 0.760 & 20/0 \\
+Legacy recipe & 0.951 & 0.857 & 0.866 & 0.756 & 20/0 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The earlier TabDDPM adapter loop on the upstream architecture diverged, with C2ST between 0.995 and 1.000 and utility between 0.49 and 0.70, against 0.74 to 0.91 and 0.87 to 0.94 with the upstream recipe. Quantile coding lowered C2ST relative to linear scaling in three of four settings, by 0.02 to 0.07 in every sample, but raised it by 0.03 for NHANES at $n = 250$, so the representation is a choice to validate rather than a fixed rule.
+
+\subsection*{Recording Resolution}
+
+Decoding changed some generators by up to 0.31 and others not at all (Table~\ref{tab:precision}, Fig.~\ref{fig:precision}). The difference lies in the inverse transforms rather than the models. TabDDPM and TabDiff invert quantile transforms whose tied knots return 45\% to 98\% of values exactly on the recording grid, which acts as an implicit decoding, whereas MedHyperDiff, TVAE and CTGAN emit almost no on-grid values. Without explicit decoding, realism rankings reversed for 29\% to 32\% of generator pairs on NHANES and 7\% to 14\% on thyroid, and the top generator changed. On the thyroid data, where hormone values are reported to about two significant figures, a single grid per column recovered only part of the effect.
+
+\begin{table}[t]
+\caption{C2ST by decoding (nominal $n = 1{,}000$)}
+\label{tab:precision}
+\centering
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{lccccc}
+\toprule
+& \multicolumn{2}{c}{NHANES} & \multicolumn{3}{c}{Thyroid} \\
+Generator & Raw & Decoded & Raw & Global & Banded \\
+\midrule
+MedHyperDiff & 0.999 & 0.692 & 0.808 & 0.763 & 0.685 \\
+TVAE & 0.991 & 0.913 & 0.950 & 0.947 & 0.934 \\
+TabDiff & 0.703 & 0.703 & 0.698 & 0.696 & 0.692 \\
+TabDDPM & 0.744 & 0.738 & 0.742 & 0.747 & 0.745 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=\textwidth]{figures/p3_precision_c2st.png}
+\caption{C2ST against the reference population for raw outputs and outputs decoded to the recorded resolution (mean of five training samples).}
+\label{fig:precision}
+\end{figure*}
+
+\subsection*{Rules and Memorization}
+
+No learned generator reproduced the supplied relations. Between 90\% and 100\% of their NHANES records violated the globulin or body mass index identities at recorded resolution, against 0\% in real data, and most thyroid records violated the free thyroxine envelope, against about 5\% in real data. Re-deriving these variables from their operands reproduced real behavior. Scoring by violation counts rather than by the gap to real rates reversed 11\% to 22\% of generator pairs but not the winner.
+
+Across generators, lower C2ST went with higher membership AUROC, with Spearman correlations between $-0.33$ and $-0.77$ (Fig.~\ref{fig:memo}). Excluding the copy control, the most realistic generator in a training sample exceeded a membership AUROC of 0.60 on at least one attack in 40\%, 0\%, 80\% and 20\% of samples for NHANES at $n = 250$ and $1{,}000$ and thyroid at $n = 250$ and $1{,}000$. Upstream TabDDPM reached 0.85 to 0.89 at $n = 250$. In the case-study search over 160 configurations, the most realistic configuration of a method memorized in 10 of 20 cohort and method combinations.
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=\textwidth]{figures/p6_memorization.png}
+\caption{Realism against membership risk for each generator (mean of five training samples). Points above the dashed line exceed a membership AUROC of 0.60 on at least one of two attacks.}
+\label{fig:memo}
+\end{figure*}
+
+\subsection*{Evaluation Size}
+
+Table~\ref{tab:evalsize} and Fig.~\ref{fig:evalsize} report the probability that a single two-sample test orders a generator pair as the full reference does. At the 60 to 120 test patients typical of public clinical cohorts, about one comparison in six was ordered wrongly, and close competitors were separated little better than by chance. Agreement reached 90\% at about 500 records per source. These values are empirical for this discriminator and these populations rather than general sample-size requirements.
+
+\begin{table}[t]
+\caption{Probability that one evaluation orders a pair correctly}
+\label{tab:evalsize}
+\centering
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{lccccc}
+\toprule
+Records per source & 50 & 100 & 200 & 500 & 1,000 \\
+\midrule
+NHANES & 0.77 & 0.85 & 0.88 & 0.93 & 0.96 \\
+Thyroid & 0.78 & 0.84 & 0.90 & 0.94 & 0.95 \\
+Pairs differing by at most 0.02 & 0.58 & 0.59 & 0.58 & 0.65 & 0.71 \\
+Median single-draw SD & 0.062 & 0.045 & 0.031 & 0.015 & 0.008 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\columnwidth]{figures/p7_evaluation_size.png}
+\caption{Agreement between a single two-sample test and the full reference ordering as a function of evaluation size. The dashed line marks 90\%.}
+\label{fig:evalsize}
+\end{figure}
+
+\section{Relation Reparameterization}
+
+\subsection*{Relations and Residuals}
+
+A supplied relation $k$ links a derived variable $x_{d_k}$ to operands $x_{O_k}$ through a known function, $x_{d_k} = f_k(x_{O_k}) + \varepsilon_k$, where $\varepsilon_k$ collects rounding and analyzer effects and is zero only for relations computed exactly. Every participant $j \in P_k = \{d_k\} \cup O_k$ can be solved for, $x_j = g_{kj}(x_{P_k \setminus j}) + \varepsilon_{kj}$. Relation reparameterization chooses one target $t_k \in P_k$ per relation and replaces $x_{t_k}$ by the residual
+\begin{equation}
+r_k = x_{t_k} - g_{k t_k}\!\left(x_{P_k \setminus t_k}\right).
+\label{eq:residual}
+\end{equation}
+The generator models the joint distribution of the remaining variables and the residuals, so rounding noise and rare discrepancies are learned rather than forced to zero or ignored. After sampling, every generated variable is decoded to its recording resolution $\rho_j$, detected on fit rows, and the targets are reconstructed in an acyclic order,
+\begin{equation}
+\hat{x}_{t_k} = \rho_{t_k}\!\left( g_{k t_k}(\hat{x}_{P_k \setminus t_k}) + \hat{r}_k \right).
+\label{eq:decode}
+\end{equation}
+A relation is treated as reported exactly when at least 99\% of complete fit rows satisfy $|x_{d_k} - f_k(x_{O_k})| \le \delta_{d_k}/2$, where $\delta_{d_k}$ is the recording step of the derived variable. For such relations the decoder finally sets $\hat{x}_{d_k} = \rho_{d_k}(f_k(\hat{x}_{O_k}))$, the computation the laboratory performs, so that rounding a reconstructed operand does not create discrepancies that real records do not have.
+
+\subsection*{Choosing the Reconstructed Participant}
+
+Errors in the generated participants propagate into the reconstructed one. On the scale on which relation $k$ is additive, $\sum_{j \in P_k} a_{kj}\, \phi_k(x_j) = c_k$, with $\phi_k$ the logarithm for products and ratios and the identity for sums, differences and linear formulas, a generation error $e_j$ in participant $j$ moves the reconstructed target $t$ by approximately $-a_{kt}^{-1} \sum_{j \ne t} a_{kj} e_j$. Relative to the spread of the target, $s_{kt} = |a_{kt}|\, \mathrm{sd}(\phi_k(x_t))$, this error is smallest for the participant with the largest $s_{kt}$ when generated participants have comparable errors. We therefore choose
+\begin{equation}
+(t_1, \dots, t_K) = \arg\max \textstyle\sum_{k} s_{k t_k}
+\label{eq:choice}
+\end{equation}
+over assignments with distinct targets that admit an acyclic reconstruction order, estimating $s$ on fit rows only. The rule rests on this first-order argument and is a heuristic, not a guarantee of optimal conditioning. It enumerates $\prod_k |P_k|$ assignments, 135 for the four blood count relations used below, which is small for a laboratory panel but grows exponentially with the number of relations.
+
+\subsection*{Model, Training and Evaluation of Relations}
+
+In MedHyperDiff each residual and the participants it depends on, expanded recursively through earlier reconstructions, form a hyperedge of the denoiser. The model is trained with a velocity-prediction loss on observed numerical values, an absorbing-state cross-entropy for categories and observation indicators, and a small physical-range energy, with linear learning-rate decay and weight averaging. The number of updates is $5{,}000 \max(1, n/250)$ for nominal sample size $n$, so the number of passes over the fit rows is constant.
+
+We score relation $k$ by
+\begin{equation}
+D_k = W_1\!\left(|\hat{\varepsilon}_k|, |\varepsilon_k^{\mathrm{ref}}|\right) / \max\!\left(\sigma_k, \delta_{d_k}/\sqrt{48}\right),
+\label{eq:metric}
+\end{equation}
+the Wasserstein distance between absolute residuals of synthetic and held-out reference records, scaled by $\sigma_k$, the standard deviation of absolute residuals on fit rows, floored at the value for pure rounding. The relation distance is the mean of $D_k$ over relations. Because absolute residuals discard the sign of a discrepancy and its dependence on other variables, we also report signed distances, the agreement of Spearman correlations between each residual and its participants, age and the label, the agreement of correlations between residuals of different relations, tail exceedance and coverage.
+
+\section{A First Test on Blood Counts}
+
+The method was first tested on the complete blood count panel of NHANES 2017 to 2018 (4,865 adults). The panel had not been used before, but 4,753 of its participants also belong to the biochemistry population of the controlled study. The analyzer measures red cell count, hemoglobin and mean corpuscular volume and computes hematocrit, mean corpuscular hemoglobin and mean corpuscular hemoglobin concentration, and the five white cell differential percentages sum to 100, all up to rounding of unrounded internal values. During development, reconstructing the basophil fraction or the mean corpuscular hemoglobin concentration, which are narrow quantities, raised C2ST to between 0.84 and 0.88; the rule of Eq.~(\ref{eq:choice}) instead reconstructs red cell count, hemoglobin, mean corpuscular hemoglobin and the neutrophil percentage. The variant was chosen on a separate development pool with a rule fixed in advance and evaluated on a never-fitted reference half of 2,433 records with five samples per size. Published generators were compared as generated, with deterministic re-derivation of the linked values in the same reconstruction direction, and with derivation plus resampled real residuals, and the same reparameterization was applied to TabDiff.
+
+\begin{table}[t]
+\caption{Blood count 2017 to 2018 (mean of five samples; in parentheses the number of samples in which MedHyperDiff was better)}
+\label{tab:relation}
+\centering
+\setlength{\tabcolsep}{2.5pt}
+\begin{tabular}{llcccc}
+\toprule
+$n$ & Measure & Ours & TabDiff & TabDiff+der. & TabDiff+rep. \\
+\midrule
+\multirow{4}{*}{250} & Relation dist. & \textbf{0.187} & 12.14 (5) & 0.965 (5) & 0.257 (5) \\
+& C2ST & \textbf{0.691} & 0.762 (5) & 0.736 (5) & 0.745 (5) \\
+& TSTR AUROC & \textbf{0.717} & 0.670 (5) & 0.671 (5) & 0.679 (5) \\
+& Membership & 0.555 & 0.619 & 0.618 & 0.598 \\
+\midrule
+\multirow{4}{*}{1,000} & Relation dist. & \textbf{0.173} & 3.92 (5) & 0.911 (5) & 0.184 (5) \\
+& C2ST & 0.664 & 0.645 (1) & \textbf{0.633} (0) & 0.643 (0) \\
+& TSTR AUROC & 0.735 & 0.735 (2) & 0.733 (2) & 0.742 (1) \\
+& Membership & 0.509 & 0.560 & 0.561 & 0.548 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=\textwidth]{figures/relation_fidelity.png}
+\caption{Reproduction of the four blood count relations on the 2017 to 2018 reference half (mean of five samples, logarithmic scale). The highlighted point is MedHyperDiff with relation reparameterization.}
+\label{fig:relation}
+\end{figure*}
+
+Table~\ref{tab:relation} and Fig.~\ref{fig:relation} summarize the result. With $n = 250$ the method reproduced the four relations better than TabDiff, TabDDPM, CTGAN, TVAE and the copula in all five samples, whether these were used as generated, with relation distances between 12 and 244, or with deterministic re-derivation, with distances between 0.95 and 0.97, and it beat derivation with resampled real residuals in four of five samples. It also had a lower C2ST than every published generator whose membership AUROC was at most 0.60, 0.691 against 0.731, and higher utility, 0.717 against at most 0.687, with a membership AUROC of 0.555. With $n = 1{,}000$ the relation advantage persisted, but TabDiff was more realistic, with a C2ST of 0.633 after re-derivation against 0.664. This model used 5,000 updates at every sample size, which the next section shows to be the cause.
+
+\section{Robustness Across Survey Cycles, Relation Types and Sizes}
+
+\subsection*{Design}
+
+A second study, again specified in a dated protocol before fitting, asked whether the relation result replicates in other survey cycles, whether it extends to relations of another kind, how it changes with sample size, and whether reparameterization also helps other generators. Four confirmation datasets were built from NHANES public files: blood counts from 2013 to 2014 (5,229 adults) and 2021 to 2023 (5,555), and a chemistry panel from 2011 to 2012 (4,778) and 2021 to 2023 (5,284). The chemistry panel has 20 numerical variables from anthropometry, the standard biochemistry profile and urine tests, with four relations that NHANES computes from reported values: globulin as total protein minus albumin, body mass index, the urine albumin to creatinine ratio, and calculated serum osmolality, $1.86\,\mathrm{Na} + \mathrm{glucose}/18 + \mathrm{BUN}/2.8 + 9$. An audit before fitting found every chemistry relation exact at reported precision and no blood count relation exact. These datasets are panel-by-cycle datasets rather than independent populations. NHANES samples different people in each cycle, but the two 2021 to 2023 datasets share 5,263 participants, and the two development datasets from 2015 to 2016, used only to choose the training budget, share 5,019.
+
+Each dataset was split once into a never-fitted reference half and a pool. Samples of nominal size 250 and 1,000 (200 and 800 fit rows) were drawn five times, and samples of 2,000 (1,600 fit rows) three times in the two 2021 to 2023 datasets. Two replicate samples share about 30\% of their fit rows at $n = 1{,}000$ and about 60\% at $n = 2{,}000$, so the spread over replicates understates sampling variability, and all differences below are conditional on the fixed reference halves. The published generators kept their fixed configurations, whereas the training budget of our model was chosen on the development datasets among four candidates declared in advance: on development data, updates proportional to $n$ lowered the mean C2ST from 0.690 to 0.653, while wider networks did not help and raised membership AUROC. Published generators were evaluated as generated, with deterministic re-derivation in the reconstruction direction of our rule, with derivation plus resampled residuals, and fitted with reparameterization added. After the run we added two exploratory analyses that use only saved outputs: re-derivation of each derived variable in its textbook direction from a generator's decoded output, which corresponds to rule-based reconstruction, and the relation diagnostics of Section VII. The protocol stated success criteria as win counts and point-estimate margins; these are descriptive criteria rather than significance tests. A size of 100 records was removed during the run by a recorded amendment, before any comparator output was examined. We analyzed 598 confirmation fits, 10 further fits on the 2017 to 2018 blood counts, and 20 MedHyperDiff fits at $n = 100$ that had finished before the amendment, which are reported separately because they have no comparators.
+
+\begin{table*}[t]
+\caption{Confirmation on four datasets (mean over samples; nominal $n$). Relation control: lowest relation distance among published generators with any post-processing, including textbook re-derivation, or with reparameterization, chosen per setting in hindsight. Realism and utility comparators: the generator and processing with the lowest C2ST or highest TSTR AUROC among arms with membership AUROC at most 0.60. Wins: samples in which MedHyperDiff was better}
+\label{tab:robust}
+\centering
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{llccccccccc}
+\toprule
+& & \multicolumn{3}{c}{Relation distance} & \multicolumn{3}{c}{C2ST} & \multicolumn{3}{c}{TSTR AUROC} \\
+Dataset & $n$ & Ours & Control & Wins & Ours & Comparator & Wins & Ours & Comparator & Wins \\
+\midrule
+Blood count 2013 to 2014 & 250 & \textbf{0.128} & 0.144 & 2/5 & \textbf{0.709} & 0.728 & 4/5 & \textbf{0.709} & 0.698 & 5/5 \\
+& 1,000 & \textbf{0.092} & 0.109 & 5/5 & 0.646 & \textbf{0.634} & 1/5 & \textbf{0.771} & 0.753 & 5/5 \\
+Blood count 2021 to 2023 & 250 & \textbf{0.151} & 0.159 & 2/5 & \textbf{0.690} & 0.719 & 5/5 & \textbf{0.684} & 0.680 & 2/5 \\
+& 1,000 & \textbf{0.137} & 0.156 & 4/5 & \textbf{0.629} & 0.634 & 3/5 & \textbf{0.733} & 0.723 & 4/5 \\
+& 2,000 & \textbf{0.136} & 0.155 & 3/3 & 0.616 & \textbf{0.577} & 0/3 & 0.745 & 0.745 & 1/3 \\
+Chemistry 2011 to 2012 & 250 & 0.049 & \textbf{0.033} & 0/5 & \textbf{0.715} & 0.737 & 4/5 & \textbf{0.878} & 0.864 & 5/5 \\
+& 1,000 & 0.025 & \textbf{0.019} & 2/5 & \textbf{0.644} & 0.674 & 5/5 & 0.888 & 0.888 & 3/5 \\
+Chemistry 2021 to 2023 & 250 & 0.050 & \textbf{0.027} & 0/5 & \textbf{0.775} & 0.783 & 4/5 & \textbf{0.895} & 0.882 & 5/5 \\
+& 1,000 & 0.025 & \textbf{0.017} & 1/5 & \textbf{0.700} & 0.749 & 5/5 & 0.904 & \textbf{0.905} & 1/5 \\
+& 2,000 & 0.021 & \textbf{0.015} & 1/3 & 0.645 & \textbf{0.625} & 0/3 & 0.905 & \textbf{0.906} & 1/3 \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+\subsection*{Relation Fidelity}
+
+For the approximate blood count relations the model had the lowest mean relation distance in all five settings (Table~\ref{tab:robust}, Fig.~\ref{fig:robust}). Its distances of 0.09 to 0.15 compare with 2.5 to 25 for TabDiff as generated, 0.74 to 0.99 for deterministic re-derivation in the reconstruction direction and 0.87 to 1.15 for re-derivation in the textbook direction, both of which over-correct relations that real records satisfy only up to rounding. Against the strongest control of each setting, usually derivation with resampled residuals or a reparameterized generator, the margin was small and the sample-level wins ranged from two of five to five of five. Textbook re-derivation also damaged realism: recomputing hematocrit, the red cell indices and the basophil fraction from generated operands raised the C2ST of TabDiff to 0.892 at $n = 250$ and 0.738 at $n = 1{,}000$ on the 2013 to 2014 blood counts, against 0.754 and 0.638 with re-derivation in the reconstruction direction, which supports the choice of direction in Eq.~(\ref{eq:choice}).
+
+For the exact chemistry relations the picture differs. Textbook re-derivation reproduces such relations by construction, and with relation distances of 0.015 to 0.033 for TabDiff and the copula it was at least as faithful as our model, which reached 0.021 to 0.050. Re-derivation in the reconstruction direction of our rule was a weaker control here (0.28 to 0.38), because rounding the reconstructed operand removed rounding noise that real records have. For exact relations, therefore, our model matched rather than improved on simple re-derivation, and its contribution there lies in realism and utility.
+
+Table~\ref{tab:diagnostics} looks beyond the absolute residual distance. Signed distances ranked the arms as the primary metric did. The clearest difference concerns the coupling between relations that share participants: hematocrit, hemoglobin and red cell count enter three of the four blood count relations, so their residuals are correlated in real records. Learned residual coding, in our model or added to TabDiff, reproduced these correlations with a mean absolute error of about 0.07, whereas re-derivation and independently resampled residuals, which treat each relation separately, had errors near 0.20. Conversely, the dependence of residuals on their own participants, age and the label was reproduced slightly worse by our model than by the controls on blood counts (0.042 against 0.030 to 0.033), mostly at $n = 250$, because real residuals are nearly independent of these variables and a learned residual model adds small spurious correlations. The share of synthetic residuals beyond the 99th percentile of real ones was 0.019 to 0.024 for the residual-based arms on blood counts and about 0.007 on chemistry, against a target of 0.01, and zero after re-derivation. The coverage of evaluable relations in these arms differed from the reference by at most 0.01. Our model, TabDiff and the copula produced no negative laboratory values, whereas up to 68\% of CTGAN rows and 41\% of TVAE rows contained one.
+
+\begin{table}[t]
+\caption{Relation diagnostics: signed residual distance, error in the correlations between residuals of different relations (coupling) and in their correlations with participants, age and label (dependence); mean over the two datasets of each panel and $n = 250$ and $1{,}000$; lower is better}
+\label{tab:diagnostics}
+\centering
+\setlength{\tabcolsep}{2.2pt}
+\begin{tabular}{lcccccc}
+\toprule
+& \multicolumn{2}{c}{Signed dist.} & \multicolumn{2}{c}{Coupling} & \multicolumn{2}{c}{Dependence} \\
+Arm & Blood & Chem. & Blood & Chem. & Blood & Chem. \\
+\midrule
+Ours & \textbf{0.101} & 0.033 & \textbf{0.068} & \textbf{0.023} & 0.042 & 0.030 \\
+TabDiff + reparam. & 0.127 & 0.039 & 0.069 & 0.025 & 0.043 & \textbf{0.028} \\
+Copula + resampled res. & 0.110 & 0.037 & 0.196 & 0.024 & \textbf{0.030} & 0.029 \\
+TabDiff + resampled res. & 0.107 & 0.040 & 0.201 & 0.025 & 0.033 & 0.030 \\
+TabDiff, re-der. (textbook) & 0.750 & \textbf{0.025} & 0.197 & \textbf{0.023} & \textbf{0.030} & \textbf{0.028} \\
+TabDiff, re-der. (rule) & 0.676 & 0.173 & 0.202 & 0.024 & 0.031 & 0.029 \\
+TabDiff, as generated & 7.60 & 2336 & 0.132 & 0.041 & 0.058 & 0.058 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=\textwidth]{figures/robustness_paper.png}
+\caption{Relation distance (top, logarithmic scale) and C2ST (bottom) on the four confirmation datasets by nominal sample size (mean over samples; bands show one standard deviation for C2ST). The dashed line is the model with a fixed budget of 5,000 updates.}
+\label{fig:robust}
+\end{figure*}
+
+\subsection*{Realism, Utility and Sample Size}
+
+With $n = 250$ the model had a lower C2ST than every comparator arm with membership AUROC at most 0.60 on all four datasets, winning in four or five of five samples (Table~\ref{tab:robust}), although its own membership AUROC exceeded 0.60 on one of them. With $n = 1{,}000$ it was clearly more realistic on both chemistry datasets, by 0.030 and 0.049 in every sample, tied on the 2021 to 2023 blood counts and trailed by 0.012 on the 2013 to 2014 blood counts, where it won one of five samples. With $n = 2{,}000$ TabDiff was more realistic, by 0.039 on blood counts and 0.020 on chemistry, in every sample. Averaged over the four datasets, the paired C2ST difference against the realism-selected comparator of each setting was $-0.020$ at $n = 250$ and $-0.018$ at $n = 1{,}000$; leaving out one survey cycle at a time gave $-0.019$ to $-0.021$ at $n = 250$ but $-0.009$ to $-0.028$ at $n = 1{,}000$, so the larger-sample advantage depends on the dataset. These averages describe repeated sampling from fixed datasets and should not be read as uncertainty across clinical populations.
+
+The proportional training budget explains the change from the first test. With the fixed budget of 5,000 updates the C2ST of the model barely changed between $n = 1{,}000$ and $2{,}000$ (Fig.~\ref{fig:robust}), whereas with the proportional budget it fell with every increase in data, from 0.661 to 0.629 and from 0.765 to 0.700 at $n = 1{,}000$ on the 2021 to 2023 datasets. Applied to the 2017 to 2018 blood counts, whose reference half had already been examined, the proportional budget reversed the earlier result at $n = 1{,}000$, with a C2ST of 0.627 against 0.633 for TabDiff with re-derivation.
+
+Utility was measured as the AUROC of a random forest for diagnosed diabetes trained on synthetic and tested on real records. Against the comparator with the highest utility in each setting, which differs from the realism-selected comparator, the model was better on average by 0.010 at $n = 250$ and by 0.007 at $n = 1{,}000$, the latter only on blood counts; at $n = 2{,}000$ utilities were equal.
+
+\subsection*{Clinical Categories and Membership}
+
+We also compared the joint distribution of relation-dependent clinical categories: anemia by sex-specific hemoglobin thresholds, mean corpuscular volume class, hypochromia and low hemoglobin concentration for blood counts, and body mass index class, albuminuria stage, albumin to globulin ratio below one and osmolality range for chemistry. Against the arm with the closest categories in each setting, the total-variation distance of the model was lower in four of ten settings, including 0.045 against 0.075 on the 2013 to 2014 blood counts at $n = 250$, and higher in six, by up to 0.027 on the 2021 to 2023 blood counts at $n = 2{,}000$. Better relation distance therefore did not consistently translate into better category agreement, mainly because re-derived and resampled controls already place most records in the correct categories.
+
+The mean membership AUROC of the model, the larger of a nearest-distance and a density-ratio attack, was between 0.525 and 0.573 in nine of ten settings and 0.608 on the 2011 to 2012 chemistry data at $n = 250$, above the threshold of 0.60. In the 20 fits at $n = 100$ it was 0.703 to 0.759, with C2ST between 0.80 and 0.85, so the model should not be used at that size without stronger privacy protection. These two attacks are diagnostics, and passing them does not establish that no patient can be identified.
+
+\subsection*{Reparameterization as a Plug-In and Computation}
+
+Added to TabDiff, TabDDPM and the copula, reparameterization lowered the relation distance relative to the raw output in every setting and matched or beat re-derivation in the same direction. It is not a universal plug-in: the prespecified criterion that it helps every generator without raising C2ST by more than 0.02 held in 37 of 50 generator and setting combinations. CTGAN and TVAE generate implausible operands on the chemistry panel, such as urine creatinine near zero, which no post-processing can turn into a faithful ratio, and TabDiff with reparameterization was unstable in one sample at $n = 2{,}000$, with a C2ST of 0.88.
+
+\begin{table}[t]
+\caption{Computation of the diffusion models (updates and median fit minutes at nominal $n$ = 250, 1,000 and 2,000, with eight concurrent single-threaded jobs on a laptop CPU)}
+\label{tab:compute}
+\centering
+\setlength{\tabcolsep}{2.5pt}
+\begin{tabular}{lcccc}
+\toprule
+Model & Parameters & Updates & Passes & Minutes \\
+\midrule
+Ours & 39,925 & 5k/20k/40k & 1,600 & 5/20/42 \\
+TabDiff & 10.8 M & 8k & 8,000 & 36/95/157 \\
+TabDDPM & 0.66 M & 30k & 30,000 & 7/18/34 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Table~\ref{tab:compute} shows that the advantage at small sizes did not come from larger models or more computation. Our model has about 40 thousand parameters against 10.8 million for TabDiff and makes fewer passes over the fit rows. The comparison is nevertheless not tuning-matched, since the training budget of our model was selected on development data while the published generators used fixed configurations; CTGAN, TVAE and the copula fitted in under two minutes.
+
+\section{A Corrected Protocol}
+
+The results suggest a corrected protocol with seven elements. Diffusion models should be trained with an optimization budget chosen during development and scaled with the training size rather than capped in epochs, with learning-rate decay and weight averaging, and any validation-based selection should report the selected updates. The numerical representation should be validated rather than assumed. Every continuous-output generator should be decoded to the recorded resolution, per order of magnitude where reporting uses significant figures, and the on-grid fraction of raw outputs should be reported. Relations computed exactly should be re-derived in the direction the laboratory computes them, and approximate relations should be scored against real held-out behavior through signed and absolute residual distances, residual coupling and dependence diagnostics. Baselines should be run with their upstream training loops. Membership diagnostics with at least a nearest-distance attack, a density-ratio attack and a copy control should accompany every realism metric, and configurations should be selected under a privacy threshold. In our setting, two-sample tests needed about 500 records per source to order pairs reliably, and differences below 0.02 were often unresolved.
+
+\section{Discussion}
+
+The seven pitfalls change which generator appears best. Three of them, the training recipe, the numerical representation and baselines run outside their published recipes, change what the generators learn; the other four change only how the same outputs are scored. Together they reversed a quarter to a third of all comparisons in a controlled setting and most conclusions of a ten-iteration development project. The decomposition of the training correction also shows how a pitfall can be misattributed: the visible symptom was early checkpoints, but the main cause was the small number of updates that an epoch cap allows on small tables.
+
+The relation studies show what a targeted mechanism can and cannot do once evaluation is reliable. Learned residual coding is most useful for approximate relations, where deterministic re-derivation over-corrects and independent residual resampling loses the coupling between relations that share participants; there, the proposed model was the most faithful arm in every setting. For relations computed exactly, re-deriving the reported value from generated operands in the textbook direction is simple and sufficient, and should be standard practice for any generator. Beyond relations, the model was more realistic than every comparator below the membership threshold at $n = 250$ on every dataset and at $n = 1{,}000$ on the chemistry panels, with a small utility advantage, using far fewer parameters than TabDiff; TabDiff was more realistic at $n = 2{,}000$. Small datasets with known laboratory relations are common, since rare diseases, single-site cohorts, pediatric studies and most public clinical tables contain hundreds rather than thousands of patients, and large datasets are often split into small subgroups. When laboratory relations must hold, as in synthetic data used to develop clinical rules or for teaching, the proposed model is a reasonable choice at these sizes; when they need not, a well-tuned general generator may be preferable with more data. The contribution of the hypergraph itself was not isolated in the final configuration, and a tuned comparison with TabDiff, residual-based baselines and a residual-coded backbone without structure on untouched data is the most direct next test.
+
+\section{Limitations}
+
+All relation datasets come from NHANES, analyzed without survey weights, and several share participants across panels; results may not transfer to hospital records, other laboratories, longitudinal data or other missingness mechanisms. Comparators used fixed configurations while our training budget was selected on development data. Results at $n = 2{,}000$ rest on three heavily overlapping samples in two datasets, the 100-record condition was removed by amendment, and differences are conditional on fixed reference halves. The primary relation metric uses absolute residuals, and the diagnostics that address sign and dependence were added after the confirmation. Utility was measured for a single prediction task with one model. Membership attacks are empirical diagnostics, the threshold of 0.60 is a convention, and no formal privacy guarantee is claimed. The protocols were dated and hashed locally rather than registered publicly. TabDDPM and TabDiff are adaptations of pinned upstream code rather than reproductions of their published benchmarks.
+
+\section{Conclusion}
+
+Routine training and evaluation choices can determine which synthetic data generator appears best on small clinical tables, reversing a quarter to a third of comparisons in a controlled study. With corrected evaluation, relation reparameterization with learned residuals and a conditioning-based reconstruction direction reproduced approximate laboratory relations more closely than published generators and post-processing controls across four survey cycles, preserved the coupling between related formulas, and matched simple re-derivation for exact formulas. At the tested size of 250 records on all datasets, and of 1,000 records on the chemistry panels, the model was also more realistic than every published generator below a prespecified membership threshold, with a small utility advantage; TabDiff was more realistic with 2,000 records.
+
+\section*{Data and Code Availability}
+
+All data are public: NHANES public-use files from the National Center for Health Statistics and the UCI Machine Learning Repository, retrieved by scripts that check SHA-256 digests. Protocols with dated amendments, run manifests with source hashes, the archived source of each study and the scripts that regenerate every table and figure are kept with the project.
+
+\section*{Acknowledgment}
+
+We thank the National Center for Health Statistics for NHANES, the Garvan Institute and Ross Quinlan for the thyroid data, and the UCI Machine Learning Repository.
+
+\begin{thebibliography}{00}
+\bibitem{xu2019ctgan} L. Xu, M. Skoularidou, A. Cuesta-Infante, and K. Veeramachaneni, ``Modeling tabular data using conditional GAN,'' in \textit{Advances in Neural Information Processing Systems}, 2019.
+\bibitem{ho2020ddpm} J. Ho, A. Jain, and P. Abbeel, ``Denoising diffusion probabilistic models,'' in \textit{Advances in Neural Information Processing Systems}, 2020.
+\bibitem{austin2021d3pm} J. Austin, D. D. Johnson, J. Ho, D. Tarlow, and R. van den Berg, ``Structured denoising diffusion models in discrete state-spaces,'' in \textit{Advances in Neural Information Processing Systems}, 2021.
+\bibitem{kotelnikov2023tabddpm} A. Kotelnikov, D. Baranchuk, I. Rubachev, and A. Babenko, ``TabDDPM: Modelling tabular data with diffusion models,'' in \textit{Proc. Int. Conf. Machine Learning}, 2023.
+\bibitem{shi2025tabdiff} J. Shi, M. Xu, H. Hua, H. Zhang, S. Ermon, and J. Leskovec, ``TabDiff: A mixed-type diffusion model for tabular data generation,'' in \textit{Proc. Int. Conf. Learning Representations}, 2025.
+\bibitem{liu2023goggle} T. Liu, Z. Qian, J. Berrevoets, and M. van der Schaar, ``GOGGLE: Generative modelling for tabular data by learning relational structure,'' in \textit{Proc. Int. Conf. Learning Representations}, 2023.
+\bibitem{umesh2024dependencies} C. Umesh, K. Schultz, M. Mahendra, S. Bej, and O. Wolkenhauer, ``Preserving logical and functional dependencies in synthetic tabular data,'' arXiv:2409.17684, 2024.
+\bibitem{umesh2025hfgf} C. Umesh, K. Schultz, M. Mahendra, S. Bej, and O. Wolkenhauer, ``Dependency-aware synthetic tabular data generation,'' arXiv:2507.19211, 2025.
+\bibitem{stoian2024cdgm} M. C. Stoian, S. Dyrmishi, M. Cordy, T. Lukasiewicz, and E. Giunchiglia, ``How realistic is your synthetic data? Constraining deep generative models for tabular data,'' in \textit{Proc. Int. Conf. Learning Representations}, 2024.
+\bibitem{stoian2025drl} M. C. Stoian and E. Giunchiglia, ``Beyond the convexity assumption: Realistic tabular data generation under quantifier-free real linear constraints,'' arXiv:2502.18237, 2025.
+\bibitem{shankar2026harpoon} A. Shankar, Y. Wang, R. Hai, and L. Chen, ``Harpoon: Generalised manifold guidance for conditional tabular diffusion,'' in \textit{Proc. Int. Conf. Learning Representations}, 2026.
+\bibitem{lopezpaz2017c2st} D. Lopez-Paz and M. Oquab, ``Revisiting classifier two-sample tests,'' in \textit{Proc. Int. Conf. Learning Representations}, 2017.
+\bibitem{vanbreugel2023domias} B. van Breugel, H. Sun, Z. Qian, and M. van der Schaar, ``Membership inference attacks against synthetic data through overfitting detection,'' in \textit{Proc. Int. Conf. Artificial Intelligence and Statistics}, 2023.
+\bibitem{giomi2023anonymeter} M. Giomi, F. Boenisch, C. Wehmeyer, and B. Tasn\'adi, ``A unified framework for quantifying privacy risk in synthetic data,'' \textit{Proc. Privacy Enhancing Technologies}, 2023.
+\bibitem{bengio2004variance} Y. Bengio and Y. Grandvalet, ``No unbiased estimator of the variance of k-fold cross-validation,'' \textit{J. Machine Learning Research}, vol. 5, pp. 1089--1105, 2004.
+\bibitem{nhanes} National Center for Health Statistics, ``National Health and Nutrition Examination Survey data files, cycles 2011--2012 to August 2021--August 2023,'' Centers for Disease Control and Prevention, 2013--2024.
+\end{thebibliography}
+
+\end{document}

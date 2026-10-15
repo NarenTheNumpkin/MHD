@@ -26,6 +26,8 @@
 - Matched current ILPD CTGAN/TVAE compact/default-capacity comparisons, statistical controls and retained explicit copula repair.
 - Supplemental tolerance-aware predictor-copy and boundary diagnostics with a bootstrap positive control; literal exact hashes alone miss round-trip copies.
 
+- Iteration 11 corrections (opt-in, legacy defaults unchanged): fixed-step training with linear learning-rate decay and EMA weights and no validation checkpoint selection; fit-only bounded quantile coding with a differentiable inverse inside the rule energy; recorded-precision decoding for every continuous-output generator; rule-realism metrics against real held-out records; upstream training recipe for TabDDPM; pinned upstream TabDiff adapter.
+
 ## Deliberate differences from the original proposal
 
 The initial backbone uses Gaussian and absorbing categorical diffusion; it is not TabDiff. Confidence is fixed, not calibrated uncertainty. No minibatch dependency loss or outcome-classifier auxiliary loss is used. All primary arms share label conditioning. Numerical observation masks are generated explicitly. CKD ordinal codes are treated categorically. Sampling uses approximate clean-prediction/logit descent followed by the actual reverse kernels; it is not an exact energy-conditioned process.

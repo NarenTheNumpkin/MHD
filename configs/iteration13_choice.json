@@ -1,0 +1,225 @@
+{
+  "created_at": "2026-10-07T14:40:48.909661+00:00",
+  "primary": "mhd_reparam",
+  "rule": "Predeclared rule: lowest mean development relation W1 among variants whose mean development C2ST\nis within 0.02 of the lowest; ties go to the simpler variant (order in DEV_VARIANTS).",
+  "means": [
+    {
+      "variant": "mhd_guided",
+      "relation_w1": 10.858968746593538,
+      "c2st": 0.6049262255336326,
+      "membership": 0.5513179269061121
+    },
+    {
+      "variant": "mhd_reparam",
+      "relation_w1": 0.16744546905801463,
+      "c2st": 0.618898270944917,
+      "membership": 0.5371832151858853
+    },
+    {
+      "variant": "mhd_reparam_backbone",
+      "relation_w1": 0.15827599770471434,
+      "c2st": 0.6262584672337744,
+      "membership": 0.537975897920605
+    },
+    {
+      "variant": "mhd_unguided",
+      "relation_w1": 10.858968746593538,
+      "c2st": 0.6049262255336326,
+      "membership": 0.5513179269061121
+    }
+  ],
+  "development": [
+    {
+      "variant": "mhd_unguided",
+      "size": 250,
+      "seed": 0,
+      "relation_w1": 11.68753998824525,
+      "c2st": 0.6769661458333334,
+      "membership": 0.5603999999999999
+    },
+    {
+      "variant": "mhd_unguided",
+      "size": 250,
+      "seed": 1,
+      "relation_w1": 11.40905654134318,
+      "c2st": 0.6829275173611111,
+      "membership": 0.612
+    },
+    {
+      "variant": "mhd_unguided",
+      "size": 250,
+      "seed": 2,
+      "relation_w1": 11.254705991413804,
+      "c2st": 0.6675086805555557,
+      "membership": 0.5715
+    },
+    {
+      "variant": "mhd_unguided",
+      "size": 500,
+      "seed": 0,
+      "relation_w1": 10.739785641237575,
+      "c2st": 0.5221739130434782,
+      "membership": 0.4893005671077505
+    },
+    {
+      "variant": "mhd_unguided",
+      "size": 500,
+      "seed": 1,
+      "relation_w1": 10.389400437956716,
+      "c2st": 0.5753308128544423,
+      "membership": 0.5252173913043477
+    },
+    {
+      "variant": "mhd_unguided",
+      "size": 500,
+      "seed": 2,
+      "relation_w1": 9.673323879364702,
+      "c2st": 0.5046502835538752,
+      "membership": 0.5494896030245747
+    },
+    {
+      "variant": "mhd_guided",
+      "size": 250,
+      "seed": 0,
+      "relation_w1": 11.68753998824525,
+      "c2st": 0.6769661458333334,
+      "membership": 0.5603999999999999
+    },
+    {
+      "variant": "mhd_guided",
+      "size": 250,
+      "seed": 1,
+      "relation_w1": 11.40905654134318,
+      "c2st": 0.6829275173611111,
+      "membership": 0.612
+    },
+    {
+      "variant": "mhd_guided",
+      "size": 250,
+      "seed": 2,
+      "relation_w1": 11.254705991413804,
+      "c2st": 0.6675086805555557,
+      "membership": 0.5715
+    },
+    {
+      "variant": "mhd_guided",
+      "size": 500,
+      "seed": 0,
+      "relation_w1": 10.739785641237575,
+      "c2st": 0.5221739130434782,
+      "membership": 0.4893005671077505
+    },
+    {
+      "variant": "mhd_guided",
+      "size": 500,
+      "seed": 1,
+      "relation_w1": 10.389400437956716,
+      "c2st": 0.5753308128544423,
+      "membership": 0.5252173913043477
+    },
+    {
+      "variant": "mhd_guided",
+      "size": 500,
+      "seed": 2,
+      "relation_w1": 9.673323879364702,
+      "c2st": 0.5046502835538752,
+      "membership": 0.5494896030245747
+    },
+    {
+      "variant": "mhd_reparam",
+      "size": 250,
+      "seed": 0,
+      "relation_w1": 0.1588259579339378,
+      "c2st": 0.6611111111111111,
+      "membership": 0.554
+    },
+    {
+      "variant": "mhd_reparam",
+      "size": 250,
+      "seed": 1,
+      "relation_w1": 0.13712428222384326,
+      "c2st": 0.7048133680555556,
+      "membership": 0.572025
+    },
+    {
+      "variant": "mhd_reparam",
+      "size": 250,
+      "seed": 2,
+      "relation_w1": 0.1814655764298357,
+      "c2st": 0.6440625,
+      "membership": 0.5587
+    },
+    {
+      "variant": "mhd_reparam",
+      "size": 500,
+      "seed": 0,
+      "relation_w1": 0.16967689208503045,
+      "c2st": 0.5525141776937619,
+      "membership": 0.4955009451795841
+    },
+    {
+      "variant": "mhd_reparam",
+      "size": 500,
+      "seed": 1,
+      "relation_w1": 0.18427632706086494,
+      "c2st": 0.5931001890359169,
+      "membership": 0.50820415879017
+    },
+    {
+      "variant": "mhd_reparam",
+      "size": 500,
+      "seed": 2,
+      "relation_w1": 0.17330377861457574,
+      "c2st": 0.5577882797731569,
+      "membership": 0.5346691871455577
+    },
+    {
+      "variant": "mhd_reparam_backbone",
+      "size": 250,
+      "seed": 0,
+      "relation_w1": 0.14520679541048184,
+      "c2st": 0.6769184027777777,
+      "membership": 0.5526
+    },
+    {
+      "variant": "mhd_reparam_backbone",
+      "size": 250,
+      "seed": 1,
+      "relation_w1": 0.14123324180331165,
+      "c2st": 0.7174262152777778,
+      "membership": 0.5636000000000001
+    },
+    {
+      "variant": "mhd_reparam_backbone",
+      "size": 250,
+      "seed": 2,
+      "relation_w1": 0.16790863721587534,
+      "c2st": 0.6400303819444445,
+      "membership": 0.5633
+    },
+    {
+      "variant": "mhd_reparam_backbone",
+      "size": 500,
+      "seed": 0,
+      "relation_w1": 0.14690889658849715,
+      "c2st": 0.5756710775047259,
+      "membership": 0.5160680529300566
+    },
+    {
+      "variant": "mhd_reparam_backbone",
+      "size": 500,
+      "seed": 1,
+      "relation_w1": 0.18421834458585473,
+      "c2st": 0.6193005671077505,
+      "membership": 0.5052551984877126
+    },
+    {
+      "variant": "mhd_reparam_backbone",
+      "size": 500,
+      "seed": 2,
+      "relation_w1": 0.16418007062426532,
+      "c2st": 0.5282041587901701,
+      "membership": 0.5270321361058602
+    }
+  ]
+}

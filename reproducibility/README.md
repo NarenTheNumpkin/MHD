@@ -88,3 +88,33 @@ See `docs/ITERATION_9_RUNBOOK.md` for commands. This sensitivity stage changes n
 The frozen `configs/iteration10.json` records three additional public cohorts, their normalized data hashes, locked outer/inner splits, nine current-full training configurations and three sampling seeds. Nine fits and 27 evaluations run on CKD, heart failure and diabetes; all outer test rows remain excluded. A preflight table exposed mixed string/float categorical types for numeric-looking CKD levels after CSV round-trip. The incomplete first table is retained under `runs/iteration10/preflight_failed/`; accepted evaluation reads force all categorical columns to strings, and the correction is recorded in the plan. All 27 accepted records, 162 AUROCs and nine first-seed replays pass the audit. CKD missingness and heart-failure utility failures remain visible; no clinical generalization or external superiority claim is made.
 
 See `docs/ITERATION_10_RUNBOOK.md` for commands and costs. No core source or default sampler changes.
+
+## Development and confirmation iteration 11
+
+Source snapshot `9739e858bc267fee430689d74988ad5e86e8ea54b1e788d30bcf6a1f8e399bd8` ran the 72 ablation jobs and the 384-job four-method search; snapshot `721c3bbb31a36d9533147a33c952502f0e1ff49d6363592c863844c618e77bb1` differs only by the appended `TabDiffAdapter` and ran the 96 TabDiff search, 54 simulator and 255 confirmation jobs. Both snapshots were re-hashed and match every manifest. Runner, stage and report scripts are archived by hash under `iteration11_scripts/`; the frozen plan, selection and guidance files are in `configs/iteration11*.json`, and every confirmation manifest records their hashes. Only the 255 confirmation manifests have `outer_test_opened: true`. Under legacy settings the modified core reproduces the archived iteration-5 `full_prior_i2027_t0_s70001_n5` synthetic table byte-for-byte, and a guidance-stage refit reproduces its search counterpart exactly. Because file access under `~/Desktop` was extremely slow on the development machine, the study ran from byte-identical copies outside the Desktop and results were copied back; see `docs/ITERATION_11_RUNBOOK.md`.
+
+## Controlled study iteration 12
+
+All 240 jobs in `runs/iteration12` record source snapshot `3aafec1cb9300f8efc734d407ee48307ceea619ddcf73a4dabff1822501a4e76` (adds NHANES/thyroid builders, definitional rule kinds, banded precision decoding, the C2ST curve and the density-ratio attack; legacy defaults unchanged), runner `61a93edf…` and splits `3b60a107…` (`configs/iteration12_splits.json`). Runner, report and protocol are archived by hash under `iteration12_scripts/`. NHANES source files are pinned by SHA-256 in `medhyperdiff.data.NHANES_FILES`; the UCI thyroid archive hash is recorded in `data/raw/thyroid.manifest.json`. The study ran from byte-identical copies outside `~/Desktop` (see the iteration-11 note) and results were copied back.
+
+## Relation study iteration 13
+
+All 90 confirmation jobs in `runs/iteration13/confirm` record source snapshot `36533bf58efea275a386096353e98ecac98db6631004c2279e301559c4dc333d` (adds `medhyperdiff.relations`, the NHANES CBC builder and relation rule kinds), runner `059e5808…`, splits `configs/iteration13_splits.json` and choice `configs/iteration13_choice.json` (`afd4798b…`). Development rounds 1–2 (superseded by Amendments 1–2) are retained. Runner, report and protocol are archived by hash under `iteration13_scripts/`.
+
+## Robustness study iteration 14
+
+All 618 confirmation fits and 10 secondary fits in `runs/iteration14` and all 60 development fits record source snapshot `890ebbee41f16b5dee0aa50ce8f051d32345db35b3d3bbac09c8e21415dff718`. This snapshot adds the NHANES cycle builders, linear relations, reported-exact detection and re-derivation, and the clinical-category metric. The runner and report scripts are archived in `iteration14_scripts/`. Of the 618 confirmation fits, 598 are analyzed; 20 MedHyperDiff fits at n = 100 finished before Amendment 1 and are reported separately.
+
+## Training decomposition iteration 15
+
+All 160 fits in `runs/iteration15` record source snapshot `1003bc8c1049287a67612a72c8f7681ba27547cfdc097e5a4be6331ea333320c`. It adds options to the fixed-budget loop (checkpoint selection, corruption draws, patience, constant rate, no averaging); default behaviour is byte-identical. Scripts are in `iteration15_scripts/`.
+
+## Post hoc controls and final comparison (14 October 2026)
+
+`runs/iteration14_controls/controls.csv` evaluates textbook re-derivation and joint residual resampling for every published generator output of iterations 13 and 14 (280 outputs, 560 evaluations, no refitting). It used source snapshot `1626362e15411c2e9016f490f82976b9f722d658c056a37f1c60aa8756902148`.
+
+This snapshot also aligns the BMI log-scale coefficient with Eq. (3) of the manuscript. A check over all 778 saved iteration 13 and 14 runs found that no reconstruction choice changes.
+
+`scripts/report_final.py` builds the comparator registry, applies the membership threshold to every arm and writes the manuscript's LaTeX table rows. Scripts are archived in `final_scripts/`.
+
+**Clean-copy check.** In a clean copy, `scripts/fetch_data.py` rebuilds all 13 processed datasets byte-identically from the public sources. All 64 tests pass with both pinned baselines in `external/`.

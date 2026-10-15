@@ -1,0 +1,69 @@
+{
+  "pdf_sha256": "cd0914f7017c42f847dbb87584510e27bd0aab637c4095a31bca450dddd19849",
+  "iteration15_manifests": 160,
+  "iteration15_report_mismatches": [],
+  "canonical_copula_rows": [
+    {
+      "seed": 0,
+      "nearest_primary": 0.4825,
+      "density_primary": 0.567,
+      "nearest_canonical": 0.4728,
+      "density_canonical": 0.56065,
+      "membership_canonical": 0.56065,
+      "c2st_canonical": 0.7542070000000001,
+      "c2st_ours": 0.771097
+    },
+    {
+      "seed": 1,
+      "nearest_primary": 0.6064,
+      "density_primary": 0.51085,
+      "nearest_canonical": 0.6014,
+      "density_canonical": 0.507275,
+      "membership_canonical": 0.6014,
+      "c2st_canonical": 0.7608590000000001,
+      "c2st_ours": 0.7664625
+    },
+    {
+      "seed": 2,
+      "nearest_primary": 0.5523,
+      "density_primary": 0.55095,
+      "nearest_canonical": 0.5572,
+      "density_canonical": 0.5524,
+      "membership_canonical": 0.5572,
+      "c2st_canonical": 0.7553780000000001,
+      "c2st_ours": 0.798673
+    },
+    {
+      "seed": 3,
+      "nearest_primary": 0.5248,
+      "density_primary": 0.547675,
+      "nearest_canonical": 0.5225,
+      "density_canonical": 0.55385,
+      "membership_canonical": 0.55385,
+      "c2st_canonical": 0.7584170000000001,
+      "c2st_ours": 0.7543015
+    },
+    {
+      "seed": 4,
+      "nearest_primary": 0.5084,
+      "density_primary": 0.5661,
+      "nearest_canonical": 0.5031,
+      "density_canonical": 0.537275,
+      "membership_canonical": 0.537275,
+      "c2st_canonical": 0.772138,
+      "c2st_ours": 0.7844889999999999
+    }
+  ],
+  "canonical_copula_means": {
+    "seed": 2.0,
+    "nearest_primary": 0.53488,
+    "density_primary": 0.548515,
+    "nearest_canonical": 0.5314,
+    "density_canonical": 0.54229,
+    "membership_canonical": 0.5620750000000001,
+    "c2st_canonical": 0.7601998000000001,
+    "c2st_ours": 0.7750045999999999
+  },
+  "canonical_copula_c2st_wins": 4,
+  "audit_scope": "Saved-output audit; C2ST values from canonical.csv, attacks recomputed without fitting a generator."
+}

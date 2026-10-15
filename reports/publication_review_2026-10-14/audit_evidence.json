@@ -1,0 +1,528 @@
+{
+  "pdf_sha256": "aa76c44bbe06467a247c67531ea9a5ad92cc1f015ef9eadedb651346bd853193",
+  "controls": 560,
+  "registry_counts": {
+    "iteration13": {
+      "rows": 330,
+      "added_controls": 100
+    },
+    "iteration14": {
+      "rows": 1610,
+      "added_controls": 460
+    }
+  },
+  "final_table_cells_verified": 10,
+  "ours_best_eligible": 5,
+  "cells": [
+    {
+      "dataset": "nhanes_cbc_h",
+      "size": 250,
+      "ours_eligible": true,
+      "relation_w1": {
+        "ours": 0.12815631059678126,
+        "comparator": 0.13925096958312735,
+        "arm": [
+          "tvae",
+          "joint"
+        ],
+        "wins": 4,
+        "n": 5,
+        "median_difference": -0.0139331330389863
+      },
+      "c2st": {
+        "ours": 0.7085936,
+        "comparator": 0.7277193000000001,
+        "arm": [
+          "copula",
+          "derived"
+        ],
+        "wins": 4,
+        "n": 5,
+        "median_difference": -0.016217999999999955
+      },
+      "ours_best_eligible": true,
+      "rf": {
+        "ours": 0.7086013244347871,
+        "comparator": 0.6980742666459724,
+        "arm": [
+          "copula",
+          "derived"
+        ],
+        "wins": 5,
+        "n": 5,
+        "median_difference": 0.008398649697345939
+      },
+      "clinical_tv": {
+        "ours": 0.045437643458301445,
+        "comparator": 0.07461224177505735,
+        "arm": [
+          "copula",
+          "derived"
+        ],
+        "wins": 5,
+        "n": 5,
+        "median_difference": -0.0240673297628156
+      }
+    },
+    {
+      "dataset": "nhanes_cbc_h",
+      "size": 1000,
+      "ours_eligible": true,
+      "relation_w1": {
+        "ours": 0.0920606378874516,
+        "comparator": 0.10581429949399379,
+        "arm": [
+          "tvae",
+          "joint"
+        ],
+        "wins": 5,
+        "n": 5,
+        "median_difference": -0.0104198350176362
+      },
+      "c2st": {
+        "ours": 0.6464474002326359,
+        "comparator": 0.6337525589068104,
+        "arm": [
+          "tabdiff",
+          "joint"
+        ],
+        "wins": 1,
+        "n": 5,
+        "median_difference": 0.015991301619377563
+      },
+      "ours_best_eligible": false,
+      "rf": {
+        "ours": 0.7710098815251696,
+        "comparator": 0.7526890941072999,
+        "arm": [
+          "copula_rp",
+          "primary"
+        ],
+        "wins": 5,
+        "n": 5,
+        "median_difference": 0.022982953075689427
+      },
+      "clinical_tv": {
+        "ours": 0.0282381407804131,
+        "comparator": 0.033536266258607464,
+        "arm": [
+          "tabdiff",
+          "primary"
+        ],
+        "wins": 3,
+        "n": 5,
+        "median_difference": -0.0018047054322877024
+      }
+    },
+    {
+      "dataset": "nhanes_cbc_l",
+      "size": 250,
+      "ours_eligible": true,
+      "relation_w1": {
+        "ours": 0.15097406485939796,
+        "comparator": 0.15903665544576925,
+        "arm": [
+          "tabddpm_upstream_rp",
+          "primary"
+        ],
+        "wins": 2,
+        "n": 5,
+        "median_difference": 0.01576633502660088
+      },
+      "c2st": {
+        "ours": 0.6899249999999999,
+        "comparator": 0.7193978,
+        "arm": [
+          "copula",
+          "resampled"
+        ],
+        "wins": 5,
+        "n": 5,
+        "median_difference": -0.02572949999999996
+      },
+      "ours_best_eligible": true,
+      "rf": {
+        "ours": 0.6844771658370498,
+        "comparator": 0.6804584687502903,
+        "arm": [
+          "tvae",
+          "primary"
+        ],
+        "wins": 2,
+        "n": 5,
+        "median_difference": -0.0028743313438350793
+      },
+      "clinical_tv": {
+        "ours": 0.04861756659467238,
+        "comparator": 0.0581437005039596,
+        "arm": [
+          "copula_rp",
+          "primary"
+        ],
+        "wins": 2,
+        "n": 5,
+        "median_difference": 0.0
+      }
+    },
+    {
+      "dataset": "nhanes_cbc_l",
+      "size": 1000,
+      "ours_eligible": true,
+      "relation_w1": {
+        "ours": 0.13688448386971327,
+        "comparator": 0.15586859524979307,
+        "arm": [
+          "tabddpm_upstream_rp",
+          "primary"
+        ],
+        "wins": 4,
+        "n": 5,
+        "median_difference": -0.02232923406001902
+      },
+      "c2st": {
+        "ours": 0.6291141805847756,
+        "comparator": 0.6339508951594888,
+        "arm": [
+          "tabdiff",
+          "joint"
+        ],
+        "wins": 2,
+        "n": 5,
+        "median_difference": 0.0033511789899139943
+      },
+      "ours_best_eligible": true,
+      "rf": {
+        "ours": 0.7330789610298466,
+        "comparator": 0.7231784634660617,
+        "arm": [
+          "copula_rp",
+          "primary"
+        ],
+        "wins": 4,
+        "n": 5,
+        "median_difference": 0.012345691754023336
+      },
+      "clinical_tv": {
+        "ours": 0.0398838012958963,
+        "comparator": 0.027232613390928702,
+        "arm": [
+          "tabdiff",
+          "derived"
+        ],
+        "wins": 0,
+        "n": 5,
+        "median_difference": 0.015200143988480998
+      }
+    },
+    {
+      "dataset": "nhanes_cbc_l",
+      "size": 2000,
+      "ours_eligible": true,
+      "relation_w1": {
+        "ours": 0.13585431642963317,
+        "comparator": 0.15527292814923258,
+        "arm": [
+          "tvae",
+          "resampled"
+        ],
+        "wins": 3,
+        "n": 3,
+        "median_difference": -0.016659379742003294
+      },
+      "c2st": {
+        "ours": 0.6163227676127162,
+        "comparator": 0.5699056818435086,
+        "arm": [
+          "tabdiff",
+          "joint"
+        ],
+        "wins": 0,
+        "n": 3,
+        "median_difference": 0.043407758480833336
+      },
+      "ours_best_eligible": false,
+      "rf": {
+        "ours": 0.7445873640197016,
+        "comparator": 0.7450142994114072,
+        "arm": [
+          "tabddpm_upstream_rp",
+          "primary"
+        ],
+        "wins": 1,
+        "n": 3,
+        "median_difference": -0.0027566746927768504
+      },
+      "clinical_tv": {
+        "ours": 0.04692788576913844,
+        "comparator": 0.020287766978641666,
+        "arm": [
+          "tabddpm_upstream",
+          "primary"
+        ],
+        "wins": 0,
+        "n": 3,
+        "median_difference": 0.0258166846652268
+      }
+    },
+    {
+      "dataset": "nhanes_chem_g",
+      "size": 250,
+      "ours_eligible": false,
+      "relation_w1": {
+        "ours": 0.04902802703987596,
+        "comparator": 0.03268594018403928,
+        "arm": [
+          "copula",
+          "textbook"
+        ],
+        "wins": 0,
+        "n": 5,
+        "median_difference": 0.015996348379224
+      },
+      "c2st": {
+        "ours": 0.7154237,
+        "comparator": 0.7374931,
+        "arm": [
+          "copula",
+          "derived"
+        ],
+        "wins": 4,
+        "n": 5,
+        "median_difference": -0.02437899999999993
+      },
+      "ours_best_eligible": false,
+      "rf": {
+        "ours": 0.8777699333854201,
+        "comparator": 0.8642247073257211,
+        "arm": [
+          "copula_rp",
+          "primary"
+        ],
+        "wins": 5,
+        "n": 5,
+        "median_difference": 0.014858063564680113
+      },
+      "clinical_tv": {
+        "ours": 0.11025549105708668,
+        "comparator": 0.1040540173066216,
+        "arm": [
+          "copula",
+          "primary"
+        ],
+        "wins": 2,
+        "n": 5,
+        "median_difference": 0.0077457578222625
+      }
+    },
+    {
+      "dataset": "nhanes_chem_g",
+      "size": 1000,
+      "ours_eligible": true,
+      "relation_w1": {
+        "ours": 0.024892575516674443,
+        "comparator": 0.01930734531503346,
+        "arm": [
+          "tabdiff",
+          "resampled"
+        ],
+        "wins": 2,
+        "n": 5,
+        "median_difference": 0.0037659557703523007
+      },
+      "c2st": {
+        "ours": 0.6443777562187233,
+        "comparator": 0.6740437588844224,
+        "arm": [
+          "tabdiff_rp",
+          "primary"
+        ],
+        "wins": 5,
+        "n": 5,
+        "median_difference": -0.02179788030145846
+      },
+      "ours_best_eligible": true,
+      "rf": {
+        "ours": 0.8877570999595228,
+        "comparator": 0.8879164980122309,
+        "arm": [
+          "copula_rp",
+          "primary"
+        ],
+        "wins": 3,
+        "n": 5,
+        "median_difference": 0.00043850153279434423
+      },
+      "clinical_tv": {
+        "ours": 0.05342524114193294,
+        "comparator": 0.06268923408313,
+        "arm": [
+          "copula",
+          "primary"
+        ],
+        "wins": 4,
+        "n": 5,
+        "median_difference": -0.0101700590239348
+      }
+    },
+    {
+      "dataset": "nhanes_chem_l",
+      "size": 250,
+      "ours_eligible": true,
+      "relation_w1": {
+        "ours": 0.04951915255582,
+        "comparator": 0.026554045440080283,
+        "arm": [
+          "copula",
+          "textbook"
+        ],
+        "wins": 0,
+        "n": 5,
+        "median_difference": 0.0216991556877502
+      },
+      "c2st": {
+        "ours": 0.7750045999999999,
+        "comparator": 0.7601998000000001,
+        "arm": [
+          "copula",
+          "textbook"
+        ],
+        "wins": 1,
+        "n": 5,
+        "median_difference": 0.01235099999999989
+      },
+      "ours_best_eligible": false,
+      "rf": {
+        "ours": 0.8951329301372896,
+        "comparator": 0.8817123606805433,
+        "arm": [
+          "copula_rp",
+          "primary"
+        ],
+        "wins": 5,
+        "n": 5,
+        "median_difference": 0.007452668290522602
+      },
+      "clinical_tv": {
+        "ours": 0.09098617456059985,
+        "comparator": 0.07769248717275287,
+        "arm": [
+          "copula",
+          "resampled"
+        ],
+        "wins": 1,
+        "n": 5,
+        "median_difference": 0.0067025156112930015
+      }
+    },
+    {
+      "dataset": "nhanes_chem_l",
+      "size": 1000,
+      "ours_eligible": true,
+      "relation_w1": {
+        "ours": 0.024539880873477478,
+        "comparator": 0.01701066540131166,
+        "arm": [
+          "copula",
+          "textbook"
+        ],
+        "wins": 1,
+        "n": 5,
+        "median_difference": 0.0073183832459256005
+      },
+      "c2st": {
+        "ours": 0.6997159808852629,
+        "comparator": 0.7250974762197565,
+        "arm": [
+          "copula",
+          "textbook"
+        ],
+        "wins": 5,
+        "n": 5,
+        "median_difference": -0.025145540993019577
+      },
+      "ours_best_eligible": true,
+      "rf": {
+        "ours": 0.9035663704974904,
+        "comparator": 0.9049017843962208,
+        "arm": [
+          "copula_rp",
+          "primary"
+        ],
+        "wins": 1,
+        "n": 5,
+        "median_difference": -0.0009151489149687997
+      },
+      "clinical_tv": {
+        "ours": 0.06758066380459926,
+        "comparator": 0.05687795174374084,
+        "arm": [
+          "copula",
+          "textbook"
+        ],
+        "wins": 1,
+        "n": 5,
+        "median_difference": 0.015711921009580403
+      }
+    },
+    {
+      "dataset": "nhanes_chem_l",
+      "size": 2000,
+      "ours_eligible": true,
+      "relation_w1": {
+        "ours": 0.020528357332810703,
+        "comparator": 0.015441343742093034,
+        "arm": [
+          "tabdiff",
+          "textbook"
+        ],
+        "wins": 1,
+        "n": 3,
+        "median_difference": 0.0052017494189292995
+      },
+      "c2st": {
+        "ours": 0.6453563985029578,
+        "comparator": 0.6204156998794489,
+        "arm": [
+          "tabdiff",
+          "textbook"
+        ],
+        "wins": 0,
+        "n": 3,
+        "median_difference": 0.023423088626570943
+      },
+      "ours_best_eligible": false,
+      "rf": {
+        "ours": 0.905493622982482,
+        "comparator": 0.90653525120559,
+        "arm": [
+          "tabddpm_upstream",
+          "textbook"
+        ],
+        "wins": 1,
+        "n": 3,
+        "median_difference": -0.0015932932905226016
+      },
+      "clinical_tv": {
+        "ours": 0.0611035940998772,
+        "comparator": 0.05168261753702621,
+        "arm": [
+          "tabdiff",
+          "textbook"
+        ],
+        "wins": 0,
+        "n": 3,
+        "median_difference": 0.0091118526677781
+      }
+    }
+  ],
+  "previous_independent_canonical_control_audit_matches": true,
+  "source_snapshots_verified": {
+    "890ebbee": "890ebbee41f16b5dee0aa50ce8f051d32345db35b3d3bbac09c8e21415dff718",
+    "1003bc8c": "1003bc8c1049287a67612a72c8f7681ba27547cfdc097e5a4be6331ea333320c",
+    "1626362e": "1626362e15411c2e9016f490f82976b9f722d658c056a37f1c60aa8756902148"
+  },
+  "release_sha256": "11ecefc8703d478d129d86189a8d968ff98f4ebde2824aff38e5544b9fc30ac7",
+  "release_selected_files_match_current": true,
+  "release_missing_report_input_control_csv": true,
+  "scope": "Saved-result consistency audit. No generator, metric classifier or full test suite was rerun."
+}

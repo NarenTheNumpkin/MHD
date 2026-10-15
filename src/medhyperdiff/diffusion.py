@@ -37,6 +37,28 @@ class DiffusionConfig:
     gated_structure: bool = False
     dense_structure: bool = False
     paired_initialization: bool = False
+    # "epochs" is the original validation-selected loop and stays the default for
+    # archived runs. "steps" trains a fixed optimizer-step budget with linear learning-rate
+    # decay and an exponential moving average, then samples from the final EMA weights;
+    # validation data are monitored but never used to choose a checkpoint.
+    training: str = "epochs"
+    train_steps: int = 0
+    ema_decay: float = .999
+    observation_prior: bool = False
+    weight_decay: float = 1e-4
+    # Optional explicit MLP widths for the official TabDDPM denoiser; empty keeps width x layers.
+    mlp_layers: tuple = ()
+    # Decomposition options for the fixed-budget loop (iteration 15). The defaults reproduce the corrected recipe:
+    # linear learning-rate decay, weight averaging and the final averaged weights. "validation" instead returns the
+    # checkpoint with the lowest validation loss among the checks (one every `check_every` steps, default
+    # train_steps // 50), with that loss averaged over `validation_draws` fixed corruption draws; a positive
+    # `selection_patience` stops training after that many checks without improvement.
+    checkpoint: str = "final"
+    validation_draws: int = 1
+    selection_patience: int = 0
+    check_every: int = 0
+    lr_schedule: str = "linear"
+    use_ema: bool = True
 
 
 def seed_all(seed):
@@ -130,6 +152,10 @@ class MixedDiffusion:
             raise ValueError("Invalid training or guidance configuration")
         if cfg.numeric_prediction not in ("x0", "v"):
             raise ValueError("numeric_prediction must be x0 or v")
+        if cfg.training not in ("epochs", "steps") or (cfg.training == "steps" and cfg.train_steps < 1):
+            raise ValueError("training must be 'epochs' or 'steps' with a positive train_steps budget")
+        if not 0 <= cfg.ema_decay < 1:
+            raise ValueError("ema_decay must lie in [0, 1)")
         seed_all(cfg.seed)
         self.device = torch.device(cfg.device)
         graph = np.asarray(graph) if cfg.graph_enabled else np.zeros_like(graph)
@@ -174,13 +200,35 @@ class MixedDiffusion:
         return total, {"numeric": float(numeric_loss.detach()), "categorical": float(categorical_loss.detach()),
                        "clinical": float(clinical_loss.detach())}
 
+    def initialize_observation_heads(self, train):
+        """Start binary observation heads at fit frequencies (iteration-5 method).
+
+        Heads whose two states both occur get zero weights and log-frequency biases;
+        all other parameters keep their seeded initialization.
+        """
+        _, categorical = self.preprocessor.transform(train)
+        offset = len(self.preprocessor.cat_names)
+        self.observation_initialization = {}
+        with torch.no_grad():
+            for i, feature in enumerate(self.preprocessor.schema.numeric):
+                counts = np.bincount(categorical[:, offset + i], minlength=2)
+                if (counts > 0).all():
+                    head = self.model.category_heads[offset + i]
+                    head.weight.zero_()
+                    head.bias.copy_(torch.as_tensor(np.log(counts / counts.sum()), dtype=head.bias.dtype))
+                    self.observation_initialization[feature] = counts.tolist()
+
     def fit(self, train, validation):
+        if self.config.observation_prior:
+            self.initialize_observation_heads(train)
+        if self.config.training == "steps":
+            return self.fit_steps(train, validation)
         numeric, categorical, labels = self.tensors(train)
         val_tensors = self.tensors(validation)
         cfg = self.config
         if cfg.paired_initialization:
             seed_all(cfg.seed + 200003)
-        optimizer = torch.optim.AdamW(self.model.parameters(), lr=cfg.learning_rate, weight_decay=1e-4)
+        optimizer = torch.optim.AdamW(self.model.parameters(), lr=cfg.learning_rate, weight_decay=cfg.weight_decay)
         history, best, best_state, stale = [], float("inf"), None, 0
         for epoch in range(cfg.epochs):
             self.model.train()
@@ -214,6 +262,89 @@ class MixedDiffusion:
             raise FloatingPointError("No finite validation checkpoint")
         self.model.load_state_dict(best_state)
         self.history = history
+        return self
+
+    def fit_steps(self, train, validation=None):
+        """Fixed-budget training: linear learning-rate decay to zero and EMA weights.
+
+        A fixed-noise validation loss of the EMA model is logged for monitoring only.
+        Its generator is separate, so monitoring cannot change the training trajectory,
+        and no checkpoint is selected with validation records.
+        """
+        numeric, categorical, labels = self.tensors(train)
+        val_tensors = self.tensors(validation) if validation is not None and len(validation) else None
+        cfg = self.config
+        if cfg.checkpoint not in ("final", "validation") or cfg.lr_schedule not in ("linear", "constant"):
+            raise ValueError("Unknown checkpoint or learning-rate schedule option")
+        if cfg.checkpoint == "validation" and val_tensors is None:
+            raise ValueError("Validation checkpoint selection needs validation records")
+        # Training randomness is independent of architecture size (paired comparisons).
+        seed_all(cfg.seed + 200003)
+        optimizer = torch.optim.AdamW(self.model.parameters(), lr=cfg.learning_rate, weight_decay=cfg.weight_decay)
+        ema = copy.deepcopy(self.model).eval()
+        for parameter in ema.parameters():
+            parameter.requires_grad_(False)
+        n = len(numeric)
+        batch = min(cfg.batch_size, n)
+        order, position = torch.randperm(n, device=self.device), 0
+        history, running, count = [], 0., 0
+        log_every = cfg.check_every or max(1, cfg.train_steps // 50)
+        best, best_state, best_step, stale = float("inf"), None, None, 0
+        for step in range(cfg.train_steps):
+            learning_rate = cfg.learning_rate * (1 - step / cfg.train_steps) if cfg.lr_schedule == "linear" else cfg.learning_rate
+            for group in optimizer.param_groups:
+                group["lr"] = learning_rate
+            if position + batch > n:
+                order, position = torch.randperm(n, device=self.device), 0
+            idx = order[position:position + batch]
+            position += batch
+            self.model.train()
+            optimizer.zero_grad(set_to_none=True)
+            loss, _ = self.loss(numeric[idx], categorical[idx], labels[idx])
+            if not torch.isfinite(loss):
+                raise FloatingPointError("Nonfinite diffusion training loss")
+            loss.backward()
+            torch.nn.utils.clip_grad_norm_(self.model.parameters(), 1.)
+            optimizer.step()
+            with torch.no_grad():
+                if cfg.use_ema:
+                    for averaged, current in zip(ema.parameters(), self.model.parameters()):
+                        averaged.lerp_(current, 1 - cfg.ema_decay)
+                else:
+                    ema.load_state_dict(self.model.state_dict())
+            running += float(loss.detach()) * len(idx)
+            count += len(idx)
+            if (step + 1) % log_every == 0 or step + 1 == cfg.train_steps:
+                record = {"step": step + 1, "learning_rate": learning_rate, "train_loss": running / max(count, 1)}
+                if val_tensors is not None:
+                    live, self.model = self.model, ema
+                    values = []
+                    for draw in range(max(1, cfg.validation_draws)):
+                        # Draw 0 is the fixed corruption used since iteration 11; further draws average it out.
+                        generator = torch.Generator(device=self.device).manual_seed(cfg.seed + 100003 + 7919 * draw)
+                        with torch.no_grad():
+                            value, details = self.loss(*val_tensors, generator=generator)
+                        values.append(float(value))
+                    self.model = live
+                    record.update({"ema_validation_loss": float(np.mean(values)), **details})
+                    if cfg.checkpoint == "validation":
+                        if record["ema_validation_loss"] < best:
+                            best, best_state, best_step, stale = record["ema_validation_loss"], copy.deepcopy(ema.state_dict()), step + 1, 0
+                        else:
+                            stale += 1
+                history.append(record)
+                running, count = 0., 0
+                if cfg.checkpoint == "validation" and cfg.selection_patience and stale >= cfg.selection_patience:
+                    break
+        if cfg.checkpoint == "validation":
+            if best_state is None:
+                raise FloatingPointError("No finite validation checkpoint")
+            self.model.load_state_dict(best_state)
+        else:
+            self.model.load_state_dict(ema.state_dict())
+        self.model.eval()
+        self.history, self.best_epoch = history, None
+        self.selected_step, self.executed_steps = (best_step if cfg.checkpoint == "validation" else None), step + 1
         return self
 
     def guide(self, clean, logits, strength):

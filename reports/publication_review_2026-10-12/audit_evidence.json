@@ -1,0 +1,646 @@
+{
+  "cohort_overlap": [
+    {
+      "cycle": "J",
+      "panels": [
+        "original",
+        "cbc"
+      ],
+      "rows": [
+        4756,
+        4865
+      ],
+      "shared_people": 4753
+    },
+    {
+      "cycle": "I",
+      "panels": [
+        "cbc",
+        "chem"
+      ],
+      "rows": [
+        5078,
+        5028
+      ],
+      "shared_people": 5019
+    },
+    {
+      "cycle": "L",
+      "panels": [
+        "cbc",
+        "chem"
+      ],
+      "rows": [
+        5555,
+        5284
+      ],
+      "shared_people": 5263
+    }
+  ],
+  "fit_sizes_and_overlap": [
+    {
+      "dataset": "nhanes_cbc_h",
+      "labelled_n": 250,
+      "fit_sizes": [
+        200
+      ],
+      "fit_pair_overlap_min": 0.04,
+      "fit_pair_overlap_max": 0.105,
+      "reference": 2614
+    },
+    {
+      "dataset": "nhanes_cbc_h",
+      "labelled_n": 1000,
+      "fit_sizes": [
+        800
+      ],
+      "fit_pair_overlap_min": 0.28125,
+      "fit_pair_overlap_max": 0.31875,
+      "reference": 2614
+    },
+    {
+      "dataset": "nhanes_cbc_l",
+      "labelled_n": 250,
+      "fit_sizes": [
+        200
+      ],
+      "fit_pair_overlap_min": 0.045,
+      "fit_pair_overlap_max": 0.13,
+      "reference": 2778
+    },
+    {
+      "dataset": "nhanes_cbc_l",
+      "labelled_n": 1000,
+      "fit_sizes": [
+        800
+      ],
+      "fit_pair_overlap_min": 0.25375,
+      "fit_pair_overlap_max": 0.295,
+      "reference": 2778
+    },
+    {
+      "dataset": "nhanes_cbc_l",
+      "labelled_n": 2000,
+      "fit_sizes": [
+        1600
+      ],
+      "fit_pair_overlap_min": 0.56125,
+      "fit_pair_overlap_max": 0.57875,
+      "reference": 2778
+    },
+    {
+      "dataset": "nhanes_chem_g",
+      "labelled_n": 250,
+      "fit_sizes": [
+        200
+      ],
+      "fit_pair_overlap_min": 0.045,
+      "fit_pair_overlap_max": 0.13,
+      "reference": 2389
+    },
+    {
+      "dataset": "nhanes_chem_g",
+      "labelled_n": 1000,
+      "fit_sizes": [
+        800
+      ],
+      "fit_pair_overlap_min": 0.305,
+      "fit_pair_overlap_max": 0.3425,
+      "reference": 2389
+    },
+    {
+      "dataset": "nhanes_chem_l",
+      "labelled_n": 250,
+      "fit_sizes": [
+        200
+      ],
+      "fit_pair_overlap_min": 0.055,
+      "fit_pair_overlap_max": 0.09,
+      "reference": 2642
+    },
+    {
+      "dataset": "nhanes_chem_l",
+      "labelled_n": 1000,
+      "fit_sizes": [
+        800
+      ],
+      "fit_pair_overlap_min": 0.28,
+      "fit_pair_overlap_max": 0.31125,
+      "reference": 2642
+    },
+    {
+      "dataset": "nhanes_chem_l",
+      "labelled_n": 2000,
+      "fit_sizes": [
+        1600
+      ],
+      "fit_pair_overlap_min": 0.59375,
+      "fit_pair_overlap_max": 0.61375,
+      "reference": 2642
+    }
+  ],
+  "cells": [
+    {
+      "dataset": "nhanes_cbc_h",
+      "size": 250,
+      "ours": {
+        "rf": 0.7086013244347871,
+        "rf_real": 0.7050194009002018,
+        "c2st": 0.7085936,
+        "membership": 0.572925,
+        "clinical_tv": 0.04543764345830144,
+        "relation_w1": 0.12815631059678126
+      },
+      "best_c2st_arm": [
+        "copula",
+        "derived"
+      ],
+      "best_c2st": 0.7277193000000001,
+      "best_utility_arm": [
+        "copula",
+        "derived"
+      ],
+      "best_utility": 0.6980742666459724,
+      "best_published_c2st_arm": [
+        "copula",
+        "derived"
+      ],
+      "best_clinical_tv": 0.07461224177505735,
+      "clinical_best_arm": [
+        "copula",
+        "derived"
+      ]
+    },
+    {
+      "dataset": "nhanes_cbc_h",
+      "size": 1000,
+      "ours": {
+        "rf": 0.7710098815251694,
+        "rf_real": 0.7690709555590046,
+        "c2st": 0.6464474002326359,
+        "membership": 0.5584525,
+        "clinical_tv": 0.0282381407804131,
+        "relation_w1": 0.0920606378874516
+      },
+      "best_c2st_arm": [
+        "tabdiff",
+        "resampled"
+      ],
+      "best_c2st": 0.6343797801140232,
+      "best_utility_arm": [
+        "copula_rp",
+        "primary"
+      ],
+      "best_utility": 0.7526890941072999,
+      "best_published_c2st_arm": [
+        "tabdiff",
+        "resampled"
+      ],
+      "best_clinical_tv": 0.033536266258607464,
+      "clinical_best_arm": [
+        "tabdiff",
+        "primary"
+      ]
+    },
+    {
+      "dataset": "nhanes_cbc_l",
+      "size": 250,
+      "ours": {
+        "rf": 0.6844771658370498,
+        "rf_real": 0.6843138914318092,
+        "c2st": 0.689925,
+        "membership": 0.5577500000000001,
+        "clinical_tv": 0.04861756659467238,
+        "relation_w1": 0.15097406485939796
+      },
+      "best_c2st_arm": [
+        "copula",
+        "resampled"
+      ],
+      "best_c2st": 0.7193978,
+      "best_utility_arm": [
+        "tvae",
+        "primary"
+      ],
+      "best_utility": 0.6804584687502903,
+      "best_published_c2st_arm": [
+        "copula",
+        "resampled"
+      ],
+      "best_clinical_tv": 0.0581437005039596,
+      "clinical_best_arm": [
+        "copula_rp",
+        "primary"
+      ]
+    },
+    {
+      "dataset": "nhanes_cbc_l",
+      "size": 1000,
+      "ours": {
+        "rf": 0.7330789610298466,
+        "rf_real": 0.7299680778928314,
+        "c2st": 0.6291141805847756,
+        "membership": 0.5507575,
+        "clinical_tv": 0.0398838012958963,
+        "relation_w1": 0.13688448386971327
+      },
+      "best_c2st_arm": [
+        "tabdiff",
+        "derived"
+      ],
+      "best_c2st": 0.6343495976045459,
+      "best_utility_arm": [
+        "copula_rp",
+        "primary"
+      ],
+      "best_utility": 0.7231784634660617,
+      "best_published_c2st_arm": [
+        "tabdiff",
+        "derived"
+      ],
+      "best_clinical_tv": 0.027232613390928702,
+      "clinical_best_arm": [
+        "tabdiff",
+        "derived"
+      ]
+    },
+    {
+      "dataset": "nhanes_cbc_l",
+      "size": 2000,
+      "ours": {
+        "rf": 0.7445873640197016,
+        "rf_real": 0.7387807330697411,
+        "c2st": 0.6163227676127162,
+        "membership": 0.5466477622187093,
+        "clinical_tv": 0.04692788576913843,
+        "relation_w1": 0.13585431642963317
+      },
+      "best_c2st_arm": [
+        "tabdiff",
+        "derived"
+      ],
+      "best_c2st": 0.5771961137277484,
+      "best_utility_arm": [
+        "tabddpm_upstream_rp",
+        "primary"
+      ],
+      "best_utility": 0.7450142994114072,
+      "best_published_c2st_arm": [
+        "tabdiff",
+        "derived"
+      ],
+      "best_clinical_tv": 0.020287766978641666,
+      "clinical_best_arm": [
+        "tabddpm_upstream",
+        "primary"
+      ]
+    },
+    {
+      "dataset": "nhanes_chem_g",
+      "size": 250,
+      "ours": {
+        "rf": 0.8777699333854201,
+        "rf_real": 0.8686867545866163,
+        "c2st": 0.7154237,
+        "membership": 0.60846,
+        "clinical_tv": 0.11025549105708665,
+        "relation_w1": 0.04902802703987596
+      },
+      "best_c2st_arm": [
+        "copula",
+        "derived"
+      ],
+      "best_c2st": 0.7374931,
+      "best_utility_arm": [
+        "copula_rp",
+        "primary"
+      ],
+      "best_utility": 0.8642247073257211,
+      "best_published_c2st_arm": [
+        "copula",
+        "derived"
+      ],
+      "best_clinical_tv": 0.1040540173066216,
+      "clinical_best_arm": [
+        "copula",
+        "primary"
+      ]
+    },
+    {
+      "dataset": "nhanes_chem_g",
+      "size": 1000,
+      "ours": {
+        "rf": 0.8877570999595228,
+        "rf_real": 0.8851381711269882,
+        "c2st": 0.6443777562187233,
+        "membership": 0.5516790625,
+        "clinical_tv": 0.05342524114193294,
+        "relation_w1": 0.02489257551667444
+      },
+      "best_c2st_arm": [
+        "tabdiff_rp",
+        "primary"
+      ],
+      "best_c2st": 0.6740437588844224,
+      "best_utility_arm": [
+        "copula_rp",
+        "primary"
+      ],
+      "best_utility": 0.8879164980122309,
+      "best_published_c2st_arm": [
+        "copula",
+        "derived"
+      ],
+      "best_clinical_tv": 0.06268923408313,
+      "clinical_best_arm": [
+        "copula",
+        "primary"
+      ]
+    },
+    {
+      "dataset": "nhanes_chem_l",
+      "size": 250,
+      "ours": {
+        "rf": 0.8951329301372896,
+        "rf_real": 0.8851443709403602,
+        "c2st": 0.7750045999999999,
+        "membership": 0.56551,
+        "clinical_tv": 0.09098617456059985,
+        "relation_w1": 0.04951915255582
+      },
+      "best_c2st_arm": [
+        "copula",
+        "primary"
+      ],
+      "best_c2st": 0.7827225,
+      "best_utility_arm": [
+        "copula_rp",
+        "primary"
+      ],
+      "best_utility": 0.8817123606805433,
+      "best_published_c2st_arm": [
+        "copula",
+        "primary"
+      ],
+      "best_clinical_tv": 0.07769248717275287,
+      "clinical_best_arm": [
+        "copula",
+        "resampled"
+      ]
+    },
+    {
+      "dataset": "nhanes_chem_l",
+      "size": 1000,
+      "ours": {
+        "rf": 0.9035663704974904,
+        "rf_real": 0.9009175708591673,
+        "c2st": 0.6997159808852629,
+        "membership": 0.5493559375,
+        "clinical_tv": 0.06758066380459926,
+        "relation_w1": 0.02453988087347748
+      },
+      "best_c2st_arm": [
+        "tabddpm_upstream",
+        "primary"
+      ],
+      "best_c2st": 0.7486772087303393,
+      "best_utility_arm": [
+        "copula_rp",
+        "primary"
+      ],
+      "best_utility": 0.9049017843962208,
+      "best_published_c2st_arm": [
+        "tabddpm_upstream",
+        "primary"
+      ],
+      "best_clinical_tv": 0.06047458993457329,
+      "clinical_best_arm": [
+        "tabdiff_rp",
+        "primary"
+      ]
+    },
+    {
+      "dataset": "nhanes_chem_l",
+      "size": 2000,
+      "ours": {
+        "rf": 0.905493622982482,
+        "rf_real": 0.9033480879711643,
+        "c2st": 0.6453563985029578,
+        "membership": 0.5252352236996151,
+        "clinical_tv": 0.0611035940998772,
+        "relation_w1": 0.0205283573328107
+      },
+      "best_c2st_arm": [
+        "tabdiff",
+        "primary"
+      ],
+      "best_c2st": 0.624805759100598,
+      "best_utility_arm": [
+        "tabddpm_upstream",
+        "derived"
+      ],
+      "best_utility": 0.9063090108626118,
+      "best_published_c2st_arm": [
+        "tabdiff",
+        "primary"
+      ],
+      "best_clinical_tv": 0.05799854926811684,
+      "clinical_best_arm": [
+        "tabdiff",
+        "resampled"
+      ]
+    }
+  ],
+  "jobs": {
+    "confirm_all": 618,
+    "analysed_confirmation": 598,
+    "omitted_n100": 20
+  },
+  "metric_reconciliation": {
+    "jobs_checked": 598,
+    "metric_hashes_available": 0,
+    "hash_mismatches": [],
+    "value_mismatches": []
+  },
+  "pipeline_summary": [
+    {
+      "comparison": "Fidelity, privacy-aware ranking",
+      "dataset": "nhanes",
+      "size": 250,
+      "reversal": 0.2714285714285714,
+      "reversal_low": 0.1714285714285714,
+      "reversal_high": 0.35,
+      "tau": 0.4571428571428571,
+      "tau_low": 0.2999999999999999,
+      "tau_high": 0.657142857142857,
+      "top1_agreement": 0.2,
+      "top_common": "Copula+repair",
+      "top_corrected": "MedHyperDiff"
+    },
+    {
+      "comparison": "Fidelity, privacy-aware ranking",
+      "dataset": "nhanes",
+      "size": 1000,
+      "reversal": 0.3357142857142857,
+      "reversal_low": 0.25,
+      "reversal_high": 0.4357142857142856,
+      "tau": 0.3285714285714285,
+      "tau_low": 0.1285714285714285,
+      "tau_high": 0.5,
+      "top1_agreement": 0.0,
+      "top_common": "Copula",
+      "top_corrected": "MedHyperDiff"
+    },
+    {
+      "comparison": "Fidelity, privacy-aware ranking",
+      "dataset": "thyroid",
+      "size": 250,
+      "reversal": 0.3642857142857142,
+      "reversal_low": 0.3071428571428571,
+      "reversal_high": 0.45,
+      "tau": 0.2714285714285713,
+      "tau_low": 0.0999999999999999,
+      "tau_high": 0.3857142857142857,
+      "top1_agreement": 0.0,
+      "top_common": "TabDiff",
+      "top_corrected": "Copula+repair"
+    },
+    {
+      "comparison": "Fidelity, privacy-aware ranking",
+      "dataset": "thyroid",
+      "size": 1000,
+      "reversal": 0.2,
+      "reversal_low": 0.1071428571428571,
+      "reversal_high": 0.2857142857142857,
+      "tau": 0.5999999999999999,
+      "tau_low": 0.4285714285714285,
+      "tau_high": 0.7857142857142856,
+      "top1_agreement": 0.2,
+      "top_common": "TabDiff",
+      "top_corrected": "MedHyperDiff"
+    },
+    {
+      "comparison": "Fidelity: common vs corrected practice",
+      "dataset": "nhanes",
+      "size": 250,
+      "reversal": 0.3214285714285714,
+      "reversal_low": 0.2928571428571428,
+      "reversal_high": 0.35,
+      "tau": 0.3571428571428571,
+      "tau_low": 0.3,
+      "tau_high": 0.4142857142857142,
+      "top1_agreement": 0.0,
+      "top_common": "Copula+repair",
+      "top_corrected": "MedHyperDiff"
+    },
+    {
+      "comparison": "Fidelity: common vs corrected practice",
+      "dataset": "nhanes",
+      "size": 1000,
+      "reversal": 0.3357142857142857,
+      "reversal_low": 0.2928571428571428,
+      "reversal_high": 0.3785714285714285,
+      "tau": 0.3285714285714285,
+      "tau_low": 0.2428571428571428,
+      "tau_high": 0.4142857142857142,
+      "top1_agreement": 0.0,
+      "top_common": "Copula",
+      "top_corrected": "MedHyperDiff"
+    },
+    {
+      "comparison": "Fidelity: common vs corrected practice",
+      "dataset": "thyroid",
+      "size": 250,
+      "reversal": 0.25,
+      "reversal_low": 0.2214285714285714,
+      "reversal_high": 0.2785714285714286,
+      "tau": 0.4999999999999999,
+      "tau_low": 0.4428571428571428,
+      "tau_high": 0.5571428571428572,
+      "top1_agreement": 0.0,
+      "top_common": "TabDiff",
+      "top_corrected": "MedHyperDiff"
+    },
+    {
+      "comparison": "Fidelity: common vs corrected practice",
+      "dataset": "thyroid",
+      "size": 1000,
+      "reversal": 0.2642857142857143,
+      "reversal_low": 0.2214285714285714,
+      "reversal_high": 0.3071428571428571,
+      "tau": 0.4714285714285713,
+      "tau_low": 0.3857142857142857,
+      "tau_high": 0.5571428571428572,
+      "top1_agreement": 0.4,
+      "top_common": "TabDiff",
+      "top_corrected": "MedHyperDiff"
+    },
+    {
+      "comparison": "Rules: violation count vs gap to real",
+      "dataset": "nhanes",
+      "size": 250,
+      "reversal": 0.3864045584045584,
+      "reversal_low": 0.3264045584045584,
+      "reversal_high": 0.4534814814814815,
+      "tau": 0.2169118176556532,
+      "tau_low": 0.0892846745939572,
+      "tau_high": 0.3303011595584214,
+      "top1_agreement": 1.0,
+      "top_common": "Copula+repair",
+      "top_corrected": "Copula+repair"
+    },
+    {
+      "comparison": "Rules: violation count vs gap to real",
+      "dataset": "nhanes",
+      "size": 1000,
+      "reversal": 0.2396825396825396,
+      "reversal_low": 0.1875661375661375,
+      "reversal_high": 0.2777777777777778,
+      "tau": 0.5174314550459367,
+      "tau_low": 0.4400396792595916,
+      "tau_high": 0.6231325143403585,
+      "top1_agreement": 1.0,
+      "top_common": "Copula+repair",
+      "top_corrected": "Copula+repair"
+    },
+    {
+      "comparison": "Rules: violation count vs gap to real",
+      "dataset": "thyroid",
+      "size": 250,
+      "reversal": 0.3285714285714285,
+      "reversal_low": 0.2785714285714286,
+      "reversal_high": 0.3857142857142857,
+      "tau": 0.3428571428571428,
+      "tau_low": 0.2285714285714285,
+      "tau_high": 0.4428571428571428,
+      "top1_agreement": 1.0,
+      "top_common": "Copula+repair",
+      "top_corrected": "Copula+repair"
+    },
+    {
+      "comparison": "Rules: violation count vs gap to real",
+      "dataset": "thyroid",
+      "size": 1000,
+      "reversal": 0.2714285714285714,
+      "reversal_low": 0.2214285714285714,
+      "reversal_high": 0.3214285714285714,
+      "tau": 0.4571428571428571,
+      "tau_low": 0.3571428571428571,
+      "tau_high": 0.5571428571428572,
+      "top1_agreement": 1.0,
+      "top_common": "Copula+repair",
+      "top_corrected": "Copula+repair"
+    }
+  ],
+  "review_scope": {
+    "date": "2026-10-12",
+    "pdf_pages_visually_reviewed": 10,
+    "confirmation_metrics_compared_to_saved_json": 598,
+    "experiments_retrained": 0,
+    "pytest_result": "No tests ran: local PyTorch source files were dataless/offloaded; interrupted during import.",
+    "source_files_syntax_checked": 66,
+    "source_files_skipped_as_dataless": 15
+  },
+  "current_source_sha256": "890ebbee41f16b5dee0aa50ce8f051d32345db35b3d3bbac09c8e21415dff718",
+  "source_hash_matches_confirmation": true
+}

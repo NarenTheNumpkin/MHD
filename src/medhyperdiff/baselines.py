@@ -12,14 +12,15 @@ class ReferenceGenerator:
     The copula uses a stated ordinal encoding for categories and is only a simple
     reference, not SDV's GaussianCopulaSynthesizer or a named paper reproduction.
     """
-    def __init__(self, schema, kind="copula", seed=0):
+    def __init__(self, schema, kind="copula", seed=0, decode_precision=False):
         if kind not in ("copula", "independent", "bootstrap"):
             raise ValueError(kind)
         self.schema, self.kind, self.seed = schema, kind, seed
+        self.decode_precision = decode_precision
 
     def fit(self, train):
         self.train = train.copy()
-        self.preprocessor = Preprocessor(self.schema).fit(train)
+        self.preprocessor = Preprocessor(self.schema, decode_precision=self.decode_precision).fit(train)
         num, cat = self.preprocessor.transform(train)
         self.values = np.concatenate([num, cat], axis=1)
         self.y = (train[self.schema.target].to_numpy() == self.schema.positive).astype(int)
@@ -62,12 +63,14 @@ class CTGANAdapter:
     Both use the same explicit numerical missingness representation as diffusion.
     Per-class fitting is a documented adaptation, not published benchmark replication.
     """
-    def __init__(self, schema, kind, epochs=100, seed=0):
+    def __init__(self, schema, kind, epochs=100, seed=0, params=None, decode_precision=False):
+        """`params` are native constructor arguments; None keeps the original compact preset."""
         self.schema, self.kind, self.epochs, self.seed = schema, kind, epochs, seed
+        self.params, self.decode_precision = params, decode_precision
 
     def fit(self, train):
         from ctgan import CTGAN, TVAE
-        self.preprocessor = Preprocessor(self.schema).fit(train)
+        self.preprocessor = Preprocessor(self.schema, decode_precision=self.decode_precision).fit(train)
         num, cat = self.preprocessor.transform(train)
         self.num_names = [f"n{i}" for i in range(num.shape[1])]
         self.cat_names = [f"c{i}" for i in range(cat.shape[1])]
@@ -77,7 +80,10 @@ class CTGANAdapter:
         labels = (train[self.schema.target].to_numpy() == self.schema.positive).astype(int)
         self.models = {}
         for label in (0, 1):
-            if self.kind == "ctgan":
+            if self.params is not None:
+                model = (CTGAN if self.kind == "ctgan" else TVAE)(**{**self.params, "epochs": self.epochs,
+                    "enable_gpu": False, "verbose": False})
+            elif self.kind == "ctgan":
                 model = CTGAN(epochs=self.epochs, batch_size=100, pac=10,
                     generator_dim=(64, 64), discriminator_dim=(64, 64), embedding_dim=32,
                     enable_gpu=False, verbose=False)

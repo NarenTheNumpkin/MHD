@@ -1,0 +1,213 @@
+{
+  "created_at": "2026-10-06T07:27:17.576725+00:00",
+  "rule": "minimize partition-mean violation gap versus real validation; ties within 1e-9 choose smaller guidance",
+  "selection_sha256": "7a461f05e537826ee47b806bdc06a52ef55b061254bf5a1ead5588d9e20f095a",
+  "guidance": {
+    "ilpd": 5.0,
+    "heart_failure": 0.0,
+    "ckd": 0.0,
+    "diabetes": 0.0
+  },
+  "table": [
+    {
+      "dataset": "ilpd",
+      "guidance": 0.0,
+      "violation_gap": 0.00950699140454058,
+      "c2st": 0.6192355064938833,
+      "numeric_w": 0.14912659745954707,
+      "rf": 0.7275447601457524,
+      "membership": 0.5168567250812776,
+      "selected": false
+    },
+    {
+      "dataset": "ilpd",
+      "guidance": 2.0,
+      "violation_gap": 0.0028563594925431154,
+      "c2st": 0.5997345931058341,
+      "numeric_w": 0.14905194167963873,
+      "rf": 0.7287617493145487,
+      "membership": 0.5147458947917596,
+      "selected": false
+    },
+    {
+      "dataset": "ilpd",
+      "guidance": 5.0,
+      "violation_gap": 0.0013004953161955901,
+      "c2st": 0.6233222654594749,
+      "numeric_w": 0.14955906660586624,
+      "rf": 0.7255546249167795,
+      "membership": 0.511555909134953,
+      "selected": true
+    },
+    {
+      "dataset": "ilpd",
+      "guidance": 10.0,
+      "violation_gap": 0.0013804636763411016,
+      "c2st": 0.5989517937640085,
+      "numeric_w": 0.14967917701852532,
+      "rf": 0.7277255188311177,
+      "membership": 0.514881618270202,
+      "selected": false
+    },
+    {
+      "dataset": "ilpd",
+      "guidance": 20.0,
+      "violation_gap": 0.0014910022308492095,
+      "c2st": 0.5919510895697924,
+      "numeric_w": 0.15166281712158383,
+      "rf": 0.7249783447515553,
+      "membership": 0.5224090052072498,
+      "selected": false
+    },
+    {
+      "dataset": "heart_failure",
+      "guidance": 0.0,
+      "violation_gap": 0.0,
+      "c2st": 0.5532407407407408,
+      "numeric_w": 0.1741638544645064,
+      "rf": 0.7885777706461276,
+      "membership": 0.5437037037037037,
+      "selected": true
+    },
+    {
+      "dataset": "heart_failure",
+      "guidance": 2.0,
+      "violation_gap": 0.0,
+      "c2st": 0.5532407407407408,
+      "numeric_w": 0.1741638544645064,
+      "rf": 0.7885777706461276,
+      "membership": 0.5437037037037037,
+      "selected": false
+    },
+    {
+      "dataset": "heart_failure",
+      "guidance": 5.0,
+      "violation_gap": 0.0,
+      "c2st": 0.5532407407407408,
+      "numeric_w": 0.1741638544645064,
+      "rf": 0.7885777706461276,
+      "membership": 0.5437037037037037,
+      "selected": false
+    },
+    {
+      "dataset": "heart_failure",
+      "guidance": 10.0,
+      "violation_gap": 0.0,
+      "c2st": 0.5532407407407408,
+      "numeric_w": 0.1741638544645064,
+      "rf": 0.7885777706461276,
+      "membership": 0.5437037037037037,
+      "selected": false
+    },
+    {
+      "dataset": "heart_failure",
+      "guidance": 20.0,
+      "violation_gap": 0.0,
+      "c2st": 0.5532407407407408,
+      "numeric_w": 0.1741638544645064,
+      "rf": 0.7885777706461276,
+      "membership": 0.5437037037037037,
+      "selected": false
+    },
+    {
+      "dataset": "ckd",
+      "guidance": 0.0,
+      "violation_gap": 0.0,
+      "c2st": 0.5947395833333333,
+      "numeric_w": 0.17017751917555768,
+      "rf": 1.0,
+      "membership": 0.46770833333333334,
+      "selected": true
+    },
+    {
+      "dataset": "ckd",
+      "guidance": 2.0,
+      "violation_gap": 0.0,
+      "c2st": 0.5947395833333333,
+      "numeric_w": 0.17017751917555768,
+      "rf": 1.0,
+      "membership": 0.46770833333333334,
+      "selected": false
+    },
+    {
+      "dataset": "ckd",
+      "guidance": 5.0,
+      "violation_gap": 0.0,
+      "c2st": 0.5947395833333333,
+      "numeric_w": 0.17017751917555768,
+      "rf": 1.0,
+      "membership": 0.46770833333333334,
+      "selected": false
+    },
+    {
+      "dataset": "ckd",
+      "guidance": 10.0,
+      "violation_gap": 0.0,
+      "c2st": 0.5947395833333333,
+      "numeric_w": 0.17017751917555768,
+      "rf": 1.0,
+      "membership": 0.46770833333333334,
+      "selected": false
+    },
+    {
+      "dataset": "ckd",
+      "guidance": 20.0,
+      "violation_gap": 0.0,
+      "c2st": 0.5947395833333333,
+      "numeric_w": 0.17017751917555768,
+      "rf": 1.0,
+      "membership": 0.46770833333333334,
+      "selected": false
+    },
+    {
+      "dataset": "diabetes",
+      "guidance": 0.0,
+      "violation_gap": 0.0,
+      "c2st": 0.507396449704142,
+      "numeric_w": 0.23111462721162698,
+      "rf": 0.9533854166666668,
+      "membership": 0.9304733727810651,
+      "selected": true
+    },
+    {
+      "dataset": "diabetes",
+      "guidance": 2.0,
+      "violation_gap": 0.0,
+      "c2st": 0.507396449704142,
+      "numeric_w": 0.23111462721162698,
+      "rf": 0.9533854166666668,
+      "membership": 0.9304733727810651,
+      "selected": false
+    },
+    {
+      "dataset": "diabetes",
+      "guidance": 5.0,
+      "violation_gap": 0.0,
+      "c2st": 0.507396449704142,
+      "numeric_w": 0.23111462721162698,
+      "rf": 0.9533854166666668,
+      "membership": 0.9304733727810651,
+      "selected": false
+    },
+    {
+      "dataset": "diabetes",
+      "guidance": 10.0,
+      "violation_gap": 0.0,
+      "c2st": 0.507396449704142,
+      "numeric_w": 0.23111462721162698,
+      "rf": 0.9533854166666668,
+      "membership": 0.9304733727810651,
+      "selected": false
+    },
+    {
+      "dataset": "diabetes",
+      "guidance": 20.0,
+      "violation_gap": 0.0,
+      "c2st": 0.507396449704142,
+      "numeric_w": 0.23111462721162698,
+      "rf": 0.9533854166666668,
+      "membership": 0.9304733727810651,
+      "selected": false
+    }
+  ]
+}

@@ -47,7 +47,9 @@ def config_for(args):
         learning_rate=args.learning_rate, clinical_weight=args.clinical_weight,
         guidance=args.guidance, patience=args.patience, numeric_prediction=args.numeric_prediction,
         gated_structure=args.gated_structure, dense_structure=args.mode == "dense",
-        paired_initialization=args.paired_initialization)
+        paired_initialization=args.paired_initialization, training=args.training,
+        train_steps=args.train_steps, ema_decay=args.ema_decay, observation_prior=args.observation_prior,
+        weight_decay=args.weight_decay)
     if args.mode in ("base", "graph", "hypergraph", "repair"):
         cfg.clinical_weight, cfg.guidance = 0., 0.
     if args.mode == "energy":
@@ -88,7 +90,9 @@ def run(args):
     if out.exists() and any(out.iterdir()):
         raise FileExistsError(f"Refusing to overwrite an existing experiment: {out}")
     out.mkdir(parents=True, exist_ok=True)
-    prep = Preprocessor(schema).fit(train)
+    # TabDDPM applies its own upstream-style quantile transform on top of the affine coding.
+    transform = "affine" if args.mode == "tabddpm" else args.numeric_transform
+    prep = Preprocessor(schema, transform, args.decode_precision).fit(train)
     constraints = build_constraints(schema, train)
     cfg = config_for(args)
     if cfg.unit_confidence:
@@ -105,7 +109,8 @@ def run(args):
     manifest = {"status": "running", "started_at": datetime.now(timezone.utc).isoformat(),
         "dataset": schema.name, "schema": asdict(schema), "mode": args.mode, "config": asdict(cfg),
         "fold": args.fold, "split_seed": args.split_seed, "evaluation_partition": evaluation_partition,
-        "inner_seed": args.inner_seed, "evaluation_version": 2,
+        "inner_seed": args.inner_seed, "evaluation_version": 3,
+        "numeric_transform": transform, "decode_precision": args.decode_precision,
         "outer_test_opened": args.evaluate_test, "train_rows": len(train), "validation_rows": len(val),
         "withheld_rules": args.withhold_rule,
         "test_rows": len(split["test"]), "synthetic_rows": len(train), "source_sha256": source_hash(),
@@ -132,9 +137,10 @@ def run(args):
             graph_report["permutation"] = permutation.tolist()
         write_json(out / "graph.json", {**graph_report, "used_adjacency": graph.tolist()})
         if args.mode in ("copula", "independent", "bootstrap"):
-            generator = ReferenceGenerator(schema, args.mode, args.seed).fit(train)
+            generator = ReferenceGenerator(schema, args.mode, args.seed, args.decode_precision).fit(train)
         elif args.mode in ("ctgan", "tvae"):
-            generator = CTGANAdapter(schema, args.mode, args.epochs, args.seed).fit(train)
+            generator = CTGANAdapter(schema, args.mode, args.epochs, args.seed,
+                                     decode_precision=args.decode_precision).fit(train)
             manifest["ctgan_version"] = version("ctgan")
         elif args.mode == "tabddpm":
             from .external_baselines import TabDDPMAdapter
@@ -214,6 +220,17 @@ def add_run_args(parser):
     parser.add_argument("--numeric-prediction", choices=("x0", "v"), default="x0")
     parser.add_argument("--gated-structure", action="store_true")
     parser.add_argument("--paired-initialization", action="store_true")
+    parser.add_argument("--numeric-transform", choices=("affine", "quantile"), default="affine",
+                        help="affine reproduces archived runs; quantile is the fit-only bounded normal-score coding")
+    parser.add_argument("--decode-precision", action="store_true",
+                        help="Round decoded numerical values to the fit partition's recorded resolution")
+    parser.add_argument("--training", choices=("epochs", "steps"), default="epochs",
+                        help="epochs: original validation-selected loop; steps: fixed budget, linear LR decay, EMA")
+    parser.add_argument("--train-steps", type=int, default=0)
+    parser.add_argument("--ema-decay", type=float, default=.999)
+    parser.add_argument("--weight-decay", type=float, default=1e-4)
+    parser.add_argument("--observation-prior", action="store_true",
+                        help="Initialize observation heads at fit frequencies (iteration-5 method)")
     parser.add_argument("--evaluate-test", action="store_true", help="Open outer test only after freezing study choices")
     parser.add_argument("--withhold-rule", action="append", default=[], help="Exclude a rule from architecture/loss/guidance, retain it in evaluation")
 
