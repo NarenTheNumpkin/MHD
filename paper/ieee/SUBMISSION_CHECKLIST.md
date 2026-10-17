@@ -16,7 +16,7 @@ The manuscript (`main.pdf`) has no known factual errors against the saved result
 
 - **Section structure.** As requested, the manuscript contains only these numbered sections: Introduction, Literature Review, Methodology, Results and Discussion, and Conclusion. The abstract, index terms and references are also kept. Many venues require separate end statements, such as Acknowledgment, Data Availability, Funding and Conflict of Interest. Add these after the Conclusion only if the chosen venue asks for them.
 
-- **Length.** The paper is 13 pages in IEEE conference format. Most IEEE conferences allow 6 to 8 pages. Journals such as the Journal of Biomedical Informatics or PLOS Digital Health accept this length but use their own templates.
+- **Length.** The paper is 14 pages in IEEE conference format. Most IEEE conferences allow 6 to 8 pages. Journals such as the Journal of Biomedical Informatics or PLOS Digital Health accept this length but use their own templates.
 - **Reformatting.** Reformat to the chosen venue's template, and move the case-study figures and Table VI to a supplement if space is limited.
 
 ## Optional, but likely requested by journal reviewers

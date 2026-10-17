@@ -1,8 +1,8 @@
-# MedHyperDiff: revision summary (11 to 15 October 2026)
+# MedHyperDiff: revision summary (11 to 17 October 2026)
 
 This document records what changed in the research and the paper after the two publication reviews by the guide (12 and 13 October 2026): why each change was made, what new experiments and analyses were run, how the claims changed, and where every file is.
 
-**Current manuscript:** [paper/ieee/main.pdf](paper/ieee/main.pdf), 13 pages, IEEE conference format.
+**Current manuscript:** [paper/ieee/main.pdf](paper/ieee/main.pdf), 14 pages, IEEE conference format.
 **Title:** *Evaluating and Preserving Laboratory Relationships in Synthetic Clinical Tables*
 **Authors:** Naren Medarametla, Abishek K G, Roshan Parveen, Parkavi K (School of Computer Science and Engineering, VIT Chennai)
 
@@ -33,12 +33,14 @@ The paper shows four things:
 | 2 | 11 Oct | Same title; added the robustness study (iteration 14) | 10 | `paper/ieee/archive/main_2026-10-11.pdf` |
 | 3 | 12 Oct | Synthetic Clinical Tables That Keep Laboratory Relationships, and How to Evaluate Them | 12 | `paper/ieee/archive/main_2026-10-12.pdf` |
 | 4 | 14 Oct | Evaluating and Preserving Laboratory Relationships in Synthetic Clinical Tables | 13 | `paper/ieee/archive/main_2026-10-14.pdf` |
-| **5 (current)** | **15 Oct** | **Same title; six-part IEEE structure and redrawn figures** | **13** | `paper/ieee/main.pdf` |
+| 5 | 15 Oct | Same title; six-part IEEE structure and redrawn figures | 13 | `paper/ieee/archive/main_2026-10-15.pdf` |
+| **6 (current)** | **17 Oct** | **Same title; guide's formatting and the flow of the guide's reference paper** | **14** | `paper/ieee/main.pdf` |
 
 What triggered each change:
 - **Version 3** responds to the first review ([REVIEW.md](reports/publication_review_2026-10-12/REVIEW.md), [RESPONSE.md](reports/publication_review_2026-10-12/RESPONSE.md)).
 - **Version 4** responds to the second review ([REVIEW.md](reports/publication_review_2026-10-13/REVIEW.md), [RESPONSE.md](reports/publication_review_2026-10-13/RESPONSE.md)).
 - **Version 5** follows the authors' formatting request: only the standard IEEE sections, and figures in the figures4papers style. No result changed (see section 7.1).
+- **Version 6** follows the guide's formatting instructions and the flow of the guide's reference paper. No result changed (see section 7.2).
 
 ---
 
@@ -262,6 +264,33 @@ The pipeline diagram (Fig. 1) was redesigned as five stages with a panel showing
 python scripts/figures_paper.py reproducibility/figure_inputs paper/ieee/figures
 ```
 
+### 7.2 Version 6 (17 October): guide's formatting and reference-paper flow
+
+**Guide's instructions.**
+- Every section with subsections opens with a three-to-four-line introduction.
+- Subsections are lettered in IEEE style (A., B., C., restarting in each section); version 5 had unnumbered subsections.
+- Lists written as prose are now bullets: the contributions, the five study parts, the seven pitfalls, the three relation situations, the seven protocol elements and the limitations.
+- No punctuation in or before display equations, and no comma directly after an inline formula in running text. Equations are introduced as "given in Eq. (n)" and followed by "where".
+
+**Flow of the reference paper** (the guide's "Enhancing Road Safety: Detection of Animals on Highways During Night").
+
+| Section | Change |
+|---|---|
+| I Introduction | New paragraph on the limitations of existing approaches; roadmap updated |
+| II Literature Review | New "Research Gaps" subsection with three bullets |
+| III Methodology | Novelty paragraph in Overview; membership risk (Eq. 4) and pair-reversal fraction (Eq. 5) written as formulas; new "Proposed Algorithm" subsection with Algorithm 1 and an explanatory paragraph |
+| IV Results and Discussion | New "Implementation Details" subsection; Limitations moved to the Conclusion |
+| V Conclusion | Now summary, limitations (bullets) and future work |
+
+**Checks.**
+- No number from version 5 was lost (automated comparison).
+- Both code-generated table row files appear verbatim in the manuscript.
+- Algorithm 1 matches `src/medhyperdiff/relations.py`, including re-derivation of exact relations inside the reconstruction loop.
+- Eq. 5 matches `pairwise_reversal` in `scripts/report_iteration12.py`, where tied pairs are excluded.
+- The build has no LaTeX warnings.
+
+Version 5 is archived as `paper/ieee/archive/main_2026-10-15.{tex,pdf}`.
+
 ## 8. Code changes
 
 | File | Change |
@@ -320,7 +349,7 @@ python scripts/figures_paper.py reproducibility/figure_inputs paper/ieee/figures
 - BMC Medical Research Methodology;
 - PLOS Digital Health.
 
-At 13 pages it is too long for most IEEE conferences (6–8 pages); a journal will need its own template.
+At 14 pages it is too long for most IEEE conferences (6–8 pages); a journal will need its own template.
 
 ---
 
