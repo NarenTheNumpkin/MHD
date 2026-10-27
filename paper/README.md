@@ -1,17 +1,28 @@
-# Figures
+# Manuscript
 
-`figures/Figure1.pdf` to `figures/Figure8.pdf` are the figures of the manuscript.
+*MedHyperDiff: relation-aware diffusion for synthetic clinical laboratory tables*, prepared for BMC Medical Informatics and Decision Making with the Springer Nature LaTeX template (`sn-jnl` class, version 3.1, Vancouver numbered references).
 
-Figure 1, the overview of the method, is drawn in TikZ following the conventions of [PetarV-/TikZ](https://github.com/PetarV-/TikZ):
+| File | Contents |
+|---|---|
+| `manuscript.tex` | LaTeX source |
+| `references.bib` | References |
+| `sn-jnl.cls`, `sn-vancouver-num.bst` | Springer Nature template class and reference style |
+| `manuscript.pdf` | Compiled manuscript |
+| `figures/Figure1.pdf` to `figures/Figure8.pdf` | Figures |
+
+Build from this folder:
 
 ```bash
-cd paper/figures/src && pdflatex overview.tex
+pdflatex manuscript && bibtex manuscript && pdflatex manuscript && pdflatex manuscript
 ```
 
-Figures 2 to 8 are drawn with matplotlib in the style of [figures4papers](https://github.com/ChenLiu-1996/figures4papers) from the CSV files in `reproducibility/figure_inputs/`:
+## Figures
+
+All figures are drawn with matplotlib in the style of [figures4papers](https://github.com/ChenLiu-1996/figures4papers).
 
 ```bash
-python scripts/figures_paper.py reproducibility/figure_inputs paper/figures/build
+python scripts/figure_overview.py paper/figures                        # Figure 1
+python scripts/figures_paper.py reproducibility/figure_inputs paper/figures/build   # Figures 2 to 8
 ```
 
 | Figure | Output of `figures_paper.py` |

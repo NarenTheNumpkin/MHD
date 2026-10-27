@@ -30,7 +30,7 @@ This repository contains the model, the experiments and the results of the accom
 | `docs/` | Dated study protocols and runbooks for every iteration (see [docs/README.md](docs/README.md)) |
 | `reports/` | Results and interpretation of every iteration; `reports/final/` holds the final comparison |
 | `reproducibility/` | Archived source snapshots and scripts for each study, and the data behind every figure (`figure_inputs/`) |
-| `paper/figures/` | Figures of the manuscript, including the TikZ source of Fig. 1 |
+| `paper/` | The manuscript (LaTeX source, references, compiled PDF) and its figures |
 | `tests/` | Unit and regression tests |
 | `external/` | Pinned upstream TabDiff and TabDDPM sources (git submodules) |
 
@@ -86,9 +86,8 @@ The runners write their outputs to `runs/`. The dated protocol of each study, wr
 | Robustness across survey cycles | `python scripts/iteration14.py prepare`, `queue --workers 8`, `choose`, `confirm --arms mhd`, then `python scripts/report_iteration14.py` | [ITERATION_14](docs/ITERATION_14_PROTOCOL.md) |
 | Knowledge-equivalent controls | `python scripts/controls_iteration14.py run --workers 8` and `python scripts/reanalysis_iteration14.py relations`, `canonical`, `report` | |
 | Final comparison | `python scripts/report_final.py <table folder>` | |
+| Figure 1 | `python scripts/figure_overview.py <figure folder>` | |
 | Figures 2 to 8 | `python scripts/figures_paper.py reproducibility/figure_inputs <figure folder>` | |
-
-Figure 1 is drawn in TikZ: `pdflatex paper/figures/src/overview.tex`.
 
 ## Results behind the paper
 
@@ -96,7 +95,7 @@ The aggregated results from which every table and figure of the manuscript is co
 
 ## Citation
 
-The manuscript is under review. Until it is published, please cite the software using [CITATION.cff](CITATION.cff):
+The manuscript is in [paper/](paper/) and is under review. Until it is published, please cite the software using [CITATION.cff](CITATION.cff):
 
 > Medarametla N, K G A, Parveen R, K P. MedHyperDiff: relation-aware diffusion for synthetic clinical laboratory tables. 2026. https://github.com/NarenTheNumpkin/MHD
 
