@@ -1,0 +1,26 @@
+{
+  "guided_base": {
+    "partitions_passed": 1,
+    "flagged_1x_tables": 2,
+    "flagged_5x_tables": 0,
+    "adopt_5x_default": false
+  },
+  "matched_dense": {
+    "partitions_passed": 3,
+    "flagged_1x_tables": 0,
+    "flagged_5x_tables": 0,
+    "adopt_5x_default": true
+  },
+  "previous_full": {
+    "partitions_passed": 2,
+    "flagged_1x_tables": 0,
+    "flagged_5x_tables": 0,
+    "adopt_5x_default": false
+  },
+  "updated_full": {
+    "partitions_passed": 2,
+    "flagged_1x_tables": 3,
+    "flagged_5x_tables": 3,
+    "adopt_5x_default": false
+  }
+}

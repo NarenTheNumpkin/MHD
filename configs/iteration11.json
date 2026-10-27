@@ -1,0 +1,637 @@
+{
+  "created_at": "2026-10-05T17:50:40.197114+00:00",
+  "source_sha256": "9739e858bc267fee430689d74988ad5e86e8ea54b1e788d30bcf6a1f8e399bd8",
+  "protocol_sha256": "adcfe1b1f5112c3a276af0883086fcc3feb915485fff60b90d94cf46bb03e44a",
+  "runner_sha256": "5379e230754c6d537c423926ed08a43d31b5b37cee2223a378ca155a78273e7b",
+  "datasets": [
+    "ilpd",
+    "heart_failure",
+    "ckd",
+    "diabetes"
+  ],
+  "inner_seeds": [
+    2027,
+    3027,
+    4027
+  ],
+  "confirm_seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "guidance_grid": [
+    0.0,
+    2.0,
+    5.0,
+    10.0,
+    20.0
+  ],
+  "sampling_offset": 70001,
+  "evaluator_seed": 2026,
+  "multiplier": 5,
+  "ablation": {
+    "a0_legacy_full_prior": {
+      "training": "epochs",
+      "numeric_transform": "affine",
+      "decode_precision": false,
+      "steps": 30,
+      "width": 32,
+      "layers": 2,
+      "heads": 4,
+      "batch_size": 64,
+      "learning_rate": 0.001,
+      "epochs": 100,
+      "patience": 20,
+      "numeric_prediction": "v",
+      "clinical_weight": 0.01,
+      "guidance": 10.0,
+      "paired_initialization": true,
+      "observation_prior": true
+    },
+    "a1_fixed_steps_ema": {
+      "training": "steps",
+      "numeric_transform": "affine",
+      "decode_precision": false,
+      "steps": 30,
+      "width": 32,
+      "layers": 2,
+      "heads": 4,
+      "batch_size": 64,
+      "learning_rate": 0.001,
+      "epochs": 100,
+      "patience": 20,
+      "numeric_prediction": "v",
+      "clinical_weight": 0.01,
+      "guidance": 10.0,
+      "paired_initialization": true,
+      "observation_prior": true,
+      "train_steps": 5000
+    },
+    "a2_plus_quantile": {
+      "training": "steps",
+      "numeric_transform": "quantile",
+      "decode_precision": false,
+      "steps": 30,
+      "width": 32,
+      "layers": 2,
+      "heads": 4,
+      "batch_size": 64,
+      "learning_rate": 0.001,
+      "epochs": 100,
+      "patience": 20,
+      "numeric_prediction": "v",
+      "clinical_weight": 0.01,
+      "guidance": 10.0,
+      "paired_initialization": true,
+      "observation_prior": true,
+      "train_steps": 5000
+    },
+    "a3_plus_T100": {
+      "training": "steps",
+      "numeric_transform": "quantile",
+      "decode_precision": false,
+      "steps": 100,
+      "width": 32,
+      "layers": 2,
+      "heads": 4,
+      "batch_size": 64,
+      "learning_rate": 0.001,
+      "epochs": 100,
+      "patience": 20,
+      "numeric_prediction": "v",
+      "clinical_weight": 0.01,
+      "guidance": 10.0,
+      "paired_initialization": true,
+      "observation_prior": true,
+      "train_steps": 5000
+    },
+    "a4_plus_precision": {
+      "training": "steps",
+      "train_steps": 5000,
+      "numeric_transform": "quantile",
+      "decode_precision": true,
+      "steps": 100,
+      "width": 32,
+      "layers": 2,
+      "heads": 4,
+      "batch_size": 64,
+      "learning_rate": 0.001,
+      "numeric_prediction": "v",
+      "clinical_weight": 0.01,
+      "guidance": 10.0,
+      "paired_initialization": true,
+      "observation_prior": true
+    },
+    "a4_but_epoch_selection": {
+      "training": "epochs",
+      "train_steps": 5000,
+      "numeric_transform": "quantile",
+      "decode_precision": true,
+      "steps": 100,
+      "width": 32,
+      "layers": 2,
+      "heads": 4,
+      "batch_size": 64,
+      "learning_rate": 0.001,
+      "numeric_prediction": "v",
+      "clinical_weight": 0.01,
+      "guidance": 10.0,
+      "paired_initialization": true,
+      "observation_prior": true,
+      "epochs": 100,
+      "patience": 20
+    },
+    "a4_no_guidance": {
+      "training": "steps",
+      "train_steps": 5000,
+      "numeric_transform": "quantile",
+      "decode_precision": true,
+      "steps": 100,
+      "width": 32,
+      "layers": 2,
+      "heads": 4,
+      "batch_size": 64,
+      "learning_rate": 0.001,
+      "numeric_prediction": "v",
+      "clinical_weight": 0.01,
+      "guidance": 0.0,
+      "paired_initialization": true,
+      "observation_prior": true
+    },
+    "a4_backbone": {
+      "training": "steps",
+      "train_steps": 5000,
+      "numeric_transform": "quantile",
+      "decode_precision": true,
+      "steps": 100,
+      "width": 32,
+      "layers": 2,
+      "heads": 4,
+      "batch_size": 64,
+      "learning_rate": 0.001,
+      "numeric_prediction": "v",
+      "clinical_weight": 0.0,
+      "guidance": 0.0,
+      "paired_initialization": true,
+      "observation_prior": true,
+      "mode": "base"
+    }
+  },
+  "search": {
+    "mhd": [
+      {
+        "train_steps": 5000,
+        "learning_rate": 0.001,
+        "width": 32,
+        "layers": 2,
+        "steps": 100,
+        "batch_size": 64,
+        "numeric_prediction": "v",
+        "clinical_weight": 0.01
+      },
+      {
+        "train_steps": 10000,
+        "learning_rate": 0.0003043884136500276,
+        "width": 32,
+        "layers": 2,
+        "steps": 100,
+        "batch_size": 64,
+        "numeric_prediction": "x0",
+        "clinical_weight": 0.01
+      },
+      {
+        "train_steps": 5000,
+        "learning_rate": 0.001855488029225823,
+        "width": 64,
+        "layers": 3,
+        "steps": 100,
+        "batch_size": 64,
+        "numeric_prediction": "x0",
+        "clinical_weight": 0.01
+      },
+      {
+        "train_steps": 5000,
+        "learning_rate": 0.00048183356988014105,
+        "width": 64,
+        "layers": 2,
+        "steps": 50,
+        "batch_size": 64,
+        "numeric_prediction": "v",
+        "clinical_weight": 0.1
+      },
+      {
+        "train_steps": 10000,
+        "learning_rate": 0.0018594378307134644,
+        "width": 64,
+        "layers": 2,
+        "steps": 200,
+        "batch_size": 128,
+        "numeric_prediction": "x0",
+        "clinical_weight": 0.1
+      },
+      {
+        "train_steps": 10000,
+        "learning_rate": 0.0003027145631931431,
+        "width": 64,
+        "layers": 3,
+        "steps": 100,
+        "batch_size": 128,
+        "numeric_prediction": "v",
+        "clinical_weight": 0.1
+      },
+      {
+        "train_steps": 2000,
+        "learning_rate": 0.0013777229227053024,
+        "width": 64,
+        "layers": 3,
+        "steps": 200,
+        "batch_size": 64,
+        "numeric_prediction": "v",
+        "clinical_weight": 0.1
+      },
+      {
+        "train_steps": 5000,
+        "learning_rate": 0.0026724524631311195,
+        "width": 64,
+        "layers": 2,
+        "steps": 50,
+        "batch_size": 128,
+        "numeric_prediction": "x0",
+        "clinical_weight": 0.1
+      }
+    ],
+    "tabddpm": [
+      {
+        "learning_rate": 1.1510940031144828e-05,
+        "mlp_layers": [
+          128,
+          512
+        ],
+        "batch_size": 4096,
+        "train_steps": 30000,
+        "steps": 1000
+      },
+      {
+        "learning_rate": 0.0017034284480126236,
+        "mlp_layers": [
+          256,
+          1024,
+          1024,
+          1024,
+          1024,
+          1024,
+          1024,
+          128
+        ],
+        "batch_size": 4096,
+        "train_steps": 30000,
+        "steps": 100
+      },
+      {
+        "learning_rate": 0.0008753752157351823,
+        "mlp_layers": [
+          1024,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          128
+        ],
+        "batch_size": 256,
+        "train_steps": 30000,
+        "steps": 100
+      },
+      {
+        "learning_rate": 5.943313891424559e-05,
+        "mlp_layers": [
+          1024,
+          1024,
+          1024,
+          1024,
+          1024,
+          1024,
+          1024,
+          256
+        ],
+        "batch_size": 256,
+        "train_steps": 30000,
+        "steps": 100
+      },
+      {
+        "learning_rate": 0.00016780238571462852,
+        "mlp_layers": [
+          512,
+          1024
+        ],
+        "batch_size": 4096,
+        "train_steps": 30000,
+        "steps": 100
+      },
+      {
+        "learning_rate": 0.002667081414738024,
+        "mlp_layers": [
+          256,
+          128,
+          128,
+          128,
+          128,
+          128,
+          128,
+          1024
+        ],
+        "batch_size": 4096,
+        "train_steps": 20000,
+        "steps": 1000
+      },
+      {
+        "learning_rate": 0.000646926226126796,
+        "mlp_layers": [
+          1024,
+          512,
+          512,
+          128
+        ],
+        "batch_size": 256,
+        "train_steps": 5000,
+        "steps": 100
+      },
+      {
+        "learning_rate": 1.3075731240552438e-05,
+        "mlp_layers": [
+          128,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          1024
+        ],
+        "batch_size": 256,
+        "train_steps": 20000,
+        "steps": 100
+      }
+    ],
+    "ctgan": [
+      {
+        "epochs": 300,
+        "embedding_dim": 128,
+        "generator_dim": [
+          256,
+          256
+        ],
+        "discriminator_dim": [
+          256,
+          256
+        ],
+        "batch_size": 500,
+        "pac": 10,
+        "generator_lr": 0.0002,
+        "discriminator_lr": 0.0002
+      },
+      {
+        "epochs": 1000,
+        "embedding_dim": 128,
+        "generator_dim": [
+          128,
+          128
+        ],
+        "discriminator_dim": [
+          128,
+          128
+        ],
+        "batch_size": 100,
+        "pac": 10,
+        "generator_lr": 0.001,
+        "discriminator_lr": 0.0002
+      },
+      {
+        "epochs": 1000,
+        "embedding_dim": 32,
+        "generator_dim": [
+          256,
+          256
+        ],
+        "discriminator_dim": [
+          256,
+          256
+        ],
+        "batch_size": 100,
+        "pac": 10,
+        "generator_lr": 0.001,
+        "discriminator_lr": 0.001
+      },
+      {
+        "epochs": 100,
+        "embedding_dim": 32,
+        "generator_dim": [
+          128,
+          128
+        ],
+        "discriminator_dim": [
+          128,
+          128
+        ],
+        "batch_size": 100,
+        "pac": 10,
+        "generator_lr": 0.0002,
+        "discriminator_lr": 0.0002
+      },
+      {
+        "epochs": 1000,
+        "embedding_dim": 32,
+        "generator_dim": [
+          256,
+          256
+        ],
+        "discriminator_dim": [
+          256,
+          256
+        ],
+        "batch_size": 100,
+        "pac": 10,
+        "generator_lr": 0.001,
+        "discriminator_lr": 0.0002
+      },
+      {
+        "epochs": 100,
+        "embedding_dim": 32,
+        "generator_dim": [
+          256,
+          256
+        ],
+        "discriminator_dim": [
+          256,
+          256
+        ],
+        "batch_size": 500,
+        "pac": 10,
+        "generator_lr": 0.0002,
+        "discriminator_lr": 0.001
+      },
+      {
+        "epochs": 1000,
+        "embedding_dim": 32,
+        "generator_dim": [
+          256,
+          256
+        ],
+        "discriminator_dim": [
+          256,
+          256
+        ],
+        "batch_size": 100,
+        "pac": 10,
+        "generator_lr": 0.001,
+        "discriminator_lr": 0.0002
+      },
+      {
+        "epochs": 300,
+        "embedding_dim": 128,
+        "generator_dim": [
+          64,
+          64
+        ],
+        "discriminator_dim": [
+          64,
+          64
+        ],
+        "batch_size": 100,
+        "pac": 10,
+        "generator_lr": 0.0002,
+        "discriminator_lr": 0.0002
+      }
+    ],
+    "tvae": [
+      {
+        "epochs": 300,
+        "embedding_dim": 128,
+        "compress_dims": [
+          128,
+          128
+        ],
+        "decompress_dims": [
+          128,
+          128
+        ],
+        "batch_size": 500,
+        "l2scale": 1e-05,
+        "loss_factor": 2.0
+      },
+      {
+        "epochs": 1000,
+        "embedding_dim": 32,
+        "compress_dims": [
+          64,
+          64
+        ],
+        "decompress_dims": [
+          64,
+          64
+        ],
+        "batch_size": 64,
+        "l2scale": 1e-05,
+        "loss_factor": 1.0
+      },
+      {
+        "epochs": 1000,
+        "embedding_dim": 128,
+        "compress_dims": [
+          128,
+          128
+        ],
+        "decompress_dims": [
+          128,
+          128
+        ],
+        "batch_size": 500,
+        "l2scale": 1e-05,
+        "loss_factor": 2.0
+      },
+      {
+        "epochs": 100,
+        "embedding_dim": 32,
+        "compress_dims": [
+          64,
+          64
+        ],
+        "decompress_dims": [
+          64,
+          64
+        ],
+        "batch_size": 500,
+        "l2scale": 1e-05,
+        "loss_factor": 1.0
+      },
+      {
+        "epochs": 100,
+        "embedding_dim": 128,
+        "compress_dims": [
+          64,
+          64
+        ],
+        "decompress_dims": [
+          64,
+          64
+        ],
+        "batch_size": 64,
+        "l2scale": 0.0001,
+        "loss_factor": 1.0
+      },
+      {
+        "epochs": 1000,
+        "embedding_dim": 128,
+        "compress_dims": [
+          256,
+          256
+        ],
+        "decompress_dims": [
+          256,
+          256
+        ],
+        "batch_size": 64,
+        "l2scale": 1e-05,
+        "loss_factor": 2.0
+      },
+      {
+        "epochs": 100,
+        "embedding_dim": 32,
+        "compress_dims": [
+          256,
+          256
+        ],
+        "decompress_dims": [
+          256,
+          256
+        ],
+        "batch_size": 500,
+        "l2scale": 1e-05,
+        "loss_factor": 1.0
+      },
+      {
+        "epochs": 100,
+        "embedding_dim": 128,
+        "compress_dims": [
+          128,
+          128
+        ],
+        "decompress_dims": [
+          128,
+          128
+        ],
+        "batch_size": 64,
+        "l2scale": 1e-05,
+        "loss_factor": 2.0
+      }
+    ]
+  },
+  "selection_rule": "mean rank of partition-mean C2ST (asc), numeric W (asc), forest TSTR AUROC (desc); ties: lower C2ST, lower index",
+  "expected": {
+    "ablation_jobs": 72,
+    "search_jobs": 384
+  }
+}

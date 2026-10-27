@@ -1,0 +1,28 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "MedHyperDiff: relation-aware diffusion for synthetic clinical laboratory tables"
+type: software
+authors:
+  - given-names: Naren
+    family-names: Medarametla
+    affiliation: "Vellore Institute of Technology, Chennai"
+  - given-names: Abishek
+    family-names: "K G"
+    affiliation: "Vellore Institute of Technology, Chennai"
+  - given-names: Roshan
+    family-names: Parveen
+    affiliation: "Vellore Institute of Technology, Chennai"
+  - given-names: Parkavi
+    family-names: K
+    affiliation: "Vellore Institute of Technology, Chennai"
+    email: parkavi.k@vit.ac.in
+repository-code: "https://github.com/NarenTheNumpkin/MHD"
+license: MIT
+version: 1.0.0
+date-released: 2026-10-27
+keywords:
+  - synthetic data
+  - tabular data
+  - diffusion models
+  - laboratory data
+  - membership inference

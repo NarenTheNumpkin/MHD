@@ -1,0 +1,17 @@
+{
+  "status": "passed",
+  "evaluations": 216,
+  "generated_pools": 108,
+  "fitted_checkpoints_used": 36,
+  "new_training_runs": 0,
+  "nested_table_prefixes_exact": true,
+  "exact_class_proportions": true,
+  "independent_sampling_seeds": true,
+  "evaluator_seed_fixed": 2026,
+  "source_and_parent_hashes_match": true,
+  "reserved_test_rows_in_fit_or_validation": 0,
+  "saved_predictions_reproduce_all_auroc": true,
+  "missingness_and_rule_bounds_recomputed": true,
+  "dense_full_capacity_pairs": 9,
+  "guided_pool_replay_exact": true
+}

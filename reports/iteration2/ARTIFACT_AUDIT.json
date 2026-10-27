@@ -1,0 +1,19 @@
+{
+  "status": "passed",
+  "completed_runs": 110,
+  "stages": {
+    "external": 6,
+    "external_diagnostic": 2,
+    "inner_sensitivity": 54,
+    "replication": 24,
+    "screen": 24
+  },
+  "source_hashes": [
+    "1a9e99d67a8131df426c2292c785cfe2b7c0f9d99d465fe4f476278d69a5645c"
+  ],
+  "all_reserved_tests_identical_to_original": true,
+  "reserved_test_rows_used_for_fit_or_validation": 0,
+  "saved_predictions_match_reported_auroc": true,
+  "class_counts_match_fit_partition": true,
+  "dense_full_parameter_counts_match": true
+}

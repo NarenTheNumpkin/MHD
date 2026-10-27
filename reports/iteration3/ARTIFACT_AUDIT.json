@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "evaluations": 174,
+  "new_training_runs": 46,
+  "fitted_checkpoints_used": 94,
+  "dense_full_training_pairs_checked": 18,
+  "parent_checkpoint_hashes_match": true,
+  "source_snapshots_match": true,
+  "reserved_outer_test_records_in_fit_or_validation": 0,
+  "saved_predictions_reproduce_auroc": true,
+  "class_counts_match": true,
+  "parent_training_config_unchanged": true,
+  "package_source": "1a9e99d67a8131df426c2292c785cfe2b7c0f9d99d465fe4f476278d69a5645c"
+}

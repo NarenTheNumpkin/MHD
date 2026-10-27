@@ -1,0 +1,6 @@
+[submodule "external/TabDiff"]
+	path = external/TabDiff
+	url = https://github.com/MinkaiXu/TabDiff.git
+[submodule "external/tab-ddpm"]
+	path = external/tab-ddpm
+	url = https://github.com/yandex-research/tab-ddpm.git

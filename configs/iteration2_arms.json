@@ -1,0 +1,84 @@
+{
+  "legacy_base": [
+    "base",
+    []
+  ],
+  "legacy_full": [
+    "full",
+    []
+  ],
+  "paired_base": [
+    "base",
+    [
+      "--paired-initialization"
+    ]
+  ],
+  "paired_full": [
+    "full",
+    [
+      "--paired-initialization"
+    ]
+  ],
+  "gated_full": [
+    "full",
+    [
+      "--paired-initialization",
+      "--gated-structure"
+    ]
+  ],
+  "velocity_base": [
+    "base",
+    [
+      "--paired-initialization",
+      "--numeric-prediction",
+      "v"
+    ]
+  ],
+  "velocity_full": [
+    "full",
+    [
+      "--paired-initialization",
+      "--numeric-prediction",
+      "v"
+    ]
+  ],
+  "gated_velocity_full": [
+    "full",
+    [
+      "--paired-initialization",
+      "--gated-structure",
+      "--numeric-prediction",
+      "v"
+    ]
+  ],
+  "gated_dense": [
+    "dense",
+    [
+      "--paired-initialization",
+      "--gated-structure"
+    ]
+  ],
+  "gated_no_guidance": [
+    "full_no_guidance",
+    [
+      "--paired-initialization",
+      "--gated-structure"
+    ]
+  ],
+  "paired_repair": [
+    "repair",
+    [
+      "--paired-initialization"
+    ]
+  ],
+  "tabddpm_small": [
+    "tabddpm",
+    []
+  ],
+  "paired_dense": [
+    "dense",
+    [
+      "--paired-initialization"
+    ]
+  ]
+}

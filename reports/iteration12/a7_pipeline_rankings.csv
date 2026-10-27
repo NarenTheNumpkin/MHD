@@ -1,0 +1,61 @@
+dataset,size,replicate,comparison,memorizing,pairs,reversal,tau,top_a,top_b
+nhanes,250,0,Fidelity: common vs corrected practice,"TabDDPM,TabDiff",28,0.35714285714285715,0.2857142857142857,TabDiff,MedHyperDiff
+nhanes,250,0,"Fidelity, privacy-aware ranking","TabDDPM,TabDiff",28,0.39285714285714285,0.21428571428571427,TabDiff,MedHyperDiff
+nhanes,250,0,Rules: violation count vs gap to real,"TabDDPM,TabDiff",26,0.38461538461538464,0.22237479499833035,Copula+repair,Copula+repair
+nhanes,250,1,Fidelity: common vs corrected practice,"TabDDPM,TabDiff",28,0.32142857142857145,0.3571428571428571,Copula+repair,MedHyperDiff
+nhanes,250,1,"Fidelity, privacy-aware ranking","TabDDPM,TabDiff",28,0.32142857142857145,0.3571428571428571,Copula+repair,MedHyperDiff
+nhanes,250,1,Rules: violation count vs gap to real,"TabDDPM,TabDiff",25,0.36,0.264575131106459,Copula+repair,Copula+repair
+nhanes,250,2,Fidelity: common vs corrected practice,"TabDDPM,TabDiff",28,0.2857142857142857,0.42857142857142855,Copula+repair,MedHyperDiff
+nhanes,250,2,"Fidelity, privacy-aware ranking","TabDDPM,TabDiff",28,0.32142857142857145,0.3571428571428571,Copula+repair,MedHyperDiff
+nhanes,250,2,Rules: violation count vs gap to real,"TabDDPM,TabDiff",25,0.28,0.41576092031014994,Copula+repair,Copula+repair
+nhanes,250,3,Fidelity: common vs corrected practice,TabDDPM,28,0.35714285714285715,0.2857142857142857,Copula+repair,MedHyperDiff
+nhanes,250,3,"Fidelity, privacy-aware ranking",TabDDPM,28,0.21428571428571427,0.5714285714285714,Copula+repair,MedHyperDiff
+nhanes,250,3,Rules: violation count vs gap to real,TabDDPM,24,0.5,0.0,Copula+repair,Copula+repair
+nhanes,250,4,Fidelity: common vs corrected practice,"MedHyperDiff,TabDDPM",28,0.2857142857142857,0.42857142857142855,Copula,MedHyperDiff
+nhanes,250,4,"Fidelity, privacy-aware ranking","MedHyperDiff,TabDDPM",28,0.10714285714285714,0.7857142857142856,Copula,Copula
+nhanes,250,4,Rules: violation count vs gap to real,"MedHyperDiff,TabDDPM",27,0.4074074074074074,0.18184824186332696,Copula+repair,Copula+repair
+nhanes,1000,0,Fidelity: common vs corrected practice,TabDDPM,28,0.2857142857142857,0.42857142857142855,Copula,TabDiff
+nhanes,1000,0,"Fidelity, privacy-aware ranking",TabDDPM,28,0.17857142857142858,0.6428571428571428,Copula,TabDiff
+nhanes,1000,0,Rules: violation count vs gap to real,TabDDPM,27,0.25925925925925924,0.47280542884465016,Copula+repair,Copula+repair
+nhanes,1000,1,Fidelity: common vs corrected practice,TabDiff,28,0.39285714285714285,0.21428571428571427,Copula,MedHyperDiff
+nhanes,1000,1,"Fidelity, privacy-aware ranking",TabDiff,28,0.5,0.0,Copula,MedHyperDiff
+nhanes,1000,1,Rules: violation count vs gap to real,TabDiff,28,0.14285714285714285,0.7142857142857142,Copula+repair,Copula+repair
+nhanes,1000,2,Fidelity: common vs corrected practice,,28,0.39285714285714285,0.21428571428571427,Copula+repair,MedHyperDiff
+nhanes,1000,2,"Fidelity, privacy-aware ranking",,28,0.39285714285714285,0.21428571428571427,Copula+repair,MedHyperDiff
+nhanes,1000,2,Rules: violation count vs gap to real,,27,0.2962962962962963,0.40006613209931935,Copula+repair,Copula+repair
+nhanes,1000,3,Fidelity: common vs corrected practice,,28,0.2857142857142857,0.42857142857142855,Copula,TabDiff
+nhanes,1000,3,"Fidelity, privacy-aware ranking",,28,0.2857142857142857,0.42857142857142855,Copula,TabDiff
+nhanes,1000,3,Rules: violation count vs gap to real,,28,0.25,0.4999999999999999,Copula+repair,Copula+repair
+nhanes,1000,4,Fidelity: common vs corrected practice,"TabDDPM,TabDiff",28,0.32142857142857145,0.3571428571428571,Copula,MedHyperDiff
+nhanes,1000,4,"Fidelity, privacy-aware ranking","TabDDPM,TabDiff",28,0.32142857142857145,0.3571428571428571,Copula,MedHyperDiff
+nhanes,1000,4,Rules: violation count vs gap to real,"TabDDPM,TabDiff",28,0.25,0.4999999999999999,Copula+repair,Copula+repair
+thyroid,250,0,Fidelity: common vs corrected practice,"MedHyperDiff,TabDDPM,TabDiff",28,0.25,0.4999999999999999,TabDiff,MedHyperDiff
+thyroid,250,0,"Fidelity, privacy-aware ranking","MedHyperDiff,TabDDPM,TabDiff",28,0.2857142857142857,0.42857142857142855,TabDiff,Copula+repair
+thyroid,250,0,Rules: violation count vs gap to real,"MedHyperDiff,TabDDPM,TabDiff",28,0.32142857142857145,0.3571428571428571,Copula+repair,Copula+repair
+thyroid,250,1,Fidelity: common vs corrected practice,"MedHyperDiff,TabDDPM,TabDiff",28,0.21428571428571427,0.5714285714285714,TabDiff,MedHyperDiff
+thyroid,250,1,"Fidelity, privacy-aware ranking","MedHyperDiff,TabDDPM,TabDiff",28,0.32142857142857145,0.3571428571428571,TabDiff,Copula
+thyroid,250,1,Rules: violation count vs gap to real,"MedHyperDiff,TabDDPM,TabDiff",28,0.32142857142857145,0.3571428571428571,Copula+repair,Copula+repair
+thyroid,250,2,Fidelity: common vs corrected practice,"MedHyperDiff,TabDDPM,TabDiff,Copula,Copula+repair",28,0.21428571428571427,0.5714285714285714,TabDiff,MedHyperDiff
+thyroid,250,2,"Fidelity, privacy-aware ranking","MedHyperDiff,TabDDPM,TabDiff,Copula,Copula+repair",28,0.5357142857142857,-0.07142857142857142,TabDiff,Independent
+thyroid,250,2,Rules: violation count vs gap to real,"MedHyperDiff,TabDDPM,TabDiff,Copula,Copula+repair",28,0.42857142857142855,0.14285714285714285,Copula+repair,Copula+repair
+thyroid,250,3,Fidelity: common vs corrected practice,"MedHyperDiff,TabDDPM,TabDiff",28,0.2857142857142857,0.42857142857142855,TabDiff,MedHyperDiff
+thyroid,250,3,"Fidelity, privacy-aware ranking","MedHyperDiff,TabDDPM,TabDiff",28,0.32142857142857145,0.3571428571428571,TabDiff,Copula+repair
+thyroid,250,3,Rules: violation count vs gap to real,"MedHyperDiff,TabDDPM,TabDiff",28,0.32142857142857145,0.3571428571428571,Copula+repair,Copula+repair
+thyroid,250,4,Fidelity: common vs corrected practice,"TabDDPM,TabDiff",28,0.2857142857142857,0.42857142857142855,TabDiff,MedHyperDiff
+thyroid,250,4,"Fidelity, privacy-aware ranking","TabDDPM,TabDiff",28,0.35714285714285715,0.2857142857142857,TabDiff,MedHyperDiff
+thyroid,250,4,Rules: violation count vs gap to real,"TabDDPM,TabDiff",28,0.25,0.4999999999999999,Copula+repair,Copula+repair
+thyroid,1000,0,Fidelity: common vs corrected practice,"TabDDPM,TabDiff",28,0.25,0.4999999999999999,TabDiff,TabDiff
+thyroid,1000,0,"Fidelity, privacy-aware ranking","TabDDPM,TabDiff",28,0.2857142857142857,0.42857142857142855,TabDiff,MedHyperDiff
+thyroid,1000,0,Rules: violation count vs gap to real,"TabDDPM,TabDiff",28,0.35714285714285715,0.2857142857142857,Copula+repair,Copula+repair
+thyroid,1000,1,Fidelity: common vs corrected practice,TabDDPM,28,0.21428571428571427,0.5714285714285714,TabDiff,TabDiff
+thyroid,1000,1,"Fidelity, privacy-aware ranking",TabDDPM,28,0.03571428571428571,0.9285714285714285,TabDiff,TabDiff
+thyroid,1000,1,Rules: violation count vs gap to real,TabDDPM,28,0.17857142857142858,0.6428571428571428,Copula+repair,Copula+repair
+thyroid,1000,2,Fidelity: common vs corrected practice,"TabDDPM,TabDiff",28,0.21428571428571427,0.5714285714285714,TabDiff,MedHyperDiff
+thyroid,1000,2,"Fidelity, privacy-aware ranking","TabDDPM,TabDiff",28,0.21428571428571427,0.5714285714285714,TabDiff,MedHyperDiff
+thyroid,1000,2,Rules: violation count vs gap to real,"TabDDPM,TabDiff",28,0.25,0.4999999999999999,Copula+repair,Copula+repair
+thyroid,1000,3,Fidelity: common vs corrected practice,TabDDPM,28,0.32142857142857145,0.3571428571428571,Copula+repair,MedHyperDiff
+thyroid,1000,3,"Fidelity, privacy-aware ranking",TabDDPM,28,0.14285714285714285,0.7142857142857142,Copula+repair,MedHyperDiff
+thyroid,1000,3,Rules: violation count vs gap to real,TabDDPM,28,0.25,0.4999999999999999,Copula+repair,Copula+repair
+thyroid,1000,4,Fidelity: common vs corrected practice,"TabDDPM,TabDiff",28,0.32142857142857145,0.3571428571428571,TabDiff,MedHyperDiff
+thyroid,1000,4,"Fidelity, privacy-aware ranking","TabDDPM,TabDiff",28,0.32142857142857145,0.3571428571428571,TabDiff,MedHyperDiff
+thyroid,1000,4,Rules: violation count vs gap to real,"TabDDPM,TabDiff",28,0.32142857142857145,0.3571428571428571,Copula+repair,Copula+repair

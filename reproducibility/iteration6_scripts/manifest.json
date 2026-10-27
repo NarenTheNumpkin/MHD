@@ -1,0 +1,72 @@
+[
+  {
+    "file": "scripts/iteration6.py",
+    "sha256": "40d19f8a5979f446bd8340a632cc6021d5383cff9980e11372cc305e4be5aca2",
+    "archive": "reproducibility/iteration6_scripts/40d19f8a5979f446bd8340a632cc6021d5383cff9980e11372cc305e4be5aca2/iteration6.py"
+  },
+  {
+    "file": "scripts/sample_iteration6.py",
+    "sha256": "3570e3718730a4a0458c6566d003a0a1645292c0c11ed4712379dc7642b1f587",
+    "archive": "reproducibility/iteration6_scripts/3570e3718730a4a0458c6566d003a0a1645292c0c11ed4712379dc7642b1f587/sample_iteration6.py"
+  },
+  {
+    "file": "scripts/report_iteration6.py",
+    "sha256": "e8919ca203233dba2ff49c2c53a709fea8c61ac318ff00be3d16050a8907df42",
+    "archive": "reproducibility/iteration6_scripts/e8919ca203233dba2ff49c2c53a709fea8c61ac318ff00be3d16050a8907df42/report_iteration6.py"
+  },
+  {
+    "file": "scripts/plot_iteration6.py",
+    "sha256": "9079a20a928703bf54fc5debaf797076581350d9ede8961b47aabb52fca85882",
+    "archive": "reproducibility/iteration6_scripts/9079a20a928703bf54fc5debaf797076581350d9ede8961b47aabb52fca85882/plot_iteration6.py"
+  },
+  {
+    "file": "scripts/export_iteration6.py",
+    "sha256": "29732cd951c23c0e64d95e40ccf98923f81acda3b2352517801dcb21bdefc083",
+    "archive": "reproducibility/iteration6_scripts/29732cd951c23c0e64d95e40ccf98923f81acda3b2352517801dcb21bdefc083/export_iteration6.py"
+  },
+  {
+    "file": "scripts/iteration6_sampler.py",
+    "sha256": "c6e2208d54264844416017274314cdd02a4e2006b62f99691e627f7e84439ffa",
+    "archive": "reproducibility/iteration6_scripts/c6e2208d54264844416017274314cdd02a4e2006b62f99691e627f7e84439ffa/iteration6_sampler.py"
+  },
+  {
+    "file": "scripts/audit_iteration6.py",
+    "sha256": "e24f1aa8f10ef8383952fb65e9907a39bd0d44cc51d5195de3fbd880fb128dbb",
+    "archive": "reproducibility/iteration6_scripts/e24f1aa8f10ef8383952fb65e9907a39bd0d44cc51d5195de3fbd880fb128dbb/audit_iteration6.py"
+  },
+  {
+    "file": "tests/test_iteration6_sampler.py",
+    "sha256": "a0ef0f32de7e9bfc88ec5d07e00ff989a96f61b7a33a46ad5b2d55af34a3a062",
+    "archive": "reproducibility/iteration6_scripts/a0ef0f32de7e9bfc88ec5d07e00ff989a96f61b7a33a46ad5b2d55af34a3a062/test_iteration6_sampler.py"
+  },
+  {
+    "file": "docs/ITERATION_6_PROTOCOL.md",
+    "sha256": "4bf0c727ffbaedba5c8099e9e3031dee8734439a839512854d8c71917ab678a7",
+    "archive": "reproducibility/iteration6_scripts/4bf0c727ffbaedba5c8099e9e3031dee8734439a839512854d8c71917ab678a7/ITERATION_6_PROTOCOL.md"
+  },
+  {
+    "file": "configs/iteration6.json",
+    "sha256": "87deef9e20973d6b3b33fba4e34396e21f806382824ebba67661e80116461ee7",
+    "archive": "reproducibility/iteration6_scripts/87deef9e20973d6b3b33fba4e34396e21f806382824ebba67661e80116461ee7/iteration6.json"
+  },
+  {
+    "file": "docs/ITERATION_6_RUNBOOK.md",
+    "sha256": "af44f48c9648cacb6f5e2e227a937ed61c6e134fcfa6fe720e89ee85a08c6a1a",
+    "archive": "reproducibility/iteration6_scripts/af44f48c9648cacb6f5e2e227a937ed61c6e134fcfa6fe720e89ee85a08c6a1a/ITERATION_6_RUNBOOK.md"
+  },
+  {
+    "file": "docs/PUBLICATION_READINESS.md",
+    "sha256": "e37d22956cc1621b8a8e56f88341304872969d245006b1959c3149d3d6f94453",
+    "archive": "reproducibility/iteration6_scripts/e37d22956cc1621b8a8e56f88341304872969d245006b1959c3149d3d6f94453/PUBLICATION_READINESS.md"
+  },
+  {
+    "file": "reports/iteration6/INTERPRETATION.md",
+    "sha256": "fc5afe238eab405f3d61240ed3f310f2d86762e7d5bbdf47ecbb0b5623838444",
+    "archive": "reproducibility/iteration6_scripts/fc5afe238eab405f3d61240ed3f310f2d86762e7d5bbdf47ecbb0b5623838444/INTERPRETATION.md"
+  },
+  {
+    "file": "paper/manuscript.md",
+    "sha256": "70ad69e01ed68a0e41f809eddc2234036648802510ec7c58cb227ab2eeb6a6f0",
+    "archive": "reproducibility/iteration6_scripts/70ad69e01ed68a0e41f809eddc2234036648802510ec7c58cb227ab2eeb6a6f0/manuscript.md"
+  }
+]

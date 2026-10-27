@@ -1,0 +1,13 @@
+variant,inner_seed,rf,logistic,numeric_fidelity,association,observed_violation,upper_violation,rule_coverage,missingness_fit,missingness_validation,numerical_variability,partition_pass,no_missingness_flags,worst_missingness_reduced,delta_rf,delta_logistic,max_sd_error_increase,largest_sd_error_increase_feature,max_missing_error,reference_max_missing_error
+full_prior,2027,True,True,True,True,True,True,True,True,True,True,True,True,True,-0.005768170722104005,0.0008268367587999093,0.04039154332879491,alt,0.004584527220630373,0.04813753581661891
+full_prior,3027,True,True,True,True,True,True,True,True,True,True,True,True,True,0.008583353019922857,0.006614694070399052,0.029016588055410908,total_bilirubin,0.004584527220630373,0.04813753581661891
+full_prior,4027,True,True,True,True,True,True,True,True,True,False,False,True,True,0.0059632469271022615,-0.006084945843982004,0.12099911729312396,ast,0.004584527220630373,0.04813753581661891
+full_prior_w4,2027,True,True,True,True,True,True,True,True,True,True,True,True,True,-0.011674147570674753,-0.0016143003386093202,0.041452272291129466,alt,0.004584527220630373,0.04813753581661891
+full_prior_w4,3027,True,True,False,False,True,True,True,True,True,False,False,True,True,0.029293645168910865,0.013308134498779323,0.14515324232132343,total_bilirubin,0.004584527220630373,0.04813753581661891
+full_prior_w4,4027,True,True,False,False,True,True,True,True,True,False,False,True,True,-0.009695347044744729,-0.01922842886698306,0.10620747149866266,ast,0.004584527220630373,0.04813753581661891
+dense_prior,2027,True,True,True,False,False,False,True,True,True,True,False,True,True,0.011949759823608352,0.009843294747617914,0.03226674237800786,albumin,0.005157593123209169,0.006303724928366762
+dense_prior,3027,True,True,True,True,True,True,True,True,True,True,True,True,True,-0.01882037955744542,0.01055201196944644,0.041881134385859574,albumin,0.005157593123209169,0.006303724928366762
+dense_prior,4027,True,True,False,False,True,True,True,True,True,True,False,True,True,0.00024339783375926238,-0.01878219950509119,0.045370500925208834,direct_bilirubin,0.005157593123209169,0.006303724928366762
+base_prior,2027,True,True,True,True,True,True,True,True,True,True,True,True,True,0.018091975746121758,0.01114260965430347,0.019609348963153972,albumin,0.004584527220630373,0.016045845272206302
+base_prior,3027,True,True,True,False,False,False,True,True,True,True,False,True,True,-0.00830774076698948,-0.01523742026931263,0.029347033136911505,direct_bilirubin,0.004584527220630373,0.016045845272206302
+base_prior,4027,True,True,True,True,True,True,True,True,True,True,True,True,True,-0.004340594702040401,-0.0033670033670034627,0.021256510420060784,total_bilirubin,0.004584527220630373,0.016045845272206302

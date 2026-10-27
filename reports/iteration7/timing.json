@@ -1,0 +1,16 @@
+{
+  "new_medhyperdiff_fits": 0,
+  "neural_adapter_fits": 36,
+  "native_class_networks": 72,
+  "statistical_fits": 9,
+  "new_sampled_tables": 135,
+  "new_repaired_derivatives": 9,
+  "new_evaluations": 144,
+  "reused_evaluations": 81,
+  "fit_seconds_sum": 114.96907682856545,
+  "sample_or_repair_seconds_sum": 4.840656301006675,
+  "evaluation_seconds_sum": 126.98079578857869,
+  "device": "CPU, torch threads=2",
+  "gpu_vram_gib": 0,
+  "peak_system_ram": "not measured"
+}

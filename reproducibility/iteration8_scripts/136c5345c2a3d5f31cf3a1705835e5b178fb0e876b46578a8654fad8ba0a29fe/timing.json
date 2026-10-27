@@ -1,0 +1,11 @@
+{
+  "new_fits": 9,
+  "new_evaluations": 27,
+  "reused_references": 36,
+  "fit_seconds_sum": 52.51195616647601,
+  "sample_seconds_sum": 38.42308175191283,
+  "evaluation_seconds_sum": 25.725172667298466,
+  "device": "CPU, torch threads=2",
+  "gpu_vram_gib": 0,
+  "peak_system_ram": "not measured"
+}

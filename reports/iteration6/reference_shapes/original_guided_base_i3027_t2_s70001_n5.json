@@ -1,0 +1,376 @@
+{
+  "reference": "runs/iteration4/evaluations/guided_base_i3027_t2_s70001_n5",
+  "reference_synthetic_sha256": "037277c5bd758552ebc13f92c7b01b7157205ef6cde46ba04301bafce6fd3810",
+  "sampler_sha256": "c6e2208d54264844416017274314cdd02a4e2006b62f99691e627f7e84439ffa",
+  "distribution_shape": {
+    "age": {
+      "status": "evaluated",
+      "fit_quantiles": [
+        18.0,
+        33.0,
+        45.0,
+        58.0,
+        72.0
+      ],
+      "validation_quantiles": [
+        20.400000000000002,
+        38.0,
+        46.0,
+        56.0,
+        72.0
+      ],
+      "synthetic_quantiles": [
+        20.034589379282853,
+        34.10697293553059,
+        43.91045548198487,
+        54.95178054815136,
+        70.5722237072669
+      ],
+      "quantile_probabilities": [
+        0.05,
+        0.25,
+        0.5,
+        0.75,
+        0.95
+      ],
+      "fit_sd": 16.067891071097275,
+      "q05_error": 0.022741666538581756,
+      "q50_error": 0.13004472763533842,
+      "q95_error": 0.08885897261908665,
+      "iqr_ratio": 1.1580448673678205,
+      "fit_upper95_rate": 0.04011461318051576,
+      "validation_upper95_rate": 0.042735042735042736,
+      "synthetic_upper95_rate": 0.04183381088825215,
+      "validation_outside_fit_range": 0.0,
+      "synthetic_outside_fit_range": 0.009742120343839542
+    },
+    "total_bilirubin": {
+      "status": "evaluated",
+      "fit_quantiles": [
+        0.6,
+        0.8,
+        1.1,
+        2.7,
+        15.439999999999985
+      ],
+      "validation_quantiles": [
+        0.6,
+        0.8,
+        0.9,
+        2.0,
+        13.339999999999963
+      ],
+      "synthetic_quantiles": [
+        0.7522468469099656,
+        1.4279825525654992,
+        2.197240008332691,
+        3.4227669975694806,
+        9.850154123919738
+      ],
+      "quantile_probabilities": [
+        0.05,
+        0.25,
+        0.5,
+        0.75,
+        0.95
+      ],
+      "fit_sd": 5.347647882792843,
+      "q05_error": 0.028469871286748542,
+      "q50_error": 0.242581418366536,
+      "q95_error": 0.6525945523282342,
+      "iqr_ratio": 1.6623203708366512,
+      "fit_upper95_rate": 0.05157593123209169,
+      "validation_upper95_rate": 0.05128205128205128,
+      "synthetic_upper95_rate": 0.019484240687679084,
+      "validation_outside_fit_range": 0.008547008547008548,
+      "synthetic_outside_fit_range": 0.009169054441260744
+    },
+    "direct_bilirubin": {
+      "status": "evaluated",
+      "fit_quantiles": [
+        0.1,
+        0.2,
+        0.4,
+        1.4,
+        8.319999999999993
+      ],
+      "validation_quantiles": [
+        0.1,
+        0.2,
+        0.3,
+        1.0,
+        6.119999999999998
+      ],
+      "synthetic_quantiles": [
+        0.06659386985117019,
+        0.3377957711087456,
+        0.7224609012995094,
+        1.2802722427375721,
+        2.8271345449781853
+      ],
+      "quantile_probabilities": [
+        0.05,
+        0.25,
+        0.5,
+        0.75,
+        0.95
+      ],
+      "fit_sd": 2.8101127537928816,
+      "q05_error": 0.011887825534310215,
+      "q50_error": 0.15033592539278112,
+      "q95_error": 1.1717912210381407,
+      "iqr_ratio": 1.178095589536033,
+      "fit_upper95_rate": 0.05157593123209169,
+      "validation_upper95_rate": 0.03418803418803419,
+      "synthetic_upper95_rate": 0.004584527220630372,
+      "validation_outside_fit_range": 0.0,
+      "synthetic_outside_fit_range": 0.07449856733524356
+    },
+    "alkaline_phosphatase": {
+      "status": "evaluated",
+      "fit_quantiles": [
+        138.20000000000002,
+        180.0,
+        215.0,
+        310.0,
+        760.7999999999994
+      ],
+      "validation_quantiles": [
+        135.0,
+        165.0,
+        195.0,
+        286.0,
+        679.7999999999995
+      ],
+      "synthetic_quantiles": [
+        141.36040279663104,
+        190.14059654466476,
+        241.00395485919938,
+        318.44291904289634,
+        637.6771333397207
+      ],
+      "quantile_probabilities": [
+        0.05,
+        0.25,
+        0.5,
+        0.75,
+        0.95
+      ],
+      "fit_sd": 265.3160338782576,
+      "q05_error": 0.023972930333903443,
+      "q50_error": 0.17339304446375325,
+      "q95_error": 0.15876487389226984,
+      "iqr_ratio": 1.0603497727126576,
+      "fit_upper95_rate": 0.05157593123209169,
+      "validation_upper95_rate": 0.03418803418803419,
+      "synthetic_upper95_rate": 0.034383954154727794,
+      "validation_outside_fit_range": 0.008547008547008548,
+      "synthetic_outside_fit_range": 0.007449856733524355
+    },
+    "alt": {
+      "status": "evaluated",
+      "fit_quantiles": [
+        15.0,
+        25.0,
+        38.0,
+        63.0,
+        263.59999999999826
+      ],
+      "validation_quantiles": [
+        13.8,
+        22.0,
+        30.0,
+        54.0,
+        204.7999999999996
+      ],
+      "synthetic_quantiles": [
+        4.551426191774519,
+        19.245392386637185,
+        36.63409261584606,
+        62.19749629310338,
+        166.59285335136104
+      ],
+      "quantile_probabilities": [
+        0.05,
+        0.25,
+        0.5,
+        0.75,
+        0.95
+      ],
+      "fit_sd": 159.13642679093115,
+      "q05_error": 0.05811726450522853,
+      "q50_error": 0.0416880832982491,
+      "q95_error": 0.24009051490664685,
+      "iqr_ratio": 1.3422532470770685,
+      "fit_upper95_rate": 0.05157593123209169,
+      "validation_upper95_rate": 0.03418803418803419,
+      "synthetic_upper95_rate": 0.029226361031518624,
+      "validation_outside_fit_range": 0.008547008547008548,
+      "synthetic_outside_fit_range": 0.11289398280802292
+    },
+    "ast": {
+      "status": "evaluated",
+      "fit_quantiles": [
+        15.0,
+        27.0,
+        46.0,
+        90.0,
+        426.9999999999988
+      ],
+      "validation_quantiles": [
+        15.0,
+        23.0,
+        38.0,
+        68.0,
+        348.4
+      ],
+      "synthetic_quantiles": [
+        11.06287006358055,
+        40.50682778449382,
+        74.24106760848822,
+        134.7561302929342,
+        334.1017352725913
+      ],
+      "quantile_probabilities": [
+        0.05,
+        0.25,
+        0.5,
+        0.75,
+        0.95
+      ],
+      "fit_sd": 301.4569394107141,
+      "q05_error": 0.013060339377543351,
+      "q50_error": 0.12021971588821942,
+      "q95_error": 0.04743053769257659,
+      "iqr_ratio": 2.094428944632008,
+      "fit_upper95_rate": 0.05157593123209169,
+      "validation_upper95_rate": 0.03418803418803419,
+      "synthetic_upper95_rate": 0.034383954154727794,
+      "validation_outside_fit_range": 0.0,
+      "synthetic_outside_fit_range": 0.04183381088825215
+    },
+    "total_protein": {
+      "status": "evaluated",
+      "fit_quantiles": [
+        4.8,
+        5.8,
+        6.6,
+        7.3,
+        8.1
+      ],
+      "validation_quantiles": [
+        4.4,
+        5.7,
+        6.4,
+        7.1,
+        8.02
+      ],
+      "synthetic_quantiles": [
+        5.172913849577957,
+        6.093608177522897,
+        6.752484522787448,
+        7.343223257848398,
+        8.258241111170369
+      ],
+      "quantile_probabilities": [
+        0.05,
+        0.25,
+        0.5,
+        0.75,
+        0.95
+      ],
+      "fit_sd": 1.0881086057518679,
+      "q05_error": 0.7103278528377079,
+      "q50_error": 0.3239424088038397,
+      "q95_error": 0.21894975364683197,
+      "iqr_ratio": 0.8925822002325006,
+      "fit_upper95_rate": 0.045845272206303724,
+      "validation_upper95_rate": 0.042735042735042736,
+      "synthetic_upper95_rate": 0.07851002865329514,
+      "validation_outside_fit_range": 0.0,
+      "synthetic_outside_fit_range": 0.0040114613180515755
+    },
+    "albumin": {
+      "status": "evaluated",
+      "fit_quantiles": [
+        1.8400000000000003,
+        2.5,
+        3.1,
+        3.9,
+        4.359999999999997
+      ],
+      "validation_quantiles": [
+        1.8,
+        2.6,
+        3.1,
+        3.7,
+        4.3
+      ],
+      "synthetic_quantiles": [
+        2.0578810531781393,
+        2.680881439827128,
+        3.0898729330663577,
+        3.481635364038845,
+        4.149479085362014
+      ],
+      "quantile_probabilities": [
+        0.05,
+        0.25,
+        0.5,
+        0.75,
+        0.95
+      ],
+      "fit_sd": 0.8068608539506142,
+      "q05_error": 0.31961031684147545,
+      "q50_error": 0.012551193782741447,
+      "q95_error": 0.18655126705056257,
+      "iqr_ratio": 0.7279581129197429,
+      "fit_upper95_rate": 0.05157593123209169,
+      "validation_upper95_rate": 0.042735042735042736,
+      "synthetic_upper95_rate": 0.029226361031518624,
+      "validation_outside_fit_range": 0.0,
+      "synthetic_outside_fit_range": 0.006876790830945559
+    },
+    "ag_ratio": {
+      "status": "evaluated",
+      "fit_quantiles": [
+        0.5,
+        0.7,
+        0.9,
+        1.1,
+        1.475
+      ],
+      "validation_quantiles": [
+        0.5,
+        0.8,
+        0.97,
+        1.1,
+        1.5
+      ],
+      "synthetic_quantiles": [
+        0.4927269043777438,
+        0.6966542630510792,
+        0.8547641047849448,
+        1.01860112220885,
+        1.2940960031803193
+      ],
+      "quantile_probabilities": [
+        0.05,
+        0.25,
+        0.5,
+        0.75,
+        0.95
+      ],
+      "fit_sd": 0.3172898872971695,
+      "q05_error": 0.02292255729992527,
+      "q50_error": 0.36318804925265946,
+      "q95_error": 0.6489459798850563,
+      "iqr_ratio": 1.0731561971925692,
+      "fit_upper95_rate": 0.05202312138728324,
+      "validation_upper95_rate": 0.07692307692307693,
+      "synthetic_upper95_rate": 0.015570934256055362,
+      "validation_outside_fit_range": 0.008547008547008548,
+      "synthetic_outside_fit_range": 0.002306805074971165
+    }
+  }
+}

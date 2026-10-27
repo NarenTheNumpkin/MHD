@@ -1,0 +1,62 @@
+[
+  {
+    "file": "scripts/audit_iteration5.py",
+    "sha256": "d04c978a44afb6f164af1fb4db6b71d1fdcd5dd62a23628d22231be0d61fc968",
+    "archive": "reproducibility/iteration5_scripts/d04c978a44afb6f164af1fb4db6b71d1fdcd5dd62a23628d22231be0d61fc968/audit_iteration5.py"
+  },
+  {
+    "file": "scripts/iteration5_model.py",
+    "sha256": "54aea46fbe906e2490ea3ffa2e8dee9d0927d8ccb4be96fcc754edb774db60bb",
+    "archive": "reproducibility/iteration5_scripts/54aea46fbe906e2490ea3ffa2e8dee9d0927d8ccb4be96fcc754edb774db60bb/iteration5_model.py"
+  },
+  {
+    "file": "scripts/plot_iteration5.py",
+    "sha256": "43ef23d6bbb506979314ff875b3bc1b0bbcf5469dca46988103beb43fdba1c14",
+    "archive": "reproducibility/iteration5_scripts/43ef23d6bbb506979314ff875b3bc1b0bbcf5469dca46988103beb43fdba1c14/plot_iteration5.py"
+  },
+  {
+    "file": "scripts/export_iteration5.py",
+    "sha256": "d72e30159d2ebd50fa13127ae1155e764f32c9df0950c6b95bae998f4c45faee",
+    "archive": "reproducibility/iteration5_scripts/d72e30159d2ebd50fa13127ae1155e764f32c9df0950c6b95bae998f4c45faee/export_iteration5.py"
+  },
+  {
+    "file": "scripts/report_iteration5.py",
+    "sha256": "f82fb912a56a8b7bafe1db2bdfe9e5b1124012b9e62cef5b6b0cba78de8a2449",
+    "archive": "reproducibility/iteration5_scripts/f82fb912a56a8b7bafe1db2bdfe9e5b1124012b9e62cef5b6b0cba78de8a2449/report_iteration5.py"
+  },
+  {
+    "file": "scripts/iteration5.py",
+    "sha256": "75efd59c74fdb9a57488343a506086f07f07ce8119d160e69c6f6e96d3e3338e",
+    "archive": "reproducibility/iteration5_scripts/75efd59c74fdb9a57488343a506086f07f07ce8119d160e69c6f6e96d3e3338e/iteration5.py"
+  },
+  {
+    "file": "tests/test_iteration5_model.py",
+    "sha256": "569bda4cda53976799f35e7c67eedbc21e281a829457eb63ff566de5a76a1641",
+    "archive": "reproducibility/iteration5_scripts/569bda4cda53976799f35e7c67eedbc21e281a829457eb63ff566de5a76a1641/test_iteration5_model.py"
+  },
+  {
+    "file": "docs/ITERATION_5_PROTOCOL.md",
+    "sha256": "55464ac1cf54bdd4a5e6bf3a43c971376ba9a042bfc23a2348ac5684cbc32987",
+    "archive": "reproducibility/iteration5_scripts/55464ac1cf54bdd4a5e6bf3a43c971376ba9a042bfc23a2348ac5684cbc32987/ITERATION_5_PROTOCOL.md"
+  },
+  {
+    "file": "configs/iteration5.json",
+    "sha256": "daf9fa5791f6b88354ee2316f35471e6315b15d1b1435f6ed7789280ea7b407a",
+    "archive": "reproducibility/iteration5_scripts/daf9fa5791f6b88354ee2316f35471e6315b15d1b1435f6ed7789280ea7b407a/iteration5.json"
+  },
+  {
+    "file": "docs/ITERATION_5_RUNBOOK.md",
+    "sha256": "3857cac0b2c907cf849aea6aafaa59c85108af9ce9cd21fe32a7dd47f6433dcb",
+    "archive": "reproducibility/iteration5_scripts/3857cac0b2c907cf849aea6aafaa59c85108af9ce9cd21fe32a7dd47f6433dcb/ITERATION_5_RUNBOOK.md"
+  },
+  {
+    "file": "reports/iteration5/INTERPRETATION.md",
+    "sha256": "1d6db04501f2347ed83cd91cecbf0d34bf6849094a7942be619458363c22ffd3",
+    "archive": "reproducibility/iteration5_scripts/1d6db04501f2347ed83cd91cecbf0d34bf6849094a7942be619458363c22ffd3/INTERPRETATION.md"
+  },
+  {
+    "file": "paper/manuscript.md",
+    "sha256": "708f20d287d46f8d521664d2ddc67fdc2ad04d9207577e30833f3af8ac01fdff",
+    "archive": "reproducibility/iteration5_scripts/708f20d287d46f8d521664d2ddc67fdc2ad04d9207577e30833f3af8ac01fdff/manuscript.md"
+  }
+]

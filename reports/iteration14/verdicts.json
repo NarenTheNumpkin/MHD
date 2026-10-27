@@ -1,0 +1,30 @@
+{
+  "H1": {
+    "units": 5,
+    "holding": 5,
+    "supported": true
+  },
+  "H1x": {
+    "units": 5,
+    "holding": 5,
+    "supported": true
+  },
+  "H2": {
+    "units": 50,
+    "holding": 37,
+    "supported": false,
+    "a": 48,
+    "b": 44,
+    "c": 44
+  },
+  "H3": {
+    "units": 4,
+    "holding": 3,
+    "supported": true
+  },
+  "H4": {
+    "units": 6,
+    "holding": 4,
+    "supported": true
+  }
+}

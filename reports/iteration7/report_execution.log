@@ -1,0 +1,50 @@
+             arm  inner_seed       rf  numeric_w  violation  exact_train_copy
+      base_prior        2027 0.721120   0.392427   0.090226               0.0
+      base_prior        3027 0.710174   0.270094   0.078892               0.0
+      base_prior        4027 0.694698   0.277702   0.076571               0.0
+       bootstrap        2027 0.737420   0.182855   0.050812               0.0
+       bootstrap        3027 0.710961   0.132063   0.044126               0.0
+       bootstrap        4027 0.709261   0.136298   0.055810               0.0
+          copula        2027 0.735530   0.184248   0.648138               0.0
+          copula        3027 0.713796   0.128532   0.646418               0.0
+          copula        4027 0.665571   0.129194   0.650095               0.0
+   copula_repair        2027 0.738011   0.196444   0.000000               0.0
+   copula_repair        3027 0.703520   0.129896   0.000000               0.0
+   copula_repair        4027 0.687964   0.133823   0.000000               0.0
+ctgan_compact100        2027 0.734625   0.435638   0.940210               0.0
+ctgan_compact100        3027 0.617962   0.307254   0.940274               0.0
+ctgan_compact100        4027 0.642489   0.350927   0.965841               0.0
+ctgan_default300        2027 0.764922   0.504371   0.972111               0.0
+ctgan_default300        3027 0.690783   0.359858   0.959758               0.0
+ctgan_default300        4027 0.678147   0.416814   0.971873               0.0
+     dense_prior        2027 0.770002   0.219176   0.066858               0.0
+     dense_prior        3027 0.650721   0.198458   0.062655               0.0
+     dense_prior        4027 0.682650   0.208290   0.078857               0.0
+      full_prior        2027 0.738346   0.304880   0.055014               0.0
+      full_prior        3027 0.699071   0.203662   0.049729               0.0
+      full_prior        4027 0.707639   0.222306   0.059619               0.0
+     independent        2027 0.767364   0.189196   0.905635               0.0
+     independent        3027 0.725963   0.129212   0.902770               0.0
+     independent        4027 0.680419   0.132005   0.899619               0.0
+ tvae_compact100        2027 0.786243   0.414466   0.857243               0.0
+ tvae_compact100        3027 0.696945   0.302323   0.853996               0.0
+ tvae_compact100        4027 0.716584   0.291151   0.855175               0.0
+ tvae_default300        2027 0.785928   0.399272   0.849920               0.0
+ tvae_default300        3027 0.682829   0.252155   0.839605               0.0
+ tvae_default300        4027 0.683765   0.277597   0.845333               0.0
+{
+  "new_medhyperdiff_fits": 0,
+  "neural_adapter_fits": 36,
+  "native_class_networks": 72,
+  "statistical_fits": 9,
+  "new_sampled_tables": 135,
+  "new_repaired_derivatives": 9,
+  "new_evaluations": 144,
+  "reused_evaluations": 81,
+  "fit_seconds_sum": 114.96907682856545,
+  "sample_or_repair_seconds_sum": 4.840656301006675,
+  "evaluation_seconds_sum": 126.98079578857869,
+  "device": "CPU, torch threads=2",
+  "gpu_vram_gib": 0,
+  "peak_system_ram": "not measured"
+}

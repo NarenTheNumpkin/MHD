@@ -1,0 +1,25 @@
+{"total": 24, "pending": 24, "workers": 6, "out": "/private/tmp/claude-501/-Users-naren-Desktop-MedHyperDiff/d519248f-6bcc-42cc-a51d-3ba77775831e/scratchpad/work2/runs/iteration13"}
+{"done": 1, "of": 24, "id": "develop/mhd_unguided/n500_s1", "status": "complete", "at": "2026-10-07T14:18:13.141820+00:00"}
+{"done": 2, "of": 24, "id": "develop/mhd_unguided/n500_s2", "status": "complete", "at": "2026-10-07T14:18:14.615742+00:00"}
+{"done": 3, "of": 24, "id": "develop/mhd_unguided/n500_s0", "status": "complete", "at": "2026-10-07T14:18:14.711600+00:00"}
+{"done": 4, "of": 24, "id": "develop/mhd_guided/n500_s0", "status": "complete", "at": "2026-10-07T14:18:27.965611+00:00"}
+{"done": 5, "of": 24, "id": "develop/mhd_guided/n500_s1", "status": "complete", "at": "2026-10-07T14:18:28.164861+00:00"}
+{"done": 6, "of": 24, "id": "develop/mhd_guided/n500_s2", "status": "complete", "at": "2026-10-07T14:18:28.737176+00:00"}
+{"done": 7, "of": 24, "id": "develop/mhd_reparam_backbone/n500_s0", "status": "complete", "at": "2026-10-07T14:20:43.181433+00:00"}
+{"done": 8, "of": 24, "id": "develop/mhd_reparam_backbone/n500_s1", "status": "complete", "at": "2026-10-07T14:20:43.719346+00:00"}
+{"done": 9, "of": 24, "id": "develop/mhd_reparam_backbone/n500_s2", "status": "complete", "at": "2026-10-07T14:20:44.446023+00:00"}
+{"done": 10, "of": 24, "id": "develop/mhd_reparam/n500_s0", "status": "complete", "at": "2026-10-07T14:21:00.074900+00:00"}
+{"done": 11, "of": 24, "id": "develop/mhd_reparam/n500_s2", "status": "complete", "at": "2026-10-07T14:21:02.213463+00:00"}
+{"done": 12, "of": 24, "id": "develop/mhd_reparam/n500_s1", "status": "complete", "at": "2026-10-07T14:21:02.293790+00:00"}
+{"done": 13, "of": 24, "id": "develop/mhd_unguided/n250_s0", "status": "complete", "at": "2026-10-07T14:23:13.505410+00:00"}
+{"done": 14, "of": 24, "id": "develop/mhd_unguided/n250_s1", "status": "complete", "at": "2026-10-07T14:23:13.901683+00:00"}
+{"done": 15, "of": 24, "id": "develop/mhd_unguided/n250_s2", "status": "complete", "at": "2026-10-07T14:23:15.375962+00:00"}
+{"done": 16, "of": 24, "id": "develop/mhd_guided/n250_s0", "status": "complete", "at": "2026-10-07T14:23:35.588896+00:00"}
+{"done": 17, "of": 24, "id": "develop/mhd_guided/n250_s2", "status": "complete", "at": "2026-10-07T14:23:39.019158+00:00"}
+{"done": 18, "of": 24, "id": "develop/mhd_guided/n250_s1", "status": "complete", "at": "2026-10-07T14:23:39.190629+00:00"}
+{"done": 19, "of": 24, "id": "develop/mhd_reparam_backbone/n250_s0", "status": "complete", "at": "2026-10-07T14:25:35.379710+00:00"}
+{"done": 20, "of": 24, "id": "develop/mhd_reparam_backbone/n250_s1", "status": "complete", "at": "2026-10-07T14:25:39.860284+00:00"}
+{"done": 21, "of": 24, "id": "develop/mhd_reparam_backbone/n250_s2", "status": "complete", "at": "2026-10-07T14:25:40.227838+00:00"}
+{"done": 22, "of": 24, "id": "develop/mhd_reparam/n250_s0", "status": "complete", "at": "2026-10-07T14:25:40.927496+00:00"}
+{"done": 23, "of": 24, "id": "develop/mhd_reparam/n250_s1", "status": "complete", "at": "2026-10-07T14:25:40.930995+00:00"}
+{"done": 24, "of": 24, "id": "develop/mhd_reparam/n250_s2", "status": "complete", "at": "2026-10-07T14:25:42.537061+00:00"}

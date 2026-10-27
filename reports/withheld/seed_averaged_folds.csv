@@ -1,0 +1,2 @@
+dataset,model,partition,epochs_budget,steps,source_sha256,config_signature,fold,wasserstein,association_rmse,rule_violation,missingness_error,tstr_forest_auroc,trtr_forest_auroc,membership_auc,fit_seconds,sample_seconds
+toy,full,inner_validation,100,30,f3016b0f62fe5db9f28ff45f8dd0da80b6c7cff8d607565bc63562a68746d22c,8167a75b88372b4e79c5289211ff8abfbf9847b61db1ce53ec45317d62512380,0,0.31127376703205656,0.06599129553173176,0.8714596949891068,0.0,0.7186163522012579,0.8005031446540881,0.40335305719921105,3.6491756665830812,0.17760652800401053

@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "medhyperdiff"
+version = "1.0.0"
+description = "Relation-aware diffusion for synthetic clinical laboratory tables"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [{name = "Naren Medarametla"}, {name = "Abishek K G"}, {name = "Roshan Parveen"}, {name = "Parkavi K", email = "parkavi.k@vit.ac.in"}]
+requires-python = ">=3.11,<3.14"
+dependencies = ["numpy>=1.26,<3", "pandas>=2.2,<3", "scipy>=1.12,<2", "scikit-learn>=1.5,<2", "torch>=2.5,<3"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<10", "matplotlib>=3.8,<4"]
+baselines = ["ctgan>=0.11,<0.12"]
+
+[project.urls]
+Repository = "https://github.com/NarenTheNumpkin/MHD"
+
+[project.scripts]
+medhyperdiff = "medhyperdiff.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

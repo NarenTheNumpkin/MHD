@@ -1,0 +1,1047 @@
+{
+  "created_at": "2026-10-09T22:02:20.960053+00:00",
+  "primary": "c1",
+  "rule": "Predeclared rule: the candidate with the lowest mean development C2ST over both development populations and the\nthree development sizes, among candidates whose mean development membership AUROC is at most 0.60 in every\npopulation x size cell; candidates within 0.002 of the lowest are tied and the earliest in CANDIDATES wins.",
+  "means": [
+    {
+      "candidate": "c0",
+      "c2st": 0.689610489379786,
+      "membership": 0.5359943136581135,
+      "relation_w1": 0.10330865630148567,
+      "forest_tstr": 0.8020143474489975
+    },
+    {
+      "candidate": "c1",
+      "c2st": 0.6531236111678436,
+      "membership": 0.55300099891078,
+      "relation_w1": 0.09703609095033927,
+      "forest_tstr": 0.8071000925400819
+    },
+    {
+      "candidate": "c2",
+      "c2st": 0.6877698431436371,
+      "membership": 0.5895703806205703,
+      "relation_w1": 0.09439128563719423,
+      "forest_tstr": 0.8061514703184948
+    },
+    {
+      "candidate": "c3",
+      "c2st": 0.6851881726281169,
+      "membership": 0.5804041165459943,
+      "relation_w1": 0.09554732999076027,
+      "forest_tstr": 0.8053843517154794
+    }
+  ],
+  "cells": [
+    {
+      "candidate": "c0",
+      "dataset": "nhanes_cbc_i",
+      "size": 250,
+      "c2st": 0.6953835,
+      "membership": 0.5373916666666667,
+      "relation_w1": 0.16292914858740531,
+      "forest_tstr": 0.7119954911478997
+    },
+    {
+      "candidate": "c0",
+      "dataset": "nhanes_cbc_i",
+      "size": 1000,
+      "c2st": 0.6651740269415601,
+      "membership": 0.5198083333333333,
+      "relation_w1": 0.15691987012481481,
+      "forest_tstr": 0.7321916546712547
+    },
+    {
+      "candidate": "c0",
+      "dataset": "nhanes_cbc_i",
+      "size": 2000,
+      "c2st": 0.6524927166141241,
+      "membership": 0.5168959320000687,
+      "relation_w1": 0.16932072863659778,
+      "forest_tstr": 0.7472321624072085
+    },
+    {
+      "candidate": "c0",
+      "dataset": "nhanes_chem_i",
+      "size": 250,
+      "c2st": 0.7224256666666666,
+      "membership": 0.5945666666666667,
+      "relation_w1": 0.052780637791840224,
+      "forest_tstr": 0.8570859233141995
+    },
+    {
+      "candidate": "c0",
+      "dataset": "nhanes_chem_i",
+      "size": 1000,
+      "c2st": 0.705633443435404,
+      "membership": 0.5307291666666667,
+      "relation_w1": 0.046910186299657576,
+      "forest_tstr": 0.8800790566877933
+    },
+    {
+      "candidate": "c0",
+      "dataset": "nhanes_chem_i",
+      "size": 2000,
+      "c2st": 0.6965535826209609,
+      "membership": 0.5165741166152785,
+      "relation_w1": 0.030991366368598294,
+      "forest_tstr": 0.8835017964656292
+    },
+    {
+      "candidate": "c1",
+      "dataset": "nhanes_cbc_i",
+      "size": 250,
+      "c2st": 0.6953835,
+      "membership": 0.5373916666666667,
+      "relation_w1": 0.16292914858740531,
+      "forest_tstr": 0.7119954911478997
+    },
+    {
+      "candidate": "c1",
+      "dataset": "nhanes_cbc_i",
+      "size": 1000,
+      "c2st": 0.6299415348733578,
+      "membership": 0.5588791666666667,
+      "relation_w1": 0.14311851055086813,
+      "forest_tstr": 0.7451759472027963
+    },
+    {
+      "candidate": "c1",
+      "dataset": "nhanes_cbc_i",
+      "size": 2000,
+      "c2st": 0.6088651020708172,
+      "membership": 0.5430925115548625,
+      "relation_w1": 0.1535136907207577,
+      "forest_tstr": 0.7571828211470222
+    },
+    {
+      "candidate": "c1",
+      "dataset": "nhanes_chem_i",
+      "size": 250,
+      "c2st": 0.7224256666666666,
+      "membership": 0.5945666666666667,
+      "relation_w1": 0.052780637791840224,
+      "forest_tstr": 0.8570859233141995
+    },
+    {
+      "candidate": "c1",
+      "dataset": "nhanes_chem_i",
+      "size": 1000,
+      "c2st": 0.6499067170279741,
+      "membership": 0.5490479166666667,
+      "relation_w1": 0.040222104960920095,
+      "forest_tstr": 0.8829629584444051
+    },
+    {
+      "candidate": "c1",
+      "dataset": "nhanes_chem_i",
+      "size": 2000,
+      "c2st": 0.6122191463682456,
+      "membership": 0.5350280652431507,
+      "relation_w1": 0.02965245309024415,
+      "forest_tstr": 0.8881974139841683
+    },
+    {
+      "candidate": "c2",
+      "dataset": "nhanes_cbc_i",
+      "size": 250,
+      "c2st": 0.719697,
+      "membership": 0.574375,
+      "relation_w1": 0.15151166429710367,
+      "forest_tstr": 0.7156328479044983
+    },
+    {
+      "candidate": "c2",
+      "dataset": "nhanes_cbc_i",
+      "size": 1000,
+      "c2st": 0.6754267405111479,
+      "membership": 0.5937354166666667,
+      "relation_w1": 0.14697079067896932,
+      "forest_tstr": 0.748350087386676
+    },
+    {
+      "candidate": "c2",
+      "dataset": "nhanes_cbc_i",
+      "size": 2000,
+      "c2st": 0.6360706806043136,
+      "membership": 0.564371384221716,
+      "relation_w1": 0.15025017283807482,
+      "forest_tstr": 0.7554240210202305
+    },
+    {
+      "candidate": "c2",
+      "dataset": "nhanes_chem_i",
+      "size": 250,
+      "c2st": 0.7421451666666666,
+      "membership": 0.6345833333333334,
+      "relation_w1": 0.04821513155906564,
+      "forest_tstr": 0.8497380027206236
+    },
+    {
+      "candidate": "c2",
+      "dataset": "nhanes_chem_i",
+      "size": 1000,
+      "c2st": 0.706512872913013,
+      "membership": 0.6101791666666666,
+      "relation_w1": 0.04024572363535453,
+      "forest_tstr": 0.879477794790148
+    },
+    {
+      "candidate": "c2",
+      "dataset": "nhanes_chem_i",
+      "size": 2000,
+      "c2st": 0.6467665981666814,
+      "membership": 0.5601779828350392,
+      "relation_w1": 0.02915423081459746,
+      "forest_tstr": 0.8882860680887923
+    },
+    {
+      "candidate": "c3",
+      "dataset": "nhanes_cbc_i",
+      "size": 250,
+      "c2st": 0.6953835,
+      "membership": 0.5373916666666667,
+      "relation_w1": 0.16292914858740531,
+      "forest_tstr": 0.7119954911478997
+    },
+    {
+      "candidate": "c3",
+      "dataset": "nhanes_cbc_i",
+      "size": 1000,
+      "c2st": 0.6754267405111479,
+      "membership": 0.5937354166666667,
+      "relation_w1": 0.14697079067896932,
+      "forest_tstr": 0.748350087386676
+    },
+    {
+      "candidate": "c3",
+      "dataset": "nhanes_cbc_i",
+      "size": 2000,
+      "c2st": 0.6497889326661621,
+      "membership": 0.5760130802969025,
+      "relation_w1": 0.14224405232054424,
+      "forest_tstr": 0.7469659709722883
+    },
+    {
+      "candidate": "c3",
+      "dataset": "nhanes_chem_i",
+      "size": 250,
+      "c2st": 0.7224256666666666,
+      "membership": 0.5945666666666667,
+      "relation_w1": 0.052780637791840224,
+      "forest_tstr": 0.8570859233141995
+    },
+    {
+      "candidate": "c3",
+      "dataset": "nhanes_chem_i",
+      "size": 1000,
+      "c2st": 0.706512872913013,
+      "membership": 0.6101791666666666,
+      "relation_w1": 0.04024572363535453,
+      "forest_tstr": 0.879477794790148
+    },
+    {
+      "candidate": "c3",
+      "dataset": "nhanes_chem_i",
+      "size": 2000,
+      "c2st": 0.6615913230117125,
+      "membership": 0.5705387023123967,
+      "relation_w1": 0.02811362693044799,
+      "forest_tstr": 0.8884308426816646
+    }
+  ],
+  "development": [
+    {
+      "dataset": "nhanes_cbc_i",
+      "size": 250,
+      "seed": 0,
+      "config": "s5000_w32",
+      "relation_w1": 0.16270893664365327,
+      "c2st": 0.689236,
+      "membership": 0.5723499999999999,
+      "forest_tstr": 0.7222532482469308,
+      "candidate": "c0"
+    },
+    {
+      "dataset": "nhanes_cbc_i",
+      "size": 250,
+      "seed": 0,
+      "config": "s5000_w32",
+      "relation_w1": 0.16270893664365327,
+      "c2st": 0.689236,
+      "membership": 0.5723499999999999,
+      "forest_tstr": 0.7222532482469308,
+      "candidate": "c1"
+    },
+    {
+      "dataset": "nhanes_cbc_i",
+      "size": 250,
+      "seed": 0,
+      "config": "s5000_w32",
+      "relation_w1": 0.16270893664365327,
+      "c2st": 0.689236,
+      "membership": 0.5723499999999999,
+      "forest_tstr": 0.7222532482469308,
+      "candidate": "c3"
+    },
+    {
+      "dataset": "nhanes_cbc_i",
+      "size": 250,
+      "seed": 0,
+      "config": "s5000_w64",
+      "relation_w1": 0.13613254885515105,
+      "c2st": 0.6988810000000001,
+      "membership": 0.5866,
+      "forest_tstr": 0.7414344457645327,
+      "candidate": "c2"
+    },
+    {
+      "dataset": "nhanes_cbc_i",
+      "size": 250,
+      "seed": 1,
+      "config": "s5000_w32",
+      "relation_w1": 0.16604931202762552,
+      "c2st": 0.6865290000000001,
+      "membership": 0.5097250000000001,
+      "forest_tstr": 0.7193097282594518,
+      "candidate": "c0"
+    },
+    {
+      "dataset": "nhanes_cbc_i",
+      "size": 250,
+      "seed": 1,
+      "config": "s5000_w32",
+      "relation_w1": 0.16604931202762552,
+      "c2st": 0.6865290000000001,
+      "membership": 0.5097250000000001,
+      "forest_tstr": 0.7193097282594518,
+      "candidate": "c1"
+    },
+    {
+      "dataset": "nhanes_cbc_i",
+      "size": 250,
+      "seed": 1,
+      "config": "s5000_w32",
+      "relation_w1": 0.16604931202762552,
+      "c2st": 0.6865290000000001,
+      "membership": 0.5097250000000001,
+      "forest_tstr": 0.7193097282594518,
+      "candidate": "c3"
+    },
+    {
+      "dataset": "nhanes_cbc_i",
+      "size": 250,
+      "seed": 1,
+      "config": "s5000_w64",
+      "relation_w1": 0.17935853360631895,
+      "c2st": 0.7359725000000001,
+      "membership": 0.572225,
+      "forest_tstr": 0.7300931492166027,
+      "candidate": "c2"
+    },
+    {
+      "dataset": "nhanes_cbc_i",
+      "size": 250,
+      "seed": 2,
+      "config": "s5000_w32",
+      "relation_w1": 0.16002919709093716,
+      "c2st": 0.7103855,
+      "membership": 0.5301,
+      "forest_tstr": 0.6944234969373164,
+      "candidate": "c0"
+    },
+    {
+      "dataset": "nhanes_cbc_i",
+      "size": 250,
+      "seed": 2,
+      "config": "s5000_w32",
+      "relation_w1": 0.16002919709093716,
+      "c2st": 0.7103855,
+      "membership": 0.5301,
+      "forest_tstr": 0.6944234969373164,
+      "candidate": "c1"
+    },
+    {
+      "dataset": "nhanes_cbc_i",
+      "size": 250,
+      "seed": 2,
+      "config": "s5000_w32",
+      "relation_w1": 0.16002919709093716,
+      "c2st": 0.7103855,
+      "membership": 0.5301,
+      "forest_tstr": 0.6944234969373164,
+      "candidate": "c3"
+    },
+    {
+      "dataset": "nhanes_cbc_i",
+      "size": 250,
+      "seed": 2,
+      "config": "s5000_w64",
+      "relation_w1": 0.139043910429841,
+      "c2st": 0.7242375,
+      "membership": 0.5643,
+      "forest_tstr": 0.6753709487323597,
+      "candidate": "c2"
+    },
+    {
+      "dataset": "nhanes_cbc_i",
+      "size": 1000,
+      "seed": 0,
+      "config": "s5000_w32",
+      "relation_w1": 0.1642136657794304,
+      "c2st": 0.6490788597446591,
+      "membership": 0.5070484375,
+      "forest_tstr": 0.7330230335626493,
+      "candidate": "c0"
+    },
+    {
+      "dataset": "nhanes_cbc_i",
+      "size": 1000,
+      "seed": 0,
+      "config": "s20000_w32",
+      "relation_w1": 0.14284409694454925,
+      "c2st": 0.6270678401575052,
+      "membership": 0.5411140625,
+      "forest_tstr": 0.732077431472009,
+      "candidate": "c1"
+    },
+    {
+      "dataset": "nhanes_cbc_i",
+      "size": 1000,
+      "seed": 0,
+      "config": "s20000_w64",
+      "relation_w1": 0.15787913886073426,
+      "c2st": 0.6689361595192197,
+      "membership": 0.5736578125,
+      "forest_tstr": 0.7421577276144268,
+      "candidate": "c2"
+    },
+    {
+      "dataset": "nhanes_cbc_i",
+      "size": 1000,
+      "seed": 0,
+      "config": "s20000_w64",
+      "relation_w1": 0.15787913886073426,
+      "c2st": 0.6689361595192197,
+      "membership": 0.5736578125,
+      "forest_tstr": 0.7421577276144268,
+      "candidate": "c3"
+    },
+    {
+      "dataset": "nhanes_cbc_i",
+      "size": 1000,
+      "seed": 1,
+      "config": "s5000_w32",
+      "relation_w1": 0.14422641945237422,
+      "c2st": 0.6969959455650574,
+      "membership": 0.513684375,
+      "forest_tstr": 0.7123010085631829,
+      "candidate": "c0"
+    },
+    {
+      "dataset": "nhanes_cbc_i",
+      "size": 1000,
+      "seed": 1,
+      "config": "s20000_w32",
+      "relation_w1": 0.138790461257425,
+      "c2st": 0.6202718489554289,
+      "membership": 0.5639609375,
+      "forest_tstr": 0.7368504988273348,
+      "candidate": "c1"
+    },
+    {
+      "dataset": "nhanes_cbc_i",
+      "size": 1000,
+      "seed": 1,
+      "config": "s20000_w64",
+      "relation_w1": 0.15024954220836556,
+      "c2st": 0.6770229244580137,
+      "membership": 0.598003125,
+      "forest_tstr": 0.7437714761352561,
+      "candidate": "c2"
+    },
+    {
+      "dataset": "nhanes_cbc_i",
+      "size": 1000,
+      "seed": 1,
+      "config": "s20000_w64",
+      "relation_w1": 0.15024954220836556,
+      "c2st": 0.6770229244580137,
+      "membership": 0.598003125,
+      "forest_tstr": 0.7437714761352561,
+      "candidate": "c3"
+    },
+    {
+      "dataset": "nhanes_cbc_i",
+      "size": 1000,
+      "seed": 2,
+      "config": "s5000_w32",
+      "relation_w1": 0.16231952514263986,
+      "c2st": 0.6494472755149638,
+      "membership": 0.5386921874999999,
+      "forest_tstr": 0.7512509218879315,
+      "candidate": "c0"
+    },
+    {
+      "dataset": "nhanes_cbc_i",
+      "size": 1000,
+      "seed": 2,
+      "config": "s20000_w32",
+      "relation_w1": 0.14772097345063012,
+      "c2st": 0.6424849155071395,
+      "membership": 0.5715625,
+      "forest_tstr": 0.7665999113090454,
+      "candidate": "c1"
+    },
+    {
+      "dataset": "nhanes_cbc_i",
+      "size": 1000,
+      "seed": 2,
+      "config": "s20000_w64",
+      "relation_w1": 0.13278369096780812,
+      "c2st": 0.6803211375562106,
+      "membership": 0.6095453125000001,
+      "forest_tstr": 0.7591210584103452,
+      "candidate": "c2"
+    },
+    {
+      "dataset": "nhanes_cbc_i",
+      "size": 1000,
+      "seed": 2,
+      "config": "s20000_w64",
+      "relation_w1": 0.13278369096780812,
+      "c2st": 0.6803211375562106,
+      "membership": 0.6095453125000001,
+      "forest_tstr": 0.7591210584103452,
+      "candidate": "c3"
+    },
+    {
+      "dataset": "nhanes_cbc_i",
+      "size": 2000,
+      "seed": 0,
+      "config": "s5000_w32",
+      "relation_w1": 0.16198151074471986,
+      "c2st": 0.6572901879944237,
+      "membership": 0.5137369819562198,
+      "forest_tstr": 0.7505276400380374,
+      "candidate": "c0"
+    },
+    {
+      "dataset": "nhanes_cbc_i",
+      "size": 2000,
+      "seed": 0,
+      "config": "s40000_w32",
+      "relation_w1": 0.1573890962167869,
+      "c2st": 0.5990044087345717,
+      "membership": 0.5401496931433386,
+      "forest_tstr": 0.7646535717080597,
+      "candidate": "c1"
+    },
+    {
+      "dataset": "nhanes_cbc_i",
+      "size": 2000,
+      "seed": 0,
+      "config": "s40000_w64",
+      "relation_w1": 0.15380335525166322,
+      "c2st": 0.6386067772058759,
+      "membership": 0.5659134815112885,
+      "forest_tstr": 0.7603043949450898,
+      "candidate": "c2"
+    },
+    {
+      "dataset": "nhanes_cbc_i",
+      "size": 2000,
+      "seed": 0,
+      "config": "s40000_w88",
+      "relation_w1": 0.1463285181861062,
+      "c2st": 0.6518948747704382,
+      "membership": 0.5799879654313536,
+      "forest_tstr": 0.7567804709157696,
+      "candidate": "c3"
+    },
+    {
+      "dataset": "nhanes_cbc_i",
+      "size": 2000,
+      "seed": 1,
+      "config": "s5000_w32",
+      "relation_w1": 0.16328779794476708,
+      "c2st": 0.6731803091931291,
+      "membership": 0.5141586265439861,
+      "forest_tstr": 0.7523263589991677,
+      "candidate": "c0"
+    },
+    {
+      "dataset": "nhanes_cbc_i",
+      "size": 2000,
+      "seed": 1,
+      "config": "s40000_w32",
+      "relation_w1": 0.14205767626819302,
+      "c2st": 0.6104546157532101,
+      "membership": 0.5431378430053883,
+      "forest_tstr": 0.7524615297055413,
+      "candidate": "c1"
+    },
+    {
+      "dataset": "nhanes_cbc_i",
+      "size": 2000,
+      "seed": 1,
+      "config": "s40000_w64",
+      "relation_w1": 0.1453389205649879,
+      "c2st": 0.6287419214177694,
+      "membership": 0.5574284275389183,
+      "forest_tstr": 0.7500972280519529,
+      "candidate": "c2"
+    },
+    {
+      "dataset": "nhanes_cbc_i",
+      "size": 2000,
+      "seed": 1,
+      "config": "s40000_w88",
+      "relation_w1": 0.1392589747343769,
+      "c2st": 0.6504352502690987,
+      "membership": 0.5732869834776178,
+      "forest_tstr": 0.7402303593406515,
+      "candidate": "c3"
+    },
+    {
+      "dataset": "nhanes_cbc_i",
+      "size": 2000,
+      "seed": 2,
+      "config": "s5000_w32",
+      "relation_w1": 0.18269287722030636,
+      "c2st": 0.6270076526548196,
+      "membership": 0.5227921875,
+      "forest_tstr": 0.7388424881844203,
+      "candidate": "c0"
+    },
+    {
+      "dataset": "nhanes_cbc_i",
+      "size": 2000,
+      "seed": 2,
+      "config": "s40000_w32",
+      "relation_w1": 0.16109429967729325,
+      "c2st": 0.6171362817246697,
+      "membership": 0.5459899985158607,
+      "forest_tstr": 0.7544333620274657,
+      "candidate": "c1"
+    },
+    {
+      "dataset": "nhanes_cbc_i",
+      "size": 2000,
+      "seed": 2,
+      "config": "s40000_w64",
+      "relation_w1": 0.15160824269757328,
+      "c2st": 0.6408633431892954,
+      "membership": 0.569772243614941,
+      "forest_tstr": 0.7558704400636488,
+      "candidate": "c2"
+    },
+    {
+      "dataset": "nhanes_cbc_i",
+      "size": 2000,
+      "seed": 2,
+      "config": "s40000_w88",
+      "relation_w1": 0.14114466404114964,
+      "c2st": 0.6470366729589495,
+      "membership": 0.5747642919817358,
+      "forest_tstr": 0.7438870826604442,
+      "candidate": "c3"
+    },
+    {
+      "dataset": "nhanes_chem_i",
+      "size": 250,
+      "seed": 0,
+      "config": "s5000_w32",
+      "relation_w1": 0.04594481255404281,
+      "c2st": 0.727909,
+      "membership": 0.6188000000000001,
+      "forest_tstr": 0.8461194512392258,
+      "candidate": "c0"
+    },
+    {
+      "dataset": "nhanes_chem_i",
+      "size": 250,
+      "seed": 0,
+      "config": "s5000_w32",
+      "relation_w1": 0.04594481255404281,
+      "c2st": 0.727909,
+      "membership": 0.6188000000000001,
+      "forest_tstr": 0.8461194512392258,
+      "candidate": "c1"
+    },
+    {
+      "dataset": "nhanes_chem_i",
+      "size": 250,
+      "seed": 0,
+      "config": "s5000_w32",
+      "relation_w1": 0.04594481255404281,
+      "c2st": 0.727909,
+      "membership": 0.6188000000000001,
+      "forest_tstr": 0.8461194512392258,
+      "candidate": "c3"
+    },
+    {
+      "dataset": "nhanes_chem_i",
+      "size": 250,
+      "seed": 0,
+      "config": "s5000_w64",
+      "relation_w1": 0.038376501572771685,
+      "c2st": 0.74165,
+      "membership": 0.6665,
+      "forest_tstr": 0.8298140093818815,
+      "candidate": "c2"
+    },
+    {
+      "dataset": "nhanes_chem_i",
+      "size": 250,
+      "seed": 1,
+      "config": "s5000_w32",
+      "relation_w1": 0.06921095680402158,
+      "c2st": 0.711356,
+      "membership": 0.5624750000000001,
+      "forest_tstr": 0.8557032446182282,
+      "candidate": "c0"
+    },
+    {
+      "dataset": "nhanes_chem_i",
+      "size": 250,
+      "seed": 1,
+      "config": "s5000_w32",
+      "relation_w1": 0.06921095680402158,
+      "c2st": 0.711356,
+      "membership": 0.5624750000000001,
+      "forest_tstr": 0.8557032446182282,
+      "candidate": "c1"
+    },
+    {
+      "dataset": "nhanes_chem_i",
+      "size": 250,
+      "seed": 1,
+      "config": "s5000_w32",
+      "relation_w1": 0.06921095680402158,
+      "c2st": 0.711356,
+      "membership": 0.5624750000000001,
+      "forest_tstr": 0.8557032446182282,
+      "candidate": "c3"
+    },
+    {
+      "dataset": "nhanes_chem_i",
+      "size": 250,
+      "seed": 1,
+      "config": "s5000_w64",
+      "relation_w1": 0.05466053434456623,
+      "c2st": 0.739689,
+      "membership": 0.6054250000000001,
+      "forest_tstr": 0.8510220638919559,
+      "candidate": "c2"
+    },
+    {
+      "dataset": "nhanes_chem_i",
+      "size": 250,
+      "seed": 2,
+      "config": "s5000_w32",
+      "relation_w1": 0.04318614401745627,
+      "c2st": 0.728012,
+      "membership": 0.602425,
+      "forest_tstr": 0.8694350740851446,
+      "candidate": "c0"
+    },
+    {
+      "dataset": "nhanes_chem_i",
+      "size": 250,
+      "seed": 2,
+      "config": "s5000_w32",
+      "relation_w1": 0.04318614401745627,
+      "c2st": 0.728012,
+      "membership": 0.602425,
+      "forest_tstr": 0.8694350740851446,
+      "candidate": "c1"
+    },
+    {
+      "dataset": "nhanes_chem_i",
+      "size": 250,
+      "seed": 2,
+      "config": "s5000_w32",
+      "relation_w1": 0.04318614401745627,
+      "c2st": 0.728012,
+      "membership": 0.602425,
+      "forest_tstr": 0.8694350740851446,
+      "candidate": "c3"
+    },
+    {
+      "dataset": "nhanes_chem_i",
+      "size": 250,
+      "seed": 2,
+      "config": "s5000_w64",
+      "relation_w1": 0.051608358759859,
+      "c2st": 0.7450964999999999,
+      "membership": 0.631825,
+      "forest_tstr": 0.8683779348880335,
+      "candidate": "c2"
+    },
+    {
+      "dataset": "nhanes_chem_i",
+      "size": 1000,
+      "seed": 0,
+      "config": "s5000_w32",
+      "relation_w1": 0.03842639120101642,
+      "c2st": 0.6988888477509242,
+      "membership": 0.5220171875,
+      "forest_tstr": 0.879850914702958,
+      "candidate": "c0"
+    },
+    {
+      "dataset": "nhanes_chem_i",
+      "size": 1000,
+      "seed": 0,
+      "config": "s20000_w32",
+      "relation_w1": 0.03660053452104881,
+      "c2st": 0.6638354253570617,
+      "membership": 0.532825,
+      "forest_tstr": 0.887926164957635,
+      "candidate": "c1"
+    },
+    {
+      "dataset": "nhanes_chem_i",
+      "size": 1000,
+      "seed": 0,
+      "config": "s20000_w64",
+      "relation_w1": 0.03348615454466863,
+      "c2st": 0.7048070186430927,
+      "membership": 0.5941875000000001,
+      "forest_tstr": 0.8829265614610847,
+      "candidate": "c2"
+    },
+    {
+      "dataset": "nhanes_chem_i",
+      "size": 1000,
+      "seed": 0,
+      "config": "s20000_w64",
+      "relation_w1": 0.03348615454466863,
+      "c2st": 0.7048070186430927,
+      "membership": 0.5941875000000001,
+      "forest_tstr": 0.8829265614610847,
+      "candidate": "c3"
+    },
+    {
+      "dataset": "nhanes_chem_i",
+      "size": 1000,
+      "seed": 1,
+      "config": "s5000_w32",
+      "relation_w1": 0.04558299636123128,
+      "c2st": 0.7135589624119252,
+      "membership": 0.5206937500000001,
+      "forest_tstr": 0.8776036551517998,
+      "candidate": "c0"
+    },
+    {
+      "dataset": "nhanes_chem_i",
+      "size": 1000,
+      "seed": 1,
+      "config": "s20000_w32",
+      "relation_w1": 0.04242145441912015,
+      "c2st": 0.6298771430506269,
+      "membership": 0.55363125,
+      "forest_tstr": 0.877712236096454,
+      "candidate": "c1"
+    },
+    {
+      "dataset": "nhanes_chem_i",
+      "size": 1000,
+      "seed": 1,
+      "config": "s20000_w64",
+      "relation_w1": 0.04172177940126828,
+      "c2st": 0.6943388306312019,
+      "membership": 0.6046812499999998,
+      "forest_tstr": 0.8757425289600018,
+      "candidate": "c2"
+    },
+    {
+      "dataset": "nhanes_chem_i",
+      "size": 1000,
+      "seed": 1,
+      "config": "s20000_w64",
+      "relation_w1": 0.04172177940126828,
+      "c2st": 0.6943388306312019,
+      "membership": 0.6046812499999998,
+      "forest_tstr": 0.8757425289600018,
+      "candidate": "c3"
+    },
+    {
+      "dataset": "nhanes_chem_i",
+      "size": 1000,
+      "seed": 2,
+      "config": "s5000_w32",
+      "relation_w1": 0.056721171336725024,
+      "c2st": 0.7044525201433627,
+      "membership": 0.5494765625,
+      "forest_tstr": 0.8827826002086219,
+      "candidate": "c0"
+    },
+    {
+      "dataset": "nhanes_chem_i",
+      "size": 1000,
+      "seed": 2,
+      "config": "s20000_w32",
+      "relation_w1": 0.04164432594259131,
+      "c2st": 0.6560075826762335,
+      "membership": 0.5606875,
+      "forest_tstr": 0.8832504742791263,
+      "candidate": "c1"
+    },
+    {
+      "dataset": "nhanes_chem_i",
+      "size": 1000,
+      "seed": 2,
+      "config": "s20000_w64",
+      "relation_w1": 0.04552923696012667,
+      "c2st": 0.7203927694647445,
+      "membership": 0.63166875,
+      "forest_tstr": 0.8797642939493573,
+      "candidate": "c2"
+    },
+    {
+      "dataset": "nhanes_chem_i",
+      "size": 1000,
+      "seed": 2,
+      "config": "s20000_w64",
+      "relation_w1": 0.04552923696012667,
+      "c2st": 0.7203927694647445,
+      "membership": 0.63166875,
+      "forest_tstr": 0.8797642939493573,
+      "candidate": "c3"
+    },
+    {
+      "dataset": "nhanes_chem_i",
+      "size": 2000,
+      "seed": 0,
+      "config": "s5000_w32",
+      "relation_w1": 0.03760213662384448,
+      "c2st": 0.6866581352856778,
+      "membership": 0.5159265625,
+      "forest_tstr": 0.8805713309705795,
+      "candidate": "c0"
+    },
+    {
+      "dataset": "nhanes_chem_i",
+      "size": 2000,
+      "seed": 0,
+      "config": "s40000_w32",
+      "relation_w1": 0.03662602423276293,
+      "c2st": 0.6123584616679609,
+      "membership": 0.535528125,
+      "forest_tstr": 0.8886227910182819,
+      "candidate": "c1"
+    },
+    {
+      "dataset": "nhanes_chem_i",
+      "size": 2000,
+      "seed": 0,
+      "config": "s40000_w64",
+      "relation_w1": 0.03137422819696909,
+      "c2st": 0.643458604764789,
+      "membership": 0.5577573860051176,
+      "forest_tstr": 0.8865969633935814,
+      "candidate": "c2"
+    },
+    {
+      "dataset": "nhanes_chem_i",
+      "size": 2000,
+      "seed": 0,
+      "config": "s40000_w88",
+      "relation_w1": 0.03360783001391402,
+      "c2st": 0.6654626691957022,
+      "membership": 0.57923125,
+      "forest_tstr": 0.890448536902271,
+      "candidate": "c3"
+    },
+    {
+      "dataset": "nhanes_chem_i",
+      "size": 2000,
+      "seed": 1,
+      "config": "s5000_w32",
+      "relation_w1": 0.03174590408300508,
+      "c2st": 0.7127180074795149,
+      "membership": 0.5210559925673192,
+      "forest_tstr": 0.8844845150152806,
+      "candidate": "c0"
+    },
+    {
+      "dataset": "nhanes_chem_i",
+      "size": 2000,
+      "seed": 1,
+      "config": "s40000_w32",
+      "relation_w1": 0.028478089591586705,
+      "c2st": 0.6019131368710717,
+      "membership": 0.533868886344664,
+      "forest_tstr": 0.8868488955853915,
+      "candidate": "c1"
+    },
+    {
+      "dataset": "nhanes_chem_i",
+      "size": 2000,
+      "seed": 1,
+      "config": "s40000_w64",
+      "relation_w1": 0.03295026508064203,
+      "c2st": 0.6490794747504666,
+      "membership": 0.5635796875,
+      "forest_tstr": 0.8905992082131113,
+      "candidate": "c2"
+    },
+    {
+      "dataset": "nhanes_chem_i",
+      "size": 2000,
+      "seed": 1,
+      "config": "s40000_w88",
+      "relation_w1": 0.027597936649529954,
+      "c2st": 0.6511894567826694,
+      "membership": 0.5622661069371899,
+      "forest_tstr": 0.8892504864792323,
+      "candidate": "c3"
+    },
+    {
+      "dataset": "nhanes_chem_i",
+      "size": 2000,
+      "seed": 2,
+      "config": "s5000_w32",
+      "relation_w1": 0.023626058398945313,
+      "c2st": 0.69028460509769,
+      "membership": 0.5127397947785164,
+      "forest_tstr": 0.8854495434110276,
+      "candidate": "c0"
+    },
+    {
+      "dataset": "nhanes_chem_i",
+      "size": 2000,
+      "seed": 2,
+      "config": "s40000_w32",
+      "relation_w1": 0.02385324544638281,
+      "c2st": 0.622385840565704,
+      "membership": 0.5356871843847881,
+      "forest_tstr": 0.8891205553488315,
+      "candidate": "c1"
+    },
+    {
+      "dataset": "nhanes_chem_i",
+      "size": 2000,
+      "seed": 2,
+      "config": "s40000_w64",
+      "relation_w1": 0.02313819916618126,
+      "c2st": 0.6477617149847885,
+      "membership": 0.559196875,
+      "forest_tstr": 0.8876620326596841,
+      "candidate": "c2"
+    },
+    {
+      "dataset": "nhanes_chem_i",
+      "size": 2000,
+      "seed": 2,
+      "config": "s40000_w88",
+      "relation_w1": 0.0231351141279,
+      "c2st": 0.6681218430567659,
+      "membership": 0.57011875,
+      "forest_tstr": 0.8855935046634905,
+      "candidate": "c3"
+    }
+  ]
+}

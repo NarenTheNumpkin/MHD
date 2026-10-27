@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "new_fits": 9,
+  "new_evaluations": 27,
+  "reused_references": 36,
+  "exact_checkpoint_replays": 9,
+  "saved_auroc_recalculations": 378,
+  "reserved_test_rows_in_fit_or_validation": 0,
+  "hashes_and_split_isolation": true,
+  "physical_unit_metric_recalculation": true,
+  "interpretation": "negative development result retained"
+}

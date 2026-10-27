@@ -1,0 +1,53 @@
+[
+  {
+    "checkpoint": "artifacts/iteration3/ilpd_full_v_l0p1_g10_i2027_s0.pt",
+    "sha256": "61bd5fa6dbe13fcd28685097e0f31cb4dc1c6a457c844aa0d28d54cae859dca6",
+    "parent_checkpoint": "runs/iteration2/screen/ilpd_velocity_full_s0/checkpoint.pt",
+    "parent_sha256": "6aae7c20d9d33a208e9deb7358862ac49978080fd02525d1dacc86a3bfac92bb",
+    "setting": {
+      "mode": "full",
+      "prediction": "v",
+      "clinical_weight": 0.1,
+      "guidance": 10.0,
+      "repair": false
+    },
+    "dataset": "ilpd",
+    "seed": 0,
+    "inner_seed": 2027,
+    "status": "development sampler selected on the screening split; not an independent-test winner"
+  },
+  {
+    "checkpoint": "artifacts/iteration3/ilpd_full_v_l0p01_g10_i2027_s0.pt",
+    "sha256": "d39cbf5ae7f3e9f56070ba62e9ab75bf3512b171eb3c962fb1fc570b01378c5f",
+    "parent_checkpoint": "runs/iteration3/training/ilpd_full_v_l0p01_i2027_s0/checkpoint.pt",
+    "parent_sha256": "d835949c167b83aa35b605635e01fcd2f125eb71eb968b3f7aeaf7a4b8ff5e1a",
+    "setting": {
+      "mode": "full",
+      "prediction": "v",
+      "clinical_weight": 0.01,
+      "guidance": 10.0,
+      "repair": false
+    },
+    "dataset": "ilpd",
+    "seed": 0,
+    "inner_seed": 2027,
+    "status": "development sampler selected on the screening split; not an independent-test winner"
+  },
+  {
+    "checkpoint": "artifacts/iteration3/toy_base_x0_l0_g0p2_i2027_s0.pt",
+    "sha256": "62eacbb3c18217a5f5b8749d2a5135804851d7276aadcc3512029995a4a4c21e",
+    "parent_checkpoint": "runs/iteration2/screen/toy_paired_base_s0/checkpoint.pt",
+    "parent_sha256": "9b73d3d91e36c54fedfbefc9770ebe4049ae7a54ab256d9b4207d39d70f6e23a",
+    "setting": {
+      "mode": "base",
+      "prediction": "x0",
+      "clinical_weight": 0.0,
+      "guidance": 0.2,
+      "repair": false
+    },
+    "dataset": "toy",
+    "seed": 0,
+    "inner_seed": 2027,
+    "status": "development sampler selected on the screening split; not an independent-test winner"
+  }
+]

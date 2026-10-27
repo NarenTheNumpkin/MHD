@@ -1,0 +1,837 @@
+{
+  "created_at": "2026-09-12T18:49:58.897225+00:00",
+  "parents": [
+    {
+      "architecture": "full",
+      "inner_seed": 2027,
+      "training_seed": 0,
+      "checkpoint": "runs/iteration5/training/full_prior_i2027_t0/checkpoint.pt",
+      "checkpoint_sha256": "12b9266800672028bd88803c754ae5fc5e0284369d57bcde1466e41ec3ccc43f",
+      "references": [
+        {
+          "sampling_seed": 70001,
+          "prior": "runs/iteration5/evaluations/full_prior_i2027_t0_s70001_n5",
+          "prior_metrics_sha256": "ec9f3a86db63e2298b83cdf1d12c2ae2660b1b6e5509cb0022c78535e52424cd",
+          "original": "runs/iteration4/evaluations/updated_full_i2027_t0_s70001_n5",
+          "original_metrics_sha256": "ce93709d7546106267ab211ae50571b339ad6497f4810b527ef64ca6fa8b77af"
+        },
+        {
+          "sampling_seed": 70002,
+          "prior": "runs/iteration5/evaluations/full_prior_i2027_t0_s70002_n5",
+          "prior_metrics_sha256": "4eb3ffc2e956466e28861ddd60be1c8674fdc087d03b9878d75d1b36f642f764",
+          "original": "runs/iteration4/evaluations/updated_full_i2027_t0_s70002_n5",
+          "original_metrics_sha256": "9b11e5f3f7d9fa3fcf96870b4960882e466a7e201f5d55bac1897ee08a5f6a4c"
+        },
+        {
+          "sampling_seed": 70003,
+          "prior": "runs/iteration5/evaluations/full_prior_i2027_t0_s70003_n5",
+          "prior_metrics_sha256": "aff5dfa6943d0b2c5bdafc8634d939055af19db89b6beee500e7bac5db3d1315",
+          "original": "runs/iteration4/evaluations/updated_full_i2027_t0_s70003_n5",
+          "original_metrics_sha256": "a88416a1d4d03e57318447fb8c9ad4a92bc263440761fb924a347164f5d05d69"
+        }
+      ]
+    },
+    {
+      "architecture": "full",
+      "inner_seed": 2027,
+      "training_seed": 1,
+      "checkpoint": "runs/iteration5/training/full_prior_i2027_t1/checkpoint.pt",
+      "checkpoint_sha256": "12935feb9e18b0335e91413cc83ef311530d1de260f856ac7c10bf6c3706b871",
+      "references": [
+        {
+          "sampling_seed": 70001,
+          "prior": "runs/iteration5/evaluations/full_prior_i2027_t1_s70001_n5",
+          "prior_metrics_sha256": "6d1bc0993b259961f0117e97d89cf0fd2b102223df72ed1e32314160854bc7df",
+          "original": "runs/iteration4/evaluations/updated_full_i2027_t1_s70001_n5",
+          "original_metrics_sha256": "ed43c04983f4fb8dbcdd181276d59adbe0bde306eb2ff85ebfc98d249aac84f2"
+        },
+        {
+          "sampling_seed": 70002,
+          "prior": "runs/iteration5/evaluations/full_prior_i2027_t1_s70002_n5",
+          "prior_metrics_sha256": "ebc5df3067361fbfcaaf4c86c5d62f4164da317e6f2ec92353be999ffb3b6ef5",
+          "original": "runs/iteration4/evaluations/updated_full_i2027_t1_s70002_n5",
+          "original_metrics_sha256": "c8837eee4805f0aee57d736edbdfee05965cb4eb750e01e86168bbb068a43c57"
+        },
+        {
+          "sampling_seed": 70003,
+          "prior": "runs/iteration5/evaluations/full_prior_i2027_t1_s70003_n5",
+          "prior_metrics_sha256": "15179e859ea03fef95839d27d860cf7ec5f0e9800fc1419af1930651c6415d45",
+          "original": "runs/iteration4/evaluations/updated_full_i2027_t1_s70003_n5",
+          "original_metrics_sha256": "589a204f8bed6ee97b5db27cbe22b087a3da80f9bafe73fd2d9cc70b9e5575f6"
+        }
+      ]
+    },
+    {
+      "architecture": "full",
+      "inner_seed": 2027,
+      "training_seed": 2,
+      "checkpoint": "runs/iteration5/training/full_prior_i2027_t2/checkpoint.pt",
+      "checkpoint_sha256": "18f62fee8791cb86e591652461106f0343c91adf26c03ef1e22af12263dd6593",
+      "references": [
+        {
+          "sampling_seed": 70001,
+          "prior": "runs/iteration5/evaluations/full_prior_i2027_t2_s70001_n5",
+          "prior_metrics_sha256": "417dfed71ab102c6a8ef67166ea228c30322f52702c5d57b506f9b374308947d",
+          "original": "runs/iteration4/evaluations/updated_full_i2027_t2_s70001_n5",
+          "original_metrics_sha256": "2f9ed9e9057e271e47854f4ae6235a552699c8bb7c6ea13e6f26a30830238a3a"
+        },
+        {
+          "sampling_seed": 70002,
+          "prior": "runs/iteration5/evaluations/full_prior_i2027_t2_s70002_n5",
+          "prior_metrics_sha256": "21cf09972b2a7bfdc2be3188858987dddd7944159d9b8a7ea79411fcc0d246bb",
+          "original": "runs/iteration4/evaluations/updated_full_i2027_t2_s70002_n5",
+          "original_metrics_sha256": "b0ec0639d15a3c71cf79e91155cb91b8bb1c95e435117908d6105665e1445696"
+        },
+        {
+          "sampling_seed": 70003,
+          "prior": "runs/iteration5/evaluations/full_prior_i2027_t2_s70003_n5",
+          "prior_metrics_sha256": "2d8b55658e5ac6d787a979f3abbfca7e5f820147e32840733231b22e6ef0006b",
+          "original": "runs/iteration4/evaluations/updated_full_i2027_t2_s70003_n5",
+          "original_metrics_sha256": "7b311e4d339c2ed9f91153640b517edb21c2e811bfd1ffaf758b95a65df9398f"
+        }
+      ]
+    },
+    {
+      "architecture": "full",
+      "inner_seed": 3027,
+      "training_seed": 0,
+      "checkpoint": "runs/iteration5/training/full_prior_i3027_t0/checkpoint.pt",
+      "checkpoint_sha256": "52d82d5110a3621613be524a079fe2171328e30c35b7f61366d8ec3ba0e901c8",
+      "references": [
+        {
+          "sampling_seed": 70001,
+          "prior": "runs/iteration5/evaluations/full_prior_i3027_t0_s70001_n5",
+          "prior_metrics_sha256": "337a784cd74ddb8c697ef8bff6e1bab38aea8c0adfe076148dabb389462cac14",
+          "original": "runs/iteration4/evaluations/updated_full_i3027_t0_s70001_n5",
+          "original_metrics_sha256": "25c4fe6d31ccb6402f76e311df43dca476bfcfab086e68917c01ed6d572df3bc"
+        },
+        {
+          "sampling_seed": 70002,
+          "prior": "runs/iteration5/evaluations/full_prior_i3027_t0_s70002_n5",
+          "prior_metrics_sha256": "c6ebfef923b219ba46b272e33dd16be05d5f476300351a50324c6eaf072752a8",
+          "original": "runs/iteration4/evaluations/updated_full_i3027_t0_s70002_n5",
+          "original_metrics_sha256": "9b8057eaf7471716dc307c668d0271d0b2aea3c2b6b17a7521f0896bb3b9789e"
+        },
+        {
+          "sampling_seed": 70003,
+          "prior": "runs/iteration5/evaluations/full_prior_i3027_t0_s70003_n5",
+          "prior_metrics_sha256": "a5c235be66c4998353a1ee7af43683a1c28a54e9ec9af492a7344b022a9b2d37",
+          "original": "runs/iteration4/evaluations/updated_full_i3027_t0_s70003_n5",
+          "original_metrics_sha256": "cd9bf11936c03ec55db323b01721560ef988726f1849276de5fa2d86fd507bb9"
+        }
+      ]
+    },
+    {
+      "architecture": "full",
+      "inner_seed": 3027,
+      "training_seed": 1,
+      "checkpoint": "runs/iteration5/training/full_prior_i3027_t1/checkpoint.pt",
+      "checkpoint_sha256": "4a47f62707c18a7b6eb699a65653db10459fa9e00fd9b6c62ed9dfcf48c2d0ec",
+      "references": [
+        {
+          "sampling_seed": 70001,
+          "prior": "runs/iteration5/evaluations/full_prior_i3027_t1_s70001_n5",
+          "prior_metrics_sha256": "be4750290e7f70cd5393bb9164f25a980280d9d8726668cf0b0a0a047e403465",
+          "original": "runs/iteration4/evaluations/updated_full_i3027_t1_s70001_n5",
+          "original_metrics_sha256": "f8b481ec2d67bcfb3a22d2ba7d3e1a9c1ab444320534d5c5f6d875364229b88d"
+        },
+        {
+          "sampling_seed": 70002,
+          "prior": "runs/iteration5/evaluations/full_prior_i3027_t1_s70002_n5",
+          "prior_metrics_sha256": "eb0d1c8daebfb47ae0577b4cd625fed9a854a514419abca45fcb42ec653d7792",
+          "original": "runs/iteration4/evaluations/updated_full_i3027_t1_s70002_n5",
+          "original_metrics_sha256": "1c51414e87ce0f3580204fcd3e185cf0afe8ca65b7d9a59c5a179c930ca7fa4f"
+        },
+        {
+          "sampling_seed": 70003,
+          "prior": "runs/iteration5/evaluations/full_prior_i3027_t1_s70003_n5",
+          "prior_metrics_sha256": "bbc6bd38c1d857f26a88401c43d589ef9bb2a7629b4b382a56cb62d8c636a1b0",
+          "original": "runs/iteration4/evaluations/updated_full_i3027_t1_s70003_n5",
+          "original_metrics_sha256": "a1db22d37a107cc618e3a6c3081301cc721283d07b56dffd9eae5d8db272e8dd"
+        }
+      ]
+    },
+    {
+      "architecture": "full",
+      "inner_seed": 3027,
+      "training_seed": 2,
+      "checkpoint": "runs/iteration5/training/full_prior_i3027_t2/checkpoint.pt",
+      "checkpoint_sha256": "a452a0f76231117d0fd41784e1614cd919f193ffef981a738b7515e9419124c9",
+      "references": [
+        {
+          "sampling_seed": 70001,
+          "prior": "runs/iteration5/evaluations/full_prior_i3027_t2_s70001_n5",
+          "prior_metrics_sha256": "76f077b98cf17c3a4e218f7405c5a75eacf8c7f70b757cb9e77e1c01750f5a7a",
+          "original": "runs/iteration4/evaluations/updated_full_i3027_t2_s70001_n5",
+          "original_metrics_sha256": "d74c1147dfc70ed02a0cba9240b049dd499e3ebc133ddde963710ef89d1fd4bb"
+        },
+        {
+          "sampling_seed": 70002,
+          "prior": "runs/iteration5/evaluations/full_prior_i3027_t2_s70002_n5",
+          "prior_metrics_sha256": "d2cb4a4c01aed174cf10ce5e8fc783394c8a09707461c26dd3e168ce60854340",
+          "original": "runs/iteration4/evaluations/updated_full_i3027_t2_s70002_n5",
+          "original_metrics_sha256": "b9898e113ce59a1b7afa023dfe1cf331305f6a77fcce66385351250fd212ddbb"
+        },
+        {
+          "sampling_seed": 70003,
+          "prior": "runs/iteration5/evaluations/full_prior_i3027_t2_s70003_n5",
+          "prior_metrics_sha256": "7def44daa9479c450ac531e4d0a629c65a8f8174fbb244185f4a338cb3d5804c",
+          "original": "runs/iteration4/evaluations/updated_full_i3027_t2_s70003_n5",
+          "original_metrics_sha256": "06375cc50f90e482193a6f59dc88db4bc443e21e6f338300914a15f149ec95a9"
+        }
+      ]
+    },
+    {
+      "architecture": "full",
+      "inner_seed": 4027,
+      "training_seed": 0,
+      "checkpoint": "runs/iteration5/training/full_prior_i4027_t0/checkpoint.pt",
+      "checkpoint_sha256": "5b98adcb95ded519082ee6eea34a6f8c761c899347fe22e1e287df27983cb8cc",
+      "references": [
+        {
+          "sampling_seed": 70001,
+          "prior": "runs/iteration5/evaluations/full_prior_i4027_t0_s70001_n5",
+          "prior_metrics_sha256": "a44ebbcc68094d19e788365e26e20494fac723aa5250ec657dbcb0878b709182",
+          "original": "runs/iteration4/evaluations/updated_full_i4027_t0_s70001_n5",
+          "original_metrics_sha256": "8f4f804979749df4220c3245a0ba3139f149a843b3289d5ce0048129c6e5832e"
+        },
+        {
+          "sampling_seed": 70002,
+          "prior": "runs/iteration5/evaluations/full_prior_i4027_t0_s70002_n5",
+          "prior_metrics_sha256": "9202f8b222498c03f153d3858152081b6647e271daccd5f0606d99fee9bf1d52",
+          "original": "runs/iteration4/evaluations/updated_full_i4027_t0_s70002_n5",
+          "original_metrics_sha256": "9b69661ec2644880fdf83c5bf672cd6483a0f69557448d440180277e4611aad2"
+        },
+        {
+          "sampling_seed": 70003,
+          "prior": "runs/iteration5/evaluations/full_prior_i4027_t0_s70003_n5",
+          "prior_metrics_sha256": "3334eb785dd0aea74dc2c650b0c93dadeb8e71667abe702a14ea49a0d5dfd369",
+          "original": "runs/iteration4/evaluations/updated_full_i4027_t0_s70003_n5",
+          "original_metrics_sha256": "2afdad6199ca16556512ab449b7c4c80779cc3ca2e29b6b74b2c975f343521bd"
+        }
+      ]
+    },
+    {
+      "architecture": "full",
+      "inner_seed": 4027,
+      "training_seed": 1,
+      "checkpoint": "runs/iteration5/training/full_prior_i4027_t1/checkpoint.pt",
+      "checkpoint_sha256": "069648695e90c22ae1b84ea6dcdd58404e550b0db0f41154a3f64c5f22a38965",
+      "references": [
+        {
+          "sampling_seed": 70001,
+          "prior": "runs/iteration5/evaluations/full_prior_i4027_t1_s70001_n5",
+          "prior_metrics_sha256": "940fa9f9da8cf283d6e53a6ea603bafdae3635f8adbda83f4d2fdbf26d4a624f",
+          "original": "runs/iteration4/evaluations/updated_full_i4027_t1_s70001_n5",
+          "original_metrics_sha256": "c48960f83e21f21d416c21c0ba237c6adc9c1cdaba3e6d7944e694cf8bfc3968"
+        },
+        {
+          "sampling_seed": 70002,
+          "prior": "runs/iteration5/evaluations/full_prior_i4027_t1_s70002_n5",
+          "prior_metrics_sha256": "c7ba9a37665c1dbc51cdd463251aae595aacf74111a5ea3281cafd50ffa4a5de",
+          "original": "runs/iteration4/evaluations/updated_full_i4027_t1_s70002_n5",
+          "original_metrics_sha256": "495d361bce75659d14cf36b4af4777b730028245d9e05fc16c9cdebd94083841"
+        },
+        {
+          "sampling_seed": 70003,
+          "prior": "runs/iteration5/evaluations/full_prior_i4027_t1_s70003_n5",
+          "prior_metrics_sha256": "5d365e672c137480d89cd2b493a6cf31e90a0d2c88ae54ee85967fb8227aa671",
+          "original": "runs/iteration4/evaluations/updated_full_i4027_t1_s70003_n5",
+          "original_metrics_sha256": "6c0a91c7d1e1d27618ff2e5d82db677d4a484236dcc27308362d38311de987e4"
+        }
+      ]
+    },
+    {
+      "architecture": "full",
+      "inner_seed": 4027,
+      "training_seed": 2,
+      "checkpoint": "runs/iteration5/training/full_prior_i4027_t2/checkpoint.pt",
+      "checkpoint_sha256": "c7cdd6944c5f3e8698093cad101627ebf3caadec101af13f4cfb62582f2f50f6",
+      "references": [
+        {
+          "sampling_seed": 70001,
+          "prior": "runs/iteration5/evaluations/full_prior_i4027_t2_s70001_n5",
+          "prior_metrics_sha256": "b593489d2f0d18deb5ccf99e88eec24cb53a73a9826b06fa4b31910b13a426a7",
+          "original": "runs/iteration4/evaluations/updated_full_i4027_t2_s70001_n5",
+          "original_metrics_sha256": "5b17fc3d10ea55490b6bcaf699ac75b16f9eeba93a5e58fe86a73f138ace2b8d"
+        },
+        {
+          "sampling_seed": 70002,
+          "prior": "runs/iteration5/evaluations/full_prior_i4027_t2_s70002_n5",
+          "prior_metrics_sha256": "45751ec2d75f267aa77c5891edf3a667f548e772a1c18532d2bf639c416afbfa",
+          "original": "runs/iteration4/evaluations/updated_full_i4027_t2_s70002_n5",
+          "original_metrics_sha256": "d0d971cef2a2c22a56142e006d5a80dbfd8773b89b0ca88939cbd3824a850431"
+        },
+        {
+          "sampling_seed": 70003,
+          "prior": "runs/iteration5/evaluations/full_prior_i4027_t2_s70003_n5",
+          "prior_metrics_sha256": "2bcd6804a9780516117ea570c40a46ca51f38801d9840b17e211bdcc6179c5a0",
+          "original": "runs/iteration4/evaluations/updated_full_i4027_t2_s70003_n5",
+          "original_metrics_sha256": "0f3dc31ecc9874af0073fdaed1213ec4b9d6955a8c3c25ad121201ac7370a098"
+        }
+      ]
+    },
+    {
+      "architecture": "dense",
+      "inner_seed": 2027,
+      "training_seed": 0,
+      "checkpoint": "runs/iteration5/training/dense_prior_i2027_t0/checkpoint.pt",
+      "checkpoint_sha256": "9c3c8ede2ee932ddb8edcfb63d667cc553d0cab6dc8cfbec5d32793cb3ed09bf",
+      "references": [
+        {
+          "sampling_seed": 70001,
+          "prior": "runs/iteration5/evaluations/dense_prior_i2027_t0_s70001_n5",
+          "prior_metrics_sha256": "c9b11f074bd7d5fb987db53993a06d03849f925d3c57b4b14a712f6d88afc55f",
+          "original": "runs/iteration4/evaluations/matched_dense_i2027_t0_s70001_n5",
+          "original_metrics_sha256": "072d7aa0175519c7cf792e61194dbbc96de0204ad2c5c279dd6274bc337859a2"
+        },
+        {
+          "sampling_seed": 70002,
+          "prior": "runs/iteration5/evaluations/dense_prior_i2027_t0_s70002_n5",
+          "prior_metrics_sha256": "323eb17dcd630cfdc407f5834add4d5e5544647c796e2298f798102d466e2831",
+          "original": "runs/iteration4/evaluations/matched_dense_i2027_t0_s70002_n5",
+          "original_metrics_sha256": "44978b521f806a577112c7bc2fea5b5959e414d817735d97f88c34c1680c3b87"
+        },
+        {
+          "sampling_seed": 70003,
+          "prior": "runs/iteration5/evaluations/dense_prior_i2027_t0_s70003_n5",
+          "prior_metrics_sha256": "8a49c6d54b6fc03ab9cda87a9c915ba5b0a9ddf1a36b5b3cb3cad725b2ae7929",
+          "original": "runs/iteration4/evaluations/matched_dense_i2027_t0_s70003_n5",
+          "original_metrics_sha256": "caf08dde5a7e6ebdb7972180afb76a722ce6bc2a59b32e9d0d2adeec9331f998"
+        }
+      ]
+    },
+    {
+      "architecture": "dense",
+      "inner_seed": 2027,
+      "training_seed": 1,
+      "checkpoint": "runs/iteration5/training/dense_prior_i2027_t1/checkpoint.pt",
+      "checkpoint_sha256": "6535e72033a38bc8f4cbacd96985e9f6820fd5e9acfdf95b249948fc86778bca",
+      "references": [
+        {
+          "sampling_seed": 70001,
+          "prior": "runs/iteration5/evaluations/dense_prior_i2027_t1_s70001_n5",
+          "prior_metrics_sha256": "048b23459ca35d988e238c6139970ffd4647064b297a8c728ea1f9dde726514d",
+          "original": "runs/iteration4/evaluations/matched_dense_i2027_t1_s70001_n5",
+          "original_metrics_sha256": "d436154d173166bc611c5eecb3342fbdad9d217cad7dc7f3ca1bca13a0c346a7"
+        },
+        {
+          "sampling_seed": 70002,
+          "prior": "runs/iteration5/evaluations/dense_prior_i2027_t1_s70002_n5",
+          "prior_metrics_sha256": "1154449005c68e45574802a9b7fdbb955e702dd07ec52716533ad418ef4039f6",
+          "original": "runs/iteration4/evaluations/matched_dense_i2027_t1_s70002_n5",
+          "original_metrics_sha256": "c52ab6ccf8eb4cc7e8442b0bfa5a597e946d54a34b8ed327a74a4629b5e7f6b9"
+        },
+        {
+          "sampling_seed": 70003,
+          "prior": "runs/iteration5/evaluations/dense_prior_i2027_t1_s70003_n5",
+          "prior_metrics_sha256": "19fe71062d1882fa3b078c06d5b78c9860779724cf54b7267bf2660bd454a5bc",
+          "original": "runs/iteration4/evaluations/matched_dense_i2027_t1_s70003_n5",
+          "original_metrics_sha256": "c9a961e5bf87ef5ad80e592b59dfe218d22a2c7f21fcfd85b473613195833c30"
+        }
+      ]
+    },
+    {
+      "architecture": "dense",
+      "inner_seed": 2027,
+      "training_seed": 2,
+      "checkpoint": "runs/iteration5/training/dense_prior_i2027_t2/checkpoint.pt",
+      "checkpoint_sha256": "b4f1d027152fb77251c6cf63257371737595a2d7b97f8f26cd167b942351799c",
+      "references": [
+        {
+          "sampling_seed": 70001,
+          "prior": "runs/iteration5/evaluations/dense_prior_i2027_t2_s70001_n5",
+          "prior_metrics_sha256": "04e5dbf68f2daef9a6cedb073b02ad7af6325ee2f8cf6c1125391551afcacee5",
+          "original": "runs/iteration4/evaluations/matched_dense_i2027_t2_s70001_n5",
+          "original_metrics_sha256": "b76b5b02a3a968be26f22b87d232b730ea5ae383f02ed334c0a72123ffe12aca"
+        },
+        {
+          "sampling_seed": 70002,
+          "prior": "runs/iteration5/evaluations/dense_prior_i2027_t2_s70002_n5",
+          "prior_metrics_sha256": "06a9f322776d349c037a8d29fee9e22f77353d42d9aceb09380a2ab8da108d4a",
+          "original": "runs/iteration4/evaluations/matched_dense_i2027_t2_s70002_n5",
+          "original_metrics_sha256": "07563a5138d07aa7ee23ddb2133fb719b187762bc4a664f73f7dc03bd41804c9"
+        },
+        {
+          "sampling_seed": 70003,
+          "prior": "runs/iteration5/evaluations/dense_prior_i2027_t2_s70003_n5",
+          "prior_metrics_sha256": "8e7610035aef69def12ea23510e957b1bc04a7311a1bec428da172b22ed4f73a",
+          "original": "runs/iteration4/evaluations/matched_dense_i2027_t2_s70003_n5",
+          "original_metrics_sha256": "099ce6ab86eea8bc7d54f2d1c42c483b4ade90f30afc8c3ea0c704e70d7656ee"
+        }
+      ]
+    },
+    {
+      "architecture": "dense",
+      "inner_seed": 3027,
+      "training_seed": 0,
+      "checkpoint": "runs/iteration5/training/dense_prior_i3027_t0/checkpoint.pt",
+      "checkpoint_sha256": "7ea3e685e4b97e6a46c41bf1a357a62fef26b4beb4d2a6e28f40098e3eb44f62",
+      "references": [
+        {
+          "sampling_seed": 70001,
+          "prior": "runs/iteration5/evaluations/dense_prior_i3027_t0_s70001_n5",
+          "prior_metrics_sha256": "5ae1d5096b1834edc178448de0c7b767b6d37388d90a2c20ec88808b0afa38d4",
+          "original": "runs/iteration4/evaluations/matched_dense_i3027_t0_s70001_n5",
+          "original_metrics_sha256": "0be6202fc360c9f005d12cdd428a977205ea9fca7763d85a87325824a75382b9"
+        },
+        {
+          "sampling_seed": 70002,
+          "prior": "runs/iteration5/evaluations/dense_prior_i3027_t0_s70002_n5",
+          "prior_metrics_sha256": "09adea52b25c265c5bb7425c69d46a65c99ac954ac265d0f3a95c2849bce480e",
+          "original": "runs/iteration4/evaluations/matched_dense_i3027_t0_s70002_n5",
+          "original_metrics_sha256": "44888c77e7c30b43665394c7d1bf5fe4f94641618ee1ff66915150e7a77fd8b2"
+        },
+        {
+          "sampling_seed": 70003,
+          "prior": "runs/iteration5/evaluations/dense_prior_i3027_t0_s70003_n5",
+          "prior_metrics_sha256": "d83aac8fdf23208551b278a071d02e2b86338acb9b208d7e032eb3951afe0348",
+          "original": "runs/iteration4/evaluations/matched_dense_i3027_t0_s70003_n5",
+          "original_metrics_sha256": "5eff6ddad287e49da2649969c58fc4b39d1325ff5e705c1907dffc8318f83f8c"
+        }
+      ]
+    },
+    {
+      "architecture": "dense",
+      "inner_seed": 3027,
+      "training_seed": 1,
+      "checkpoint": "runs/iteration5/training/dense_prior_i3027_t1/checkpoint.pt",
+      "checkpoint_sha256": "ea29fd988510f44a3917509a23f007b6baf2b2e023e43487be111e03d34ccf8a",
+      "references": [
+        {
+          "sampling_seed": 70001,
+          "prior": "runs/iteration5/evaluations/dense_prior_i3027_t1_s70001_n5",
+          "prior_metrics_sha256": "3f8bde210081c438610d35303d8a1268e39b93f0fb0605c6ee6f029f334d8b9e",
+          "original": "runs/iteration4/evaluations/matched_dense_i3027_t1_s70001_n5",
+          "original_metrics_sha256": "2d80984114fbfb772cf18c43f6dd73f9423ae1ba67f0e644c84090940455927e"
+        },
+        {
+          "sampling_seed": 70002,
+          "prior": "runs/iteration5/evaluations/dense_prior_i3027_t1_s70002_n5",
+          "prior_metrics_sha256": "87c5e6e4ac3ea88e68a4d10e8da44a788c31855704dcf325695222978d5c2bb9",
+          "original": "runs/iteration4/evaluations/matched_dense_i3027_t1_s70002_n5",
+          "original_metrics_sha256": "ffc37a276cd0969e9dc7b9875f49b7a16173f0736ba8b6519d3857cc2cd5247d"
+        },
+        {
+          "sampling_seed": 70003,
+          "prior": "runs/iteration5/evaluations/dense_prior_i3027_t1_s70003_n5",
+          "prior_metrics_sha256": "3b397351a8e179e23db6718cc6dcdf25bc0eb573007fd6e9edf86263ce704dde",
+          "original": "runs/iteration4/evaluations/matched_dense_i3027_t1_s70003_n5",
+          "original_metrics_sha256": "0815881baa5a426774f8554952f16d0df9a09d8d64ed0310c2d8b322408f0b7d"
+        }
+      ]
+    },
+    {
+      "architecture": "dense",
+      "inner_seed": 3027,
+      "training_seed": 2,
+      "checkpoint": "runs/iteration5/training/dense_prior_i3027_t2/checkpoint.pt",
+      "checkpoint_sha256": "5394585835624cb26fc34761e8cf30e2219ea5ed5e002a157b10bd3e778a345d",
+      "references": [
+        {
+          "sampling_seed": 70001,
+          "prior": "runs/iteration5/evaluations/dense_prior_i3027_t2_s70001_n5",
+          "prior_metrics_sha256": "a80d81b876a90ac67d38dbb0c73469db8d55a2530bf32e419b72bd322ff1a4b7",
+          "original": "runs/iteration4/evaluations/matched_dense_i3027_t2_s70001_n5",
+          "original_metrics_sha256": "37dd1b1cbd1509c6872bc05cb94068f69eb394cc25a77544f237c52114041564"
+        },
+        {
+          "sampling_seed": 70002,
+          "prior": "runs/iteration5/evaluations/dense_prior_i3027_t2_s70002_n5",
+          "prior_metrics_sha256": "cc4a3661bce8605f02afd59af67536194e264cf8564fadc1dcfd69792788a21a",
+          "original": "runs/iteration4/evaluations/matched_dense_i3027_t2_s70002_n5",
+          "original_metrics_sha256": "c33db107baf7a008cf7ba6d74c53c6ad74b251de0a82ac445bbfde430c567f45"
+        },
+        {
+          "sampling_seed": 70003,
+          "prior": "runs/iteration5/evaluations/dense_prior_i3027_t2_s70003_n5",
+          "prior_metrics_sha256": "e3663b2c67e6c7c2b95abde8e193873f3d09813d0849fa600533e37548158d5f",
+          "original": "runs/iteration4/evaluations/matched_dense_i3027_t2_s70003_n5",
+          "original_metrics_sha256": "832d9d9bda32cb5b1751660d91c9ff9aad8a9e9ffb40b7d270be76870c105d16"
+        }
+      ]
+    },
+    {
+      "architecture": "dense",
+      "inner_seed": 4027,
+      "training_seed": 0,
+      "checkpoint": "runs/iteration5/training/dense_prior_i4027_t0/checkpoint.pt",
+      "checkpoint_sha256": "06d344721239fb3b84e9a3025556f2afe09f719b239cd45cf4f3893ed3db911c",
+      "references": [
+        {
+          "sampling_seed": 70001,
+          "prior": "runs/iteration5/evaluations/dense_prior_i4027_t0_s70001_n5",
+          "prior_metrics_sha256": "8e54343880b47e7d0850ea0dc512eaff5697e8981e6b47851fc1cd60f51fab89",
+          "original": "runs/iteration4/evaluations/matched_dense_i4027_t0_s70001_n5",
+          "original_metrics_sha256": "53549f9f74dc4d29d7ceef6d9d9cc45bfd0ff9f5494f2cb92cd07f8d6f761c06"
+        },
+        {
+          "sampling_seed": 70002,
+          "prior": "runs/iteration5/evaluations/dense_prior_i4027_t0_s70002_n5",
+          "prior_metrics_sha256": "c95b0c09e3e77c0c1b5edc4ed619f32470601b780e1ed844d6c6d583331d6903",
+          "original": "runs/iteration4/evaluations/matched_dense_i4027_t0_s70002_n5",
+          "original_metrics_sha256": "5d4732027505d3e5f100a1d6a32d45075a9800a2a1763e816224a234e22441c4"
+        },
+        {
+          "sampling_seed": 70003,
+          "prior": "runs/iteration5/evaluations/dense_prior_i4027_t0_s70003_n5",
+          "prior_metrics_sha256": "6f39d30c7faff959bfb57e7e3b04cdbe477e8630ad2818824d53db6a9dd3b2b0",
+          "original": "runs/iteration4/evaluations/matched_dense_i4027_t0_s70003_n5",
+          "original_metrics_sha256": "809f8c090446126a6acb93cc6425e415930ecda688d5d27256a7226dc05dfe1f"
+        }
+      ]
+    },
+    {
+      "architecture": "dense",
+      "inner_seed": 4027,
+      "training_seed": 1,
+      "checkpoint": "runs/iteration5/training/dense_prior_i4027_t1/checkpoint.pt",
+      "checkpoint_sha256": "bc2e669e22f8a3c9fb6c47f3fcc40dce1f7a74ea0bd09b94e912803c03f24edf",
+      "references": [
+        {
+          "sampling_seed": 70001,
+          "prior": "runs/iteration5/evaluations/dense_prior_i4027_t1_s70001_n5",
+          "prior_metrics_sha256": "3756d482707b68ec5ef130a199b38181fd9b8b24cd5e5236d8540e7775f15735",
+          "original": "runs/iteration4/evaluations/matched_dense_i4027_t1_s70001_n5",
+          "original_metrics_sha256": "ee354e972dcc9f9957eccc5ad08990465a59cc2215bcc6d6effd7d321ceb6a58"
+        },
+        {
+          "sampling_seed": 70002,
+          "prior": "runs/iteration5/evaluations/dense_prior_i4027_t1_s70002_n5",
+          "prior_metrics_sha256": "1997f9d568d850628b7cd3266c5295e5bc131908b85299d8edc4d2d52fa68c91",
+          "original": "runs/iteration4/evaluations/matched_dense_i4027_t1_s70002_n5",
+          "original_metrics_sha256": "23705482284349a60572b72e7b60534ed8d2637bc4ff5c9da078ea90c7558672"
+        },
+        {
+          "sampling_seed": 70003,
+          "prior": "runs/iteration5/evaluations/dense_prior_i4027_t1_s70003_n5",
+          "prior_metrics_sha256": "aa3c7ba52f37d045607873c7b110775767f3c6406c44c35bfd19e37386025eb6",
+          "original": "runs/iteration4/evaluations/matched_dense_i4027_t1_s70003_n5",
+          "original_metrics_sha256": "e4bc7f36bf86fc63af3582ed97f5a8460406d5352dc25ac0461d4fd801377170"
+        }
+      ]
+    },
+    {
+      "architecture": "dense",
+      "inner_seed": 4027,
+      "training_seed": 2,
+      "checkpoint": "runs/iteration5/training/dense_prior_i4027_t2/checkpoint.pt",
+      "checkpoint_sha256": "619126bab4a63a482eaef661076ba4f83963cd1ec8e2862847a712494778dc9f",
+      "references": [
+        {
+          "sampling_seed": 70001,
+          "prior": "runs/iteration5/evaluations/dense_prior_i4027_t2_s70001_n5",
+          "prior_metrics_sha256": "513434aa4e4660b76c4305de2b9a2255eae5c91ab51e2137e6ee0ec59c9e4242",
+          "original": "runs/iteration4/evaluations/matched_dense_i4027_t2_s70001_n5",
+          "original_metrics_sha256": "a1ec8449d83246cfa82b6a05a48d0178d64d033bf7ecbb4ab2b787fdf475bdac"
+        },
+        {
+          "sampling_seed": 70002,
+          "prior": "runs/iteration5/evaluations/dense_prior_i4027_t2_s70002_n5",
+          "prior_metrics_sha256": "e9319887c0e2d751fd72a97313adec13d9787eedc67fd7261b9ce219fb54f0ab",
+          "original": "runs/iteration4/evaluations/matched_dense_i4027_t2_s70002_n5",
+          "original_metrics_sha256": "0b19781aeef491d5c4f60c97157765ce7dc65632c904f1188c98e39b65d6d297"
+        },
+        {
+          "sampling_seed": 70003,
+          "prior": "runs/iteration5/evaluations/dense_prior_i4027_t2_s70003_n5",
+          "prior_metrics_sha256": "bcca1c2b61e2d28125c9b38229afd8695cd72e715876a4704b314c23b398b13e",
+          "original": "runs/iteration4/evaluations/matched_dense_i4027_t2_s70003_n5",
+          "original_metrics_sha256": "1cfba6e3ffd0efe3d473901054cbe57eede320d6d7f4b22e4a0c045cb881fc31"
+        }
+      ]
+    },
+    {
+      "architecture": "base",
+      "inner_seed": 2027,
+      "training_seed": 0,
+      "checkpoint": "runs/iteration5/training/base_prior_i2027_t0/checkpoint.pt",
+      "checkpoint_sha256": "f78ad81c49bc50a131a035c7249629d3a190a72065c151a948e2d3349f2f31e3",
+      "references": [
+        {
+          "sampling_seed": 70001,
+          "prior": "runs/iteration5/evaluations/base_prior_i2027_t0_s70001_n5",
+          "prior_metrics_sha256": "eecd476bc70f13ba702316eab14249b38412decbd38b9190e2ef4cf300bb2ca3",
+          "original": "runs/iteration4/evaluations/guided_base_i2027_t0_s70001_n5",
+          "original_metrics_sha256": "135f186622835d468f509b9a89e667a41575407c22453e107957224b999eaca7"
+        },
+        {
+          "sampling_seed": 70002,
+          "prior": "runs/iteration5/evaluations/base_prior_i2027_t0_s70002_n5",
+          "prior_metrics_sha256": "216acc4e9c0cfccf6ad248594bbdb7348e47cc5edb37d34b773a6fcb3a7272da",
+          "original": "runs/iteration4/evaluations/guided_base_i2027_t0_s70002_n5",
+          "original_metrics_sha256": "8aeac4c5704a4badfbeb924724b79c731698985a8fbd064b6ea50459d87af7db"
+        },
+        {
+          "sampling_seed": 70003,
+          "prior": "runs/iteration5/evaluations/base_prior_i2027_t0_s70003_n5",
+          "prior_metrics_sha256": "920ba171046722d4c1cc5449f159171bf078528ea698920cbe80d084f73f540a",
+          "original": "runs/iteration4/evaluations/guided_base_i2027_t0_s70003_n5",
+          "original_metrics_sha256": "0ebb9de9cad016c19edd9c8fceb07d928e4abdd374b267fa398b2803c5f4b90b"
+        }
+      ]
+    },
+    {
+      "architecture": "base",
+      "inner_seed": 2027,
+      "training_seed": 1,
+      "checkpoint": "runs/iteration5/training/base_prior_i2027_t1/checkpoint.pt",
+      "checkpoint_sha256": "915d1ce51f24433319f901347b0d8a4d3a400c1ee183db8efabba8800732dac3",
+      "references": [
+        {
+          "sampling_seed": 70001,
+          "prior": "runs/iteration5/evaluations/base_prior_i2027_t1_s70001_n5",
+          "prior_metrics_sha256": "9f458b9ab5105c5ed0da4d53346ceb6014f5edfe0f0a0d7ee5e01e916ad0e0cf",
+          "original": "runs/iteration4/evaluations/guided_base_i2027_t1_s70001_n5",
+          "original_metrics_sha256": "9c2f2e220d1dae2ea306a16d0989f48416fbd6dd66866019413ddb73932f7ffe"
+        },
+        {
+          "sampling_seed": 70002,
+          "prior": "runs/iteration5/evaluations/base_prior_i2027_t1_s70002_n5",
+          "prior_metrics_sha256": "c7199d642f28997683b14767363ccaa65a333b6ae3bbc47c493b27d0af2822f3",
+          "original": "runs/iteration4/evaluations/guided_base_i2027_t1_s70002_n5",
+          "original_metrics_sha256": "908dcd036526523b0519e29c376bedf453b59a1781fd7a3191ac2a8ea7f8faa4"
+        },
+        {
+          "sampling_seed": 70003,
+          "prior": "runs/iteration5/evaluations/base_prior_i2027_t1_s70003_n5",
+          "prior_metrics_sha256": "2b5661c51b9f87cb94b758830ace5bd73c382594ba23458826b8c61d8be86f87",
+          "original": "runs/iteration4/evaluations/guided_base_i2027_t1_s70003_n5",
+          "original_metrics_sha256": "617d6efe16b164c3ad479924401f7103eebdb82d03085018bc9da7066bbff521"
+        }
+      ]
+    },
+    {
+      "architecture": "base",
+      "inner_seed": 2027,
+      "training_seed": 2,
+      "checkpoint": "runs/iteration5/training/base_prior_i2027_t2/checkpoint.pt",
+      "checkpoint_sha256": "9f2a1440618d718f6b678c6cc0a651941bc8b7a9c263bacce9d6c06f579a7f73",
+      "references": [
+        {
+          "sampling_seed": 70001,
+          "prior": "runs/iteration5/evaluations/base_prior_i2027_t2_s70001_n5",
+          "prior_metrics_sha256": "5b4a897339507ef5845eb29a8a30567900d2eb47473c26157a987440a5507822",
+          "original": "runs/iteration4/evaluations/guided_base_i2027_t2_s70001_n5",
+          "original_metrics_sha256": "dcd9b828451fd529ab22a4f818bc23e196bfaadf005d0feab44dc8a8f8d237f8"
+        },
+        {
+          "sampling_seed": 70002,
+          "prior": "runs/iteration5/evaluations/base_prior_i2027_t2_s70002_n5",
+          "prior_metrics_sha256": "512abd3b115a546d60b3232bca2e0f6a169195040670e5157763becd309fdd01",
+          "original": "runs/iteration4/evaluations/guided_base_i2027_t2_s70002_n5",
+          "original_metrics_sha256": "25936e2b5d97b59881ccb293263ccad764127f5b5dd399881d1785ad3c4cdd94"
+        },
+        {
+          "sampling_seed": 70003,
+          "prior": "runs/iteration5/evaluations/base_prior_i2027_t2_s70003_n5",
+          "prior_metrics_sha256": "84765654259fa84c6092cf12422003617a8cbc6eb29e22ccdd7a6849d69f30a8",
+          "original": "runs/iteration4/evaluations/guided_base_i2027_t2_s70003_n5",
+          "original_metrics_sha256": "dd6c2a9fad4ffd4143877c8a127c73f17a312ed7613f992e93b2cb71c9bc70f2"
+        }
+      ]
+    },
+    {
+      "architecture": "base",
+      "inner_seed": 3027,
+      "training_seed": 0,
+      "checkpoint": "runs/iteration5/training/base_prior_i3027_t0/checkpoint.pt",
+      "checkpoint_sha256": "8bac239dc851276dbbfef124cbbdaca5b5f7cb71f7cc18bbe3ce4a270e7889a5",
+      "references": [
+        {
+          "sampling_seed": 70001,
+          "prior": "runs/iteration5/evaluations/base_prior_i3027_t0_s70001_n5",
+          "prior_metrics_sha256": "2a4d06c4753f8334d806e3106319f827bc587dadd53bc0f9020aa93b5b652474",
+          "original": "runs/iteration4/evaluations/guided_base_i3027_t0_s70001_n5",
+          "original_metrics_sha256": "0b7dd864d8ec054bdd97f4569e11260b3ed7d081bf8a51e8ba283f9c43047d18"
+        },
+        {
+          "sampling_seed": 70002,
+          "prior": "runs/iteration5/evaluations/base_prior_i3027_t0_s70002_n5",
+          "prior_metrics_sha256": "9766455f01e711a9d7b40107effacf5f6f119c876bb01d8185b3ae435931502f",
+          "original": "runs/iteration4/evaluations/guided_base_i3027_t0_s70002_n5",
+          "original_metrics_sha256": "27891f39150d63dda9a44e451f35f7973d4674922a648a630a5277af58e8ce26"
+        },
+        {
+          "sampling_seed": 70003,
+          "prior": "runs/iteration5/evaluations/base_prior_i3027_t0_s70003_n5",
+          "prior_metrics_sha256": "013817fe6aaf85582b911d505a4893380399a1187ec7ca99c1759fc89e755208",
+          "original": "runs/iteration4/evaluations/guided_base_i3027_t0_s70003_n5",
+          "original_metrics_sha256": "bf0b3f5b719cdbf9beedfd5a2fadc705b0c8bfbcde1c46f8326241cbb7af872a"
+        }
+      ]
+    },
+    {
+      "architecture": "base",
+      "inner_seed": 3027,
+      "training_seed": 1,
+      "checkpoint": "runs/iteration5/training/base_prior_i3027_t1/checkpoint.pt",
+      "checkpoint_sha256": "518b8d9245f4130a5f4bc5aaa697768f4f9ca83ce681b525d5db58928b190292",
+      "references": [
+        {
+          "sampling_seed": 70001,
+          "prior": "runs/iteration5/evaluations/base_prior_i3027_t1_s70001_n5",
+          "prior_metrics_sha256": "7a1ab219c6baa71c33389a8d0cfe5062f82c242ff8aa60f0985eb2eb47304cfe",
+          "original": "runs/iteration4/evaluations/guided_base_i3027_t1_s70001_n5",
+          "original_metrics_sha256": "6b36d45e655287c6ac0d16c1de44b2ee533bc4c90b12e8e353abc19b0150e6a5"
+        },
+        {
+          "sampling_seed": 70002,
+          "prior": "runs/iteration5/evaluations/base_prior_i3027_t1_s70002_n5",
+          "prior_metrics_sha256": "030e51e2a572a116ce2c8327c9098c9bdf267d82e9af807865c88a1427142d9d",
+          "original": "runs/iteration4/evaluations/guided_base_i3027_t1_s70002_n5",
+          "original_metrics_sha256": "1d87c0b65833b2fb109aab79ce3e392af12667f6bcda2271cf1fd3d8c073d54f"
+        },
+        {
+          "sampling_seed": 70003,
+          "prior": "runs/iteration5/evaluations/base_prior_i3027_t1_s70003_n5",
+          "prior_metrics_sha256": "ed8e8876fd1f142d33365cb528924323f9092a90290e993218a7675716a73cc3",
+          "original": "runs/iteration4/evaluations/guided_base_i3027_t1_s70003_n5",
+          "original_metrics_sha256": "9fe3d87ad53014e023e7d8dece48aeedf9c264912abe624e29e3d9e044cd7c41"
+        }
+      ]
+    },
+    {
+      "architecture": "base",
+      "inner_seed": 3027,
+      "training_seed": 2,
+      "checkpoint": "runs/iteration5/training/base_prior_i3027_t2/checkpoint.pt",
+      "checkpoint_sha256": "11dda1f07adfe08efcbb5c15a49e9e0d91bc0f57151d1a08f4959f03e8e36c19",
+      "references": [
+        {
+          "sampling_seed": 70001,
+          "prior": "runs/iteration5/evaluations/base_prior_i3027_t2_s70001_n5",
+          "prior_metrics_sha256": "22a8039aa02431150933440dd24ea418c799a00f8b734ba111b3611a0edea79b",
+          "original": "runs/iteration4/evaluations/guided_base_i3027_t2_s70001_n5",
+          "original_metrics_sha256": "2638a5b3e17ef4ecc2a45b0109af2cc1036e94a813b405fa6e73e71f7ad9d503"
+        },
+        {
+          "sampling_seed": 70002,
+          "prior": "runs/iteration5/evaluations/base_prior_i3027_t2_s70002_n5",
+          "prior_metrics_sha256": "139be53b32e99c37113a0102aafac92b78a5513a50bfe6bc9fa0eb811fa40d3b",
+          "original": "runs/iteration4/evaluations/guided_base_i3027_t2_s70002_n5",
+          "original_metrics_sha256": "02108874e865bf9b7b0c3a536f5bde6664aa5cd20ce760dd5ef944787c116ff4"
+        },
+        {
+          "sampling_seed": 70003,
+          "prior": "runs/iteration5/evaluations/base_prior_i3027_t2_s70003_n5",
+          "prior_metrics_sha256": "55af30d15776436e336f7de402de5090735ddeacfd3cc9f55463b3fba903e4f6",
+          "original": "runs/iteration4/evaluations/guided_base_i3027_t2_s70003_n5",
+          "original_metrics_sha256": "447c9c799a76cdf1f79390cfc465b9b92435c7bcbd01d5ec50d714e8ae98be05"
+        }
+      ]
+    },
+    {
+      "architecture": "base",
+      "inner_seed": 4027,
+      "training_seed": 0,
+      "checkpoint": "runs/iteration5/training/base_prior_i4027_t0/checkpoint.pt",
+      "checkpoint_sha256": "80329dcf6c2ffa3910ca7c7148d283071d840014b7d8b37e126b247ae2be4f6b",
+      "references": [
+        {
+          "sampling_seed": 70001,
+          "prior": "runs/iteration5/evaluations/base_prior_i4027_t0_s70001_n5",
+          "prior_metrics_sha256": "7d10ec69d54851d05a6483980abded8735a203ed87040281175f1c0720e81064",
+          "original": "runs/iteration4/evaluations/guided_base_i4027_t0_s70001_n5",
+          "original_metrics_sha256": "36e78a059b1c255b73bbeb6a582a146726e69bc871f2bfd509ca090e796d1b92"
+        },
+        {
+          "sampling_seed": 70002,
+          "prior": "runs/iteration5/evaluations/base_prior_i4027_t0_s70002_n5",
+          "prior_metrics_sha256": "c9d7ee83eba9a237ac1cd80a3ac00340a365056f66744a853c699e8100cc3330",
+          "original": "runs/iteration4/evaluations/guided_base_i4027_t0_s70002_n5",
+          "original_metrics_sha256": "a4483196bf118ef3dde7a1ab2ef6f9d49b411458bbb8b77c35f78b03b9633a62"
+        },
+        {
+          "sampling_seed": 70003,
+          "prior": "runs/iteration5/evaluations/base_prior_i4027_t0_s70003_n5",
+          "prior_metrics_sha256": "b2428b8ac8af382777c6e0744c968db6110413ef9d5ab1f54709475967f9ad24",
+          "original": "runs/iteration4/evaluations/guided_base_i4027_t0_s70003_n5",
+          "original_metrics_sha256": "bd4692fb040769defec74391ba85c0798ae94be41a1e7e35217017c7a96c3651"
+        }
+      ]
+    },
+    {
+      "architecture": "base",
+      "inner_seed": 4027,
+      "training_seed": 1,
+      "checkpoint": "runs/iteration5/training/base_prior_i4027_t1/checkpoint.pt",
+      "checkpoint_sha256": "9b95913710cbf5b707b747b2201f3aa7559410d4eb145198f76fc4a518e1ca59",
+      "references": [
+        {
+          "sampling_seed": 70001,
+          "prior": "runs/iteration5/evaluations/base_prior_i4027_t1_s70001_n5",
+          "prior_metrics_sha256": "c9c2f5b365532cb79cdd958f81cac698b212b80f431a6dfd02811388b8c0cb2a",
+          "original": "runs/iteration4/evaluations/guided_base_i4027_t1_s70001_n5",
+          "original_metrics_sha256": "339de989c1fb506328ff45a044da64f54f697fd5b340e64dc96a3dd76d92da36"
+        },
+        {
+          "sampling_seed": 70002,
+          "prior": "runs/iteration5/evaluations/base_prior_i4027_t1_s70002_n5",
+          "prior_metrics_sha256": "b505462c0ba420c83c9c31da2b0a85ac603f41664a2c4ddf39688e9ca8321bc4",
+          "original": "runs/iteration4/evaluations/guided_base_i4027_t1_s70002_n5",
+          "original_metrics_sha256": "a1f4a10484ff816268277287cba26949954c48486c4c6628c47ccd94839382f1"
+        },
+        {
+          "sampling_seed": 70003,
+          "prior": "runs/iteration5/evaluations/base_prior_i4027_t1_s70003_n5",
+          "prior_metrics_sha256": "3e8d2d5d71bd8b0d5f720ce4eb10f392e26e5ccc2ab0ae9eb15cd0c90858bfe9",
+          "original": "runs/iteration4/evaluations/guided_base_i4027_t1_s70003_n5",
+          "original_metrics_sha256": "bd7fa081b469ce0bf47f0846606329ca6351e9540501615695c4713174b62c7d"
+        }
+      ]
+    },
+    {
+      "architecture": "base",
+      "inner_seed": 4027,
+      "training_seed": 2,
+      "checkpoint": "runs/iteration5/training/base_prior_i4027_t2/checkpoint.pt",
+      "checkpoint_sha256": "a14351b0d309a8c30a7408fc438888dc9245abb6832a57fc1bb8f26f848e4aee",
+      "references": [
+        {
+          "sampling_seed": 70001,
+          "prior": "runs/iteration5/evaluations/base_prior_i4027_t2_s70001_n5",
+          "prior_metrics_sha256": "e97bc78e17df7d0be6d13e28861efe36bd1af06cc2753a39b868b2318665f02f",
+          "original": "runs/iteration4/evaluations/guided_base_i4027_t2_s70001_n5",
+          "original_metrics_sha256": "b5ab0e193321b0653489930f2c6f3cbf24e178dcb73806186ea24307dcc36c67"
+        },
+        {
+          "sampling_seed": 70002,
+          "prior": "runs/iteration5/evaluations/base_prior_i4027_t2_s70002_n5",
+          "prior_metrics_sha256": "b5a3f595084bb09518bca95ca9380ad3e9c86abe2ac5d259bbc1eb3595f6157e",
+          "original": "runs/iteration4/evaluations/guided_base_i4027_t2_s70002_n5",
+          "original_metrics_sha256": "5789e72e0b92ed51b858c14affe94845953d845ff3c30893c7cb812733e339ab"
+        },
+        {
+          "sampling_seed": 70003,
+          "prior": "runs/iteration5/evaluations/base_prior_i4027_t2_s70003_n5",
+          "prior_metrics_sha256": "d3884a891025ae56bbaa50764a4898f0f6d9eeb83ccdfc1086342aab3f6af4c6",
+          "original": "runs/iteration4/evaluations/guided_base_i4027_t2_s70003_n5",
+          "original_metrics_sha256": "0d662c049ad0f9cbab925dce1e1f39ca37bf1afc815a4bddc5ae120f0c52a0cf"
+        }
+      ]
+    }
+  ],
+  "variance_mixtures": [
+    0.5,
+    1.0
+  ],
+  "source_sha256": "1a9e99d67a8131df426c2292c785cfe2b7c0f9d99d465fe4f476278d69a5645c",
+  "runner_sha256": "40d19f8a5979f446bd8340a632cc6021d5383cff9980e11372cc305e4be5aca2",
+  "sampler_sha256": "c6e2208d54264844416017274314cdd02a4e2006b62f99691e627f7e84439ffa",
+  "protocol_sha256": "4bf0c727ffbaedba5c8099e9e3031dee8734439a839512854d8c71917ab678a7",
+  "study_helpers_sha256": "4c4c10fa6e8ae7a8d118db08018284ceb00d78d71c706d8965940ff9fbfc4482",
+  "audit_helpers_sha256": "077446fbc961dbca9d404a52f81d94c9ed585c9825c9239caabab568d2761c2a",
+  "sampling_seeds": [
+    70001,
+    70002,
+    70003
+  ],
+  "multiplier": 5,
+  "sampling_batch_size": 256,
+  "evaluator_seed": 2026,
+  "guidance": 10.0,
+  "new_training_runs": 0,
+  "expected_new_evaluations": 162,
+  "expected_reference_evaluations": 162
+}
