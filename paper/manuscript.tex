@@ -15,7 +15,7 @@
 
 \begin{document}
 
-\title[MedHyperDiff]{MedHyperDiff: relation-aware diffusion for synthetic clinical laboratory tables}
+\title[Laboratory relationships in synthetic clinical tables]{Evaluating and preserving laboratory relationships in synthetic clinical tables}
 
 \author[1]{\fnm{Naren} \sur{Medarametla}}\email{naren.medarametla2023@vitstudent.ac.in}
 \author[1]{\fnm{Abishek} \sur{K G}}\email{abishek.kg2023@vitstudent.ac.in}
@@ -44,7 +44,7 @@ This work began as the development of a constraint-guided diffusion model for me
 
 \subsection*{Tabular data generators}
 
-Tabular data generators range from statistical copulas to generative adversarial networks and variational autoencoders, of which CTGAN and TVAE are the standard references \cite{xu2019ctgan}. Diffusion models \cite{ho2020ddpm,austin2021d3pm} were adapted to mixed tables by TabDDPM \cite{kotelnikov2023tabddpm}, which combines Gaussian and multinomial diffusion, and by TabDiff \cite{shi2025tabdiff}, which uses continuous-time diffusion with learnable per-column noise schedules. Feature relationships have been modeled with learned graphs in GOGGLE \cite{liu2023goggle}.
+Tabular data generators range from statistical copulas to generative adversarial networks and variational autoencoders, of which CTGAN and TVAE are the standard references \cite{xu2019ctgan}. Diffusion models \cite{ho2020ddpm,austin2021d3pm} were adapted to mixed tables by TabDDPM \cite{kotelnikov2023tabddpm}, which combines Gaussian and multinomial diffusion, and by TabDiff \cite{shi2025tabdiff}, which uses continuous-time diffusion with learnable per-column noise schedules. Feature relationships have been modeled with learned graphs in GOGGLE \cite{liu2023goggle}. For longitudinal patient records, Momenzadeh and Oshaghi combined a deep encoder-decoder with a hidden Markov layer and evaluated statistical similarity, temporal consistency, compliance with clinical rules, privacy and downstream accuracy \cite{momenzadeh2026dghmm}. There, clinical rules are one dimension on which the generated data are scored; MedHyperDiff instead builds the supplied laboratory relations into the representation that the generator learns.
 
 \subsection*{Dependency-aware and constraint-aware generation}
 
@@ -52,7 +52,7 @@ Umesh \textit{et al.} showed that common generators do not preserve functional d
 
 \subsection*{Evaluation of synthetic data}
 
-Evaluation commonly combines classifier two-sample tests \cite{lopezpaz2017c2st}, marginal and dependence distances, downstream utility and privacy diagnostics such as distance to the closest record, membership inference by overfitting detection \cite{vanbreugel2023domias} and attack-based audits \cite{giomi2023anonymeter}. The difficulty of estimating uncertainty from overlapping resamples is well known \cite{bengio2004variance}. We do not propose a new metric family; we show how ordinary choices around established metrics change conclusions on small clinical tables.
+Evaluation commonly combines classifier two-sample tests \cite{lopezpaz2017c2st}, marginal and dependence distances, downstream utility and privacy diagnostics such as distance to the closest record, membership inference by overfitting detection \cite{vanbreugel2023domias} and attack-based audits \cite{giomi2023anonymeter}. Integrated frameworks combine these dimensions: Kim \textit{et al.} jointly assessed distributional fidelity, privacy risk and diagnostic utility of VAE and CTGAN data from a severely imbalanced cohort, stratifying every metric by disease prevalence, and showed that single-metric evaluation misses failure modes in minority classes \cite{kim2026integrated}. The difficulty of estimating uncertainty from overlapping resamples is well known \cite{bengio2004variance}. We do not propose a new metric family or framework. Our evaluation question is complementary: holding the metrics fixed, we show how ordinary training and evaluation choices, such as the training budget, the scaling of heavy-tailed values, the scoring of clinical rules and the size of the evaluation set, change which generator appears best on small clinical tables, and we add relation fidelity, measured against the recording resolution of each variable, as a dimension that existing frameworks do not assess.
 
 \subsection*{Aims}
 
@@ -528,7 +528,7 @@ UCI & University of California, Irvine \\
 \section*{Declarations}
 
 \subsection*{Ethics approval and consent to participate}
-This study is a secondary analysis of publicly available, de-identified data; no new data were collected and no participants were contacted. The NHANES protocols were approved by the Ethics Review Board of the National Center for Health Statistics (Protocol \#2011-17 and its continuations for 2011 to 2016, Protocol \#2018-01 for 2017 to 2018 and Protocol \#2021-05 for 2021 to 2023) \cite{nhaneserb}, and NHANES participants provide informed consent before taking part. The UCI datasets were obtained from the UCI Machine Learning Repository as released by their contributors. [AUTHOR TO CONFIRM: whether the Vellore Institute of Technology requires a statement of exemption or a waiver for secondary analysis of public de-identified data, and if so its committee name and reference number.]
+This study is a secondary analysis of publicly available, de-identified data; no new data were collected and no participants were contacted. The NHANES protocols were approved by the Ethics Review Board of the National Center for Health Statistics (Protocol \#2011-17 and its continuations for 2011 to 2016, Protocol \#2018-01 for 2017 to 2018 and Protocol \#2021-05 for 2021 to 2023) \cite{nhaneserb}, and NHANES participants provide informed consent before taking part. The UCI datasets were obtained from the UCI Machine Learning Repository as released by their contributors.
 
 \subsection*{Consent for publication}
 Not applicable.

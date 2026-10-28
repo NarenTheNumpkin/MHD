@@ -1,6 +1,6 @@
 # Manuscript
 
-*MedHyperDiff: relation-aware diffusion for synthetic clinical laboratory tables*, prepared for BMC Medical Informatics and Decision Making with the Springer Nature LaTeX template (`sn-jnl` class, version 3.1, Vancouver numbered references).
+*Evaluating and preserving laboratory relationships in synthetic clinical tables*, prepared for BMC Medical Informatics and Decision Making with the Springer Nature LaTeX template (`sn-jnl` class, version 3.1, Vancouver numbered references).
 
 | File | Contents |
 |---|---|
