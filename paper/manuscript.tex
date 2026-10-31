@@ -1,5 +1,12 @@
 %Springer Nature LaTeX template, version 3.1 (December 2024)
-\documentclass[pdflatex,sn-vancouver-num,referee]{sn-jnl}% referee: double line spacing
+\documentclass[pdflatex,referee]{sn-jnl}% referee: double line spacing
+% Vancouver numbered references as with the class option sn-vancouver-num, but using
+% bmc-vancouver.bst, which prints web references in BMC form (URL, then "Accessed date").
+\usepackage[numbers,sort&compress]{natbib}%
+\gdef\NumBib{YES}%
+\bibliographystyle{bmc-vancouver}%
+\setlength{\bibsep}{1em}%
+\makeatletter\def\bibfont{\reset@font\fontfamily{\rmdefault}\normalsize\selectfont}\makeatother%
 \usepackage{graphicx}%
 \graphicspath{{figures/}}%
 \usepackage{multirow}%

@@ -6,7 +6,8 @@
 |---|---|
 | `manuscript.tex` | LaTeX source |
 | `references.bib` | References |
-| `sn-jnl.cls`, `sn-vancouver-num.bst` | Springer Nature template class and reference style |
+| `sn-jnl.cls` | Springer Nature template class |
+| `bmc-vancouver.bst` | Reference style: the template's `sn-vancouver-num.bst` with web references in BMC form ("Accessed" date after the URL) |
 | `manuscript.pdf` | Compiled manuscript |
 | `figures/Figure1.pdf` to `figures/Figure8.pdf` | Figures |
 

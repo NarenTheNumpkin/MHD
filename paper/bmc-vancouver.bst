@@ -1,3 +1,5 @@
+%% bmc-vancouver.bst: copy of sn-vancouver-num.bst v1.1 that prints web references in BMC form
+%% (Author. Title. Publisher; Year. URL. Accessed date.) with no "Available from:" prefix.
 %%
 %% This is file `sn-vancouver-num.bst',
 %% generated with the docstrip utility.
@@ -91,7 +93,7 @@ INTEGERS { hrefform addeprints adddoiresolver }
 % Following constants may be adjusted by hand, if desired
 FUNCTION {init.config.constants}
 {
-  "Available from: " 'urlintro := % prefix before URL
+  "" 'urlintro := % prefix before URL (BMC: bare URL)
   "http://arxiv.org/abs/" 'eprinturl := % prefix to make URL from eprint ref
   "arXiv:" 'eprintprefix := % text prefix printed before eprint ref
   "http://dx.doi.org/" 'doiurl := % prefix to make URL from DOI
@@ -190,11 +192,7 @@ FUNCTION {inbrackets}
 FUNCTION {format.lastchecked}
 { lastchecked empty$
     { "" }
-    { updated empty$
-      { inbrackets "cited " lastchecked * }
-      { inbrackets "updated " updated * "; cited " * lastchecked * }
-    if$
-    }
+    { "Accessed " lastchecked * }
   if$
 }
 % ...urlbst to here
@@ -1469,6 +1467,7 @@ FUNCTION {output.url}
     'skip$ 
     { new.block 
       format.url output
+      new.block
       format.lastchecked output 
     }
   if$
@@ -1522,19 +1521,13 @@ FUNCTION {webpage}
   format.title "title" output.check
   journal empty$
     {
-      format.type "type" output.check
       publisher empty$
         'skip$
         { format.publisher.address output }
       if$
-      "database on the Internet" 'database :=
-      type database =
-        { format.journal.date "year" output.check }
-        { format.date "year" output.check }
-      if$
-      lastchecked empty$
+      year empty$
         'skip$
-        { format.lastchecked output }
+        { format.date output }
       if$
       new.block
       part empty$
@@ -1569,6 +1562,11 @@ FUNCTION {webpage}
     }
   if$
   format.url "url" output.check
+  new.block
+  lastchecked empty$
+    'skip$
+    { format.lastchecked output }
+  if$
   new.block
   note output
   fin.entry
